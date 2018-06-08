@@ -1,0 +1,60 @@
+﻿@{
+    Layout = null;
+}
+
+@{
+    <style>
+        /*link：未访问过的超链接颜色 */
+        a:link {
+            color: blue
+        }
+
+        /*vlink：已访问过的超链接颜色 */
+        a:visited {
+            color: black
+        }
+
+        /*alink：鼠标点击超链接时的颜色  */
+        a:active {
+            color: red
+        }
+
+        /*鼠标移到链接上时的颜色  */
+        a:hover {
+            color: burlywood
+        }
+    </style>
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <a href="http://tool.oschina.net/commons?type=2">HTML转义字符</a>
+        <textarea>
+        字符   十进制 	转义字符
+        " 	   &#34; 	&quot;
+        & 	   &#38; 	&amp;
+        <      &#60; 	&lt;
+        > 	   &#62; 	&gt;
+        不断开空格(non-breaking space) 	&#160; 	&nbsp;
+        </textarea>
+    </div>
+    <div>
+        <p>position 属性</p>
+        <textarea>
+        absolute：生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。
+        fixed：生成绝对定位的元素，相对于浏览器窗口进行定位。
+        relative：生成相对定位的元素，相对于其正常位置进行定位。
+        static：默认值，没有定位。
+        inherit：规定应该从父元素继承 position 属性的值。
+        </textarea>
+    </div>
+
+</body>
+</html>
