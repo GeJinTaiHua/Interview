@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
  * @date 2018/5/25 0025
  */
 @SpringBootTest
-public class string {
+public class String {
     /*
      * @desc 字符串比较
      * == 比较两个对象的引用是否相等
@@ -18,9 +18,9 @@ public class string {
      * @date 2018/5/25 0025
      */
     @Test
-    public void compare() {
-        String s1 = new String("Hello");
-        String s2 = new String("Hello");
+    public void Compare() {
+        java.lang.String s1 = new java.lang.String("Hello");
+        java.lang.String s2 = new java.lang.String("Hello");
 
         System.out.println(s1 == s2); //false
         System.out.println(s1.equals(s2)); //true
