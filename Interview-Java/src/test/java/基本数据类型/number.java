@@ -1,4 +1,4 @@
-package 浮点数;
+package 基本数据类型;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -6,23 +6,23 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.math.BigDecimal;
 
 /*
- * @desc 价格金额等
+ * @desc 数字
  * @author wjl
  * @date 2018/6/11 0011
  */
 @SpringBootTest
-public class amount {
+public class number {
     /*
-     * @desc 建议用BigDecimal（参数为String类型的构造方法）
+     * @desc 价格金额等建议用BigDecimal（参数为String类型的构造方法）
      * @author wjl
      * @date 2018/6/11 0011
      */
     @Test
-    public void test() {
+    public void amount() {
         float f1 = 2.15f;
         float f2 = 1.10f;
         System.out.println("float类型运算结果：\n" + f1 + "-" + f2 + "=" + (f1 - f2) + "\n");
-        // 2.15-1.1=1.0500001
+        //2.15-1.1=1.0500001
 
         BigDecimal bd1 = new BigDecimal("2.15");
         BigDecimal bd2 = new BigDecimal("1.10");
