@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 @SpringBootTest
 public class Number {
     /*
-     * @desc 价格金额等建议用BigDecimal（参数为String类型的构造方法）
+     * @desc 价格金额（建议用BigDecimal（参数为String类型的构造方法））
      * @author wjl
      * @date 2018/6/11 0011
      */
