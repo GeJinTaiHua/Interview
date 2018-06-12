@@ -1,7 +1,9 @@
 package 基本数据类型;
 
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+
 
 /*
  * @desc 字符串
@@ -54,5 +56,36 @@ public class Str {
 
         System.out.println(str1 == str6.intern());//true
         System.out.println(str1 == str7.intern());//true
+    }
+
+    /*
+     * @desc apache commons lang包中的StringUtils工具
+     * @author wjl
+     * @date 2018/6/12 0012
+     */
+    @Test
+    public void StringUtil() {
+        // 空字符串检查
+        String strIsBlank1 = "ACD";
+        String strIsBlank2 = " ";
+        String strIsBlank3 = null;
+        StringUtils.isBlank(strIsBlank1);//false
+        StringUtils.isBlank(strIsBlank2);//true
+        StringUtils.isBlank(strIsBlank3);//true
+
+        // 清除空白字符
+        String strTrimToNull = "  A  Test  ";
+        StringUtils.trimToNull(strTrimToNull);//A  Test
+
+        // 计算某个字符的出现次数
+        int n = StringUtils.countMatches("*12**2222*", "*");//4
+
+        // 重复一个字符串
+        String strRepeat = "ADCD";
+        String strRepeatResult = StringUtils.repeat(strRepeat, 3);//ADCDADCDADCD
+
+        // 拆分字符串
+        String strSplit = "A*BDD*DA";
+        String[] strSp = StringUtils.split(strSplit, "*");//A   BDD   DA
     }
 }
