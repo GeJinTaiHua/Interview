@@ -2,7 +2,6 @@
 
 ## 一、Java
 ### 1.1 目录
-详情查看目录：
 + /Interview-Java/src/test/java 
 + /Interview-Java/src/main/java/www/wjl/com/Interview
 ### 1.2 基础问题
@@ -19,7 +18,6 @@
 
 ## 二、.Net
 ### 2.1 目录
-详情查看目录：
 + /Interview-.NET/Subject/ 
 + /Interview-.NET/NETSubject/Controllers
 + /Interview-.NET/NETSubject/Views
