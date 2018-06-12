@@ -39,6 +39,8 @@ public class Str {
         String str3 = "ABCD";
         String str4 = "1234";
 
+        // 虽然对于对一个动态创建的字符串（比如string+variable；variable+variable），驻留机制便不会起作用。
+        // 但是我们可以手工的启用驻留机制——那就是调用定义的System.String中的静态方法Intern。
         String str5 = "ABCD" + "1234";
         String str6 = "ABCD" + str4;
         String str7 = str3 + str4;
