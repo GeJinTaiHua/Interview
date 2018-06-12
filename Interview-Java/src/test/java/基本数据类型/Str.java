@@ -87,5 +87,9 @@ public class Str {
         // 拆分字符串
         String strSplit = "A*BDD*DA";
         String[] strSp = StringUtils.split(strSplit, "*");//A   BDD   DA
+
+        // 颠倒字符串
+        String strrRverse = "ABCDE";
+        String strrRverseR = StringUtils.reverse(strrRverse);//EDCBA
     }
 }
