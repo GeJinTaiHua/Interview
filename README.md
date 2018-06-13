@@ -20,9 +20,10 @@
 ### 2.1 目录
 + /Interview-.NET/Subject/ 
 + /Interview-.NET/NETSubject/Controllers
-+ /Interview-.NET/NETSubject/Views
 
 ## 三、HTML、CSS、javascript
+### 3.1 目录
++ /Interview-.NET/NETSubject/Views
 
 ## 四、其他
 ### 4.1 设计模式
