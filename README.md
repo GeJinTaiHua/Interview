@@ -2,7 +2,8 @@
 
 ## 一、Java
 ### 1.1 目录
-详情查看 /Interview-Java/src/test/java 目录。
++ /Interview-Java/src/test/java 
++ /Interview-Java/src/main/java/www/wjl/com/Interview
 ### 1.2 基础问题
 [30个Java集合面试问题及答案](https://mp.weixin.qq.com/s?__biz=MzAwNDE2NTgzNQ==&mid=2247484485&idx=1&sn=e25d097893b232403d74b2110e5b1fab&chksm=9b315de1ac46d4f72b703b2c85e57019b481bdcc59dc53447a27909d7b8f70f0ed1ee4854159&mpshare=1&scene=23&srcid=0608pXE8NxhkbmuVbGvu5Qpd#rd)
 
@@ -10,14 +11,16 @@
 
 [10 个有关 String 的面试问题](https://mp.weixin.qq.com/s/uaytl6QKKTqLitvXxlcU2g)
 
-### 1.2 面试
+### 1.3 面试
 [面试的角度诠释 Java工程师（1）](https://mp.weixin.qq.com/s?__biz=MjM5NzMyMjAwMA==&mid=2651479600&idx=1&sn=7f310d3fe836232e72491e595ffbaa1f&chksm=bd25324f8a52bb59863fa0c133e6d381def118bed4d820ef523afb12ec62bac8d508202da214&mpshare=1&scene=1&srcid=061265cmoVaAepudXykwsdN6#rd)
 
 [面试的角度诠释 Java工程师（2）](https://mp.weixin.qq.com/s?__biz=MjM5NzMyMjAwMA==&mid=2651479604&idx=1&sn=2a4d352795d60297e236dc4d06b59a04&chksm=bd25324b8a52bb5d87856ceb2dc0e5338ab37c24da9f30297435f001ef43f1c49efc570e8606&mpshare=1&scene=1&srcid=0612FgwBictVHwxAhjHOc4ec#rd)
 
 ## 二、.Net
 ### 2.1 目录
-详情查看 /Interview-.NET/Subject/ 目录。
++ /Interview-.NET/Subject/ 
++ /Interview-.NET/NETSubject/Controllers
++ /Interview-.NET/NETSubject/Views
 
 ## 三、HTML、CSS、javascript
 
