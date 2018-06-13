@@ -4,6 +4,7 @@
 ### 1.1 目录
 + /Interview-Java/src/test/java 
 + /Interview-Java/src/main/java/www/wjl/com/Interview
+
 ### 1.2 基础问题
 [30个Java集合面试问题及答案](https://mp.weixin.qq.com/s?__biz=MzAwNDE2NTgzNQ==&mid=2247484485&idx=1&sn=e25d097893b232403d74b2110e5b1fab&chksm=9b315de1ac46d4f72b703b2c85e57019b481bdcc59dc53447a27909d7b8f70f0ed1ee4854159&mpshare=1&scene=23&srcid=0608pXE8NxhkbmuVbGvu5Qpd#rd)
 
@@ -25,8 +26,11 @@
 ### 3.1 目录
 + /Interview-.NET/NETSubject/Views
 
-## 四、其他
-### 4.1 设计模式
+## 四、设计模式
+### 4.1 目录
++ /Interview-.NET/Subject/设计模式/
+
+### 4.2 基础问题
 [20个设计模式和软件设计面试问题](https://mp.weixin.qq.com/s?__biz=MjM5NzMyMjAwMA==&mid=2651479456&idx=1&sn=0f9d07bd3aa5a53aaa6d61b87125a31a&chksm=bd2531df8a52b8c9ec0aef2fb318e53f81027c2871511f0f474737bc81d10b7fdc90d339c3c2&mpshare=1&scene=1&srcid=0612kHCAY5DNOO2NI9emkMuw#rd)
 
 
