@@ -3,6 +3,7 @@ package 基本数据类型;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /*
  * @desc 集合：Collection
@@ -16,11 +17,16 @@ import java.util.*;
 @SpringBootTest
 public class Collection {
     public void List() {
+        // 以数组形式实现，顺序插入、查找快，插入、删除较慢
         List<String> arrayList = new ArrayList<>();
 
+        // 以链表形式实现，顺序插入、查找较慢，插入、删除方便
         List<String> linkedList = new LinkedList<>();
 
         List<String> vector = new Stack<>();
+
+        //读写分离+最终一致
+        List<String> copyOnWriteArrayList = new CopyOnWriteArrayList<>();
     }
 
     public void Set() {
