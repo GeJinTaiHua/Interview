@@ -20,7 +20,9 @@ public class Collection {
         // 以数组形式实现，顺序插入、查找快，插入、删除较慢
         List<String> arrayList = new ArrayList<>();
         arrayList.add("A");
+        arrayList.add("B");
         arrayList.add("C");
+        arrayList.get(0);
         arrayList.remove("C");
 
         // 以链表形式实现，顺序插入、查找较慢，插入、删除方便
