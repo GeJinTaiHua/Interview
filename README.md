@@ -12,8 +12,6 @@
 + /Interview-Java/src/main/java/www/wjl/com/Interview
 
 ### 1.2 基础问题
-![集合](http://img.blog.csdn.net/20160706172512559?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
-
 
 [30个Java集合面试问题及答案](https://mp.weixin.qq.com/s?__biz=MzAwNDE2NTgzNQ==&mid=2247484485&idx=1&sn=e25d097893b232403d74b2110e5b1fab&chksm=9b315de1ac46d4f72b703b2c85e57019b481bdcc59dc53447a27909d7b8f70f0ed1ee4854159&mpshare=1&scene=23&srcid=0608pXE8NxhkbmuVbGvu5Qpd#rd)
 
@@ -21,26 +19,37 @@
 
 [10 个有关 String 的面试问题](https://mp.weixin.qq.com/s/uaytl6QKKTqLitvXxlcU2g)
 
-### 1.3 面试
 [面试的角度诠释 Java工程师（1）](https://mp.weixin.qq.com/s?__biz=MjM5NzMyMjAwMA==&mid=2651479600&idx=1&sn=7f310d3fe836232e72491e595ffbaa1f&chksm=bd25324f8a52bb59863fa0c133e6d381def118bed4d820ef523afb12ec62bac8d508202da214&mpshare=1&scene=1&srcid=061265cmoVaAepudXykwsdN6#rd)
 
 [面试的角度诠释 Java工程师（2）](https://mp.weixin.qq.com/s?__biz=MjM5NzMyMjAwMA==&mid=2651479604&idx=1&sn=2a4d352795d60297e236dc4d06b59a04&chksm=bd25324b8a52bb5d87856ceb2dc0e5338ab37c24da9f30297435f001ef43f1c49efc570e8606&mpshare=1&scene=1&srcid=0612FgwBictVHwxAhjHOc4ec#rd)
+
+### 1.3 集合
+![集合](http://img.blog.csdn.net/20160706172512559?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
 ## 二、.Net
 ### 2.1 目录
 + /Interview-.NET/Subject/ 
 + /Interview-.NET/NETSubject/Controllers
 
+### 2.2 基础问题
+
 ## 三、HTML、CSS、javascript
 ### 3.1 目录
 + /Interview-.NET/NETSubject/Views
 
-## 四、设计模式
+### 3.2 基础问题
+
+## 四、其他
 ### 4.1 目录
 + /Interview-.NET/Subject/设计模式/
 
 ### 4.2 基础问题
 [20个设计模式和软件设计面试问题](https://mp.weixin.qq.com/s?__biz=MjM5NzMyMjAwMA==&mid=2651479456&idx=1&sn=0f9d07bd3aa5a53aaa6d61b87125a31a&chksm=bd2531df8a52b8c9ec0aef2fb318e53f81027c2871511f0f474737bc81d10b7fdc90d339c3c2&mpshare=1&scene=1&srcid=0612kHCAY5DNOO2NI9emkMuw#rd)
+
+### 4.3 常见锁
++ 互斥锁（Mutex）
++ 信号量（Semaphore）
++ 乐观锁（CAS）
 
 
 
