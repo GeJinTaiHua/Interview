@@ -28,7 +28,7 @@ public class Map {
         //相对于HashMap保证了元素迭代的顺序
         LinkedHashMap<String, String> linkedHashMap = new LinkedHashMap<>();
 
-        // 线程安全，不允许空的value 
+        // 线程安全，不允许空的value
         Hashtable<String, String> hashtable = new Hashtable<>();
 
         SortedMap<String, String> sortedMap = new TreeMap<>();
