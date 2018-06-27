@@ -25,7 +25,7 @@ public class Collection {
         arrayList.get(0);
         arrayList.remove("C");
 
-        // 以链表形式实现，顺序插入、查找较慢，插入、删除方便
+        // 以链表形式实现，顺序插入、查找较慢，插入、删除方便 
         List<String> linkedList = new LinkedList<>();
 
         List<String> vector = new Stack<>();
