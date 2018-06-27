@@ -120,6 +120,14 @@ public class SingletonClass{
 + 不剥夺条件：进程已获得的资源，在末使用完之前，不能强行剥夺。
 + 循环等待条件：若干进程之间形成一种头尾相接的循环等待资源关系。
 
+### 4.7 线程
++ 进程与线程的区别：
+  - 线程是进程的子集，一个进程可以有很多线程，每条线程并行执行不同的任务；
+  - 不同的进程使用不同的内存空间，而所有的线程共享一片相同的内存空间；
+  - 进程间通讯依靠IPC资源，例如管道（pipes）、套接字（sockets）等；
+  - 线程间通讯依靠JVM提供的API，例如wait方法、notify方法和notifyAll方法，线程间还可以通过共享的主内存来进行值的传递。
+
+![线程的所有状态](http://mmbiz.qpic.cn/mmbiz_png/Bf4u9qKuXWupl2hClEIRRTBPpWAic4GicZDMAFRRWUIU5qYOYY9Ds9NTrI8GdwGZkOjPkgGZa234kCT7050dDk3g/640?wx_fmt=png&wxfrom=5&wx_lazy=1)
 
 
 
