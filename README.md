@@ -26,6 +26,10 @@
 
 ![集合](http://img.blog.csdn.net/20160706172512559?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
+### 1.4 JVM 类加载机制
+类被加载到虚拟机内存开始，到卸载出内存为止，生命周期包含：加载，验证，准备，解析，初始化，使用，卸载这7个阶段。加载，验证，准备，初始化和卸载这5个顺序是确定的，解析阶段则不一定，他在某些情况下可以在初始化阶段之后在开始，这是为了支持Java语言的运行时绑定。
+![类加载](http://incdn1.b0.upaiyun.com/2017/06/2fb054008ca2898e0a17f7d79ce525a1.png)
+
 
 
 ## 二、.Net
@@ -51,6 +55,8 @@
 
 ### 4.2 基础问题
 [20个设计模式和软件设计面试问题](https://mp.weixin.qq.com/s?__biz=MjM5NzMyMjAwMA==&mid=2651479456&idx=1&sn=0f9d07bd3aa5a53aaa6d61b87125a31a&chksm=bd2531df8a52b8c9ec0aef2fb318e53f81027c2871511f0f474737bc81d10b7fdc90d339c3c2&mpshare=1&scene=1&srcid=0612kHCAY5DNOO2NI9emkMuw#rd)
+
+[面试常见其他问题](https://mp.weixin.qq.com/s/dc6z7G7ej0m5dCc80r1Rlw)
 
 ### 4.3 常见锁
 + 互斥锁（Mutex）
