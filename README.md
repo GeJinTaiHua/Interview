@@ -19,6 +19,8 @@
 
 [面试的角度诠释 Java工程师（2）](https://mp.weixin.qq.com/s?__biz=MjM5NzMyMjAwMA==&mid=2651479604&idx=1&sn=2a4d352795d60297e236dc4d06b59a04&chksm=bd25324b8a52bb5d87856ceb2dc0e5338ab37c24da9f30297435f001ef43f1c49efc570e8606&mpshare=1&scene=1&srcid=0612FgwBictVHwxAhjHOc4ec#rd)
 
+[2017秋，阿里、京东、美团、滴滴面试案](https://mp.weixin.qq.com/s/BGo3RY6JLFeg87hH3Y60KA)
+
 ### 1.3 集合
 [30个Java集合面试问题及答案](https://mp.weixin.qq.com/s?__biz=MzAwNDE2NTgzNQ==&mid=2247484485&idx=1&sn=e25d097893b232403d74b2110e5b1fab&chksm=9b315de1ac46d4f72b703b2c85e57019b481bdcc59dc53447a27909d7b8f70f0ed1ee4854159&mpshare=1&scene=23&srcid=0608pXE8NxhkbmuVbGvu5Qpd#rd)
 
@@ -89,8 +91,11 @@
     - 对象锁 object.lock()
     - 可重入锁（递归锁）
 + 信号量（Semaphore）
-+ 乐观锁（CAS）
-+ 悲观锁
++ 乐观锁（CAS）：
+假设不会发生并发冲突，只在提交操作时检查是否违反数据完整性。能解决脏读的问题（适合读取操较频繁的场景）。
++ 悲观锁：
+假定会发生并发冲突，屏蔽一切可能违反数据完整性的操作（适合写入操作频繁的场景）。
++ 分布式锁：用来协调多个进程下的所有线程多共享资源的同步访问。
 
 ### 4.4 常用设计模式
 + 单例模式：保证一个类仅有一个实例，并提供一个访问它的全局访问点。
@@ -159,7 +164,4 @@ public class SingletonClass{
   - 线程间通讯依靠JVM提供的API，例如wait方法、notify方法和notifyAll方法，线程间还可以通过共享的主内存来进行值的传递。
 
 ![线程的所有状态](http://mmbiz.qpic.cn/mmbiz_png/Bf4u9qKuXWupl2hClEIRRTBPpWAic4GicZDMAFRRWUIU5qYOYY9Ds9NTrI8GdwGZkOjPkgGZa234kCT7050dDk3g/640?wx_fmt=png&wxfrom=5&wx_lazy=1)
-
-
-
 
