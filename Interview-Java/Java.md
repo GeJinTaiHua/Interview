@@ -68,7 +68,6 @@ IO|NIO
 
 ### JVM 新生代、老年代
 ![新生代、老年代](https://images0.cnblogs.com/blog/587773/201409/061921034534396.png)
-
 + 新生代：
   - 存活时间较短，因此基于**复制算法**来进行回收。
   - 划分为三个区域：Eden、From Survivor、To Survivor。
@@ -76,6 +75,5 @@ IO|NIO
 + 老年代：
   - 对象存活的时间比较长，比较稳定，因此采用**标记（Mark）算法**来进行回收。
   - Full GC
-
 
 
