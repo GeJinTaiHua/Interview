@@ -3,38 +3,16 @@
 ![jQuery](https://img.shields.io/badge/jQuery-1.10.2-orange.svg)
 ![build passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
-### 一、语言
+### 语言
 + [Java](Interview-Java/Java.md)
 + [C#](Interview-.NET/NET.md)
 
+### [数据库](Interview-DataBase/DataBase.md)
 
-### 二、数据库
-#### 2.1 事务
-+ 原子性（atomicity）：
-一个事务是一个不可分割的工作单位，事务中包括的诸操作要么都做，要么都不做。
-+ 一致性（consistency）：
-事务必须是使数据库从一个一致性状态变到另一个一致性状态。一致性与原子性是密切相关的。
-+ 隔离性（isolation）：
-一个事务的执行不能被其他事务干扰。即一个事务内部的操作及使用的数据对并发的其他事务是隔离的，并发执行的各个事务之间不能互相干扰。
-+ 持久性（durability）：
-也称永久性（permanence），指一个事务一旦提交，它对数据库中数据的改变就应该是永久性的。接下来的其他操作或故障不应该对其有任何影响。
-
-#### 2.2 范式
-+ 第一范式（1NF）：确保每一列的原子性
-+ 第二范式：非键字段必须依赖于键字段
-+ 第三范式：在1NF基础上，除了主键以外的其它列都不传递依赖于主键列，或者说任何非主属性不依赖于其它非主属性（在2NF基础上消除传递依赖）
-
-#### 2.3 数据库垂直水平切分
-+ 垂直拆分：把表按模块划分到不同数据库表中。
-+ 水平拆分：把一个表按照某种规则（时间、用户...）把数据划分到不同表或数据库里。
-
-
-### 三、设计模式
-#### 3.1 面试题
+### 设计模式
 [20个设计模式和软件设计面试问题](https://mp.weixin.qq.com/s?__biz=MjM5NzMyMjAwMA==&mid=2651479456&idx=1&sn=0f9d07bd3aa5a53aaa6d61b87125a31a&chksm=bd2531df8a52b8c9ec0aef2fb318e53f81027c2871511f0f474737bc81d10b7fdc90d339c3c2&mpshare=1&scene=1&srcid=0612kHCAY5DNOO2NI9emkMuw#rd)  
 [面试常见其他问题](https://mp.weixin.qq.com/s/dc6z7G7ej0m5dCc80r1Rlw)
 
-#### 3.2 常用设计模式
 + 单例模式：保证一个类仅有一个实例，并提供一个访问它的全局访问点。
 ```
 public class SingletonClass{
