@@ -9,7 +9,7 @@ package 进程线程;
  * @date 2018/6/28 0028
  */
 public class ThreadByOrder {
-    static Thread T1 = new Thread(new Runnable() { 
+    static Thread T1 = new Thread(new Runnable() {
         @Override
         public void run() {
             System.out.println("T1 RUN");
