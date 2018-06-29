@@ -68,6 +68,7 @@ IO|NIO
 
 ### JVM 新生代、老年代
 ![新生代、老年代](https://images0.cnblogs.com/blog/587773/201409/061921034534396.png)
+
 + 新生代：
   - 存活时间较短，因此基于**复制算法**来进行回收。
   - 划分为三个区域：Eden、From Survivor、To Survivor。
