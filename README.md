@@ -5,7 +5,7 @@
 
 ### 语言
 + [Java](Interview-Java/Java.md)
-+ [C#](Interview-.NET/C#.md)
++ [C#](Interview-.NET/NET.md)
 
 
 ## 四、其他
