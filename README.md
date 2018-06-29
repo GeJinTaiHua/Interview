@@ -1,11 +1,9 @@
+[TOC]
+
 # 知识小抄集
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-1.5.13-brightgreen.svg)
 ![jQuery](https://img.shields.io/badge/jQuery-1.10.2-orange.svg)
 ![build passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
-
-[TOC]
-
-
 
 ## 一、Java
 ### 1.1 目录
@@ -52,6 +50,20 @@
 + 启动类加载器（Bootstrap ClassLoader）
 + 扩展类加载器（Extension ClassLoader）
 + 应用程序类加载器（Application ClassLoader）：一般情况下这个是程序默认的类加载器
+
+### 1.5 JVM 内存模型
+![JVM 内存模型](http://img.blog.csdn.net/20150720152805765?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
++ 方法区：
+用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。（JDK1.8 元数据区取代了永久代）
+  - 运行时常量池：存放编译期生成的各种字面量和符号引用。
++ 虚拟机栈：
+为虚拟机执行Java方法（也就是字节码）服务。
++ 本地方法栈：
+为虚拟机使用到的Native 方法服务。
++ 堆：
+用来存放对象实例。
++ 程序计数器：
+这里记录了线程执行的字节码的行号，在分支、循环、跳转、异常、线程恢复等都依赖这个计数器。
 
 
 
