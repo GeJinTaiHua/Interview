@@ -1,5 +1,5 @@
 ### 代码
-+ [Interview/Interview-.NET/Subject/设计模式/](/Interview/Interview-.NET/Subject/设计模式/)
++ [Interview/Interview-.NET/Subject/设计模式/](/Interview-.NET/Subject/设计模式/)
 
 ### 链接
 [20个设计模式和软件设计面试问题](https://mp.weixin.qq.com/s?__biz=MjM5NzMyMjAwMA==&mid=2651479456&idx=1&sn=0f9d07bd3aa5a53aaa6d61b87125a31a&chksm=bd2531df8a52b8c9ec0aef2fb318e53f81027c2871511f0f474737bc81d10b7fdc90d339c3c2&mpshare=1&scene=1&srcid=0612kHCAY5DNOO2NI9emkMuw#rd)  
