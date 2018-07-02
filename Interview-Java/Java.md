@@ -1,5 +1,5 @@
 ### 代码目录
-+ [/Interview-Java/src/test/java](Interview-Java/src/test/java/)
++ [/Interview-Java/src/test/java](src/test/java)
 + /Interview-Java/src/main/java/www/wjl/com/Interview
 
 ### 链接
