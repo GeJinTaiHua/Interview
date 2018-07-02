@@ -73,7 +73,7 @@ public class Amout_BigDecimal {
      * @date 2018/7/2 0002
      */
     @Test
-    public void Equal() {
+    public void Equal_CompareTo() {
         System.out.println(new BigDecimal("1.2").equals(new BigDecimal("1.20"))); // 输出false
         System.out.println(new BigDecimal("1.2").compareTo(new BigDecimal("1.20")) == 0); // 输出true
     }
