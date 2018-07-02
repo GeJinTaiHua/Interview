@@ -1,5 +1,6 @@
 ### 代码目录
-+ [/Interview-Java/src/test/java](src/test/java)
++ [数据类型](src/test/java/基本数据类型)
++ [进程线程](src/test/java/进程线程)
 + [/Interview-Java/src/main/java/www/wjl/com/Interview](src/main/java/www/wjl/com/Interview)
 
 ### 链接
