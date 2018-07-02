@@ -64,4 +64,17 @@ public class Number {
         // 四舍五入，逢5舍弃
         System.out.println("ROUND_HALF_DOWN:" + bd.setScale(2, BigDecimal.ROUND_HALF_DOWN));//1.12
     }
+
+    /*
+     * @desc BigDecimal比较大小
+     * equal：比较精确度、值
+     * compareTo：比较值
+     * @author wjl
+     * @date 2018/7/2 0002
+     */
+    @Test
+    public void Equal() {
+        System.out.println(new BigDecimal("1.2").equals(new BigDecimal("1.20"))); // 输出false
+        System.out.println(new BigDecimal("1.2").compareTo(new BigDecimal("1.20")) == 0); // 输出true
+    }
 }
