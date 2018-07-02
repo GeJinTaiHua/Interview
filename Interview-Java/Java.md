@@ -1,6 +1,6 @@
 ### 代码目录
 + [/Interview-Java/src/test/java](src/test/java)
-+ /Interview-Java/src/main/java/www/wjl/com/Interview
++ [/Interview-Java/src/main/java/www/wjl/com/Interview](src/main/java/www/wjl/com/Interview)
 
 ### 链接
 [10 个有关 String 的面试问题](https://mp.weixin.qq.com/s/uaytl6QKKTqLitvXxlcU2g)  
