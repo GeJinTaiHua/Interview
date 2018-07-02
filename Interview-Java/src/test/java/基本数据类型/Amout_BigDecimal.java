@@ -11,7 +11,7 @@ import java.math.BigDecimal;
  * @date 2018/6/11 0011
  */
 @SpringBootTest
-public class Number {
+public class Amout_BigDecimal {
     /*
      * @desc 价格金额（建议用BigDecimal（参数为String类型的构造方法））
      * @author wjl
