@@ -1,7 +1,7 @@
 ### 代码目录
 + [数据类型](src/test/java/基本数据类型)
 + [进程线程](src/test/java/进程线程)
-+ [/Interview-Java/src/main/java/www/wjl/com/Interview](src/main/java/www/wjl/com/Interview)
++ [链表与树](src/main/java/www/wjl/com/Interview/集合)
 
 ### 链接
 [10 个有关 String 的面试问题](https://mp.weixin.qq.com/s/uaytl6QKKTqLitvXxlcU2g)  
