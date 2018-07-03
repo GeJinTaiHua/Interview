@@ -28,7 +28,7 @@
   - ORM（对象关系映射）
   
 ### 常用工具
-+ [JAXB](https://github.com/GeJinTaiHua/JAXB):XML 节点元素和 JavaBean 相互转换工具。
++ [JAXB](https://github.com/GeJinTaiHua/JAXB)：XML 节点元素和 JavaBean 相互转换工具。
 + [Gson](https://github.com/GeJinTaiHua/Gson)：Josn 序列化与反序列化工具。
 + [SLF4J](https://github.com/GeJinTaiHua/SLF4J)：日志工具。
 + [STOMP](https://github.com/GeJinTaiHua/STOMP)：面向消息的简单文本协议。
