@@ -4,14 +4,14 @@
 ![build passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
 ### 语言
-+ [☕️Java](Interview-Java/Java.md)
++ [Java](Interview-Java/Java.md)
 + [C#](Interview-.NET/NET.md)
 
-### [📅数据库](Interview-DataBase/DataBase.md)
+### [数据库](Interview-DataBase/DataBase.md)
 
 ### [设计模式](Interview-DesignPattern/DesignPattern.md)
 
-### 🔒常见锁
+### 常见锁
 + 互斥锁（Mutex）
   - 同步块 synchronized block
   - 对象锁 object.lock()
