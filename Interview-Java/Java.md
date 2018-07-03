@@ -1,4 +1,6 @@
 ## ☕️Java
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-1.5.13-brightgreen.svg)
+![build passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
 ### 源码
 + [数据类型](src/test/java/基本数据类型)
