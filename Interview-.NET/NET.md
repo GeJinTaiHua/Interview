@@ -1,5 +1,4 @@
 ## 🆚C#
-![build passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
 ### [签名方法](https://github.com/GeJinTaiHua/RSA_SHA_MD5)
 + RSA
