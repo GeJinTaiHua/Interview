@@ -81,3 +81,24 @@ IO|NIO
   - 对象存活的时间比较长，比较稳定，因此采用**标记（Mark）算法**来进行回收。
   - Full GC
 
+### Java 三大框架
++ [Spring](https://github.com/GeJinTaiHua/Learn-Spring)
+  - 依赖注入（DI）又称为控制反转（IOC）
+  - 面向切片编程（AOP）是面向对象编程（OOP）的延续
++ Struts
+  - 模型（M）
+  - 视图（V）
+  - 控制器（C
++ Hibernate
+  - ORM（对象关系映射）
+
+
+
+
+
+
+
+
+
+
+
