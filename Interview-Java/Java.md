@@ -8,7 +8,7 @@
 [面试的角度诠释 Java工程师（2）](https://mp.weixin.qq.com/s?__biz=MjM5NzMyMjAwMA==&mid=2651479604&idx=1&sn=2a4d352795d60297e236dc4d06b59a04&chksm=bd25324b8a52bb5d87856ceb2dc0e5338ab37c24da9f30297435f001ef43f1c49efc570e8606&mpshare=1&scene=1&srcid=0612FgwBictVHwxAhjHOc4ec#rd)  
 [2017秋，阿里、京东、美团、滴滴面试案](https://mp.weixin.qq.com/s/BGo3RY6JLFeg87hH3Y60KA)
 
-### Frames
+### 三大框架
 + [Spring](https://github.com/GeJinTaiHua/Learn-Spring)
   - 依赖注入（DI）又称为控制反转（IOC）
   - 面向切片编程（AOP）是面向对象编程（OOP）的延续
@@ -22,14 +22,14 @@
 + Hibernate
   - ORM（对象关系映射）
   
-### Tools
+### 常用工具
 + [JAXB](https://github.com/GeJinTaiHua/JAXB)：XML 节点元素和 JavaBean 相互转换工具。
 + [Gson](https://github.com/GeJinTaiHua/Gson)：Josn 序列化与反序列化工具。
 + [SLF4J](https://github.com/GeJinTaiHua/SLF4J)：日志工具。
 + [STOMP](https://github.com/GeJinTaiHua/STOMP)：面向消息的简单文本协议。
 + [REST](https://github.com/GeJinTaiHua/HTTP)：HTTP 协议的 GET，POST，DELETE...
 
-### Book
+### 推荐书籍
 + [《Head First Java》](https://github.com/GeJinTaiHua/HeadFirstJava)
 + 《java核心技术卷》系列
 + 《Effective Java》
