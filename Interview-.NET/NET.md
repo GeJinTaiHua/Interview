@@ -1,4 +1,6 @@
 ## 🆚C#
+![jQuery](https://img.shields.io/badge/jQuery-1.10.2-orange.svg)
+![build passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
 ### 源码
 + [链表](Subject/数据结构/LinkReverse.cs)
