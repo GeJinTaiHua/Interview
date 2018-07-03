@@ -32,7 +32,7 @@
 + [Gson](https://github.com/GeJinTaiHua/Gson)：Josn 序列化与反序列化工具。
 + [SLF4J](https://github.com/GeJinTaiHua/SLF4J)：日志工具。
 + [STOMP](https://github.com/GeJinTaiHua/STOMP)：面向消息的简单文本协议。
-+ [REST](https://github.com/GeJinTaiHua/HTTP)：http 协议的 GET，POST，DELETE...
++ [REST](https://github.com/GeJinTaiHua/HTTP)：HTTP 协议的 GET，POST，DELETE...
 
 ### 集合
 ![集合](http://img.blog.csdn.net/20160706172512559?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
