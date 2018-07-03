@@ -1,5 +1,4 @@
 ## ✒️设计模式
-![build passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
 ### 源码
 + [单例模式](/Interview-.NET/Subject/设计模式/Singleton.cs)
