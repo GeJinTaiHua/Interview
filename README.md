@@ -9,7 +9,7 @@
 
 ### [💾数据库](Interview-DataBase/DataBase.md)
 
-### [设计模式](Interview-DesignPattern/DesignPattern.md)
+### [✒️设计模式](Interview-DesignPattern/DesignPattern.md)
 
 ### 常见锁
 + 互斥锁（Mutex）
