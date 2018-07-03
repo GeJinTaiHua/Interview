@@ -13,6 +13,20 @@
 [面试的角度诠释 Java工程师（2）](https://mp.weixin.qq.com/s?__biz=MjM5NzMyMjAwMA==&mid=2651479604&idx=1&sn=2a4d352795d60297e236dc4d06b59a04&chksm=bd25324b8a52bb5d87856ceb2dc0e5338ab37c24da9f30297435f001ef43f1c49efc570e8606&mpshare=1&scene=1&srcid=0612FgwBictVHwxAhjHOc4ec#rd)  
 [2017秋，阿里、京东、美团、滴滴面试案](https://mp.weixin.qq.com/s/BGo3RY6JLFeg87hH3Y60KA)
 
+### Java 三大框架
++ [Spring](https://github.com/GeJinTaiHua/Learn-Spring)
+  - 依赖注入（DI）又称为控制反转（IOC）
+  - 面向切片编程（AOP）是面向对象编程（OOP）的延续
+  - [Spring Boot](https://github.com/GeJinTaiHua/Learn-SpringBoot)
+  - [Spring Boot2.0](https://github.com/GeJinTaiHua/Learn-SpringBoot2.0)
+  - [Spring Cloud](https://github.com/GeJinTaiHua/Learn-SpringCloud)
++ Struts
+  - 模型（M）
+  - 视图（V）
+  - 控制器（C
++ Hibernate
+  - ORM（对象关系映射）
+
 ### 集合
 ![集合](http://img.blog.csdn.net/20160706172512559?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
@@ -81,19 +95,6 @@ IO|NIO
   - 对象存活的时间比较长，比较稳定，因此采用**标记（Mark）算法**来进行回收。
   - Full GC
 
-### Java 三大框架
-+ [Spring](https://github.com/GeJinTaiHua/Learn-Spring)
-  - 依赖注入（DI）又称为控制反转（IOC）
-  - 面向切片编程（AOP）是面向对象编程（OOP）的延续
-  - [Spring Boot](https://github.com/GeJinTaiHua/Learn-SpringBoot)
-  - [Spring Boot2.0](https://github.com/GeJinTaiHua/Learn-SpringBoot2.0)
-  - [Spring Cloud](https://github.com/GeJinTaiHua/Learn-SpringCloud)
-+ Struts
-  - 模型（M）
-  - 视图（V）
-  - 控制器（C
-+ Hibernate
-  - ORM（对象关系映射）
 
 
 
