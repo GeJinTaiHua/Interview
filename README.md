@@ -4,8 +4,8 @@
 ![build passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
 ### 语言
-+ [Java](Interview-Java/Java.md)
-+ [C#](Interview-.NET/NET.md)
++ [☕️Java](Interview-Java/Java.md)
++ [🆚C#](Interview-.NET/NET.md)
 
 ### [数据库](Interview-DataBase/DataBase.md)
 
