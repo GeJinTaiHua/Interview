@@ -27,14 +27,14 @@
 + [♻️Gson](https://github.com/GeJinTaiHua/Gson)：Josn 序列化与反序列化工具。
 + [📆SLF4J](https://github.com/GeJinTaiHua/SLF4J)：日志工具。
 + [👫STOMP](https://github.com/GeJinTaiHua/STOMP)：面向消息的简单文本协议。
-+ [☁️REST](https://github.com/GeJinTaiHua/HTTP)：HTTP 协议的 GET，POST，DELETE...
++ [☁️REST](https://github.com/GeJinTaiHua/HTTP)：HTTP 协议的 GET，POST，DELETE ...
 
 ### 推荐书籍
 + [📖《Head First Java》](https://github.com/GeJinTaiHua/HeadFirstJava)
 + 《java核心技术卷》系列
 + 《Effective Java》
 + 《Java编程思想》
-+ .....
++ ... ...
 
 ### 集合
 + [Collection](/Interview-Java/src/test/java/基本数据类型/Collection.java)
@@ -107,7 +107,4 @@ IO|NIO
 + 老年代：
   - 对象存活的时间比较长，比较稳定，因此采用**标记（Mark）算法**来进行回收。
   - Full GC
-
-
-
 
