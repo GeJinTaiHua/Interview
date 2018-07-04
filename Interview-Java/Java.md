@@ -9,12 +9,12 @@
 [Java 集合框架面试问题集锦](https://mp.weixin.qq.com/s?__biz=MjM5NzMyMjAwMA==&mid=2651480544&idx=1&sn=7b853579f783bf6d4ade4a79ca2dee6c&chksm=bd250d9f8a5284898ba1ba298e4367956ba6c7a15c01597ae70c56f30b1e72982d7a7d764c73&mpshare=1&scene=1&srcid=0612q9YIyiWAjSrjP6mEZ2A9#rd)
 
 ### 三大框架
-+ [Spring](https://github.com/GeJinTaiHua/Learn-Spring)
++ [☕️Spring](https://github.com/GeJinTaiHua/Learn-Spring)
   - 依赖注入（DI）又称为控制反转（IOC）
   - 面向切片编程（AOP）是面向对象编程（OOP）的延续
-  - [Spring Boot](https://github.com/GeJinTaiHua/Learn-SpringBoot)
-  - [Spring Boot 2.0](https://github.com/GeJinTaiHua/Learn-SpringBoot2.0)
-  - [Spring Cloud](https://github.com/GeJinTaiHua/Learn-SpringCloud)
+  - [☕️Spring Boot](https://github.com/GeJinTaiHua/Learn-SpringBoot)
+  - [☕️Spring Boot 2.0](https://github.com/GeJinTaiHua/Learn-SpringBoot2.0)
+  - [☕️Spring Cloud](https://github.com/GeJinTaiHua/Learn-SpringCloud)
 + Struts
   - 模型（M）
   - 视图（V）
@@ -23,14 +23,14 @@
   - ORM（对象关系映射）
   
 ### 常用工具
-+ [JAXB](https://github.com/GeJinTaiHua/JAXB)：XML 节点元素和 JavaBean 相互转换工具。
-+ [Gson](https://github.com/GeJinTaiHua/Gson)：Josn 序列化与反序列化工具。
-+ [SLF4J](https://github.com/GeJinTaiHua/SLF4J)：日志工具。
-+ [STOMP](https://github.com/GeJinTaiHua/STOMP)：面向消息的简单文本协议。
-+ [REST](https://github.com/GeJinTaiHua/HTTP)：HTTP 协议的 GET，POST，DELETE...
++ [♻️JAXB](https://github.com/GeJinTaiHua/JAXB)：XML 节点元素和 JavaBean 相互转换工具。
++ [♻️Gson](https://github.com/GeJinTaiHua/Gson)：Josn 序列化与反序列化工具。
++ [📆SLF4J](https://github.com/GeJinTaiHua/SLF4J)：日志工具。
++ [👫STOMP](https://github.com/GeJinTaiHua/STOMP)：面向消息的简单文本协议。
++ [☁️REST](https://github.com/GeJinTaiHua/HTTP)：HTTP 协议的 GET，POST，DELETE...
 
 ### 推荐书籍
-+ [《Head First Java》](https://github.com/GeJinTaiHua/HeadFirstJava)
++ [📖《Head First Java》](https://github.com/GeJinTaiHua/HeadFirstJava)
 + 《java核心技术卷》系列
 + 《Effective Java》
 + 《Java编程思想》
