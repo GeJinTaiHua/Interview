@@ -13,7 +13,7 @@
   - 依赖注入（DI）又称为控制反转（IOC）
   - 面向切片编程（AOP）是面向对象编程（OOP）的延续
   - [Spring Boot](https://github.com/GeJinTaiHua/Learn-SpringBoot)
-  - [Spring Boot2.0](https://github.com/GeJinTaiHua/Learn-SpringBoot2.0)
+  - [Spring Boot 2.0](https://github.com/GeJinTaiHua/Learn-SpringBoot2.0)
   - [Spring Cloud](https://github.com/GeJinTaiHua/Learn-SpringCloud)
 + Struts
   - 模型（M）
