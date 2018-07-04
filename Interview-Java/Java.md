@@ -38,8 +38,8 @@
 
 ### 集合
 + [Collection](/Interview-Java/src/test/java/基本数据类型/Collection.java)
-  - List
   - Set
+  - List
 + [Map](/Interview-Java/src/test/java/基本数据类型/Map.java)
   - HashMap
   - Hashtable
