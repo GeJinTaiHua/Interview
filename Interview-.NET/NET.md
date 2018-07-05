@@ -13,6 +13,52 @@
 + PostSharp
 + ... ...
 
+### 传输实例
++ [♻️调用外部接口翻译](https://github.com/GeJinTaiHua/ConvertCNtoHK)
++ [✉️发邮件](https://github.com/GeJinTaiHua/SendEmail)
++ [☁️OAuth2.0](https://github.com/GeJinTaiHua/OAuth2.0)
+
+### this 关键字解析
++ this 代表当前类的实例对象
+```
+namespace Demo
+{
+    public class Test
+    {
+        private string scope = "全局变量";
+        public string getResult()
+        {
+            string scope = "局部变量";
+　　　　　　　// this代表Test的实例对象
+　　　　　　　// 所以this.scope对应的是全局变量
+　　　　　　  // scope对应的是getResult方法内的局部变量
+            return this.scope + "-" + scope;
+        }
+    }
+}
+```
++ 用 this串 联构造函数
+```
+namespace Demo
+{
+    public class Test
+    {
+        public Test()
+        {
+            Console.WriteLine("无参构造函数");
+        }
+        // this()对应无参构造方法Test()
+　　　　 // 先执行Test()，后执行Test(string text)
+        public Test(string text) : this()
+        {
+            Console.WriteLine(text);
+            Console.WriteLine("有参构造函数");
+        }
+    }
+}
+```
+
+
 ### 接口、类等的区别
 + 接口和类
   + 区别：
@@ -46,10 +92,3 @@
    + 动态常量可以是任意的数据类型；
    + 应用场合例如：SqlHelper类的连接字符串定义。
  + static：static是指所修饰的成员与类型有关，而与对象无关。意义与const和readonly迥然不同
-
-### 传输协议实例
-+ [♻️调用外部接口翻译](https://github.com/GeJinTaiHua/ConvertCNtoHK)
-+ [✉️发邮件](https://github.com/GeJinTaiHua/SendEmail)
-+ [☁️OAuth2.0](https://github.com/GeJinTaiHua/OAuth2.0)
-
-
