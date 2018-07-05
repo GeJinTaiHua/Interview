@@ -54,7 +54,7 @@ select top 10 * from tablename order by newid()
 ```
 
 ### count(1) count(主键) count(\*)
-+ count(1) 和 count(主键) 这两个只**扫描主键**Index就可以得到数据，
-+ count(\*) 是**扫描表**的。
-+ count(1) 和 count(主键)这两个效率高。
-+ count（ROWID）这也是只扫描Index的，效率高。
++ count(1) 和 count(主键) 这两个只**扫描主键**Index就可以得到数据
++ count(\*) 是**扫描表**的
++ count(1) 和 count(主键) 这两个效率高
++ count(ROWID) 这也是只扫描Index的，效率高
