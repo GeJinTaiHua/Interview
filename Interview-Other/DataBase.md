@@ -48,6 +48,15 @@ select distinct * into temp from tablename
 delete from tablename
 insert into tablename select * from temp
 ```
++ 随机取出10条数据
+```
+select top 10 * from tablename order by newid()
+```
 
+### count(1) count(主键) count(*)
++ count(1)和count(主键) 这两个只扫描主键Index就可以得到数据，
++ count(*)是扫描表的。
+所以count(1)和count(主键)这两个效率高。
+还有一种写法是count（ROWID）这也是只扫描Index的，效率高。
 
 
