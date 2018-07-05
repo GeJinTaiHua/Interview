@@ -99,8 +99,8 @@ namespace Demo
 
 ### 网址的拆分获取
 http://www.bilo.com/aaa/bbb.aspx?id=1&name=bili   
-"http://"是协议名   
-"www.bilo.com"是域名  
+"http://" 是协议名   
+"www.bilo.com" 是域名  
 "aaa"是站点名  
 "bbb.aspx"是页面名（文件名）  
 "id=1&name=bili"是参数   
