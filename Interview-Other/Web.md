@@ -1,7 +1,6 @@
 ## 🌏网络
 
 ### OSI 七层和 TCP/IP 四层
-
 <table>
     <tr>
         <td >OSI 七层网络模型</td> 
@@ -25,6 +24,20 @@
         <td >传输层（Transport）</td> 
         <td >传输层</td> 
         <td >TCP, UDP</td> 
+    </tr>
+    <tr>
+        <td >网络层（Network）</td> 
+        <td >网络层</td> 
+        <td >IP, ICMP, ARP, RARP, AKP, UUCP</td> 
+    </tr>
+    <tr>
+        <td >数据链路层（Data Link）</td> 
+        <td rowspan="2">数据链路层</td> 
+        <td >FDDI, Ethernet, Arpanet, PDN, SLIP, PPP/td> 
+    </tr>
+    <tr>
+        <td >物理层（Physical）</td> 
+        <td >IEEE 802.1A, IEEE 802.2到IEEE 802.11</td> 
     </tr>
 </table>
 
