@@ -1,9 +1,6 @@
 ## 🆚C#
 
-### [🔓签名方法](https://github.com/GeJinTaiHua/RSA_SHA_MD5)
-+ RSA
-+ SHA1
-+ MD5
+### [🔓签名方法](https://github.com/GeJinTaiHua/RSA_SHA_MD5)：RSA、SHA1、MD5... 
 
 ### IOC框架
 + [🅰️Autofac](https://github.com/GeJinTaiHua/NetCore.Autofac)
