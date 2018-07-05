@@ -6,11 +6,11 @@
 ### 语言
 + [☕️Java](Interview-Java/Java.md)
 + [🆚C#](Interview-.NET/NET.md)
-+ [📄HTML5](Interview-HTML5/HTML5.md)
++ [📄HTML5](Interview-Other/HTML5.md)
 
-### [💾数据库](Interview-DataBase/DataBase.md)
+### [💾数据库](Interview-Other/DataBase.md)
 
-### [✒️设计模式](Interview-DesignPattern/DesignPattern.md)
+### [✒️设计模式](Interview-Other/DesignPattern.md)
 
 ### 常见锁
 + 互斥锁（Mutex）
