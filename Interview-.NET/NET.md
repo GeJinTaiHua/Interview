@@ -148,14 +148,14 @@ string url=Request.RawUrl;  (或 string url= Request.Url.PathAndQuery;)
     + 非抽象派生类必须重写抽象类中的抽象方法，虚方法不必
     
  ### const、readonly、static 
- + const：静态常量，也称编译时常量(compile-time constants)，属于类型级，通过类名直接访问，被所有对象共享。
+ + const：静态常量，也称编译时常量(compile-time constants)，属于类型级，**通过类名直接访问**，被所有对象共享。
    + 叫编译时常量的原因是它***编译时***会将其替换为所对应的值；
    + 静态常量在***速度***上会稍稍快一些，但是灵活性却比动态常量差一些；
    + 静态常量，隐式是静态的，即被static隐式修饰过，不能再用static重复修饰；
    + 在声明时初始化；
    + 静态常量只能被声明为简单的数据类型(内建的int和浮点型)、枚举或字符串；
    + 应用场合例如:Math.PI的定义（要声明一些从不改变且处处唯一的常量，就应该使用静态常量）。
- + readonly：动态常量，也称运行时常量(runtime constants)，属于对象级，通过对象访问。
+ + readonly：动态常量，也称运行时常量(runtime constants)，属于对象级，**通过对象访问**。
    + 而动态常量的值是在***运行时***获得的；
    + 动态常量在性能上稍差一点，但是***灵活性***好比前者好；
    + readonly可以被static修饰，这时的static readonly和const非常相似；
