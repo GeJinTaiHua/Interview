@@ -116,8 +116,18 @@ string url=HttpContext.Current.Request.Url.Host;
 ```
 + 获取参数
 ```
-// ?id=5&name=kelli
+// ?id=1&name=bili  
 string param= HttpContext.Current.Request.Url.Query; 
+```
++ 获取 站点名+页面名 
+```
+// aaa/bbb.aspx
+string url=HttpContext.Current.Request.Url.AbsolutePath;  (或 string url= HttpContext.Current.Request.Path;) 
+```
++ 获取 站点名+页面名+参数
+```
+// /aaa/bbb.aspx?id=1&name=bili  
+string url=Request.RawUrl;  (或 string url= Request.Url.PathAndQuery;) 
 ```
 
 ### 接口、类等的区别
