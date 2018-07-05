@@ -162,6 +162,6 @@ string url=Request.RawUrl;  (或 string url= Request.Url.PathAndQuery;)
    + 在声明是初始化，在构造函数里初始化（static readonly常量，如果在构造函数内指定初始值，则必须是静态无参构造函数）；
    + 动态常量可以是任意的数据类型；
    + 应用场合例如：SqlHelper类的连接字符串定义。
- + static：static是指所修饰的成员与类型有关，而与对象无关。意义与const和readonly迥然不同
+ + static：static是指所修饰的成员与类型有关，而与对象无关。意义与const和readonly迥然不同。
  
  
