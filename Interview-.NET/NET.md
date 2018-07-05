@@ -97,6 +97,29 @@ namespace Demo
 ```
 + [索引器](http://www.cnblogs.com/jh007/p/6603318.html)
 
+### 网址的拆分获取
+http://www.bilo.com/aaa/bbb.aspx?id=1&name=bili   
+"http://"是协议名   
+"www.bilo.com"是域名  
+"aaa"是站点名  
+"bbb.aspx"是页面名（文件名）  
+"id=1&name=bili"是参数   
++ 获取完整 url（协议名+域名+站点名+文件名+参数）  
+```
+// http://www.bilo.net/aaa/bbb.aspx?id=1&name=bili  
+string url=Request.Url.ToString(); 
+```
++ 获取域名
+```
+// www.bilo.com
+string url=HttpContext.Current.Request.Url.Host; 
+```
++ 获取参数
+```
+// ?id=5&name=kelli
+string param= HttpContext.Current.Request.Url.Query; 
+```
+
 ### 接口、类等的区别
 + 接口和类
   + 区别：
