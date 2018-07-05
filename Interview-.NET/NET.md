@@ -95,7 +95,7 @@ namespace Demo
     }
 }
 ```
-+ 索引器（[基于索引器封装EPList，用于优化大数据下频发的Linq查询引发的程序性能问题，通过索引从list集合中查询数据](http://www.cnblogs.com/jh007/p/6603318.html)）
++ [索引器](http://www.cnblogs.com/jh007/p/6603318.html)
 
 ### 接口、类等的区别
 + 接口和类
