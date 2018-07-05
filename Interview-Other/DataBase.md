@@ -1,5 +1,30 @@
 ## 💾数据库
 
+### SQL 一些小技巧
++ 根据已有的表创建新表
+```
+create table tab_new like tab_old 
+```
+```
+create table tab_new as select col1,col2… from tab_old definition only
+```
++ 复制表（只复制结构）
+```
+select * into tab_new from tab_old where 1<>1（仅用于SQlServer）
+```
+```
+select top 0 * into tab_new from tab_old
+```
++ 删除重复记录
+```
+delete from tablename where id not in (select max(id) from tablename group by col1,col2,...)（推荐）
+```
+```
+select distinct * into temp from tablename
+delete from tablename
+insert into tablename select * from temp
+```
+
 ### 范式
 + 第一范式（1NF）：
 确保每一列的原子性。
