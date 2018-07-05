@@ -1,13 +1,31 @@
 ## 🌏网络
 
 ### OSI 七层和 TCP/IP 四层
-OSI七层网络模型|TCP/IP四层概念模型|对应网络协议
----|---|---
-||
-||
-||
-||
-||
+<table>
+    <tr>
+        <td>OSI 七层网络模型</td> 
+        <td>TCP/IP 四层概念模型</td> 
+        <td>对应网络协议</td> 
+    </tr>
+   
+    <tr>
+        <td >应用层（Application）</td>    
+        <td rowspan="3">应用层</td>  
+        <td >HTTP、TFTP, FTP, NFS, WAIS、SMTP</td>      
+    </tr>
+    
+    <tr>
+        <td >表示层（Presentation</td>    
+        <td >Telnet, Rlogin, SNMP, Gopher</td>      
+    </tr>
+    
+    <tr>
+        <td >会话层（Session）</td>    
+        <td >SMTP, DNS</td>      
+    </tr>
+
+
+</table>
 
 ### TCP 三次握手和四次挥手
 + 三次握手:   
