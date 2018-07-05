@@ -12,7 +12,7 @@
 6. 通配符选择器
 7. 器自定义或继承
 
-### append()、html()、after() 等区别
+### html()、append()、prepend()、after()、before()
 + html中()替换当前所有内容
 + append()在被选元素结尾插入内容
 + prepend()在被选元素开头插入内容
