@@ -37,7 +37,7 @@ namespace Demo
     }
 }
 ```
-+ 用 this串 联构造函数
++ 用 this 串联构造函数
 ```
 namespace Demo
 {
@@ -57,7 +57,48 @@ namespace Demo
     }
 }
 ```
-
++ 为原始类型扩展方法：静态类、静态方法、第一个参数前加this。
+```
+namespace Demo
+{
+    public static class Extends
+    {
+　　　　 // string类型扩展ToJson方法
+        public static object ToJson(this string Json)
+        {
+            return Json == null ? null : JsonConvert.DeserializeObject(Json);
+        }
+        // object类型扩展ToJson方法
+        public static string ToJson(this object obj)
+        {
+            var timeConverter = new IsoDateTimeConverter { DateTimeFormat = "yyyy-MM-dd HH:mm:ss" };
+            return JsonConvert.SerializeObject(obj, timeConverter);
+        }
+        public static string ToJson(this object obj, string datetimeformats)
+        {
+            var timeConverter = new IsoDateTimeConverter { DateTimeFormat = datetimeformats };
+            return JsonConvert.SerializeObject(obj, timeConverter);
+        }
+        public static T ToObject<T>(this string Json)
+        {
+            return Json == null ? default(T) : JsonConvert.DeserializeObject<T>(Json);
+        }
+        public static List<T> ToList<T>(this string Json)
+        {
+            return Json == null ? null : JsonConvert.DeserializeObject<List<T>>(Json);
+        }
+        public static DataTable ToTable(this string Json)
+        {
+            return Json == null ? null : JsonConvert.DeserializeObject<DataTable>(Json);
+        }
+        public static JObject ToJObject(this string Json)
+        {
+            return Json == null ? JObject.Parse("{}") : JObject.Parse(Json.Replace("&nbsp;", ""));
+        }
+    }
+}
+```
++ 索引器（[基于索引器封装EPList，用于优化大数据下频发的Linq查询引发的程序性能问题，通过索引从list集合中查询数据](http://www.cnblogs.com/jh007/p/6603318.html)）
 
 ### 接口、类等的区别
 + 接口和类
