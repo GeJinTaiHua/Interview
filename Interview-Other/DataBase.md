@@ -85,4 +85,3 @@ add constraint FK_stuNo foreign key(stuNo)references stuinfo(stuNo)
 把表按模块划分到不同数据库表中。
 + 水平拆分：
 把一个表按照某种规则（时间、用户...）把数据划分到不同表或数据库里。
-
