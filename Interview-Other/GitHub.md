@@ -2,7 +2,7 @@
 
 ### [热门项目](https://github.com/trending)
 
-### [官方徽章网站](http://shields.io/)
+### [官方徽章](http://shields.io/)
 示例：
 ![build passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-1.5.13-brightgreen.svg)
