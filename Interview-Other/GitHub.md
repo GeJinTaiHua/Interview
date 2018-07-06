@@ -9,7 +9,7 @@
 ![JDK](https://img.shields.io/badge/JDK-1.8-blue.svg)
 
 ### [emoji表情](https://www.cnblogs.com/takeurhand/p/6940135.html)
-示例：
+示例：  
 💭💬☁️🎲  
 🌐🌍🌗⚽  
 ✏️✒️📐📕  
