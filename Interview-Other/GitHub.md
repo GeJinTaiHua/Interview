@@ -1,5 +1,7 @@
 ## :octocat:关于GitHub
 
+### [热门项目](https://github.com/trending)
+
 ### [官方徽章网站](http://shields.io/)
 示例：
 ![build passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
