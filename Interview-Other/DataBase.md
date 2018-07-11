@@ -8,41 +8,6 @@
 + Oracle
 + Microsoft Access
 
-### SQL 一些小技巧
-+ 根据已有的表创建新表
-```
-create table tab_new like tab_old 
-```
-```
-create table tab_new as select col1,col2… from tab_old definition only
-```
-+ 复制表（只复制结构）
-```
-select * into tab_new from tab_old where 1<>1（仅用于SQlServer）
-```
-```
-select top 0 * into tab_new from tab_old
-```
-+ 删除重复记录
-```
-delete from tablename where id not in (select max(id) from tablename group by col1,col2,...)（推荐）
-```
-```
-select distinct * into temp from tablename
-delete from tablename
-insert into tablename select * from temp
-```
-+ 随机取出10条数据
-```
-select top 10 * from tablename order by newid()
-```
-
-### count(1) count(主键) count(\*)
-+ count(1) 和 count(主键) 这两个只扫描主键Index就可以得到数据
-+ count(\*) 是扫描表的
-+ count(1) 和 count(主键) 这两个效率高
-+ count(ROWID) 这也是只扫描Index的，效率高
-
 ### 三大范式
 + 第一范式（1NF）：
 每一列都是不可分割的原子数据项；
@@ -93,3 +58,40 @@ add constraint FK_stuNo foreign key(stuNo)references stuinfo(stuNo)
 把表按模块划分到不同数据库表中。
 + 水平拆分：
 把一个表按照某种规则（时间、用户...）把数据划分到不同表或数据库里。
+
+### SQL 一些小技巧
++ 根据已有的表创建新表
+```
+create table tab_new like tab_old 
+```
+```
+create table tab_new as select col1,col2… from tab_old definition only
+```
++ 复制表（只复制结构）
+```
+select * into tab_new from tab_old where 1<>1（仅用于SQlServer）
+```
+```
+select top 0 * into tab_new from tab_old
+```
++ 删除重复记录
+```
+delete from tablename where id not in (select max(id) from tablename group by col1,col2,...)（推荐）
+```
+```
+select distinct * into temp from tablename
+delete from tablename
+insert into tablename select * from temp
+```
++ 随机取出10条数据
+```
+select top 10 * from tablename order by newid()
+```
+
+### count(1) count(主键) count(\*)
++ count(1) 和 count(主键) 这两个只扫描主键Index就可以得到数据
++ count(\*) 是扫描表的
++ count(1) 和 count(主键) 这两个效率高
++ count(ROWID) 这也是只扫描Index的，效率高
+
+
