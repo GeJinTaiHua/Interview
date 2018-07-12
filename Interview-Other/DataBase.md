@@ -91,7 +91,7 @@ select top 10 * from tablename order by newid()
 ### count(1) count(主键) count(\*)
 + count(1) 和 count(主键) 这两个只扫描主键Index就可以得到数据
 + count(\*) 是扫描表的
-+ count(1) 和 count(主键) 这两个效率高
++ count(主键)>count(1)= count(\*)
 + count(ROWID) 这也是只扫描Index的，效率高
 
 
