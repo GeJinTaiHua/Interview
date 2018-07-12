@@ -42,6 +42,19 @@
 + 《Java编程思想》
 + ... ...
 
+### 8个基本类型（对应包装类）
+||
+-|-|-
++ boolean/1
++ byte/8
++ char/16
++ short/16
++ int/32
++ float/32
++ long/64
++ double/64
+
+
 ### 集合
 + [Collection](/Interview-Java/src/test/java/基本数据类型/Collection.java)
   - Set
