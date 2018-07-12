@@ -42,17 +42,17 @@
 + 《Java编程思想》
 + ... ...
 
-### 8个基本类型（对应包装类）
-||
--|-|-
-+ boolean/1
-+ byte/8
-+ char/16
-+ short/16
-+ int/32
-+ float/32
-+ long/64
-+ double/64
+### 8个基本类型
+基本类型|包装类
+---|---
+boolean/1|Boolean
+byte/8|Byte
+char/16|Character
+short/16|Short
+int/32|Integer
+float/32|Float
+long/64|Long
+double/64|Double
 
 
 ### 集合
