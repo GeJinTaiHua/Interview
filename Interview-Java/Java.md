@@ -43,17 +43,16 @@
 + ... ...
 
 ### 8个基本类型
-基本类型|包装类
----|---
-boolean/1|Boolean
-byte/8|Byte
-char/16|Character
-short/16|Short
-int/32|Integer
-float/32|Float
-long/64|Long
-double/64|Double
-
+基本类型|包装类|位数
+---|---|---
+boolean|Boolean|1
+byte|Byte|8
+char|Character|16
+short|Short|16
+int|Integer|32
+float|Float|32
+long|Long|64
+double|Double|64
 
 ### 集合
 + [Collection](/Interview-Java/src/test/java/基本数据类型/Collection.java)
