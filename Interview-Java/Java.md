@@ -22,12 +22,6 @@
 + Hibernate
   - ORM（对象关系映射）
   
-### 主流开源框架
-+ MyBatis：一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射。
-+ RabbitMQ：一个在AMQP基础上完成的，可复用的企业消息系统。
-+ Dubbo：阿里巴巴公司开源的一个高性能优秀的服务框架，使得应用可通过高性能的 RPC 实现服务的输出和输入功能，可以和Spring框架无缝集成。
-+ Zookeeper：一个分布式的，开放源码的分布式应用程序协调服务。
-  
 ### 常用工具
 + [♻️JAXB](https://github.com/GeJinTaiHua/JAXB)：XML 节点元素和 JavaBean 相互转换工具。
 + [♻️Gson](https://github.com/GeJinTaiHua/Gson)：Josn 序列化与反序列化工具。
