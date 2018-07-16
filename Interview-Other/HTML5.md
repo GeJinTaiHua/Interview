@@ -3,6 +3,38 @@
 ### 源码
 + [超链接、转义字符](/Interview-.NET/NETSubject/Views/ViewValue/Index.cshtml)
 
+### AJAX 
++ url：要求为String类型的参数，（默认为当前页地址）发送请求的地址。
++ type：要求为String类型的参数，请求方式（post或get）默认为get。注意其他http请求方法，例如put和delete也可以使用，但仅部分浏览器支持。
++ cache：要求为Boolean类型的参数，默认为true（当dataType为script时，默认为false），设置为false将不会从浏览器缓存中加载请求信息。
++ data：要求为 Object或String类型的参数，发送到服务器的数据。
++ dataType：要求为String类型的参数，预期服务器返回的数据类型。
+  + xml：返回XML文档，可用JQuery处理。
+  + html：返回纯文本HTML信息；包含的script标签会在插入DOM时执行。
+  + script：返回纯文本JavaScript代码。不会自动缓存结果。除非设置了cache参数。注意在远程请求时（不在同一个域下），所有post请求都将转为get请求。
+  + json：返回JSON数据。
+  + jsonp：JSONP格式。使用SONP形式调用函数时，例如myurl?callback=?，JQuery将自动替换后一个“?”为正确的函数名，以执行回调函数。
+  + text：返回纯文本字符串。
++ beforeSend：发送请求前
++ complete：请求完成后
++ success：请求成功后
++ error：请求失败时
++ ... ...
+```
+    $.ajax({
+        type: "POST",
+        url: "https://www.json.cn/",
+        data: { 
+                date1: 2, 
+                date2: "123"
+              },
+        dataType: "json",
+        success: function (data) {
+          
+        }
+    });
+```
+
 ### CSS 优先级
 1. 在属性后面使用 !important 会覆盖页面内任何位置定义的元素样式
 2. 作为 style 属性写在元素内的样式
@@ -53,48 +85,6 @@
 + :text : 匹配所有的单行文本框
 + :input : 匹配所有 input, textarea, select 和 button 元素
 + ... ...
-
-### AJAX 
-+ url：要求为String类型的参数，（默认为当前页地址）发送请求的地址。
-+ type：要求为String类型的参数，请求方式（post或get）默认为get。注意其他http请求方法，例如put和delete也可以使用，但仅部分浏览器支持。
-+ cache：要求为Boolean类型的参数，默认为true（当dataType为script时，默认为false），设置为false将不会从浏览器缓存中加载请求信息。
-+ data：要求为 Object或String类型的参数，发送到服务器的数据。
-+ dataType：要求为String类型的参数，预期服务器返回的数据类型。
-  + xml：返回XML文档，可用JQuery处理。
-  + html：返回纯文本HTML信息；包含的script标签会在插入DOM时执行。
-  + script：返回纯文本JavaScript代码。不会自动缓存结果。除非设置了cache参数。注意在远程请求时（不在同一个域下），所有post请求都将转为get请求。
-  + json：返回JSON数据。
-  + jsonp：JSONP格式。使用SONP形式调用函数时，例如myurl?callback=?，JQuery将自动替换后一个“?”为正确的函数名，以执行回调函数。
-  + text：返回纯文本字符串。
-+ beforeSend：发送请求前
-+ complete：请求完成后
-+ success：请求成功后
-+ error：请求失败时
-+ ......
-```
-    $.ajax({
-        type: "POST",
-        url: "https://www.json.cn/",
-        data: { 
-                date1: 2, 
-                date2: "123"
-              },
-        dataType: "json",
-        success: function (data) {
-          
-        }
-    });
-```
-
-
-
-
-
-
-
-
-
-
 
 
 
