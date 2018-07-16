@@ -20,8 +20,8 @@
 + before()在被选元素之前插入内容
 
 ### prop()、attr() 
-+ 对于HTML元素本身就带有的固有属性，在处理时，使用prop方法。$("#chk1").prop("checked") == false
-+ 对于HTML元素我们自己自定义的DOM属性，在处理时，使用attr方法。  $(".intxt1").attr("url");
++ 对于HTML元素本身就带有的固有属性，在处理时，使用prop方法。   $("#chk1").prop("checked") == false
++ 对于HTML元素我们自己自定义的DOM属性，在处理时，使用attr方法。   $(".intxt1").attr("url");
 
 ### jQuery的各种选择器
 + #id：根据给定的ID匹配一个元素
