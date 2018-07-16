@@ -86,6 +86,11 @@
 + :input : 匹配所有 input, textarea, select 和 button 元素
 + ... ...
 
-
+### 选择器性能优化
++ 第一，多用ID选择器 , 总是从#id选择器来继承。（ID选择器是速度最快的，这主要是因为它使用JavaScript的内置函数getElementById()）
++ 第二，少直接使用Class选择器。（速度最慢的是Class选择器，其需要通过解析 HTML文档树）
++ 第三，多用父子关系，少用嵌套关系。
++ 第四，缓存jQuery对象。
++ 通过链式调用，采用find(),end(),children(),has,filter()等方法，来过滤结果集，减少$()查找方法调用，提升性能。
 
 
