@@ -95,3 +95,4 @@ select top 10 * from tablename order by newid()
 + count(ROWID) 这也是只扫描Index的，效率高
 
 
+
