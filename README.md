@@ -1,13 +1,8 @@
 ## [📚技术心得](README.md)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-1.5.13-brightgreen.svg)
-![jQuery](https://img.shields.io/badge/jQuery-1.10.2-orange.svg)
-![build passing](https://img.shields.io/badge/build-passing-brightgreen.svg) 
-
 
 | Ⅰ | Ⅱ | Ⅲ | 
 |---|---| ---| 
 | [☕Java️](Interview-Java/Java.md)|[🆚C#](Interview-.NET/NET.md)|[📄HTML5](Interview-Other/HTML5.md)| 
-
 
 | Ⅰ | Ⅱ | Ⅲ | Ⅳ | Ⅴ | Ⅵ | Ⅶ | Ⅷ | Ⅸ | Ⅹ |
 | :--------: | :---------: | :---------: | :---------: | :---------: | :---------:| :---------: | :-------: | :-------:| :------:|
