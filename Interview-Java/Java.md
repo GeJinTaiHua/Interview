@@ -1,4 +1,6 @@
 ## ☕️Java
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-1.5.13-brightgreen.svg)
+![build passing](https://img.shields.io/badge/build-passing-brightgreen.svg) 
  
 ### 链接
 [10 个有关 String 的面试问题](https://mp.weixin.qq.com/s/uaytl6QKKTqLitvXxlcU2g)  
