@@ -3,19 +3,10 @@
 ![jQuery](https://img.shields.io/badge/jQuery-1.10.2-orange.svg)
 ![build passing](https://img.shields.io/badge/build-passing-brightgreen.svg) 
 
-<table>
-<tr>
-    <td rowspan="2">语言</td>
-    <td>Ⅰ</td>
-    <td>Ⅱ</td>
-    <td>Ⅲ</td>
-</tr>
-<tr>
-    <td>[☕Java️](Interview-Java/Java.md) </td>
-    <td>[🆚C#](Interview-.NET/NET.md)</td>
-    <td>[📄HTML5](Interview-Other/HTML5.md)</td>
-</tr>
-</table>
+| Ⅰ | Ⅱ | Ⅲ | 
+|---|---| ---| 
+| [☕Java️](Interview-Java/Java.md)|[🆚C#](Interview-.NET/NET.md)|[📄HTML5](Interview-Other/HTML5.md)| 
+
   
 ### 语言
 + [☕️Java](Interview-Java/Java.md)
