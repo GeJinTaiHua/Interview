@@ -1,4 +1,4 @@
-## :octocat:关于GitHub
+## :octocat:GitHub
 
 ### [热门项目](https://github.com/trending)
 
