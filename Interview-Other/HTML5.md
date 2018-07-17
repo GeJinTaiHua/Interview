@@ -1,8 +1,5 @@
 ## 📄HTML5
 
-### 源码
-+ [超链接、转义字符](/Interview-.NET/NETSubject/Views/ViewValue/Index.cshtml)
-
 ### AJAX 
 + url：要求为String类型的参数，（默认为当前页地址）发送请求的地址。
 + type：要求为String类型的参数，请求方式（post或get）默认为get。注意其他http请求方法，例如put和delete也可以使用，但仅部分浏览器支持。
