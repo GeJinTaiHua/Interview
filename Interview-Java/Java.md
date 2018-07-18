@@ -50,7 +50,11 @@ double|Double|64|浮点类型|
   - List
 + [Map](/Interview-Java/src/test/java/基本数据类型/Map.java)
   - HashMap
+    + 非线程安全
+    + 链表散列
   - Hashtable
+    + 线程安全
+    + 遗留类，多线程建议 ConcurrentHashMap
   - SortedMap  
 ![集合](http://img.blog.csdn.net/20160706172512559?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
