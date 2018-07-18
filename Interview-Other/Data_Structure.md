@@ -6,10 +6,10 @@
 + 循环队列
  
 ### 链表
-+ [单向链表](/Interview-.NET/Entity/Node.cs)
-  + [反转链表](/Interview-.NET/Subject/数据结构/LinkReverse.cs)
++ [单向链表](/Interview-.NET/Entity/Node.cs#L6)
+  + [反转单向链表](/Interview-.NET/Subject/数据结构/LinkReverse.cs#L15)
 + [双向链表](/Interview-.NET/Entity/Node.cs#L19)
-  + [反转链表](/Interview-.NET/Subject/数据结构/LinkReverse.cs#L91)
+  + [反转双向链表](/Interview-.NET/Subject/数据结构/LinkReverse.cs#L91)
 
 ### 树
 + 二叉排序树 
