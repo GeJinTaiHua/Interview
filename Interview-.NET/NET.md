@@ -2,7 +2,7 @@
 ![jQuery](https://img.shields.io/badge/jQuery-1.10.2-orange.svg)
 ![build passing](https://img.shields.io/badge/build-passing-brightgreen.svg) 
 
-### [🔓签名方法](https://github.com/GeJinTaiHua/RSA_SHA_MD5)：RSA、SHA1、MD5 ... 
+### [🔓签名方法](https://github.com/GeJinTaiHua/RSA_SHA_MD5)
 
 ### IOC框架
 + [🅰️Autofac](https://github.com/GeJinTaiHua/NetCore.Autofac)
@@ -16,6 +16,13 @@
 + [♻️调用外部接口翻译](https://github.com/GeJinTaiHua/ConvertCNtoHK)
 + [✉️发邮件](https://github.com/GeJinTaiHua/SendEmail)
 + [☁️OAuth2.0](https://github.com/GeJinTaiHua/OAuth2.0)
+
+### 深拷贝、浅拷贝
++ 深拷贝
+  + 整个独立的对象拷贝。
++ 浅拷贝
+  + 对主对象进行拷贝，但不会复制主对象里面的对象。
+  + 两个对象并非独立的。
 
 ### 接口、类、抽象方法、虚方法
 + 接口和类
