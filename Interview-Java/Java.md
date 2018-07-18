@@ -42,7 +42,7 @@ float|Float|32|浮点类型|
 long|Long|64|整数值型|
 double|Double|64|浮点类型|
 
-+ String：引用类型，final,字符串常量
++ String：引用类型，final，字符串常量
 
 ### 集合
 + [Collection](/Interview-Java/src/test/java/基本数据类型/Collection.java)
