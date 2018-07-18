@@ -8,7 +8,7 @@
 ### 链表
 + [单向链表](/Interview-.NET/Entity/Node.cs)
   + [反转链表](/Interview-.NET/Subject/数据结构/LinkReverse.cs)
-+ 双向链表
++ [双向链表](/Interview-.NET/Entity/Node.cs#L19)
   + 反转链表
 
 ### 树
