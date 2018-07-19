@@ -32,15 +32,16 @@
   + 类间解耦，低耦合
 
 ### 24种设计模式
-+ [单例模式](/Interview-.NET/Subject/设计模式/Singleton.cs)
-  + 单例类只能有一个实例。
-  + 单例类必须自己创建自己的唯一实例。
-  + 单例类必须给所有其他对象提供这一实例。
-+ 工厂模式：定义一个用于创建对象的接口，让子类决定实例化哪一个类。
++ 创建型模式
+  + 工厂模式：定义一个用于创建对象的接口，让子类决定实例化哪一个类。  
 ![工厂模式](https://raw.githubusercontent.com/aalansehaiyang/technology-talk/master/basic-knowledge/img/10.jpg)
-+ 抽象工厂模式：提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。
-+ 建造者模式
-+ 原型模式
+  + 抽象工厂模式：提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。
+  + [单例模式](/Interview-.NET/Subject/设计模式/Singleton.cs)
+    + 单例类只能有一个实例。
+    + 单例类必须自己创建自己的唯一实例。
+    + 单例类必须给所有其他对象提供这一实例。
+  + 建造者模式
+  + 原型模式
 + 装饰模式
 + 适配器模式：一个类的接口不能被客户端接受，需要转换为另一种接口，从而使两个不匹配的接口能在一起工作。  
 ![适配器模式](https://raw.githubusercontent.com/aalansehaiyang/technology-talk/master/basic-knowledge/img/5.png)
