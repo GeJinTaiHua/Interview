@@ -74,6 +74,9 @@ class Person{
     }
 }
 ```
++ 包：静态导包
+  + import static代替import。
+  + 导入这个类里的静态方法。
 
 ### 集合
 + [Collection](/Interview-Java/src/test/java/基本数据类型/Collection.java)
