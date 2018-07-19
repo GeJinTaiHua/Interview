@@ -33,8 +33,8 @@
 
 ### 24种设计模式
 + 创建型模式
-  + 工厂模式：定义一个用于创建对象的接口，让子类决定实例化哪一个类。  
-![工厂模式](https://raw.githubusercontent.com/aalansehaiyang/technology-talk/master/basic-knowledge/img/10.jpg)
+  + 工厂模式：定义一个用于创建对象的接口，让子类决定实例化哪一个类。   
+  ![工厂模式](https://raw.githubusercontent.com/aalansehaiyang/technology-talk/master/basic-knowledge/img/10.jpg)
   + 抽象工厂模式：提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。
   + [单例模式](/Interview-.NET/Subject/设计模式/Singleton.cs)
     + 单例类只能有一个实例。
@@ -42,24 +42,34 @@
     + 单例类必须给所有其他对象提供这一实例。
   + 建造者模式
   + 原型模式
-+ 装饰模式
-+ 适配器模式：一个类的接口不能被客户端接受，需要转换为另一种接口，从而使两个不匹配的接口能在一起工作。  
-![适配器模式](https://raw.githubusercontent.com/aalansehaiyang/technology-talk/master/basic-knowledge/img/5.png)
-+ 桥接模式
-+ 组合模式
++ 结构型模式
+  + 适配器模式：一个类的接口不能被客户端接受，需要转换为另一种接口，从而使两个不匹配的接口能在一起工作。   
+  ![适配器模式](https://raw.githubusercontent.com/aalansehaiyang/technology-talk/master/basic-knowledge/img/5.png)
+  + 装饰器模式
+  + 代理模式
+  + 外观模式
+  + 桥接模式
+  + 组合模式
+  + 享元模式
++ 行为型模式 
+  
 + 门面模式
-+ 享元模式
-+ 命令模式
-+ 解析器模式
-+ 迭代器模式
-+ 中介模式
-+ 备忘录模式
-+ 观察者模式（发布—订阅模式）（事件监听模）
-+ 状态模式
-+ 责任链模式
-+ 策略模式
-+ 模版模式
-+ 代理模式
-+ 访问者模式
+  + 策略模式
+  + 模板方法模式
+  + 观察者模式（发布—订阅模式）（事件监听模）
+  + 迭代子模式
+  + 责任链模式
+  + 命令模式
+  + 备忘录模式
+  + 状态模式
+  + 访问者模式
+  + 中介者模式
+  + 解释器模式
+
+
+
+
+
+
 
 
