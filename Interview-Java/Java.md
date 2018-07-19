@@ -44,6 +44,37 @@ double|Double|64|浮点类型|
 
 + String：引用类型，final，字符串常量
 
+### static
++ 方法：静态方法
+  + 不依赖于任何对象就可以进行访问。
+  + 在静态方法中不能访问类的非静态成员方法/变量。
+  + 在非静态成员方法中可以访问静态成员方法/变量。
++ 变量：静态变量
+  + 被所有的对象所共享，在内存中只有一个副本。
+  + 当且仅当在类初次加载时会被初始化。
++ 代码块：静态代码块
+  + 优化程序性能。
+  + 可以置于类中的任何地方，可以有多个static块。
+  + 类初次被加载的时候，会按照static块的顺序来执行每个static块，并且只会执行一次。
+```
+class Person{
+    private Date birthDate;
+    private static Date startDate,endDate;
+    static{
+        startDate = Date.valueOf("1946");
+        endDate = Date.valueOf("1964");
+    }
+     
+    public Person(Date birthDate) {
+        this.birthDate = birthDate;
+    }
+     
+    boolean isBornBoomer() {
+        return birthDate.compareTo(startDate)>=0 && birthDate.compareTo(endDate) < 0;
+    }
+}
+```
+
 ### 集合
 + [Collection](/Interview-Java/src/test/java/基本数据类型/Collection.java)
   - Set
