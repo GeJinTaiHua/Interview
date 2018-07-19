@@ -147,7 +147,7 @@ IO|NIO
   4) 子类构造函数
 
 ### JVM 内存模型
-![JVM 内存模型](http://img.blog.csdn.net/20150720152805765?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
+![JVM 内存模型](https://images2017.cnblogs.com/blog/720994/201711/720994-20171111163050263-549527776.png)
 + 方法区：用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据（JDK1.8 元数据区取代了永久代）。
   - 运行时常量池：存放编译期生成的各种字面量和符号引用。
 + 虚拟机栈：为虚拟机执行 Java 方法（也就是字节码）服务。
