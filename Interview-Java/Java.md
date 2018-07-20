@@ -45,7 +45,7 @@
 + 《Java编程思想》
 + ... ...
 
-### 基础知识
+### 关键字
 #### 8大基本类型
 基本类型|包装类|位数|  |
 ---|---|---|---|
@@ -83,7 +83,6 @@ public synchronized String toString() {
 }
 ```
 
-
 #### static
 + 静态方法
   + 不依赖于任何对象就可以进行访问。
@@ -117,7 +116,25 @@ class Person{
 + 静态导包
   + import static 代替 import。
   + 导入这个类里的静态方法。
+  
+#### transient 
++ 序列化
+  + 通过在运行时判断类的 serialVersionUID 来验证版本一致性。
+  + serialVersionUID 生成方式：
+    1) 默认的1L
+    2) 根据类名、接口名、成员方法以及属性等来生成一个64位的Hash字段
+  1）Serializable接口：所有的序列化会自动进行。
+  2）Externalizable接口：没有任何东西可以自动序列化，需要在writeExternal方法中进行手工指定所要序列化的变量，这与是否被transient修饰无关。
+```
+public class User extends BaseRequest implements Serializable {
+	      private static final long serialVersionUID = 1L;
+       ... ...
+```
++ transient：不需要序列化的属性。
+  + 只能修饰变量，不能修饰方法和类。
+  + 一个静态变量不管是否被transient修饰，均不能被序列化。反序列化后类中static型变量的值为当前JVM中对应static变量的值。
 
+### 基础知识
 #### java.util包
 + Comparator：比较接口
 + Iterator：迭代接口
@@ -149,7 +166,7 @@ class Person{
   + 你在迭代的时候会去底层集合做一个拷贝，所以你在修改上层集合的时候是不会受影响的，不会抛出 ConcurrentModification 异常。
   + 在 java.util.concurrent 包下的全是安全失败的。
 
-### IO 与 NIO
+#### IO 与 NIO
 + 管道（Channel）：实际上就像传统IO中的流，到任何目的地(或来自任何地方)的所有数据都必须通过一个 Channel 对象。一个 Buffer 实质上是一个容器对象。
 + 选择器（Selector）：用于监听多个管道的事件，使用传统的阻塞IO时我们可以方便的知道什么时候可以进行读写，而使用非阻塞通道，我们需要一些方法来知道什么时候通道准备好了，选择器正是为这个需要而诞生的。
 
