@@ -8,7 +8,7 @@
   * [推荐书籍](#%E6%8E%A8%E8%8D%90%E4%B9%A6%E7%B1%8D)
   * [关键字](#%E5%85%B3%E9%94%AE%E5%AD%97)
     * [8大基本类型](#8%E5%A4%A7%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B)
-    * [String](#string)
+    * [String、StringBuilder、StringBuffer](#stringstringbuilderstringbuffer)
     * [static](#static)
     * [transient](#transient)
   * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
