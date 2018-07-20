@@ -64,6 +64,7 @@ double|Double|64|浮点类型|
   + final 修饰，不可被继承
 + StringBuilder 
   + 字符串变量（非线程安全）
+  + 默认容量16
 ```
 public String toString() {
   // Create a copy, don't share the array
@@ -72,7 +73,6 @@ public String toString() {
 ```
 + StringBuffer 
   + 字符串变量（线程安全）
-  + final
   + toString()方法会进行对象缓存，以减少元素的复制开销
 ```
 public synchronized String toString() {
