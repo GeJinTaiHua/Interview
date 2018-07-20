@@ -138,6 +138,35 @@ public class User extends BaseRequest implements Serializable {
   + 只能修饰变量，不能修饰方法和类。
   + 一个静态变量不管是否被transient修饰，均不能被序列化。反序列化后类中static型变量的值为当前JVM中对应static变量的值。
 
+#### Thread、Runnable
++ Thread（类）
+  + start()：启动一个线程，这时此线程处于就绪（可运行）状态。
+  + run()：只是类的一个普通方法而已。
++ Runnable（接口）
+  + 避免继承的局限，一个类可以继承多个接口。
+  + 适合于资源的共享，节约资源。
+```
+public class Thread1 extends Thread{
+    @Override
+    public void run() {
+        System.out.println("extend thread");
+    }
+}
+public class Thread2 implements Runnable{
+    public void run() {
+        System.out.println("runbale interfance");   
+    }    
+}
+public static void main(String[] args) {
+        new Thread1().start();
+	new Thread1().start();
+	
+	Thread2 thread2 = new Thread2()；
+        new Thread(thread2).start();
+	new Thread(thread2).start();
+}
+```
+
 ### 基础知识
 #### java.util包
 + Comparator：比较接口
