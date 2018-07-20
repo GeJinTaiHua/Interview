@@ -2,7 +2,7 @@
 
 
   * [热门项目](#%E7%83%AD%E9%97%A8%E9%A1%B9%E7%9B%AE)
-  * [Github README\.md的目录](#github-readmemd%E7%9A%84%E7%9B%AE%E5%BD%95)
+  * [README.md 的目录](#README.md 的目录)
   * [徽章](#%E5%BE%BD%E7%AB%A0)
   * [表情](#%E8%A1%A8%E6%83%85)
   * [Markdown](#markdown)
@@ -11,7 +11,7 @@
 ### 热门项目
 https://github.com/trending
 
-### Github README.md的目录
+### README.md 的目录
 [原文链接](https://blog.csdn.net/esa_dsq/article/details/79617041#2-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88gh-md-toc)
 1) 下载[工具](https://github.com/ekalinin/github-markdown-toc.go/releases)，直接在文件名后面加上.exe，放到README.md同一级目录；
 2) 接着按住shift键同时右击；  
