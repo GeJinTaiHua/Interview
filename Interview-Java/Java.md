@@ -66,9 +66,25 @@ double|Double|64|浮点类型|
 + String
   + 字符串常量
   + final 修饰，不可被继承
+  + hashCode() 源码：
+```
+    public int hashCode() {
+        int h = hash;
+        if (h == 0 && value.length > 0) {
+            char val[] = value;
+ 
+            for (int i = 0; i < value.length; i++) {
+                h = 31 * h + val[i];
+            }
+            hash = h;
+        }
+        return h;
+    }
+```
 + StringBuilder 
   + 字符串变量（非线程安全）
   + 默认容量16
+  + toString() 源码：
 ```
 public String toString() {
   // Create a copy, don't share the array
@@ -78,6 +94,7 @@ public String toString() {
 + StringBuffer 
   + 字符串变量（线程安全）
   + toString()方法会进行对象缓存，以减少元素的复制开销
+  + toString() 源码：
 ```
 public synchronized String toString() {
   if (toStringCache == null) {
