@@ -2,8 +2,6 @@
 ![jQuery](https://img.shields.io/badge/jQuery-1.10.2-orange.svg)
 ![build passing](https://img.shields.io/badge/build-passing-brightgreen.svg) 
 
-### [🔓签名方法](https://github.com/GeJinTaiHua/RSA_SHA_MD5)
-
 ### IOC框架
 + [🅰️Autofac](https://github.com/GeJinTaiHua/NetCore.Autofac)
 + Unity
@@ -12,19 +10,59 @@
 + PostSharp
 + ... ...
 
-### 传输实例
+### 网络
+#### 传输实例
 + [♻️调用外部接口翻译](https://github.com/GeJinTaiHua/ConvertCNtoHK)
 + [✉️发邮件](https://github.com/GeJinTaiHua/SendEmail)
 + [☁️OAuth2.0](https://github.com/GeJinTaiHua/OAuth2.0)
 
-### 深拷贝、浅拷贝
+### 加密解密
++ [🔓签名方法](https://github.com/GeJinTaiHua/RSA_SHA_MD5)
+
+#### 网址的拆分获取
+http://www.bilo.com/aaa/bbb.aspx?id=1&name=bili   
+"http://" 是协议名   
+"www.bilo.com" 是域名  
+"aaa"是站点名  
+"bbb.aspx"是页面名（文件名）  
+"id=1&name=bili"是参数   
++ 获取完整 url（协议名+域名+站点名+文件名+参数）  
+```
+// http://www.bilo.net/aaa/bbb.aspx?id=1&name=bili  
+string url=Request.Url.ToString(); 
+```
++ 获取域名
+```
+// www.bilo.com
+string url=HttpContext.Current.Request.Url.Host; 
+```
++ 获取参数
+```
+// ?id=1&name=bili  
+string param= HttpContext.Current.Request.Url.Query; 
+```
++ 获取 站点名+页面名 
+```
+// aaa/bbb.aspx
+string url=HttpContext.Current.Request.Url.AbsolutePath;  (或 string url= HttpContext.Current.Request.Path;) 
+```
++ 获取 站点名+页面名+参数
+```
+// /aaa/bbb.aspx?id=1&name=bili  
+string url=Request.RawUrl;  (或 string url= Request.Url.PathAndQuery;) 
+```
+
+ 
+
+### 基础知识
+#### 深拷贝、浅拷贝
 + 深拷贝
   + 整个独立的对象拷贝。
 + 浅拷贝
   + 对主对象进行拷贝，但不会复制主对象里面的对象。
   + 两个对象并非独立的。
 
-### 接口、类、抽象方法、虚方法
+#### 接口、类、抽象方法、虚方法
 + 接口和类
   + 区别：
     + 接口不能直接实例化，类可以
@@ -41,7 +79,7 @@
     + 抽象方法只能在抽象类中声明，虚方法不是
     + 非抽象派生类必须重写抽象类中的抽象方法，虚方法不必
     
-### const、readonly、static 
+#### const、readonly、static 
 + const：静态常量，也称**编译时常量**(compile-time constants)，属于类型级，**通过类名直接访问**，被所有对象共享。
    + 叫编译时常量的原因是它编译时会将其替换为所对应的值；
    + 静态常量在**速度**上会稍稍快一些，但是灵活性却比动态常量差一些；
@@ -58,7 +96,7 @@
    + 应用场合例如：SqlHelper类的连接字符串定义。
 + static：static是指所修饰的成员与类型有关，而与对象无关。意义与const和readonly迥然不同。
 
-### this 关键字解析
+#### this 关键字解析
 + this 代表当前类的实例对象
 ```
 namespace Demo
@@ -140,38 +178,4 @@ namespace Demo
 ```
 + [索引器](http://www.cnblogs.com/jh007/p/6603318.html)
 
-### 网址的拆分获取
-http://www.bilo.com/aaa/bbb.aspx?id=1&name=bili   
-"http://" 是协议名   
-"www.bilo.com" 是域名  
-"aaa"是站点名  
-"bbb.aspx"是页面名（文件名）  
-"id=1&name=bili"是参数   
-+ 获取完整 url（协议名+域名+站点名+文件名+参数）  
-```
-// http://www.bilo.net/aaa/bbb.aspx?id=1&name=bili  
-string url=Request.Url.ToString(); 
-```
-+ 获取域名
-```
-// www.bilo.com
-string url=HttpContext.Current.Request.Url.Host; 
-```
-+ 获取参数
-```
-// ?id=1&name=bili  
-string param= HttpContext.Current.Request.Url.Query; 
-```
-+ 获取 站点名+页面名 
-```
-// aaa/bbb.aspx
-string url=HttpContext.Current.Request.Url.AbsolutePath;  (或 string url= HttpContext.Current.Request.Path;) 
-```
-+ 获取 站点名+页面名+参数
-```
-// /aaa/bbb.aspx?id=1&name=bili  
-string url=Request.RawUrl;  (或 string url= Request.Url.PathAndQuery;) 
-```
-
- 
  
