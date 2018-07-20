@@ -2,6 +2,19 @@
 ![jQuery](https://img.shields.io/badge/jQuery-1.10.2-orange.svg)
 ![build passing](https://img.shields.io/badge/build-passing-brightgreen.svg) 
 
+
+  * [IOC框架](#ioc%E6%A1%86%E6%9E%B6)
+  * [网络](#%E7%BD%91%E7%BB%9C)
+    * [传输实例](#%E4%BC%A0%E8%BE%93%E5%AE%9E%E4%BE%8B)
+    * [加密解密](#%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86)
+    * [网址的拆分获取](#%E7%BD%91%E5%9D%80%E7%9A%84%E6%8B%86%E5%88%86%E8%8E%B7%E5%8F%96)
+  * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
+    * [深拷贝、浅拷贝](#%E6%B7%B1%E6%8B%B7%E8%B4%9D%E6%B5%85%E6%8B%B7%E8%B4%9D)
+    * [接口、类、抽象方法、虚方法](#%E6%8E%A5%E5%8F%A3%E7%B1%BB%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95%E8%99%9A%E6%96%B9%E6%B3%95)
+    * [const、readonly、static](#constreadonlystatic)
+    * [this 关键字解析](#this-%E5%85%B3%E9%94%AE%E5%AD%97%E8%A7%A3%E6%9E%90)
+
+
 ### IOC框架
 + [🅰️Autofac](https://github.com/GeJinTaiHua/NetCore.Autofac)
 + Unity
@@ -51,8 +64,6 @@ string url=HttpContext.Current.Request.Url.AbsolutePath;  (或 string url= HttpC
 // /aaa/bbb.aspx?id=1&name=bili  
 string url=Request.RawUrl;  (或 string url= Request.Url.PathAndQuery;) 
 ```
-
- 
 
 ### 基础知识
 #### 深拷贝、浅拷贝
