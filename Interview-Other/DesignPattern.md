@@ -48,15 +48,18 @@
     + 单例类必须给所有其他对象提供这一实例。
   + 建造者模式
   + 原型模式
+  
 + 结构型模式
   + 适配器模式：一个类的接口不能被客户端接受，需要转换为另一种接口，从而使两个不匹配的接口能在一起工作。   
   ![适配器模式](https://raw.githubusercontent.com/aalansehaiyang/technology-talk/master/basic-knowledge/img/5.png)
-  + 装饰器模式
+  + 装饰器模式：允许向一个现有的对象添加新的功能，同时又不改变其结构。
+  ![](http://www.runoob.com/wp-content/uploads/2014/08/decorator_pattern_uml_diagram.jpg)
   + 代理模式
   + 外观模式
   + 桥接模式
   + 组合模式
   + 享元模式
+  
 + 行为型模式 
   + 策略模式
   + 模板方法模式
