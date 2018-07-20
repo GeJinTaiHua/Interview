@@ -6,11 +6,15 @@
   * [三大框架](#%E4%B8%89%E5%A4%A7%E6%A1%86%E6%9E%B6)
   * [常用工具](#%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7)
   * [推荐书籍](#%E6%8E%A8%E8%8D%90%E4%B9%A6%E7%B1%8D)
-  * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
-    * [8个基本类型](#8%E4%B8%AA%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B)
+  * [关键字](#%E5%85%B3%E9%94%AE%E5%AD%97)
+    * [8大基本类型](#8%E5%A4%A7%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B)
+    * [String](#string)
     * [static](#static)
+    * [transient](#transient)
+  * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
+    * [java\.util包](#javautil%E5%8C%85)
     * [集合](#%E9%9B%86%E5%90%88)
-  * [IO 与 NIO](#io-%E4%B8%8E-nio)
+    * [IO 与 NIO](#io-%E4%B8%8E-nio)
   * [JVM](#jvm)
     * [JVM 类加载机制](#jvm-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6)
     * [JVM 内存模型](#jvm-%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B)
@@ -123,8 +127,8 @@ class Person{
   + serialVersionUID 生成方式：
     1) 默认的1L
     2) 根据类名、接口名、成员方法以及属性等来生成一个64位的Hash字段
-  1）Serializable接口：所有的序列化会自动进行。
-  2）Externalizable接口：没有任何东西可以自动序列化，需要在writeExternal方法中进行手工指定所要序列化的变量，这与是否被transient修饰无关。
+  + Serializable接口：所有的序列化会自动进行。
+  + Externalizable接口：没有任何东西可以自动序列化，需要在writeExternal方法中进行手工指定所要序列化的变量，这与是否被transient修饰无关。
 ```
 public class User extends BaseRequest implements Serializable {
 	      private static final long serialVersionUID = 1L;
