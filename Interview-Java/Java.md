@@ -131,10 +131,13 @@ class Person{
 + [Map](/Interview-Java/src/test/java/基本数据类型/Map.java)
   - HashMap
     + 非线程安全
-    + 链表散列
+    + 数组+链表+红黑树
   - Hashtable
     + 线程安全
-    + 遗留类，多线程建议 ConcurrentHashMap
+    + 遗留类，多线程下效率低下 
+    + ConcurrentHashMap
+      + 锁分离（JDK1.8放弃）：在HashMap的基础上，将数据分段存储，ConcurrentHashMap由多个Segment组成，每个Segment都有把锁。
+      + CAS算法：如果valueOffset位置包含的值与expect值相同，则更新valueOffset位置的值为update，并返回true，否则不更新，返回false。
   - SortedMap  
     + TreeMap：有序
 ![集合](http://img.blog.csdn.net/20160706172512559?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
