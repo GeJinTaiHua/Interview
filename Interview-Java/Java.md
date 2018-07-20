@@ -57,7 +57,32 @@ int|Integer|32|整数值型|
 float|Float|32|浮点类型|
 long|Long|64|整数值型|
 double|Double|64|浮点类型|
-+ String：引用类型，final，字符串常量。
+
+#### String
++ String
+  + 字符串常量
+  + final 修饰，不可被继承
++ StringBuilder 
+  + 字符串变量（非线程安全）
+```
+public String toString() {
+  // Create a copy, don't share the array
+  return new String(value, 0, count);
+}
+```
++ StringBuffer 
+  + 字符串变量（线程安全）
+  + final
+  + toString()方法会进行对象缓存，以减少元素的复制开销
+```
+public synchronized String toString() {
+  if (toStringCache == null) {
+    toStringCache = Arrays.copyOfRange(value, 0, count);
+  }
+  return new String(toStringCache, true);
+}
+```
+
 
 #### static
 + 静态方法
