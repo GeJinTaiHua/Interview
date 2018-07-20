@@ -38,6 +38,7 @@
   + 类间解耦，低耦合
 
 ### 24种设计模式
+[原文链接](http://www.runoob.com/design-pattern/design-pattern-intro.html)
 + 创建型模式
   + 工厂模式：定义一个用于创建对象的接口，让子类决定实例化哪一个类。   
   ![简单工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601914-2143-DP-SimpleFactory.png)
@@ -74,10 +75,12 @@
     + 当一个对象被修改时，则会自动通知它的依赖对象。
   ![观察者模式](http://www.runoob.com/wp-content/uploads/2014/08/observer_pattern_uml_diagram.jpg)
   + 迭代子模式
-  + 责任链模式
+  + 责任链模式：通常每个接收者都包含对另一个接收者的引用。如果一个对象不能处理该请求，那么它会把相同的请求传给下一个接收者，依此类推。
+  ![责任链模式](http://www.runoob.com/wp-content/uploads/2014/08/chain_pattern_uml_diagram.jpg)
   + 命令模式
   + 备忘录模式
-  + 状态模式
+  + 状态模式：类的行为是基于它的状态改变的
+  ![状态模式](http://www.runoob.com/wp-content/uploads/2014/08/state_pattern_uml_diagram_1.png)
   + 访问者模式
   + 中介者模式
   + 解释器模式
