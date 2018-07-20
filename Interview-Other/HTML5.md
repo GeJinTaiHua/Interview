@@ -1,5 +1,12 @@
 ## 📄HTML5
 
+
+  * [OSI 七层和 TCP/IP 四层](#osi-%E4%B8%83%E5%B1%82%E5%92%8C-tcpip-%E5%9B%9B%E5%B1%82)
+  * [TCP 三次握手和四次挥手](#tcp-%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B)
+  * [常见锁](#%E5%B8%B8%E8%A7%81%E9%94%81)
+  * [线程](#%E7%BA%BF%E7%A8%8B)
+
+
 ### AJAX 
 + url：要求为String类型的参数，（默认为当前页地址）发送请求的地址。
 + type：要求为String类型的参数，请求方式（post或get）默认为get。注意其他http请求方法，例如put和delete也可以使用，但仅部分浏览器支持。
