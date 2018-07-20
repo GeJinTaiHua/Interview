@@ -99,6 +99,7 @@ class Person{
 + AbstractXXX：骨架类，核心代码实现
 + 集合、数组
 ![d](https://img-blog.csdn.net/20170227215859844?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvejU1ODg3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![集合](http://img.blog.csdn.net/20160706172512559?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
 #### 集合
 + [Collection](/Interview-Java/src/test/java/基本数据类型/Collection.java)
