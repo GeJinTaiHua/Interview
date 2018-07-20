@@ -42,7 +42,8 @@
 + 《Java编程思想》
 + ... ...
 
-### 8个基本类型
+### 基础知识
+#### 8个基本类型
 基本类型|包装类|位数|  |
 ---|---|---|---|
 boolean|Boolean|1|布尔型|
@@ -53,10 +54,9 @@ int|Integer|32|整数值型|
 float|Float|32|浮点类型|
 long|Long|64|整数值型|
 double|Double|64|浮点类型|
-
 + String：引用类型，final，字符串常量。
 
-### static
+#### static
 + 静态方法
   + 不依赖于任何对象就可以进行访问。
   + 在静态方法中不能访问类的非静态成员方法/变量。
@@ -90,7 +90,7 @@ class Person{
   + import static 代替 import。
   + 导入这个类里的静态方法。
 
-### 集合
+#### 集合
 + [Collection](/Interview-Java/src/test/java/基本数据类型/Collection.java)
   - Set
   - List
