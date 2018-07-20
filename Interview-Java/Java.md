@@ -62,7 +62,7 @@ float|Float|32|浮点类型|
 long|Long|64|整数值型|
 double|Double|64|浮点类型|
 
-#### String
+#### String、StringBuilder、StringBuffer
 + String
   + 字符串常量
   + final 修饰，不可被继承
