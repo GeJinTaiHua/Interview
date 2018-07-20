@@ -40,8 +40,10 @@
 ### 24种设计模式
 + 创建型模式
   + 工厂模式：定义一个用于创建对象的接口，让子类决定实例化哪一个类。   
-  ![工厂模式](https://raw.githubusercontent.com/aalansehaiyang/technology-talk/master/basic-knowledge/img/10.jpg)
-  + 抽象工厂模式：提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。
+  ![简单工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601914-2143-DP-SimpleFactory.png)
+  ![工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601917-1999-DP-Factory.png)
+  + 抽象工厂模式：围绕一个超级工厂创建其他工厂。
+  ![抽象工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601916-7298-DP-AbstractFactory.png)
   + [单例模式](/Interview-.NET/Subject/设计模式/Singleton.cs)
     + 单例类只能有一个实例。
     + 单例类必须自己创建自己的唯一实例。
