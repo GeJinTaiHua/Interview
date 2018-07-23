@@ -188,25 +188,43 @@ public static void main(String[] args) {
 #### java.util包
 + Comparator：比较接口
 + Iterator：迭代接口
+  + Iterator：存在于 java.util 包中，核心的方法next()，hasnext()，remove()。
+  ```
+	List list = new ArrayList(); //产生一个 List 集合，典型实现为 ArrayList。
+	list.add("a");
+	list.add("b");
+	list.add("c");
+	Iterator it = list.iterator(); //构造 List 的迭代器
+	while(it.hasNext()){ //通过迭代器遍历元素
+	    Object obj = it.next();
+	    System.out.println(obj);
+	}
+  ```
+  + Iterable:存在于 java.lang 包中，里面封装了 Iterator 接口。所以只要实现了Iterable接口的类，就可以使用Iterator迭代器了。
 + AbstractXXX：骨架类，核心代码实现
 + 集合、数组
 
 #### 集合
 + [Collection](/Interview-Java/src/test/java/基本数据类型/Collection.java)
-  - Set
-  - List
-+ [Map](/Interview-Java/src/test/java/基本数据类型/Map.java)
-  - HashMap
-    + 非线程安全
-    + 数组+链表+红黑树
-  - Hashtable
-    + 线程安全
-    + 遗留类，多线程下效率低下 
+  - List：有序，可以重复的集合。
+    + ArrayList：底层数据结构是数组。查询快，增删慢；线程不安全，效率高。
+      +  CopyOnWriteArrayList：写时拷贝；java.util.concurrent包。
+    + Vector（淘汰）：底层数据结构是数组。查询快，增删慢；线程安全，效率低。
+    + LinkedList：底层数据结构是链表。查询慢，增删快；线程不安全，效率高。
+  - Set：
+    + HashSet：底层采用哈希表。无序，不可重复的集合；非线程安全。
+    + linkedHashSet：底层采用链表和哈希表。有序，不可以重复；非线程安全。
+    + TreeSet：底层使用红黑树算法，擅长于范围查询。有序，不可以重复；非线程安全。
+    + 线程安全：Set set = Collections.synchronizedSet(set 对象)
++ [Map](/Interview-Java/src/test/java/基本数据类型/Map.java)：key-value 的键值对，key 不允许重复，value 可以。
+  - HashMap：哈希表算法。非线程安全。
+  + linkedHashMap：链表和哈希表算法。
+  - Hashtable（淘汰）：哈希表算法。线程安全；多线程下效率低下。
     + ConcurrentHashMap
       + 锁分离（JDK1.8放弃）：在HashMap的基础上，将数据分段存储，ConcurrentHashMap由多个Segment组成，每个Segment都有把锁。
       + CAS算法：如果valueOffset位置包含的值与expect值相同，则更新valueOffset位置的值为update，并返回true，否则不更新，返回false。
   - SortedMap  
-    + TreeMap：有序
+    + TreeMap：红黑树算法。有序。
 ![集合](http://img.blog.csdn.net/20160706172512559?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
 + fail-fast（快速失败）
