@@ -46,7 +46,7 @@
 + Trie树（字典树）（单词查找树）：利用字符串的公共前缀来减少查询时间，最大限度地减少无谓的字符串比较，查询效率比哈希树高。
 
 ### 图
-+ 存储结构—-邻接矩阵。
++ 存储结构—-邻接矩阵。   
 ![邻接矩阵](https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=77989746352ac65c73086e219a9bd974/b812c8fcc3cec3fdb11cec53d688d43f879427f1.jpg)
 + 存储结构—-邻接表  
 ```
