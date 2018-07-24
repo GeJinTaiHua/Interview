@@ -68,8 +68,17 @@ struct Vnode
 + 存储结构—-十字链表   
 ![十字链表](https://images2015.cnblogs.com/blog/705949/201605/705949-20160505160739841-1219722707.png)
 + 存储结构—-邻接多重表  
-![邻接多重表](http://img.blog.csdn.net/20140829211052687?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvS29uZ2tPbmdM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
 ### 堆
 
 ### 散列表
+
+
+
+
+
+
+
+
+
+
