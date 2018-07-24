@@ -40,15 +40,14 @@
 ### 24种设计模式
 [原文链接](http://www.runoob.com/design-pattern/design-pattern-intro.html)
 + 创建型模式
+  + [单例模式](/Interview-.NET/Subject/设计模式/Singleton.cs)：保证一个类仅有一个实例，并提供一个访问它的全局访问点。
+    + [double check](/Interview-Java/src/test/java/Pattern/Singleton/SingletonDC.java)
+    + [懒加载](/Interview-Java/src/test/java/Pattern/Singleton/SingletonIODH.java)
   + 工厂模式：定义一个用于创建对象的接口，让子类决定实例化哪一个类。   
   ![简单工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601914-2143-DP-SimpleFactory.png)   
   ![工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601917-1999-DP-Factory.png)
   + 抽象工厂模式：围绕一个超级工厂创建其他工厂。   
   ![抽象工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601916-7298-DP-AbstractFactory.png)
-  + [单例模式](/Interview-.NET/Subject/设计模式/Singleton.cs)：保证一个类仅有一个实例，并提供一个访问它的全局访问点。
-    + 单例类只能有一个实例。
-    + 单例类必须自己创建自己的唯一实例。
-    + 单例类必须给所有其他对象提供这一实例。
   + 建造者模式：使用多个简单的对象一步一步构建成一个复杂的对象。
   + 原型模式：用于创建重复的对象，同时又能保证性能。    
   ![原型模式](http://www.runoob.com/wp-content/uploads/2014/08/prototype_pattern_uml_diagram.jpg)
