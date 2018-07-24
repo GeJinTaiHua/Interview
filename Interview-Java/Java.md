@@ -290,15 +290,37 @@ IO|NIO
 + 堆：用来存放对象实例。
 + 程序计数器：这里记录了线程执行的字节码的行号，在分支、循环、跳转、异常、线程恢复等都依赖这个计数器。
 
-#### JVM 新生代、老年代
-![新生代、老年代](http://images0.cnblogs.com/blog/587773/201409/061921034534396.png)
-+ 新生代：
-  - 存活时间较短，因此基于**复制算法**来进行回收。
-  - 划分为三个区域：Eden、From Survivor、To Survivor。
-  - Minor GC
-+ 老年代：
-  - 对象存活的时间比较长，比较稳定，因此采用**标记（Mark）算法**来进行回收。
-  - Full GC
+#### 垃圾收集算法
++ 标记-清除算法
+  1) 首先标记出所有需要回收的对象；
+  2) 在标记完成后统一回收所有被标记的对象。  
+  ![标记-清除算法](https://upload-images.jianshu.io/upload_images/3985563-1b31d5ebe8dec659.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/267)
+  + 缺点：标记和清除两个过程的效率都不高；产生大量不连续的内存碎片。
++ 复制算法（商业虚拟机采用）
+  1) 将可用内存按容量大小划分为大小相等的两块，每次只使用其中的一块；
+  2) 当一块内存使用完了，就将还存活着的对象复制到另一块上面，然后再把已使用过的内存空间一次清理掉。  
+  ![复制算法](https://upload-images.jianshu.io/upload_images/3985563-1b7d8f53a44cdfdb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+  + 缺点：将内存缩小为了原来的一半。
++ 标记-整理算法
+  1) 首先标记出所有需要回收的对象；
+  2) 让所有存活的对象都向一端移动，然后直接清理掉边界以外的内存。  
+  ![标记-整理算法](https://upload-images.jianshu.io/upload_images/3985563-1bd60604e0c0f46a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/571)
++ 分代收集算法
+  + 新生代：
+    - 存活时间较短，因此基于**复制算法**来进行回收。
+    - 划分为三个区域：Eden、From Survivor、To Survivor。
+    - Minor GC
+  + 老年代：
+    - 对象存活的时间比较长，比较稳定，因此采用**标记（Mark）算法**来进行回收。
+    - Full GC  
+  ![分代收集算法](http://images0.cnblogs.com/blog/587773/201409/061921034534396.png)
+
+
+
+
+
+
+
 
 
 
