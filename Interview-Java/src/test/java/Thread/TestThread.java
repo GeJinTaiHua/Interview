@@ -1,4 +1,4 @@
-package 进程线程;
+package Thread;
 
 import www.wjl.com.Interview.entity.ThreadCount;
 

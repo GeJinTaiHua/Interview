@@ -1,4 +1,4 @@
-package 基本数据类型;
+package BaseData;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;

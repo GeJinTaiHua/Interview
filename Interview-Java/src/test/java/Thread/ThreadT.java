@@ -1,4 +1,4 @@
-package 进程线程;
+package Thread;
 
 /*
  * @desc 基础知识

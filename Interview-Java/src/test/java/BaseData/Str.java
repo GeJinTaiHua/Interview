@@ -1,4 +1,4 @@
-package 基本数据类型;
+package BaseData;
 
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
