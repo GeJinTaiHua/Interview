@@ -38,7 +38,6 @@
   + 类间解耦，低耦合
 
 ### 24种设计模式
-[原文链接](http://www.runoob.com/design-pattern/design-pattern-intro.html)
 + 创建型模式
   + [单例模式](/Interview-.NET/Subject/设计模式/Singleton.cs)：保证一个类仅有一个实例，并提供一个访问它的全局访问点。
     + [double check](/Interview-Java/src/test/java/Pattern/Singleton/SingletonDC.java)
