@@ -65,9 +65,10 @@ struct Vnode
 };
 ```
 ![邻接表](https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=f912d7d98d94a4c21e2eef796f9d70b0/4e4a20a4462309f7bfc89bc4780e0cf3d6cad644.jpg)
-+ 存储结构—-邻接表
-+ 存储结构—-十字链表  
-+ 存储结构—-邻接多重表
++ 存储结构—-十字链表   
+![十字链表](https://img-blog.csdn.net/20161212165731159)
++ 存储结构—-邻接多重表  
+![邻接多重表](https://img-blog.csdn.net/20141016174002546)
 
 ### 堆
 
