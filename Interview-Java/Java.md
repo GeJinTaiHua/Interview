@@ -11,6 +11,7 @@
     * [String、StringBuilder、StringBuffer](#stringstringbuilderstringbuffer)
     * [static](#static)
     * [transient](#transient)
+    * [Thread、Runnable](#threadrunnable)
   * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
     * [java\.util包](#javautil%E5%8C%85)
     * [集合](#%E9%9B%86%E5%90%88)
@@ -18,7 +19,7 @@
   * [JVM](#jvm)
     * [JVM 类加载机制](#jvm-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6)
     * [JVM 内存模型](#jvm-%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B)
-    * [JVM 新生代、老年代](#jvm-%E6%96%B0%E7%94%9F%E4%BB%A3%E8%80%81%E5%B9%B4%E4%BB%A3)
+    * [垃圾收集算法](#%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95)
 
 
 ### 三大框架
@@ -314,10 +315,6 @@ IO|NIO
     - 对象存活的时间比较长，比较稳定，因此采用**标记（Mark）算法**来进行回收。
     - Full GC  
   ![分代收集算法](http://images0.cnblogs.com/blog/587773/201409/061921034534396.png)
-
-
-
-
 
 
 
