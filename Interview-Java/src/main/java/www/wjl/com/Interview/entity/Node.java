@@ -1,4 +1,4 @@
-package www.wjl.com.Interview.集合;
+package www.wjl.com.Interview.entity;
 
 import java.util.ArrayList;
 import java.util.List;
