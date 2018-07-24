@@ -17,13 +17,12 @@
 + 顺序队列（先进先出） 
 ![顺序队列](https://sfault-image.b0.upaiyun.com/124/395/1243953170-57245f3329084_articlex)
 + 循环队列   
-![循环队列](https://img-blog.csdn.net/20130806120215890)
+![循环队列](https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=2d7e279f259759ee5e5d6899d3922873/5d6034a85edf8db1ee973ff60a23dd54574e74e2.jpg)
  
 ### 链表
 + [单向链表](/Interview-.NET/Entity/Node.cs#L6)
   + [反转单向链表](/Interview-.NET/Subject/数据结构/LinkReverse.cs)
 + [双向链表](/Interview-.NET/Entity/Node.cs#L19)
-  + [反转双向链表](/Interview-.NET/Subject/数据结构/LinkReverse.cs#L91)
 
 ### 树
 + 完全二叉树
@@ -48,12 +47,7 @@
 
 ### 图
 + 存储结构—-邻接矩阵。
-  + 无向图  
-  ![无向图](https://img-blog.csdn.net/20170225164347019?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzU2NDQyMzQ=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-  + 有向图  
-  ![有向图](https://img-blog.csdn.net/20170225165023103?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzU2NDQyMzQ=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-    + 有向网
-    ![有向网](https://img-blog.csdn.net/20170225170847003?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzU2NDQyMzQ=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast) 
+![邻接矩阵](https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=77989746352ac65c73086e219a9bd974/b812c8fcc3cec3fdb11cec53d688d43f879427f1.jpg)
 + 存储结构—-邻接表  
 ```
 typedef char Vertextype;
@@ -70,10 +64,9 @@ struct Vnode
     ArcNode * firstarc; //指向第一条依附在该顶点边的信息（表结点）
 };
 ```
-![无向图](https://img-blog.csdn.net/20170226104025425?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzU2NDQyMzQ=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![邻接表](https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=f912d7d98d94a4c21e2eef796f9d70b0/4e4a20a4462309f7bfc89bc4780e0cf3d6cad644.jpg)
 + 存储结构—-邻接表
 + 存储结构—-十字链表  
-![十字链表](https://img-blog.csdn.net/20170226171332169?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzU2NDQyMzQ=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 + 存储结构—-邻接多重表
 
 ### 堆
