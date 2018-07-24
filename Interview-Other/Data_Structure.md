@@ -66,9 +66,9 @@ struct Vnode
 ```
 ![邻接表](https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=f912d7d98d94a4c21e2eef796f9d70b0/4e4a20a4462309f7bfc89bc4780e0cf3d6cad644.jpg)
 + 存储结构—-十字链表   
-![十字链表](https://img-blog.csdn.net/20161212165731159)
+![十字链表](https://images2015.cnblogs.com/blog/705949/201605/705949-20160505160739841-1219722707.png)
 + 存储结构—-邻接多重表  
-![邻接多重表](https://img-blog.csdn.net/20141016174002546)
+![邻接多重表](http://img.blog.csdn.net/20140829211052687?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvS29uZ2tPbmdM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
 ### 堆
 
