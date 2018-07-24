@@ -1,7 +1,7 @@
 ﻿## 📐数据结构 
  
  
-   * [栈](#%E6%A0%88)
+  * [栈](#%E6%A0%88)
   * [队列](#%E9%98%9F%E5%88%97)
   * [链表](#%E9%93%BE%E8%A1%A8)
   * [树](#%E6%A0%91)
@@ -11,9 +11,15 @@
  
  
 ### 栈
+后进先出  
+![栈](http://i2.51cto.com/images/blog/201801/21/796da6488c298dcd907ee5e204d1215b.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=)
  
 ### 队列
-+ 循环队列
+先进先出
++ 顺序队列   
+![顺序队列](https://sfault-image.b0.upaiyun.com/124/395/1243953170-57245f3329084_articlex)
++ 循环队列   
+![循环队列](https://img-blog.csdn.net/20130806120215890)
  
 ### 链表
 + [单向链表](/Interview-.NET/Entity/Node.cs#L6)
@@ -35,16 +41,48 @@
       + AVL树
       + 红黑树  
       ![红黑树](http://jbcdn2.b0.upaiyun.com/2017/07/9fd5e683147961431e0ecfcffbe5805b.png)
-+ 多路搜索树
-  + B树：一种树状数据结构，能够用来存储排序后的数据。  
-  ![B树](http://jbcdn2.b0.upaiyun.com/2017/07/0178191b698ab75a98fa1d0bb03cc51f.jpg)
-    + B+树：B+树只有达到叶子结点才命中（B树可以在非叶子结点命中）。  
-    ![B+树](http://jbcdn2.b0.upaiyun.com/2017/07/0972ef809f286cc29cd2d94687b2ef2d.jpg)
-      + B\*树：在B+树的非根和非叶子结点再增加指向兄弟的指针，将结点的最低利用率从1/2提高到2/3。
-      ![B\*树](http://jbcdn2.b0.upaiyun.com/2017/07/eb5835f421e029240105ccb8e80279ee.jpg)
+
++ B树：一种树状数据结构，能够用来存储排序后的数据。  
+![B树](http://jbcdn2.b0.upaiyun.com/2017/07/0178191b698ab75a98fa1d0bb03cc51f.jpg)
+  + B+树：B+树只有达到叶子结点才命中（B树可以在非叶子结点命中）。  
+  ![B+树](http://jbcdn2.b0.upaiyun.com/2017/07/0972ef809f286cc29cd2d94687b2ef2d.jpg)
+    + B\*树：在B+树的非根和非叶子结点再增加指向兄弟的指针，将结点的最低利用率从1/2提高到2/3。
+    ![B\*树](http://jbcdn2.b0.upaiyun.com/2017/07/eb5835f421e029240105ccb8e80279ee.jpg)
 + Trie树（字典树）（单词查找树）：利用字符串的公共前缀来减少查询时间，最大限度地减少无谓的字符串比较，查询效率比哈希树高。
 
 ### 图
+存储结构—-邻接矩阵。
++ 无向图  
+![无向图](https://img-blog.csdn.net/20170225164347019?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzU2NDQyMzQ=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
++ 有向图  
+![有向图](https://img-blog.csdn.net/20170225165023103?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzU2NDQyMzQ=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+  + 有向网
+  ![有向网](https://img-blog.csdn.net/20170225170847003?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzU2NDQyMzQ=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+  
+存储结构—-邻接表
+```
+typedef char Vertextype;
+//表结点结构
+struct ArcNode {
+    int adjvex;   //某条边指向的那个顶点的位置（一般是数组的下标）。
+    ArcNode * nextarc; //指向下一个表结点
+    int weight;   //这个只有网图才需要使用。普通的图可以直接忽略
+};
+//头结点
+struct Vnode
+{
+    Vertextype data;  //这个是记录每个顶点的信息（现在一般都不需要怎么使用）
+    ArcNode * firstarc; //指向第一条依附在该顶点边的信息（表结点）
+};
+```
+![无向图](https://img-blog.csdn.net/20170226104025425?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzU2NDQyMzQ=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
+存储结构—-邻接表
+
+存储结构—-十字链表  
+![十字链表](https://img-blog.csdn.net/20170226171332169?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzU2NDQyMzQ=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
+存储结构—-邻接多重表
 
 ### 堆
 
