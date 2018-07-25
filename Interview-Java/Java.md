@@ -42,6 +42,7 @@
 + [📆SLF4J](https://github.com/GeJinTaiHua/Learn-SLF4J)：日志工具。
 + [👫STOMP](https://github.com/GeJinTaiHua/STOMP)：面向消息的简单文本协议。
 + [☁️REST](https://github.com/GeJinTaiHua/Learn-HTTP)：HTTP 协议的 GET，POST，DELETE ...
++ [🌐WebService](https://github.com/GeJinTaiHua/Learn-WebService)：一种跨编程语言和跨操作系统平台的远程调用技术。
 
 ### 推荐书籍
 + [📖《Head First Java》](https://github.com/GeJinTaiHua/HeadFirstJava)
