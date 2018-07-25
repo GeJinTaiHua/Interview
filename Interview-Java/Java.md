@@ -135,6 +135,14 @@ class Person{
     }
 }
 ```
++ 静态内部类
+```
+public class TestInnerClass{
+   public static final class Builder {
+        private Integer id;
+   }
+}
+```
 + 静态导包
   + import static 代替 import。
   + 导入这个类里的静态方法。
