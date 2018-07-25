@@ -16,7 +16,7 @@
 
 
 ### IOC框架
-+ [🅰️Autofac](https://github.com/GeJinTaiHua/NetCore.Autofac)
++ [🅰️Autofac](https://github.com/GeJinTaiHua/Learn-Autofac)
 + Unity
 + MEF
 + Spring.NET
