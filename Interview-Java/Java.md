@@ -5,7 +5,6 @@
 
   * [三大框架](#%E4%B8%89%E5%A4%A7%E6%A1%86%E6%9E%B6)
   * [常用工具](#%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7)
-  * [推荐书籍](#%E6%8E%A8%E8%8D%90%E4%B9%A6%E7%B1%8D)
   * [关键字](#%E5%85%B3%E9%94%AE%E5%AD%97)
     * [8大基本类型](#8%E5%A4%A7%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B)
     * [String、StringBuilder、StringBuffer](#stringstringbuilderstringbuffer)
@@ -43,13 +42,6 @@
 + [👫STOMP](https://github.com/GeJinTaiHua/STOMP)：面向消息的简单文本协议。
 + [☁️REST](https://github.com/GeJinTaiHua/Learn-HTTP)：HTTP 协议的 GET，POST，DELETE ...
 + [🌐WebService](https://github.com/GeJinTaiHua/Learn-WebService)：一种跨编程语言和跨操作系统平台的远程调用技术。
-
-### 推荐书籍
-+ [📖《Head First Java》](https://github.com/GeJinTaiHua/HeadFirstJava)
-+ 《java核心技术卷》系列
-+ 《Effective Java》
-+ 《Java编程思想》
-+ ... ...
 
 ### 关键字
 #### 8大基本类型
