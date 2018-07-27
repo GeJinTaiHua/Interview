@@ -1,16 +1,19 @@
 package Pattern.Singleton;
 
 /*
- * @desc 懒加载
+ * @desc 静态内部类
  * @author wjl
  * @date 2018/7/24 0024
  */
 public class SingletonIODH {
-    static class SingletonHolder {
-        static SingletonIODH instance = new SingletonIODH();
+    private static class SingletonHolder {
+        private static final SingletonIODH instance = new SingletonIODH();
     }
 
-    public static SingletonIODH getInstance() {
+    private SingletonIODH() {
+    }
+
+    public static final SingletonIODH getInstance() {
         return SingletonHolder.instance;
     }
 }

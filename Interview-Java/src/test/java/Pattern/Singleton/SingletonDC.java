@@ -8,6 +8,9 @@ package Pattern.Singleton;
 public class SingletonDC {
     private volatile static SingletonDC instance;
 
+    private SingletonDC() {
+    }
+
     public static SingletonDC getInstance() {
         if (instance == null) {
             synchronized (SingletonDC.class) {
