@@ -35,13 +35,20 @@
 + [☕️Hibernate](https://github.com/GeJinTaiHua/Learn-Hibernate)
   - ORM（对象关系映射）
   
-### 常用工具
+### 常用三方工具
 + [♻️JAXB](https://github.com/GeJinTaiHua/Learn-JAXB)：XML 节点元素和 JavaBean 相互转换工具。
 + [♻️Gson](https://github.com/GeJinTaiHua/Learn-Gson)：Josn 序列化与反序列化工具。
 + [📆SLF4J](https://github.com/GeJinTaiHua/Learn-SLF4J)：日志工具。
 + [👫STOMP](https://github.com/GeJinTaiHua/STOMP)：面向消息的简单文本协议。
 + [☁️REST](https://github.com/GeJinTaiHua/Learn-HTTP)：HTTP 协议的 GET，POST，DELETE ...
 + [🌐WebService](https://github.com/GeJinTaiHua/Learn-WebService)：一种跨编程语言和跨操作系统平台的远程调用技术。
+
+### 中间件
++ dubbo
++ ActiveMQ
++ RabbitMQ
++ zookeeper
++ apollo
 
 ### 关键字
 #### 8大基本类型
