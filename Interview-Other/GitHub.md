@@ -1,18 +1,20 @@
 ## :octocat:GitHub
 
-
+  * [书籍](#%E6%8E%A8%E8%8D%90%E4%B9%A6%E7%B1%8D)
   * [热门项目](#%E7%83%AD%E9%97%A8%E9%A1%B9%E7%9B%AE)
   * [README\.md 的目录](#readmemd-%E7%9A%84%E7%9B%AE%E5%BD%95)
   * [徽章](#%E5%BE%BD%E7%AB%A0)
   * [表情](#%E8%A1%A8%E6%83%85)
   * [Markdown](#markdown)
 
+### 书籍
++ [📖《Head First Java》](https://github.com/GeJinTaiHua/HeadFirstJava)
 
 ### 热门项目
 https://github.com/trending
 
 ### README.md 的目录
-[原文链接](https://blog.csdn.net/esa_dsq/article/details/79617041#2-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88gh-md-toc)
++ [原文链接](https://blog.csdn.net/esa_dsq/article/details/79617041#2-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88gh-md-toc)
 1) 下载[工具](https://github.com/ekalinin/github-markdown-toc.go/releases)，直接在文件名后面加上.exe，放到README.md同一级目录；
 2) 接着按住shift键同时右击；  
 ![](https://img-blog.csdn.net/20180319203002205?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L0VTQV9EU1E=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
