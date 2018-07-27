@@ -42,8 +42,8 @@
   + [单例模式](/Interview-.NET/Subject/设计模式/Singleton.cs)：保证一个类仅有一个实例，并提供一个访问它的全局访问点。
     + [double check](/Interview-Java/src/test/java/Pattern/Singleton/SingletonDC.java)
     + [饿汉模式](/Interview-Java/src/test/java/Pattern/Singleton/SingletonHungry.java)
-    + [静态内部类](/Interview-Java/src/test/java/Pattern/Singleton/SingletonIODH.java))
-    + [枚举单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonEnum.java))
+    + [静态内部类](/Interview-Java/src/test/java/Pattern/Singleton/SingletonIODH.java)
+    + [枚举单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonEnum.java)
   + 工厂模式：定义一个用于创建对象的接口，让子类决定实例化哪一个类。   
   ![简单工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601914-2143-DP-SimpleFactory.png)   
   ![工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601917-1999-DP-Factory.png)
