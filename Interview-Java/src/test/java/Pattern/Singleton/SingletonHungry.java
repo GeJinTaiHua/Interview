@@ -13,6 +13,10 @@ public class SingletonHungry {
     }
 
     private SingletonHungry() {
+        // 避免反射破坏单例
+//        if (instance != null) {
+//            throw new UnsupportedOperationException("实例已经初始化过！");
+//        }
     }
 
     public static SingletonHungry getInstance() {
