@@ -39,6 +39,7 @@ public class DestroySingle {
 
     /*
      * @desc 利用反序列化破坏
+     * 序列化会通过反射调用无参数的构造方法创建一个新的对象。
      * @author wjl
      * @date 2018/8/2 0002
      */

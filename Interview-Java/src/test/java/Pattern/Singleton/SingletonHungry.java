@@ -15,7 +15,7 @@ public class SingletonHungry implements Serializable {
     }
 
     private SingletonHungry() {
-        // 避免反射破坏单例
+//        // 1.避免反射破坏单例
 //        if (instance != null) {
 //            throw new UnsupportedOperationException("实例已经初始化过！");
 //        }
@@ -24,4 +24,9 @@ public class SingletonHungry implements Serializable {
     public static SingletonHungry getInstance() {
         return instance;
     }
+
+//    // 2.避免反系列化破坏单例
+//    private Object readResolve() {
+//        return instance;
+//    }
 }
