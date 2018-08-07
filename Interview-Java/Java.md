@@ -44,6 +44,7 @@
 + [👫STOMP](https://github.com/GeJinTaiHua/STOMP)：面向消息的简单文本协议。
 + [☁️REST](https://github.com/GeJinTaiHua/Learn-HTTP)：HTTP 协议的 GET，POST，DELETE ...
 + [🌐WebService](https://github.com/GeJinTaiHua/Learn-WebService)：一种跨编程语言和跨操作系统平台的远程调用技术。
++ [🚗RabbitM](https://github.com/GeJinTaiHua/Learn-RabbitMQ)：是一个在AMQP基础上完成的，可复用的企业消息系统。他遵循Mozilla Public License开源协议。
 
 ### 中间件
 + dubbo
