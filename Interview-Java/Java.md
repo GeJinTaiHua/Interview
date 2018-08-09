@@ -48,11 +48,16 @@
 ### 中间件
 + RPC框架
   + Dubbo
+  + Dubbox
   + Motan
 + MQ消息
   + [🚗RabbitMQ](https://github.com/GeJinTaiHua/Learn-RabbitMQ)：是一个在AMQP基础上完成的，可复用的企业消息系统。他遵循Mozilla Public License开源协议。
+  + ActiveMQ
+  + Kafka
 + 分布式协调服务
   + ZooKeeper 
+  + Keepalived
+  + Eureka
 + 配置管理
   + Apollo
 + 大数据
