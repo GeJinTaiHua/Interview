@@ -4,8 +4,8 @@
 
 
   * [三大框架](#%E4%B8%89%E5%A4%A7%E6%A1%86%E6%9E%B6)
-  * [常用三方工具](#%E5%B8%B8%E7%94%A8%E4%B8%89%E6%96%B9%E5%B7%A5%E5%85%B7)
-  * [中间件](#%E4%B8%AD%E9%97%B4%E4%BB%B6)
+  * [第三方库](#第三方库)
+  * [中间件](#中间件)
   * [关键字](#%E5%85%B3%E9%94%AE%E5%AD%97)
     * [8大基本类型](#8%E5%A4%A7%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B)
     * [String、StringBuilder、StringBuffer](#stringstringbuilderstringbuffer)
@@ -37,21 +37,16 @@
 + [☕️Hibernate](https://github.com/GeJinTaiHua/Learn-Hibernate)
   - ORM（对象关系映射）
   
-### 常用三方工具
+### 第三方库
 + [♻️JAXB](https://github.com/GeJinTaiHua/Learn-JAXB)：XML 节点元素和 JavaBean 相互转换工具。
 + [♻️Gson](https://github.com/GeJinTaiHua/Learn-Gson)：Josn 序列化与反序列化工具。
 + [📆SLF4J](https://github.com/GeJinTaiHua/Learn-SLF4J)：日志工具。
 + [👫STOMP](https://github.com/GeJinTaiHua/STOMP)：面向消息的简单文本协议。
 + [☁️REST](https://github.com/GeJinTaiHua/Learn-HTTP)：HTTP 协议的 GET，POST，DELETE ...
 + [🌐WebService](https://github.com/GeJinTaiHua/Learn-WebService)：一种跨编程语言和跨操作系统平台的远程调用技术。
-+ [🚗RabbitM](https://github.com/GeJinTaiHua/Learn-RabbitMQ)：是一个在AMQP基础上完成的，可复用的企业消息系统。他遵循Mozilla Public License开源协议。
 
 ### 中间件
-+ dubbo
-+ ActiveMQ
-+ RabbitMQ
-+ zookeeper
-+ apollo
++ [🚗RabbitM](https://github.com/GeJinTaiHua/Learn-RabbitMQ)：是一个在AMQP基础上完成的，可复用的企业消息系统。他遵循Mozilla Public License开源协议。
 
 ### 关键字
 #### 8大基本类型
