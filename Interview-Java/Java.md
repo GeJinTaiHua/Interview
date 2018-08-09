@@ -48,6 +48,7 @@
 ### 中间件
 + RPC框架
   + Dubbo
+  + Motan
 + MQ消息
   + [🚗RabbitMQ](https://github.com/GeJinTaiHua/Learn-RabbitMQ)：是一个在AMQP基础上完成的，可复用的企业消息系统。他遵循Mozilla Public License开源协议。
 + 分布式协调服务
@@ -59,6 +60,7 @@
   + Hadoop
   + Hive
   + Spark
+  + Storm
 + 容器
   + Docker
   + Kubernetes
@@ -66,6 +68,7 @@
 + 分布式缓存
   + Redis
   + MemCache
+  + EhCache 
 
 ### 关键字
 #### 8大基本类型
