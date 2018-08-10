@@ -8,10 +8,10 @@
   * [中间件](#中间件)
   * [关键字](#%E5%85%B3%E9%94%AE%E5%AD%97)
     * [8大基本类型](#8%E5%A4%A7%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B)
-    * [String、StringBuilder、StringBuffer](#stringstringbuilderstringbuffer)
     * [static](#static)
     * [transient](#transient)
     * [Thread、Runnable](#threadrunnable)
+    * [String、StringBuilder、StringBuffer](#stringstringbuilderstringbuffer)
   * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
     * [java\.util包](#javautil%E5%8C%85)
     * [集合](#%E9%9B%86%E5%90%88)
@@ -88,59 +88,28 @@ float|Float|32|浮点类型|
 long|Long|64|整数值型|
 double|Double|64|浮点类型|
 
-#### String、StringBuilder、StringBuffer
-+ String
-  + 字符串常量
-  + final 修饰，不可被继承
-  + hashCode() 源码：
-```
-    public int hashCode() {
-        int h = hash;
-        if (h == 0 && value.length > 0) {
-            char val[] = value;
- 
-            for (int i = 0; i < value.length; i++) {
-                h = 31 * h + val[i];
-            }
-            hash = h;
-        }
-        return h;
-    }
-```
-+ StringBuilder 
-  + 字符串变量（非线程安全）
-  + 默认容量16
-  + toString() 源码：
-```
-public String toString() {
-  // Create a copy, don't share the array
-  return new String(value, 0, count);
-}
-```
-+ StringBuffer 
-  + 字符串变量（线程安全）
-  + toString()方法会进行对象缓存，以减少元素的复制开销
-  + toString() 源码：
-```
-public synchronized String toString() {
-  if (toStringCache == null) {
-    toStringCache = Arrays.copyOfRange(value, 0, count);
-  }
-  return new String(toStringCache, true);
-}
-```
-
+### final
++ 类
+  + 表明这个类不能被继承。
+  + final类中的所有成员方法都会被隐式地指定为final方法。
++ 方法
+  + 把方法锁定，以防任何继承类修改它的含义；
+  + 类的private方法会隐式地被指定为final方法。
++ 变量
+  + 基本数据类型：数值一旦在初始化之后便不能更改；
+  + 引用类型：在对其初始化之后便不能再让其指向另一个对象。	
+  
 #### static
 + 静态方法
-  + 不依赖于任何对象就可以进行访问。
-  + 在静态方法中不能访问类的非静态成员方法/变量。
+  + 不依赖于任何对象就可以进行访问；
+  + 在静态方法中不能访问类的非静态成员方法/变量；
   + 在非静态成员方法中可以访问静态成员方法/变量。
 + 静态变量
-  + 被所有的对象所共享，在内存中只有一个副本。
+  + 被所有的对象所共享，在内存中只有一个副本；
   + 当且仅当在类初次加载时会被初始化。
 + 静态代码块
-  + 优化程序性能。
-  + 可以置于类中的任何地方，可以有多个static块。
+  + 优化程序性能；
+  + 可以置于类中的任何地方，可以有多个static块；
   + 类初次被加载的时候，会按照static块的顺序来执行每个static块，并且只会执行一次。
 ```
 class Person{
@@ -169,16 +138,16 @@ public class TestInnerClass{
 }
 ```
 + 静态导包
-  + import static 代替 import。
+  + import static 代替 import；
   + 导入这个类里的静态方法。
   
 #### transient 
 + 序列化
-  + 通过在运行时判断类的 serialVersionUID 来验证版本一致性。
+  + 通过在运行时判断类的 serialVersionUID 来验证版本一致性；
   + serialVersionUID 生成方式：
-    1) 默认的1L
-    2) 根据类名、接口名、成员方法以及属性等来生成一个64位的Hash字段
-  + Serializable接口：所有的序列化会自动进行。
+    1) 默认的1L；
+    2) 根据类名、接口名、成员方法以及属性等来生成一个64位的Hash字段。
+  + Serializable接口：所有的序列化会自动进行；
   + Externalizable接口：没有任何东西可以自动序列化，需要在writeExternal方法中进行手工指定所要序列化的变量，这与是否被transient修饰无关。
 ```
 public class User extends BaseRequest implements Serializable {
@@ -186,15 +155,15 @@ public class User extends BaseRequest implements Serializable {
        ... ...
 ```
 + transient：不需要序列化的属性。
-  + 只能修饰变量，不能修饰方法和类。
+  + 只能修饰变量，不能修饰方法和类；
   + 一个静态变量不管是否被transient修饰，均不能被序列化。反序列化后类中static型变量的值为当前JVM中对应static变量的值。
 
 #### Thread、Runnable
 + Thread（类）
-  + start()：启动一个线程，这时此线程处于就绪（可运行）状态。
+  + start()：启动一个线程，这时此线程处于就绪（可运行）状态；
   + run()：只是类的一个普通方法而已。
 + Runnable（接口）
-  + 避免继承的局限，一个类可以继承多个接口。
+  + 避免继承的局限，一个类可以继承多个接口；
   + 适合于资源的共享，节约资源。
 ```
 public class Thread1 extends Thread{
@@ -215,6 +184,48 @@ public static void main(String[] args) {
 	Thread2 thread2 = new Thread2()；
         new Thread(thread2).start();
 	new Thread(thread2).start();
+}
+```
+
+#### String、StringBuilder、StringBuffer
++ String
+  + 字符串常量；
+  + final 修饰，不可被继承；
+  + hashCode() 源码：
+```
+    public int hashCode() {
+        int h = hash;
+        if (h == 0 && value.length > 0) {
+            char val[] = value;
+ 
+            for (int i = 0; i < value.length; i++) {
+                h = 31 * h + val[i];
+            }
+            hash = h;
+        }
+        return h;
+    }
+```
++ StringBuilder 
+  + 字符串变量（非线程安全）；
+  + 默认容量16；
+  + toString() 源码：
+```
+public String toString() {
+  // Create a copy, don't share the array
+  return new String(value, 0, count);
+}
+```
++ StringBuffer 
+  + 字符串变量（线程安全）；
+  + toString()方法会进行对象缓存，以减少元素的复制开销；
+  + toString() 源码：
+```
+public synchronized String toString() {
+  if (toStringCache == null) {
+    toStringCache = Arrays.copyOfRange(value, 0, count);
+  }
+  return new String(toStringCache, true);
 }
 ```
 
@@ -241,18 +252,18 @@ public static void main(String[] args) {
 #### 集合
 + [Collection](/Interview-Java/src/test/java/基本数据类型/Collection.java)
   - List：有序，可以重复的集合。
-    + ArrayList：底层数据结构是数组。查询快，增删慢；线程不安全，效率高。
+    + ArrayList：底层数据结构是数组。查询快，增删慢；线程不安全，效率高；
       +  CopyOnWriteArrayList（CopyOnWrite）：写时拷贝；java.util.concurrent包。
-    + Vector（淘汰）：底层数据结构是数组。查询快，增删慢；线程安全，效率低。
+    + Vector（淘汰）：底层数据结构是数组。查询快，增删慢；线程安全，效率低；
     + LinkedList：底层数据结构是链表。查询慢，增删快；线程不安全，效率高。
   - Set：
-    + HashSet：底层采用哈希表。无序，不可重复的集合；非线程安全。
-    + linkedHashSet：底层采用链表和哈希表。有序，不可以重复；非线程安全。
-    + TreeSet：底层使用红黑树算法，擅长于范围查询。有序，不可以重复；非线程安全。
+    + HashSet：底层采用哈希表。无序，不可重复的集合；非线程安全；
+    + linkedHashSet：底层采用链表和哈希表。有序，不可以重复；非线程安全；
+    + TreeSet：底层使用红黑树算法，擅长于范围查询。有序，不可以重复；非线程安全；
     + 线程安全：Set set = Collections.synchronizedSet(set 对象)
 + [Map](/Interview-Java/src/test/java/基本数据类型/Map.java)：key-value 的键值对，key 不允许重复，value 可以。
   - HashMap：哈希表算法。非线程安全。
-  + linkedHashMap：链表和哈希表算法。
+  - linkedHashMap：链表和哈希表算法。
   - Hashtable（淘汰）：哈希表算法。线程安全；多线程下效率低下。
     + ConcurrentHashMap
       + 锁分离（JDK1.8放弃）：在HashMap的基础上，将数据分段存储，ConcurrentHashMap由多个Segment组成，每个Segment都有把锁。
@@ -262,10 +273,10 @@ public static void main(String[] args) {
 ![集合](http://img.blog.csdn.net/20160706172512559?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
 + fail-fast（快速失败）
-  + 当你在迭代一个集合的时候，如果有另一个线程正在修改你正在访问的那个集合时，就会抛出一个 ConcurrentModification 异常。
+  + 当你在迭代一个集合的时候，如果有另一个线程正在修改你正在访问的那个集合时，就会抛出一个 ConcurrentModification 异常；
   + 在 java.util 包下的都是快速失败。
 + fail-safe（安全失败）
-  + 你在迭代的时候会去底层集合做一个拷贝，所以你在修改上层集合的时候是不会受影响的，不会抛出 ConcurrentModification 异常。
+  + 你在迭代的时候会去底层集合做一个拷贝，所以你在修改上层集合的时候是不会受影响的，不会抛出 ConcurrentModification 异常；
   + 在 java.util.concurrent 包下的全是安全失败的。
 
 #### IO 与 NIO
@@ -294,19 +305,19 @@ IO|NIO
     - 启动类加载器（Bootstrap ClassLoader）
     - 扩展类加载器（Extension ClassLoader）
     - 应用程序类加载器（Application ClassLoader）：程序默认的类加载器
-+ 验证阶段：检查载入Class文件数据的正确性。
-+ 准备阶段：给类的静态变量分配存储空间。
-+ 解析阶段：将符号引用转成直接引用。
++ 验证阶段：检查载入Class文件数据的正确性；
++ 准备阶段：给类的静态变量分配存储空间；
++ 解析阶段：将符号引用转成直接引用；
 + 初始化阶段：对类的静态变量，静态代码块执行初始化操作。
 + 类的实例化顺序
-  1) 父类静态变量
-  1) 父类静态代码块
-  2) 子类静态变量
-  2) 子类静态代码块
-  3) 父类非静态变量
-  3) 父类构造函数
-  4) 子类非静态变量
-  4) 子类构造函数
+  1) 父类静态变量；
+  1) 父类静态代码块；
+  2) 子类静态变量；
+  2) 子类静态代码块；
+  3) 父类非静态变量；
+  3) 父类构造函数；
+  4) 子类非静态变量；
+  4) 子类构造函数。
 
 #### JVM 内存模型
 ![JVM 内存模型](https://images2017.cnblogs.com/blog/720994/201711/720994-20171111163050263-549527776.png)
