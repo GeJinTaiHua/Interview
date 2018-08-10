@@ -8,7 +8,7 @@
   * [中间件](#%E4%B8%AD%E9%97%B4%E4%BB%B6)
   * [关键字](#%E5%85%B3%E9%94%AE%E5%AD%97)
     * [8大基本类型](#8%E5%A4%A7%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B)
-  * [final](#final)
+    * [final](#final)
     * [static](#static)
     * [transient](#transient)
     * [Thread、Runnable](#threadrunnable)
@@ -89,7 +89,7 @@ float|Float|32|浮点类型|
 long|Long|64|整数值型|
 double|Double|64|浮点类型|
 
-### final
+#### final
 + 类
   + 表明这个类不能被继承。
   + final类中的所有成员方法都会被隐式地指定为final方法。
