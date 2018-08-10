@@ -242,7 +242,7 @@ public static void main(String[] args) {
 + [Collection](/Interview-Java/src/test/java/基本数据类型/Collection.java)
   - List：有序，可以重复的集合。
     + ArrayList：底层数据结构是数组。查询快，增删慢；线程不安全，效率高。
-      +  CopyOnWriteArrayList：写时拷贝；java.util.concurrent包。
+      +  CopyOnWriteArrayList（CopyOnWrite）：写时拷贝；java.util.concurrent包。
     + Vector（淘汰）：底层数据结构是数组。查询快，增删慢；线程安全，效率低。
     + LinkedList：底层数据结构是链表。查询慢，增删快；线程不安全，效率高。
   - Set：
