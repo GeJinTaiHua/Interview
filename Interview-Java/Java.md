@@ -360,7 +360,7 @@ IO|NIO
         <td colspan=2>DataOutput（将数据从任何Java基本类型转换为一系列字节）</td> 
     </tr>
 </table>
-  
+
 ### JVM
 #### JVM 类加载机制
 ![类加载](http://incdn1.b0.upaiyun.com/2017/06/2fb054008ca2898e0a17f7d79ce525a1.png)
