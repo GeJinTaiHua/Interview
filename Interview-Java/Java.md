@@ -290,13 +290,77 @@ IO|NIO
 阻塞IO|非阻塞IO
 无|选择器
 
-+ 推荐 [🔘IO](https://github.com/GeJinTaiHua/Learn-IO)
-  + 少量的连接。
-  + 连接每次要发送大量的数据。
 + 推荐 [🔘NIO](https://github.com/GeJinTaiHua/Learn-IO)
   + 大量的连接。
   + 连接每次发送少量的数据。
   + 聊天服务器。
++ 推荐 [🔘IO](https://github.com/GeJinTaiHua/Learn-IO)
+  + 少量的连接。
+  + 连接每次要发送大量的数据。
+  + 流的分类
+<table>
+    <tr>
+        <td >\</td> 
+        <td >字节流</td> 
+        <td >字符流</td> 
+    </tr>
+    <tr>
+        <td >输入流</td> 
+        <td >InputStream（字节输入流）</td> 
+        <td >Reader（字符输入流）</td> 
+    </tr>  
+    <tr>
+        <td >输出流</td> 
+        <td >OutputStream（字节输出流）</td> 
+        <td >Writer（字符输出流）</td> 
+    </tr>
+    <tr>
+        <td rowspan=2>缓冲流</td> 
+        <td >BufferedInputStream</td> 
+        <td >BufferedReader</td> 
+    </tr> 
+    <tr>
+        <td >BufferedOutputStream（字节缓冲流）	</td> 
+        <td >BufferedWriter（字符缓冲流）</td> 
+    </tr> 
+    <tr>
+        <td rowspan=2>转换流</td> 
+        <td colspan=2>InputStreamReader（把字节输入流转换为字符输入流）</td> 
+    </tr> 
+    <tr>
+        <td colspan=2>OutputStreamWriter（把字节输出流转换为字符输出流）</td>
+    </tr> 
+    <tr>
+        <td rowspan=4>内存流</td> 
+        <td >ByteArrayInputStream</td> 
+        <td >CharArrayReader</td> 
+    </tr>
+    <tr>
+        <td >ByteArrayOutputStream（字节内存流）</td> 
+        <td >CharArrayWriter（字符内存流）</td> 
+    </tr>
+    <tr>
+        <td rowspan=2></td> 
+        <td >StringReader</td> 
+    </tr>
+    <tr>
+        <td >StringWriter（字符串流）</td> 
+    </tr>
+    <tr>
+        <td rowspan=2>对象流</td> 
+        <td colspan=2>ObjectInputStream（反序列化）</td> 
+    </tr>
+    <tr>
+        <td colspan=2>ObjectOutputStream（序列化）</td> 
+    </tr>
+    <tr>
+        <td rowspan=2>数据流</td> 
+        <td colspan=2>DataInput（从二进制流读取字节并从其中重建任何Java原语类型的数据）</td> 
+    </tr>
+    <tr>
+        <td colspan=2>DataOutput（将数据从任何Java基本类型转换为一系列字节）</td> 
+    </tr>
+</table>
   
 ### JVM
 #### JVM 类加载机制
