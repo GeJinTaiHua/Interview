@@ -297,7 +297,8 @@ IO|NIO
 + 推荐 [🔘IO](https://github.com/GeJinTaiHua/Learn-IO)
   + 少量的连接。
   + 连接每次要发送大量的数据。
-  + 流的分类<table>
+  + 流的分类
+<table>
     <tr>
         <td >\</td> 
         <td >字节流</td> 
