@@ -257,11 +257,11 @@ public synchronized String toString() {
       +  CopyOnWriteArrayList（CopyOnWrite）：写时拷贝；java.util.concurrent包。
     + Vector（淘汰）：底层数据结构是数组。查询快，增删慢；线程安全，效率低；
     + LinkedList：底层数据结构是链表。查询慢，增删快；线程不安全，效率高。
-  - Set：
-    + HashSet：底层采用哈希表。无序，不可重复的集合；非线程安全；
-    + linkedHashSet：底层采用链表和哈希表。有序，不可以重复；非线程安全；
-    + TreeSet：底层使用红黑树算法，擅长于范围查询。有序，不可以重复；非线程安全；
-    + 线程安全：Set set = Collections.synchronizedSet(set 对象)
+  - Set：不可重复的集合。
+    + HashSet：底层采用哈希表。无序；非线程安全；
+    + linkedHashSet：底层采用链表和哈希表。有序；非线程安全；
+    + TreeSet：底层使用红黑树算法，擅长于范围查询。有序；非线程安全；
+    + 线程安全：Set set = Collections.synchronizedSet(set 对象)。
 + [Map](/Interview-Java/src/test/java/基本数据类型/Map.java)：key-value 的键值对，key 不允许重复，value 可以。
   - HashMap：哈希表算法。非线程安全。
   - linkedHashMap：链表和哈希表算法。
