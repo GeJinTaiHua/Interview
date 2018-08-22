@@ -219,7 +219,7 @@ public synchronized String toString() {
 }
 ```
 
-#### final、finally和finalize
+#### final、finally、finalize
 + final
   + 类
     + 表明这个类不能被继承。
