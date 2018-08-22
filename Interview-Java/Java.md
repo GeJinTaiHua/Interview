@@ -148,6 +148,11 @@ public class User extends BaseRequest implements Serializable {
   + 只能修饰变量，不能修饰方法和类；
   + 一个静态变量不管是否被transient修饰，均不能被序列化。反序列化后类中static型变量的值为当前JVM中对应static变量的值。
 
+#### Overload、Override
++ Overload（重载）：一个类中多态性的表现；
++ Override（重写）：父类和子类多态性的表现；
+![重载重写](http://www.runoob.com/wp-content/uploads/2013/12/overloading-vs-overriding.png)
+
 #### Thread、Runnable
 + Thread（类）
   + start()：启动一个线程，这时此线程处于就绪（可运行）状态；
