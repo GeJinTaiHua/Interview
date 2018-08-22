@@ -84,8 +84,3 @@
   + 访问者模式
   + 中介者模式
   + 解释器模式
-
-### Overload、Override
-+ Overload（重载）：一个类中多态性的表现；
-+ Override（重写）：父类和子类多态性的表现；
-![重载重写](http://www.runoob.com/wp-content/uploads/2013/12/overloading-vs-overriding.png)
