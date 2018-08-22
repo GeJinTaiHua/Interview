@@ -89,17 +89,6 @@ float|Float|32|浮点类型|
 long|Long|64|整数值型|
 double|Double|64|浮点类型|
 
-#### final
-+ 类
-  + 表明这个类不能被继承。
-  + final类中的所有成员方法都会被隐式地指定为final方法。
-+ 方法
-  + 把方法锁定，以防任何继承类修改它的含义；
-  + 类的private方法会隐式地被指定为final方法。
-+ 变量
-  + 基本数据类型：数值一旦在初始化之后便不能更改；
-  + 引用类型：在对其初始化之后便不能再让其指向另一个对象。	
-  
 #### static
 + 静态方法
   + 不依赖于任何对象就可以进行访问；
@@ -229,6 +218,20 @@ public synchronized String toString() {
   return new String(toStringCache, true);
 }
 ```
+
+#### final、finally和finalize
++ final
+  + 类
+    + 表明这个类不能被继承。
+    + final类中的所有成员方法都会被隐式地指定为final方法。
+  + 方法
+    + 把方法锁定，以防任何继承类修改它的含义；
+    + 类的private方法会隐式地被指定为final方法。
+  + 变量
+    + 基本数据类型：数值一旦在初始化之后便不能更改；
+    + 引用类型：在对其初始化之后便不能再让其指向另一个对象。	
++ finally：在异常处理时提供 finally 块来执行任何清除操作。
++ finalize：方法名；finalize() 方法在垃圾收集器将对象从内存中清除出去之前做必要的清理工作。
 
 ### 基础知识
 #### java.util包
