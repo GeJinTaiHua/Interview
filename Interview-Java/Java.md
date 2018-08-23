@@ -141,7 +141,8 @@ public class TestInnerClass{
 + default
   + 没有符合的case就执行它;
   + 并不是必须的。
-```运行结果输出：default
+```
+// 运行结果输出：default
     int i = 6;
     switch(i){
     case 0:
@@ -154,7 +155,8 @@ public class TestInnerClass{
     	System.out.print("default");
     }
 ```
-```运行结果输出：2 3
+```
+// 运行结果输出：2 3
     int i = 2;
     switch(i){
     case 0:
