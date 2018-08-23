@@ -67,7 +67,7 @@ string url=Request.RawUrl;  (或 string url= Request.Url.PathAndQuery;)
 ```
 
 ### 关键字
-#### this 关键字解析
+#### this 
 + this 代表当前类的实例对象
 ```
 namespace Demo
