@@ -9,6 +9,7 @@
   * [关键字](#%E5%85%B3%E9%94%AE%E5%AD%97)
     * [8大基本类型](#8%E5%A4%A7%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B)
     * [static](#static)
+    * [switch\.\.\.case\.\.\.default\.\.\.](#switchcasedefault)
     * [transient](#transient)
     * [Overload、Override](#overloadoverride)
     * [Thread、Runnable](#threadrunnable)
