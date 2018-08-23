@@ -38,52 +38,54 @@
   + 类间解耦，低耦合
 
 ### 24种设计模式
-1) 创建型模式
-  + [单例模式](/Interview-.NET/Subject/设计模式/Singleton.cs)：保证一个类仅有一个实例，并提供一个访问它的全局访问点。
-    1) [double check](/Interview-Java/src/test/java/Pattern/Singleton/SingletonDC.java)
-    2) [饿汉模式](/Interview-Java/src/test/java/Pattern/Singleton/SingletonHungry.java)
-    3) [静态内部类](/Interview-Java/src/test/java/Pattern/Singleton/SingletonIODH.java)
-    4) [枚举单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonEnum.java)
-    + [容器管理单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonManager.java)
-    + [破坏单例的2种方法](/Interview-Java/src/test/java/Pattern/DestroySingle.java#L19)
-  + 工厂模式：定义一个用于创建对象的接口，让子类决定实例化哪一个类。   
-  ![简单工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601914-2143-DP-SimpleFactory.png)   
-  ![工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601917-1999-DP-Factory.png)
-  + 抽象工厂模式：围绕一个超级工厂创建其他工厂。   
-  ![抽象工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601916-7298-DP-AbstractFactory.png)
-  + 建造者模式：使用多个简单的对象一步一步构建成一个复杂的对象。
-  + 原型模式：用于创建重复的对象，同时又能保证性能。    
-  ![原型模式](http://www.runoob.com/wp-content/uploads/2014/08/prototype_pattern_uml_diagram.jpg) 
-2) 结构型模式
-  + 适配器模式：作为两个不兼容的接口之间的桥梁。       
-  ![适配器模式](https://raw.githubusercontent.com/aalansehaiyang/technology-talk/master/basic-knowledge/img/5.png)
-  + 装饰器模式：允许向一个现有的对象添加新的功能，同时又不改变其结构。    
-  ![装饰器模式](http://www.runoob.com/wp-content/uploads/2014/08/decorator_pattern_uml_diagram.jpg)
-  + 代理模式
-  + 外观模式
-  + 桥接模式
-  + 组合模式（整体模式）：把一组相似的对象当作一个单一的对象。
-    + 创建了一个包含自己对象组的类。
-    + 据树形结构来组合对象，用来表示部分以及整体层次。    
-  ![组合模式](http://www.runoob.com/wp-content/uploads/2014/08/composite_pattern_uml_diagram.jpg)
-  + 享元模式
-3) 行为型模式 
-  + 策略模式
-  + 模板方法模式
-  + 观察者模式（发布—订阅模式）（事件监听模式）
-    + 对象间存在一对多关系
-    + 当一个对象被修改时，则会自动通知它的依赖对象。    
-  ![观察者模式](http://www.runoob.com/wp-content/uploads/2014/08/observer_pattern_uml_diagram.jpg)
-  + 迭代子模式
-  + 责任链模式：通常每个接收者都包含对另一个接收者的引用。如果一个对象不能处理该请求，那么它会把相同的请求传给下一个接收者，依此类推。    
-  ![责任链模式](http://www.runoob.com/wp-content/uploads/2014/08/chain_pattern_uml_diagram.jpg)
-  + 命令模式
-  + 备忘录模式
-  + 状态模式：类的行为是基于它的状态改变的     
-  ![状态模式](http://www.runoob.com/wp-content/uploads/2014/08/state_pattern_uml_diagram_1.png)
-  + 访问者模式
-  + 中介者模式
-  + 解释器模式
+#### 创建型模式
++ [单例模式](/Interview-.NET/Subject/设计模式/Singleton.cs)：保证一个类仅有一个实例，并提供一个访问它的全局访问点。
+  1) [double check](/Interview-Java/src/test/java/Pattern/Singleton/SingletonDC.java)
+  2) [饿汉模式](/Interview-Java/src/test/java/Pattern/Singleton/SingletonHungry.java)
+  3) [静态内部类](/Interview-Java/src/test/java/Pattern/Singleton/SingletonIODH.java)
+  4) [枚举单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonEnum.java)
+  + [容器管理单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonManager.java)
+  + [破坏单例的2种方法](/Interview-Java/src/test/java/Pattern/DestroySingle.java#L19)
++ 工厂模式：定义一个用于创建对象的接口，让子类决定实例化哪一个类。   
+![简单工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601914-2143-DP-SimpleFactory.png)   
+![工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601917-1999-DP-Factory.png)
++ 抽象工厂模式：围绕一个超级工厂创建其他工厂。   
+![抽象工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601916-7298-DP-AbstractFactory.png)
++ 建造者模式：使用多个简单的对象一步一步构建成一个复杂的对象。
++ 原型模式：用于创建重复的对象，同时又能保证性能。    
+![原型模式](http://www.runoob.com/wp-content/uploads/2014/08/prototype_pattern_uml_diagram.jpg) 
+
+#### 结构型模式
++ 适配器模式：作为两个不兼容的接口之间的桥梁。       
+![适配器模式](https://raw.githubusercontent.com/aalansehaiyang/technology-talk/master/basic-knowledge/img/5.png)
++ 装饰器模式：允许向一个现有的对象添加新的功能，同时又不改变其结构。    
+![装饰器模式](http://www.runoob.com/wp-content/uploads/2014/08/decorator_pattern_uml_diagram.jpg)
++ 代理模式
++ 外观模式
++ 桥接模式
++ 组合模式（整体模式）：把一组相似的对象当作一个单一的对象。
+  + 创建了一个包含自己对象组的类。
+  + 据树形结构来组合对象，用来表示部分以及整体层次。    
+![组合模式](http://www.runoob.com/wp-content/uploads/2014/08/composite_pattern_uml_diagram.jpg)
++ 享元模式
+
+#### 行为型模式 
++ 策略模式
++ 模板方法模式
++ 观察者模式（发布—订阅模式）（事件监听模式）
+  + 对象间存在一对多关系
+  + 当一个对象被修改时，则会自动通知它的依赖对象。    
+![观察者模式](http://www.runoob.com/wp-content/uploads/2014/08/observer_pattern_uml_diagram.jpg)
++ 迭代子模式
++ 责任链模式：通常每个接收者都包含对另一个接收者的引用。如果一个对象不能处理该请求，那么它会把相同的请求传给下一个接收者，依此类推。    
+![责任链模式](http://www.runoob.com/wp-content/uploads/2014/08/chain_pattern_uml_diagram.jpg)
++ 命令模式
++ 备忘录模式
++ 状态模式：类的行为是基于它的状态改变的     
+![状态模式](http://www.runoob.com/wp-content/uploads/2014/08/state_pattern_uml_diagram_1.png)
++ 访问者模式
++ 中介者模式
++ 解释器模式
  
  ### 框架模式
  #### MVC
