@@ -131,7 +131,45 @@ public class TestInnerClass{
 + 静态导包
   + import static 代替 import；
   + 导入这个类里的静态方法。
-  
+
+#### switch...case...default...
++ switch(A)
+  + A的取值只能是整型或者可以转换为整型的数值类型，比如byte、short、int、char、还有枚举；
+  + JDK1.7之后，A的取值也支持String了；
++ case B:C
+  + 常量表达式；B的取值只能是常量（需要定义一个final型的常量）或者int、byte、short、char、String；
++ default
+  + 没有符合的case就执行它;
+  + 并不是必须的。
+```运行结果输出：default
+    int i = 6;
+    switch(i){
+    case 0:
+    	System.out.print("0");
+    case 1:
+    	System.out.print("1");
+    case 2:
+    	System.out.print("2");
+    default:
+    	System.out.print("default");
+    }
+```
+```运行结果输出：2 3
+    int i = 2;
+    switch(i){
+    case 0:
+    	System.out.print("0");
+    case 1:
+    	System.out.print("1");
+    case 2:
+    	System.out.print("2");
+    case 3:
+    	System.out.print("3");break;
+    default:
+    	System.out.print("default");
+    }
+```
+
 #### transient 
 + 序列化
   + 通过在运行时判断类的 serialVersionUID 来验证版本一致性；
