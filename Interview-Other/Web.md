@@ -29,17 +29,19 @@
   + 循环等待条件：若干进程之间形成一种头尾相接的循环等待资源关系。
 
 ### 线程  
+#### 进程与线程
 ![线程的所有状态](http://mmbiz.qpic.cn/mmbiz_png/Bf4u9qKuXWupl2hClEIRRTBPpWAic4GicZDMAFRRWUIU5qYOYY9Ds9NTrI8GdwGZkOjPkgGZa234kCT7050dDk3g/640?wx_fmt=png&wxfrom=5&wx_lazy=1)  
 + 进程与线程的区别：
   - 线程是进程的子集，一个进程可以有很多线程，每条线程并行执行不同的任务；
   - 不同的进程使用不同的内存空间，而所有的线程共享一片相同的内存空间；
   - 进程间通讯依靠IPC资源，例如管道（pipes）、套接字（sockets）等；
   - 线程间通讯依靠JVM提供的API，例如wait方法、notify方法和notifyAll方法，线程间还可以通过共享的主内存来进行值的传递。
-+ 线程同步的方法:
-  + wait()：等待状态，释放所持有对象的lock；
-  + sleep()：睡眠状态，静态方法；
-  + notify()：唤醒一个等待状态的线程；
-  + Allnotify()：唤醒所有等待状态的线程，竞争。
+  
+#### 线程同步的方法
++ wait()：等待状态，释放所持有对象的lock；
++ sleep()：睡眠状态，静态方法；
++ notify()：唤醒一个等待状态的线程；
++ Allnotify()：唤醒所有等待状态的线程，竞争。
   
 ### 分布式 session
 + 基于数据库的session共享
