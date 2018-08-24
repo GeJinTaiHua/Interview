@@ -199,6 +199,10 @@ public class User extends BaseRequest implements Serializable {
 + Thread（类）
   + start()：启动一个线程，这时此线程处于就绪（可运行）状态；
   + run()：只是类的一个普通方法而已。
+  + 缺点：
+    1) 每次通过new Thread()创建对象性能不佳；
+    2) 线程缺乏统一管理，可能无限制新建线程，相互之间竞争，及可能占用过多系统资源导致死机或oom；
+    3) 缺乏更多功能，如定时执行、定期执行、线程中断。
 + Runnable（接口）
   + 避免继承的局限，一个类可以继承多个接口；
   + 适合于资源的共享，节约资源。
@@ -223,6 +227,11 @@ public static void main(String[] args) {
 	new Thread(thread2).start();
 }
 ```
++ 线程池
+  + newCachedThreadPool：可缓存线程池，如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程。
+  + newFixedThreadPool：创建一个定长线程池，可控制线程最大并发数，超出的线程会在队列中等待。 
+  + newScheduledThreadPool：创建一个定长线程池，支持定时及周期性任务执行。 
+  + newSingleThreadExecutor：创建一个单线程化的线程池，它只会用唯一的工作线程来执行任务，保证所有任务按照指定顺序(FIFO, LIFO, 优先级)执行。
 
 #### String、StringBuilder、StringBuffer
 + String
