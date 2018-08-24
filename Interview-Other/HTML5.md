@@ -8,8 +8,8 @@
   * [jQuery的各种选择器](#jquery%E7%9A%84%E5%90%84%E7%A7%8D%E9%80%89%E6%8B%A9%E5%99%A8)
   * [选择器性能优化](#%E9%80%89%E6%8B%A9%E5%99%A8%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96)
 
-
-### AJAX 
+### 关键字
+#### AJAX 
 + url：要求为String类型的参数，（默认为当前页地址）发送请求的地址。
 + type：要求为String类型的参数，请求方式（post或get）默认为get。注意其他http请求方法，例如put和delete也可以使用，但仅部分浏览器支持。
 + cache：要求为Boolean类型的参数，默认为true（当dataType为script时，默认为false），设置为false将不会从浏览器缓存中加载请求信息。
@@ -41,7 +41,19 @@
     });
 ```
 
-### CSS 优先级
+#### html()、append()、prepend()、after()、before()
++ html中()替换当前所有内容
++ append()在被选元素结尾插入内容
++ prepend()在被选元素开头插入内容
++ after()在被选元素之后插入内容
++ before()在被选元素之前插入内容
+
+#### prop()、attr() 
++ 对于HTML元素本身就带有的固有属性，在处理时，使用prop方法。   $("#chk1").prop("checked") == false
++ 对于HTML元素我们自己自定义的DOM属性，在处理时，使用attr方法。   $(".intxt1").attr("url");
+
+### 基础知识
+#### CSS 优先级
 1. 在属性后面使用 !important 会覆盖页面内任何位置定义的元素样式
 2. 作为 style 属性写在元素内的样式
 3. id选择器
@@ -50,18 +62,7 @@
 6. 通配符选择器
 7. 器自定义或继承
 
-### html()、append()、prepend()、after()、before()
-+ html中()替换当前所有内容
-+ append()在被选元素结尾插入内容
-+ prepend()在被选元素开头插入内容
-+ after()在被选元素之后插入内容
-+ before()在被选元素之前插入内容
-
-### prop()、attr() 
-+ 对于HTML元素本身就带有的固有属性，在处理时，使用prop方法。   $("#chk1").prop("checked") == false
-+ 对于HTML元素我们自己自定义的DOM属性，在处理时，使用attr方法。   $(".intxt1").attr("url");
-
-### jQuery的各种选择器
+#### jQuery的各种选择器
 + #id：根据给定的ID匹配一个元素
 + element：根据给定的元素标签名匹配所有元素
 + .class：根据给定的css类名匹配元素
@@ -92,7 +93,7 @@
 + :input : 匹配所有 input, textarea, select 和 button 元素
 + ... ...
 
-### 选择器性能优化
+#### 选择器性能优化
 + 第一，多用ID选择器 , 总是从#id选择器来继承。（ID选择器是速度最快的，这主要是因为它使用JavaScript的内置函数getElementById()）
 + 第二，少直接使用Class选择器。（速度最慢的是Class选择器，其需要通过解析 HTML文档树）
 + 第三，多用父子关系，少用嵌套关系。
