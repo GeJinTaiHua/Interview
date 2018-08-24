@@ -7,12 +7,12 @@
     * [分布式锁](#%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81)
     * [死锁、活锁](#%E6%AD%BB%E9%94%81%E6%B4%BB%E9%94%81)
   * [线程](#%E7%BA%BF%E7%A8%8B)
-    * [进程与线程](#%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B)
+    * [进程、线程](#%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B)
     * [线程同步的方法](#%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%9A%84%E6%96%B9%E6%B3%95)
   * [网路](#%E7%BD%91%E8%B7%AF)
-    * [GET、POST](#getpost)
     * [OSI 七层和 TCP/IP 四层](#osi-%E4%B8%83%E5%B1%82%E5%92%8C-tcpip-%E5%9B%9B%E5%B1%82)
     * [TCP 三次握手和四次挥手](#tcp-%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B)
+    * [GET、POST](#getpost)
   * [分布式 session](#%E5%88%86%E5%B8%83%E5%BC%8F-session)
   
   
