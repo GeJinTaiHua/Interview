@@ -20,15 +20,18 @@
 ![循环队列](https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=2d7e279f259759ee5e5d6899d3922873/5d6034a85edf8db1ee973ff60a23dd54574e74e2.jpg)
 
 #### Java中的队列
-1）ArrayDeque, （数组双端队列） 
-2）PriorityQueue, （优先级队列） 
-3）ConcurrentLinkedQueue, （基于链表的并发队列） 
-4）DelayQueue, （延期阻塞队列）（阻塞队列实现了BlockingQueue接口） 
-5）ArrayBlockingQueue, （基于数组的并发阻塞队列） 
-6）LinkedBlockingQueue, （基于链表的FIFO阻塞队列） 
-7）LinkedBlockingDeque, （基于链表的FIFO双端阻塞队列） 
-8）PriorityBlockingQueue, （带优先级的无界阻塞队列） 
-9）SynchronousQueue, （并发同步阻塞队列）
++ 普通队列
+  + ArrayDeque（数组双端队列） 
+  + PriorityQueue（优先级队列） 
+  + ConcurrentLinkedQueue（基于链表的并发队列） 
++ 阻塞队列：当队列是空的时，从队列中获取元素的操作将会被阻塞，或者当队列是满时，往队列里添加元素的操作会被阻塞。
+  + DelayQueue（延期阻塞队列）（阻塞队列实现了BlockingQueue接口） 
+  + ArrayBlockingQueue（基于数组的并发阻塞队列阻塞队列） 
+  + LinkedBlockingQueue（基于链表的FIFO阻塞队列） 
+  + LinkedBlockingDeque（基于链表的FIFO双端阻塞队列） 
+  + PriorityBlockingQueue（带优先级的无界阻塞队列） 
+  + ynchronousQueue（并发同步阻塞队列）
+  + 生产者-消费者模式
  
 ### 链表
 + [单向链表](/Interview-.NET/Entity/Node.cs#L6)
