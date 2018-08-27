@@ -133,6 +133,18 @@ public class TestInnerClass{
   + import static 代替 import；
   + 导入这个类里的静态方法。
 
+#### Exception（异常类）
++ Error：编译和系统的错误，不允许捕获；如：Java环境错误，文件丢失，服务器异常，配置错误等导致。
++ Exception：标准Java库方法所激发的异常。
+  + Runtime_Exception：运行异常类，如：算数异常（如被0除）、下标异常（如数组越界）等。
+  + Non_RuntimeException：非运行异常类
++ 常见异常
+  + NullPointerException（空指针异常）
+  + ClassCastException（类型强制转换异常）
+  + ArrayIndexOutOfBoundsException（数组下标越界异常）
+  + ArithmeticException（算术运算异常）
+  + NumberFormatException（数字格式异常）
+
 #### switch...case...default...
 + switch(A)
   + A的取值只能是整型或者可以转换为整型的数值类型，比如byte、short、int、char、还有枚举；
