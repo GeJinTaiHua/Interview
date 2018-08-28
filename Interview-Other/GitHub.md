@@ -8,18 +8,22 @@
   * [Markdown](#markdown)
 
 ### 书籍
-+ 《代码大全》
-+ 《重构 改善既有代码设计》
-+ 《代码整洁之道》
-+ 《调试九法》
-+ 《研磨设计模式》
++ 编程语言
+  + 《深入理解C#》
+  + 《JavaScript语法精粹》
+  + [📖《Head First Java》](https://github.com/GeJinTaiHua/HeadFirstJava)
+  + 《Spring实战》
++ 代码技巧
+  + 《代码大全》
+  + 《代码整洁之道》
+  + 《重构 改善既有代码设计》
++ Web
+  + 《图解HTTP》
+  + 《白帽子讲Web安全》
 + 《编程珠玑》
++ 《研磨设计模式》
 + 《我编程，我快乐》
-+ 《白帽子讲Web安全》
-+ 《JavaScript语法精粹》
-+ 《深入理解C#》
-+ [📖《Head First Java》](https://github.com/GeJinTaiHua/HeadFirstJava)
-+ 《Spring实战》
++ 《调试九法 软硬件错误的排查之道》
 
 ### 热门项目
 https://github.com/trending
