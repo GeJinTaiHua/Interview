@@ -60,7 +60,7 @@
 + 分布式协调服务
   + ZooKeeper 
   + Keepalived
-  + Eureka
+  + [Eureka](https://github.com/GeJinTaiHua/Learn-Eureka)：服务的注册与发现。
 + 配置管理
   + Apollo
 + 大数据
