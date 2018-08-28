@@ -302,6 +302,22 @@ public synchronized String toString() {
 + finalize：方法名；finalize() 方法在垃圾收集器将对象从内存中清除出去之前做必要的清理工作。
 
 ### 基础知识
+#### 四种引用
++ 强引用：是指创建一个对象并把这个对象赋给一个引用变量。
+```
+Object object =new Object();
+String str ="hello";
+```
+  + 强引用有引用变量指向时永远不会被垃圾回收，JVM宁愿抛出OutOfMemory错误也不会回收这种对象；
+  + 想中断强引用和某个对象之间的关联，可以显式地将引用赋值为null。
++ 软引用（SoftReference）：
+  + 内存空间足够，垃圾回收器就不会回收它；
+  + 可用来实现内存敏感的高速缓存,比如网页缓存、图片缓存等。使用软引用能防止内存泄露，增强程序的健壮性。   
++ 弱引用（WeakReference）：
+  + 当JVM进行垃圾回收时，无论内存是否充足，都会回收被弱引用关联的对象。
++ 虚引用（PhantomReference）：
+  + 并不影响对象的生命周期；
+
 #### java.util包
 + Comparator：比较接口
 + Iterator：迭代接口
