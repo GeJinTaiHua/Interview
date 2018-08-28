@@ -318,7 +318,7 @@ String str ="hello";
 + 弱引用（WeakReference）：
   + 当JVM进行垃圾回收时，无论内存是否充足，都会回收被弱引用关联的对象。
 + 虚引用（PhantomReference）：
-  + 并不影响对象的生命周期；
+  + 并不影响对象的生命周期。
 
 #### java.util包
 + Comparator：比较接口
