@@ -12,13 +12,10 @@
  
  
 ### 栈
-![栈](http://i2.51cto.com/images/blog/201801/21/796da6488c298dcd907ee5e204d1215b.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=)
  
 ### 队列
 + 顺序队列（先进先出） 
-![顺序队列](https://sfault-image.b0.upaiyun.com/124/395/1243953170-57245f3329084_articlex)
 + 循环队列   
-![循环队列](https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=2d7e279f259759ee5e5d6899d3922873/5d6034a85edf8db1ee973ff60a23dd54574e74e2.jpg)
 
 #### Java中的队列
 + 普通队列
