@@ -456,7 +456,6 @@ IO|NIO
     + CMS
   + 整堆收集器
     + G1
-![垃圾收集器](https://img-blog.csdn.net/20170102225015393)
 + 并发垃圾收集和并行垃圾收集的区别
   + 并发（Concurrent）
     + 指用户线程与垃圾收集线程同时执行（但不一定是并行的，可能会交替执行）；
@@ -465,7 +464,13 @@ IO|NIO
   + 并行（Parallel）
     + 指多条垃圾收集线程并行工作，但此时用户线程仍然处于等待状态；
     + 如 ParNew、Parallel Scavenge、Parallel Old）。
-
++ Minor GC和Full GC的区别
+  + Minor GC（新生代GC）
+    + 发生在新生代的垃圾收集动作；
+    + 非常频繁，一般回收速度也比较快。
+  + Full GC（Major GC）（老年代GC）
+    + 出现Full GC经常会伴随至少一次的Minor GC；
+    + 速度一般比Minor GC慢10倍以上。
 
 
 
