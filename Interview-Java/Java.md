@@ -9,7 +9,8 @@
   * [关键字](#%E5%85%B3%E9%94%AE%E5%AD%97)
     * [8大基本类型](#8%E5%A4%A7%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B)
     * [static](#static)
-    * [Exception（异常类）](#exception%E5%BC%82%E5%B8%B8%E7%B1%BB)
+    * [Exception](#exception)
+    * [synchronized](#synchronized)
     * [switch\.\.\.case\.\.\.default\.\.\.](#switchcasedefault)
     * [transient](#transient)
     * [Overload、Override](#overloadoverride)
@@ -155,18 +156,58 @@ public class TestInnerClass{
 + 代码块（同步语句块）
   + 作用的范围是大括号{}括起来的代码；
   + 作用的对象是调用这个代码块的对象；
+```
+public class SyncThread implements Runnable {
+   private static int count;
+
+   public void run() {
+      synchronized(this) {
+         for (int i = 0; i < 5; i++) {
+            // todo
+         }
+      }
+   }
+}
+```
   1) 一个线程访问一个对象中的synchronized(this)同步代码块时，其他试图访问该对象的线程将被阻塞；
   2) 当一个线程访问对象的一个synchronized(this)同步代码块时，另一个线程仍然可以访问该对象中的非synchronized(this)同步代码块。
+
 + 方法（同步方法）
   + 作用的范围是整个方法；
   + 作用的对象是调用这个方法的对象；
+```
+public synchronized void method()
+{
+   // todo
+}
+```
   1) synchronized关键字不能继承；
+  2) 在定义接口方法时不能使用synchronized关键字；
+  3) 构造方法不能使用synchronized关键字，但可以使用synchronized代码块来进行同步。
+
 + 静态的方法
   + 作用的范围是整个静态方法；
   + 作用的对象是这个类的所有对象；
+```
+public synchronized static void method() {
+   // todo
+}
+```
+  1) 静态方法是属于类的而不属于对象的。同样的，synchronized修饰的静态方法锁定的是这个类的所有对象。
+
 + 类
   + 作用的范围是synchronized后面括号括起来的部分；
-  + 作用主的对象是这个类的所有对象。
+  + 作用主的对象是这个类的所有对象；
+```
+public class ClassName {
+   public void method() {
+      synchronized(ClassName.class) {
+         // todo
+      }
+   }
+}
+```
+ 1) synchronized作用于一个类T时，是给这个类T加锁，T的所有对象用的是同一把锁。
 
 #### switch...case...default...
 + switch(A)
