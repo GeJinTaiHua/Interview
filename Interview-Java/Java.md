@@ -139,7 +139,7 @@ public class TestInnerClass{
   + import static 代替 import；
   + 导入这个类里的静态方法。
 
-#### Exception（异常类）
+#### Exception
 + Error：编译和系统的错误，不允许捕获；如：Java环境错误，文件丢失，服务器异常，配置错误等导致。
 + Exception：标准Java库方法所激发的异常。
   + Runtime_Exception：运行异常类，如：算数异常（如被0除）、下标异常（如数组越界）等。
@@ -150,6 +150,23 @@ public class TestInnerClass{
   + ArrayIndexOutOfBoundsException（数组下标越界异常）
   + ArithmeticException（算术运算异常）
   + NumberFormatException（数字格式异常）
+
+#### synchronized
++ 代码块（同步语句块）
+  + 作用的范围是大括号{}括起来的代码；
+  + 作用的对象是调用这个代码块的对象；
+  1) 一个线程访问一个对象中的synchronized(this)同步代码块时，其他试图访问该对象的线程将被阻塞；
+  2) 当一个线程访问对象的一个synchronized(this)同步代码块时，另一个线程仍然可以访问该对象中的非synchronized(this)同步代码块。
++ 方法（同步方法）
+  + 作用的范围是整个方法；
+  + 作用的对象是调用这个方法的对象；
+  1) synchronized关键字不能继承；
++ 静态的方法
+  + 作用的范围是整个静态方法；
+  + 作用的对象是这个类的所有对象；
++ 类
+  + 作用的范围是synchronized后面括号括起来的部分；
+  + 作用主的对象是这个类的所有对象。
 
 #### switch...case...default...
 + switch(A)
