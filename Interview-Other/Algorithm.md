@@ -15,6 +15,7 @@
  + [约瑟夫问题 ](/Interview-.NET/Subject/算法/Josephus.cs)
  + [水仙花数](/Interview-.NET/Subject/算法/Narcissus.cs)
  + [交换 a b 的值](/Interview-.NET/Subject/算法/Swap.cs)
+ + [100个URL如何找到出现频率最高的前10个](/Interview-Java/src/test/java/Algorithm/MaxUrl.java)
  
 ### 排序
 #### 插入排序
