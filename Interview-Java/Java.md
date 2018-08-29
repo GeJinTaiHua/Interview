@@ -321,7 +321,7 @@ String str ="hello";
 + 虚引用（PhantomReference）：
   + 并不影响对象的生命周期。
 
-#### java.util包
+#### java.util
 + Comparator：比较接口
 + Iterator：迭代接口
   + Iterator：存在于 java.util 包中，核心的方法next()，hasnext()，remove()。
@@ -341,29 +341,31 @@ String str ="hello";
 + 集合、数组
 
 #### 集合
-+ [Collection](/Interview-Java/src/test/java/BaseData/Collection.java)
-  - List：有序，可以重复的集合。
-    + ArrayList：底层数据结构是数组。查询快，增删慢；线程不安全，效率高；
-      +  CopyOnWriteArrayList（CopyOnWrite）：写时拷贝；java.util.concurrent包。
-    + Vector（淘汰）：底层数据结构是数组。查询快，增删慢；线程安全，效率低；
-    + LinkedList：底层数据结构是链表。查询慢，增删快；线程不安全，效率高。
-  - Set：不可重复的集合。
-    + HashSet：底层采用哈希表。无序；非线程安全；
-    + linkedHashSet：底层采用链表和哈希表。有序；非线程安全；
-    + TreeSet：底层使用红黑树算法，擅长于范围查询。有序；非线程安全；
-    + 线程安全：Set set = Collections.synchronizedSet(set 对象)。
-+ [Map](/Interview-Java/src/test/java/BaseData/Map.java)：key-value 的键值对，key 不允许重复，value 可以。
-  - HashMap：哈希表算法。非线程安全。
-  ![链表散列](https://images0.cnblogs.com/blog/381060/201401/152128351581.png)
-    + linkedHashMap：链表和哈希表算法。
-  - Hashtable（淘汰）：哈希表算法。线程安全；多线程下效率低下。
-    + ConcurrentHashMap
-      + 锁分离（JDK1.8放弃）：在HashMap的基础上，将数据分段存储，ConcurrentHashMap由多个Segment组成，每个Segment都有把锁。
-      + CAS算法：如果valueOffset位置包含的值与expect值相同，则更新valueOffset位置的值为update，并返回true，否则不更新，返回false。
-  - SortedMap  
-    + TreeMap：红黑树算法。有序。
 ![集合](http://img.blog.csdn.net/20160706172512559?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
+##### Collection
++ List
+  1) ArrayList：底层数据结构是数组。查询快，增删慢；线程不安全，效率高；
+     +  CopyOnWriteArrayList（CopyOnWrite）：写时拷贝；java.util.concurrent包。
+  2) Vector（淘汰）：底层数据结构是数组。查询快，增删慢；线程安全，效率低；
+  3) LinkedList：底层数据结构是链表。查询慢，增删快；线程不安全，效率高。
++ Set
+  1) HashSet：底层采用哈希表。无序；非线程安全；
+     + linkedHashSet：底层采用链表和哈希表。有序；非线程安全；
+  2) TreeSet：底层使用红黑树算法，擅长于范围查询。有序；非线程安全；
+  3) 线程安全：Set set = Collections.synchronizedSet(set 对象)。
+    
+##### Map 
++ HashMap：哈希表算法。非线程安全。  
+![链表散列](https://images0.cnblogs.com/blog/381060/201401/152128351581.png)
+  + linkedHashMap：链表和哈希表算法。
++ Hashtable（淘汰）：哈希表算法。线程安全；多线程下效率低下。
+  + ConcurrentHashMap
+    + 锁分离（JDK1.8放弃）：在HashMap的基础上，将数据分段存储，ConcurrentHashMap由多个Segment组成，每个Segment都有把锁。
+    + CAS算法：如果valueOffset位置包含的值与expect值相同，则更新valueOffset位置的值为update，并返回true，否则不更新，返回false。
++ SortedMap  
+  + TreeMap：红黑树算法。有序。
 
+##### fail-fast、fail-safe
 + fail-fast（快速失败）
   + 当你在迭代一个集合的时候，如果有另一个线程正在修改你正在访问的那个集合时，就会抛出一个 ConcurrentModification 异常；
   + 在 java.util 包下的都是快速失败。
@@ -371,7 +373,7 @@ String str ="hello";
   + 你在迭代的时候会去底层集合做一个拷贝，所以你在修改上层集合的时候是不会受影响的，不会抛出 ConcurrentModification 异常；
   + 在 java.util.concurrent 包下的全是安全失败的。
 
-#### IO 与 NIO
+#### IO、NIO
 + 管道（Channel）：实际上就像传统IO中的流，到任何目的地(或来自任何地方)的所有数据都必须通过一个 Channel 对象。一个 Buffer 实质上是一个容器对象。
 + 选择器（Selector）：用于监听多个管道的事件，使用传统的阻塞IO时我们可以方便的知道什么时候可以进行读写，而使用非阻塞通道，我们需要一些方法来知道什么时候通道准备好了，选择器正是为这个需要而诞生的。
 
