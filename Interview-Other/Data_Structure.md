@@ -40,6 +40,10 @@
 
 ### 树
 + 完全二叉树
+  + [前序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L17)
+  + [中序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L57)
+  + [后序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L95)
+  + [层序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L108)
 + 满二叉树  
 ![完全二叉树 和 满二叉树](http://jbcdn2.b0.upaiyun.com/2017/07/a5952ec741b60202c7b377bfb8e8f368.png)
 + 二叉查找树（二叉排序树）（二叉搜索树）：O(logn)
