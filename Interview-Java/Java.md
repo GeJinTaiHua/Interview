@@ -461,19 +461,19 @@ IO|NIO
        + 目标则是达一个可控制的吞吐量（Throughput），即减少垃圾收集时间，让用户代码获得更长的运行时间。
          + 吞吐量=运行用户代码时间/（运行用户代码时间+垃圾收集时间）
   + 老年代收集器
-    4) Serial Old：Serial收集器的老年代版本。
+    1) Serial Old：Serial收集器的老年代版本。
        + 采用"标记-整理"算法（还有压缩，Mark-Sweep-Compact）；
        + 单线程收集。
-    5) Parallel Old：Parallel Scavenge收集器的老年代版本。
+    2) Parallel Old：Parallel Scavenge收集器的老年代版本。
        + 采用"标记-整理"算法；
        + 多线程收集；
-    6) CMS：也称为并发低停顿收集器（Concurrent Low Pause Collector）或低延迟（low-latency）垃圾收集器。
+    3) CMS：也称为并发低停顿收集器（Concurrent Low Pause Collector）或低延迟（low-latency）垃圾收集器。
        + 基于"标记-清除"算法(不进行压缩操作，产生内存碎片)；           
        + 以获取最短回收停顿时间为目标；
        + 并发收集、低停顿；
        + 需要更多的内存。
   + 整堆收集器
-    7) G1：JDK7-u4才推出商用的收集器。
+    1) G1：JDK7-u4才推出商用的收集器。
        + 可以并行来缩短"Stop The World"停顿时间；也可以并发让垃圾收集与用户程序同时进行；
        + 分代收集，收集范围包括新生代和老年代；
        + 结合多种垃圾收集算法，空间整合，不产生碎片；
