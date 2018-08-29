@@ -14,8 +14,10 @@
 ### 栈
  
 ### 队列
-+ 顺序队列（先进先出） 
-+ 循环队列   
+#### 顺序队列
+先进先出
+
+#### 循环队列   
 
 #### Java中的队列
 + 普通队列
@@ -34,23 +36,22 @@
 + 锁自由（lock-free）算法：如果算法的每一个步骤中都有一些线程能够继续执行。
  
 ### 链表
-+ [单向链表](/Interview-.NET/Entity/Node.cs#L6)
-  + [反转单向链表](/Interview-.NET/Subject/数据结构/LinkReverse.cs)
-+ [双向链表](/Interview-.NET/Entity/Node.cs#L19)
+#### 单向链表
++ [反转单向链表](/Interview-.NET/Subject/数据结构/LinkReverse.cs)
+  
+#### 双向链表 
 
 ### 树
-+ 二叉树  
+### 二叉树  
 ![二叉树](https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D220/sign=7e9edc97a9773912c0268263c8188675/3c6d55fbb2fb4316e5bfe05020a4462309f7d37c.jpg)
++ 遍历
   + [前序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L17)：ABDECF
   + [中序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L57)：DBEAFC
   + [后序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L95)：DEBFCA
   + [层序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L108)：ABCDEF
-  
 + 完全二叉树
-  
 + 满二叉树   
 ![完全二叉树 和 满二叉树](http://jbcdn2.b0.upaiyun.com/2017/07/a5952ec741b60202c7b377bfb8e8f368.png)
-
 + 二叉查找树（二叉排序树）（二叉搜索树）：O(logn)
   1) 若左子树不空，则左子树上所有结点的值均小于它的根结点的值；
   2) 若右子树不空，则右子树上所有结点的值均大于或等于它的根结点的值；
@@ -60,20 +61,22 @@
     + AVL树
     + 红黑树  
     ![红黑树](http://jbcdn2.b0.upaiyun.com/2017/07/9fd5e683147961431e0ecfcffbe5805b.png)  
-    
-+ B树：一种树状数据结构，能够用来存储排序后的数据。  
+
+#### B树
+一种树状数据结构，能够用来存储排序后的数据。   
 ![B树](http://jbcdn2.b0.upaiyun.com/2017/07/0178191b698ab75a98fa1d0bb03cc51f.jpg)
-  + B+树：B+树只有达到叶子结点才命中（B树可以在非叶子结点命中）。  
-  ![B+树](http://jbcdn2.b0.upaiyun.com/2017/07/0972ef809f286cc29cd2d94687b2ef2d.jpg)
-    + B\*树：在B+树的非根和非叶子结点再增加指向兄弟的指针，将结点的最低利用率从1/2提高到2/3。
-    ![B\*树](http://jbcdn2.b0.upaiyun.com/2017/07/eb5835f421e029240105ccb8e80279ee.jpg)
++ B+树：B+树只有达到叶子结点才命中（B树可以在非叶子结点命中）。  
+![B+树](http://jbcdn2.b0.upaiyun.com/2017/07/0972ef809f286cc29cd2d94687b2ef2d.jpg)
+  + B\*树：在B+树的非根和非叶子结点再增加指向兄弟的指针，将结点的最低利用率从1/2提高到2/3。
+  ![B\*树](http://jbcdn2.b0.upaiyun.com/2017/07/eb5835f421e029240105ccb8e80279ee.jpg)
     
-+ Trie树（字典树）（单词查找树）：利用字符串的公共前缀来减少查询时间，最大限度地减少无谓的字符串比较，查询效率比哈希树高。
+#### Trie树（字典树）（单词查找树）
+利用字符串的公共前缀来减少查询时间，最大限度地减少无谓的字符串比较，查询效率比哈希树高。
 
 ### 图
+#### 存储结构
 + 存储结构—-邻接矩阵。   
 ![邻接矩阵](https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=77989746352ac65c73086e219a9bd974/b812c8fcc3cec3fdb11cec53d688d43f879427f1.jpg)
-
 + 存储结构—-邻接表  
 ```
 typedef char Vertextype;
@@ -91,10 +94,8 @@ struct Vnode
 };
 ```
 ![邻接表](https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=f912d7d98d94a4c21e2eef796f9d70b0/4e4a20a4462309f7bfc89bc4780e0cf3d6cad644.jpg)
-
 + 存储结构—-十字链表   
 ![十字链表](https://images2015.cnblogs.com/blog/705949/201605/705949-20160505160739841-1219722707.png)
-
 + 存储结构—-邻接多重表  
 
 ### 堆
