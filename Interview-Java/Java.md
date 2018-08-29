@@ -445,17 +445,26 @@ IO|NIO
 
 
 #### 垃圾收集器
++ 垃圾收集器组合
+  + 新生代收集器
+    + Serial
+    + ParNew
+    + Parallel Scavenge
+  + 老年代收集器
+    + Serial Old
+    + Parallel Old
+    + CMS
+  + 整堆收集器
+    + G1
 ![垃圾收集器](https://img-blog.csdn.net/20170102225015393)
-+ 新生代收集器
-  + Serial
-  + ParNew
-  + Parallel Scavenge
-+ 老年代收集器
-  + Serial Old
-  + Parallel Old
-  + CMS
-+ 整堆收集器
-  + G1
++ 并发垃圾收集和并行垃圾收集的区别
+  + 并发（Concurrent）
+    + 指用户线程与垃圾收集线程同时执行（但不一定是并行的，可能会交替执行）；
+    + 用户程序在继续运行，而垃圾收集程序线程运行于另一个CPU上；
+    + 如CMS、G1（也有并行）；  
+  + 并行（Parallel）
+    + 指多条垃圾收集线程并行工作，但此时用户线程仍然处于等待状态；
+    + 如 ParNew、Parallel Scavenge、Parallel Old）。
 
 
 
