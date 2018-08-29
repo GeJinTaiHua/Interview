@@ -10,7 +10,7 @@
     * [单向链表](#%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8)
     * [双向链表](#%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8)
   * [树](#%E6%A0%91)
-  * [二叉树](#%E4%BA%8C%E5%8F%89%E6%A0%91)
+    * [二叉树](#%E4%BA%8C%E5%8F%89%E6%A0%91)
     * [B树](#b%E6%A0%91)
     * [Trie树（字典树）（单词查找树）](#trie%E6%A0%91%E5%AD%97%E5%85%B8%E6%A0%91%E5%8D%95%E8%AF%8D%E6%9F%A5%E6%89%BE%E6%A0%91)
   * [图](#%E5%9B%BE)
@@ -50,7 +50,7 @@
 #### 双向链表 
 
 ### 树
-### 二叉树  
+#### 二叉树  
 ![二叉树](https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D220/sign=7e9edc97a9773912c0268263c8188675/3c6d55fbb2fb4316e5bfe05020a4462309f7d37c.jpg)
 + 遍历
   + [前序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L17)：ABDECF
