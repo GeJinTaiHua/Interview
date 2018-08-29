@@ -354,7 +354,8 @@ String str ="hello";
     + 线程安全：Set set = Collections.synchronizedSet(set 对象)。
 + [Map](/Interview-Java/src/test/java/BaseData/Map.java)：key-value 的键值对，key 不允许重复，value 可以。
   - HashMap：哈希表算法。非线程安全。
-  - linkedHashMap：链表和哈希表算法。
+  ![链表散列](https://images0.cnblogs.com/blog/381060/201401/152128351581.png)
+    + linkedHashMap：链表和哈希表算法。
   - Hashtable（淘汰）：哈希表算法。线程安全；多线程下效率低下。
     + ConcurrentHashMap
       + 锁分离（JDK1.8放弃）：在HashMap的基础上，将数据分段存储，ConcurrentHashMap由多个Segment组成，每个Segment都有把锁。
