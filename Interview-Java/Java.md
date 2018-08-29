@@ -444,7 +444,18 @@ IO|NIO
   ![新生代老年代](http://images0.cnblogs.com/blog/587773/201409/061921034534396.png)
 
 
-
+#### 垃圾收集器
+![垃圾收集器](https://img-blog.csdn.net/20170102225015393)
++ 新生代收集器
+  + Serial
+  + ParNew
+  + Parallel Scavenge
++ 老年代收集器
+  + Serial Old
+  + Parallel Old
+  + CMS
++ 整堆收集器
+  + G1
 
 
 
