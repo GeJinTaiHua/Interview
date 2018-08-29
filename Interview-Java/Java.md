@@ -344,26 +344,46 @@ String str ="hello";
 ![集合](http://img.blog.csdn.net/20160706172512559?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 ##### Collection
 + List
-  1) ArrayList：底层数据结构是数组。查询快，增删慢；线程不安全，效率高；
-     +  CopyOnWriteArrayList（CopyOnWrite）：写时拷贝；java.util.concurrent包。
-  2) Vector（淘汰）：底层数据结构是数组。查询快，增删慢；线程安全，效率低；
-  3) LinkedList：底层数据结构是链表。查询慢，增删快；线程不安全，效率高。
+  1) ArrayList
+     + 底层数据结构是数组；
+     + 查询快，增删慢；
+     + 线程不安全，效率高；
+     + CopyOnWriteArrayList（CopyOnWrite）：写时拷贝；java.util.concurrent包。
+  2) LinkedList
+     + 底层数据结构是链表；
+     + 查询慢，增删快；
+     + 线程不安全，效率高。
+  3) Vector（淘汰）
+     + 底层数据结构是数组；
+     + 查询快，增删慢；
+     + 线程安全，效率低；
 + Set
-  1) HashSet：底层采用哈希表。无序；非线程安全；
-     + linkedHashSet：底层采用链表和哈希表。有序；非线程安全；
-  2) TreeSet：底层使用红黑树算法，擅长于范围查询。有序；非线程安全；
+  1) HashSet
+     + 底层采用哈希表；
+     + 无序；
+     + 非线程安全；
+     + linkedHashSet：有序；
+  2) TreeSet
+     + 底层使用红黑树算法，擅长于范围查询；
+     + 有序；
+     + 非线程安全；
   3) 线程安全：Set set = Collections.synchronizedSet(set 对象)。
     
 ##### Map 
-+ HashMap：哈希表算法。非线程安全。  
+1) HashMap：
+   + 哈希表算法；
+   + 非线程安全。； 
 ![链表散列](https://images0.cnblogs.com/blog/381060/201401/152128351581.png)
-  + linkedHashMap：链表和哈希表算法。
-+ Hashtable（淘汰）：哈希表算法。线程安全；多线程下效率低下。
-  + ConcurrentHashMap
-    + 锁分离（JDK1.8放弃）：在HashMap的基础上，将数据分段存储，ConcurrentHashMap由多个Segment组成，每个Segment都有把锁。
-    + CAS算法：如果valueOffset位置包含的值与expect值相同，则更新valueOffset位置的值为update，并返回true，否则不更新，返回false。
-+ SortedMap  
-  + TreeMap：红黑树算法。有序。
+   + linkedHashMap：链表和哈希表算法。
+2) Hashtable（淘汰）
+   + 哈希表算法；
+   + 线程安全；
+   + 多线程下效率低下。
+   + ConcurrentHashMap
+     + 锁分离（JDK1.8放弃）：在HashMap的基础上，将数据分段存储，ConcurrentHashMap由多个Segment组成，每个Segment都有把锁。
+     + CAS算法：如果valueOffset位置包含的值与expect值相同，则更新valueOffset位置的值为update，并返回true，否则不更新，返回false。
+3) SortedMap  
+   + TreeMap：红黑树算法；有序。
 
 ##### fail-fast、fail-safe
 + fail-fast（快速失败）
