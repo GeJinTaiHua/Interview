@@ -341,7 +341,7 @@ String str ="hello";
 + 集合、数组
 
 #### 集合
-+ [Collection](/Interview-Java/src/test/java/基本数据类型/Collection.java)
++ [Collection](/Interview-Java/src/test/java/BaseData/Collection.java)
   - List：有序，可以重复的集合。
     + ArrayList：底层数据结构是数组。查询快，增删慢；线程不安全，效率高；
       +  CopyOnWriteArrayList（CopyOnWrite）：写时拷贝；java.util.concurrent包。
@@ -352,7 +352,7 @@ String str ="hello";
     + linkedHashSet：底层采用链表和哈希表。有序；非线程安全；
     + TreeSet：底层使用红黑树算法，擅长于范围查询。有序；非线程安全；
     + 线程安全：Set set = Collections.synchronizedSet(set 对象)。
-+ [Map](/Interview-Java/src/test/java/基本数据类型/Map.java)：key-value 的键值对，key 不允许重复，value 可以。
++ [Map](/Interview-Java/src/test/java/BaseData/Map.java)：key-value 的键值对，key 不允许重复，value 可以。
   - HashMap：哈希表算法。非线程安全。
   - linkedHashMap：链表和哈希表算法。
   - Hashtable（淘汰）：哈希表算法。线程安全；多线程下效率低下。
