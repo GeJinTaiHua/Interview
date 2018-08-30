@@ -399,7 +399,14 @@ String str ="hello";
   ```
   + Iterable:存在于 java.lang 包中，里面封装了 Iterator 接口。所以只要实现了Iterable接口的类，就可以使用Iterator迭代器了。
 + AbstractXXX：骨架类，核心代码实现
-+ 集合、数组
++ java.util.concurrent：是专为 Java并发编程而设计的包。
+  1) locks部分：显式锁(互斥锁和速写锁)相关；
+  2) atomic部分：原子变量类相关，是构建非阻塞算法的基础；
+  3) executor部分：线程池相关；
+  4) collections部分：并发容器相关；
+  5) tools部分：同步工具相关，如信号量、闭锁、栅栏等功能；
+  + BlockingQueue：此接口是一个线程安全的 存取实例的队列。  
+  ![BlockingQueue](https://img-blog.csdn.net/20170227071415737?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2J3ang=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 #### 集合
 ![集合](http://img.blog.csdn.net/20160706172512559?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
