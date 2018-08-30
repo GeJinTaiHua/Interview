@@ -382,31 +382,46 @@ String str ="hello";
 + 虚引用（PhantomReference）：
   + 并不影响对象的生命周期。
 
-#### java.util
-+ Comparator：比较接口
-+ Iterator：迭代接口
-  + Iterator：存在于 java.util 包中，核心的方法next()，hasnext()，remove()。
-  ```
-	List list = new ArrayList(); //产生一个 List 集合，典型实现为 ArrayList。
-	list.add("a");
-	list.add("b");
-	list.add("c");
-	Iterator it = list.iterator(); //构造 List 的迭代器
-	while(it.hasNext()){ //通过迭代器遍历元素
-	    Object obj = it.next();
-	    System.out.println(obj);
-	}
-  ```
-  + Iterable:存在于 java.lang 包中，里面封装了 Iterator 接口。所以只要实现了Iterable接口的类，就可以使用Iterator迭代器了。
-+ AbstractXXX：骨架类，核心代码实现
-+ java.util.concurrent：是专为 Java并发编程而设计的包。
-  1) locks部分：显式锁(互斥锁和速写锁)相关；
-  2) atomic部分：原子变量类相关，是构建非阻塞算法的基础；
-  3) executor部分：线程池相关；
-  4) collections部分：并发容器相关；
-  5) tools部分：同步工具相关，如信号量、闭锁、栅栏等功能；
-  + BlockingQueue：此接口是一个线程安全的 存取实例的队列。  
-  ![BlockingQueue](https://img-blog.csdn.net/20170227071415737?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2J3ang=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+#### java.util.concurrent
+专为 Java并发编程而设计的包。转发：https://www.xmind.net/m/tJy5/
+1) locks部分：显式锁(互斥锁和速写锁)相关；
+   + Lock：一个类似于 synchronized 块的线程同步机制接口。但是 Lock 比 synchronized 块更加灵活、精细。
+     + ReentrantLock
+```
+Lock lock = new ReentrantLock();  
+lock.lock();  
+//critical section  
+lock.unlock();
+```
+   + ReadWriteLock：读写锁一种先进的线程锁机制。
+     + ReentrantReadWriteLock
+2) atomic部分：原子变量类相关，是构建非阻塞算法的基础；
+3) executor部分：线程池相关；
+   + ExecutorService
+     + ScheduledThreadPoolExecutor：通过 Executors.newScheduledThreadPool(10)创建的
+     + ThreadPoolExecutor: 除了第一种的其他三种方式创建的
+   + ThreadPoolExecutor：使用其内部池中的线程执行给定任务(Callable 或者 Runnable)。
+   + ForkJoinPool
+4) collections部分：并发容器相关；
+   + BlockingQueue：此接口是一个线程安全的 存取实例的队列。  
+     + ArrayBlockingQueue：数组阻塞队列
+     + DelayQueue：延迟队列
+     + LinkedBlockingQueue：链阻塞队列
+     + PriorityBlockingQueue： 具有优先级的阻塞队列
+     + SynchronousQueue：同步队列
+   + BlockingDeque：此接口表示一个线程安全放入和提取实例的双端队列。
+     + LinkedBlockingDeque：链阻塞双端队列
+   + ConcurrentMap：一个能够对别人的访问(插入和提取)进行并发处理的 java.util.Map接口。
+     + ConcurrentHashMap
+     + ConcurrentNavigableMap
+5) tools部分：同步工具相关，如信号量、闭锁、栅栏等功能；
+   + CountDownLatch：是一个并发构造，它允许一个或多个线程等待一系列指定操作的完成。
+   + CyclicBarrier：是一种同步机制，它能够对处理一些算法的线程实现同步。
+   + Exchanger：表示一种两个线程可以进行互相交换对象的会和点。
+   + Semaphore：是一个计数信号量。acquire()、release()
+     + 保护一个重要(代码)部分防止一次超过 N 个线程进入。
+     + 在两个线程之间发送信号。
+
 
 #### 集合
 ![集合](http://img.blog.csdn.net/20160706172512559?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
