@@ -19,7 +19,7 @@
     * [final、finally、finalize](#finalfinallyfinalize)
   * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
     * [四种引用](#%E5%9B%9B%E7%A7%8D%E5%BC%95%E7%94%A8)
-    * [java\.util](#javautil)
+    * [java\.util\.concurrent](#javautilconcurrent)
     * [集合](#%E9%9B%86%E5%90%88)
       * [Collection](#collection)
       * [Map](#map)
@@ -385,14 +385,14 @@ String str ="hello";
 #### java.util.concurrent
 专为 Java并发编程而设计的包。转发：https://www.xmind.net/m/tJy5/
 1) locks部分：显式锁(互斥锁和速写锁)相关；
-   + Lock：一个类似于 synchronized 块的线程同步机制接口。但是 Lock 比 synchronized 块更加灵活、精细。
-     + ReentrantLock
 ```
 Lock lock = new ReentrantLock();  
 lock.lock();  
 //critical section  
 lock.unlock();
 ```
+   + Lock：一个类似于 synchronized 块的线程同步机制接口。但是 Lock 比 synchronized 块更加灵活、精细。
+     + ReentrantLock
    + ReadWriteLock：读写锁一种先进的线程锁机制。
      + ReentrantReadWriteLock
 2) atomic部分：原子变量类相关，是构建非阻塞算法的基础；
