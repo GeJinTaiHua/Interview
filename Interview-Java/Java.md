@@ -383,7 +383,7 @@ String str ="hello";
   + 并不影响对象的生命周期。
 
 #### 泛型
-+ T ？
++ T 
 + extends
   + 上界 <? extends T>
   + 不能往里存，只能往外取  
