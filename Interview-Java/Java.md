@@ -19,6 +19,7 @@
     * [final、finally、finalize](#finalfinallyfinalize)
   * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
     * [四种引用](#%E5%9B%9B%E7%A7%8D%E5%BC%95%E7%94%A8)
+    * [泛型](#%E6%B3%9B%E5%9E%8B)
     * [java\.util\.concurrent](#javautilconcurrent)
     * [集合](#%E9%9B%86%E5%90%88)
       * [Collection](#collection)
