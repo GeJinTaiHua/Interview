@@ -440,7 +440,7 @@ lock.unlock();
 \\创建了一个函数，用来计算两个操作数的和。
 int sum = (x, y) -> x + y;
 ```
-2) [函数式接口](/Interview-Java/src/test/java/BaseData/FunctionInterfaceDemo.java#L22)
+2) [函数式接口](/Interview-Java/src/test/java/BaseData/FunctionInterfaceDemo.java)
 
 接口|参数|返回值|类别|
 ---|---|---|---|
