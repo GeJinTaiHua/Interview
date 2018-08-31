@@ -441,6 +441,7 @@ lock.unlock();
 int sum = (x, y) -> x + y;
 ```
 2) [函数式接口](/Interview-Java/src/test/java/BaseData/FunctionInterfaceDemo.java#L22)
+
 接口|参数|返回值|类别|
 ---|---|---|---|
 Consumer|T|void|消费型接口|
