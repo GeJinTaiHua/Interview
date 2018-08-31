@@ -384,7 +384,7 @@ String str ="hello";
 
 #### 泛型
 + T ？
-+ extends（上限）
++ extends（上限）<? extends Class>  
   + <? extends Class>  
   ![extends](https://images2018.cnblogs.com/blog/1043143/201804/1043143-20180414164334299-153062921.jpg)
 + super（下限）
