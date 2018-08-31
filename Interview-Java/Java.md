@@ -431,6 +431,16 @@ lock.unlock();
      + 保护一个重要(代码)部分防止一次超过 N 个线程进入。
      + 在两个线程之间发送信号。
 
+#### Lambda 表达式
+1) expression = (variable) -> action
+   + variable：这是一个变量，一个占位符。像x、y、z可以是多个变量；
+   + action：这是我们实现的代码逻辑部分，它可以是一行代码也可以是一个代码片段。
+```
+\\创建了一个函数，用来计算两个操作数的和。
+int sum = (x, y) -> x + y;
+```
+2) 函数式接口
+
 
 #### 集合
 ![集合](http://img.blog.csdn.net/20160706172512559?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
