@@ -69,6 +69,8 @@ public class FunctionInterfaceDemo {
     public void PredicateTest() {
         List<String> fruit = Arrays.asList("香蕉", "哈密瓜", "榴莲", "火龙果", "水蜜桃");
         List<String> newFruit = filter(fruit, (f) -> f.contains("果") || f.contains("瓜"));
-        newFruit.forEach(System.out::println);
+        newFruit.forEach(item -> {
+            System.out.println("瓜果有" + item);
+        });
     }
 }
