@@ -392,46 +392,6 @@ String str ="hello";
   + 往外取只能赋值给Object变量，不影响往里存  
   ![super](https://images2018.cnblogs.com/blog/1043143/201804/1043143-20180414164527508-811736127.jpg)
 
-#### java.util.concurrent
-专为 Java并发编程而设计的包。转发：https://www.xmind.net/m/tJy5/
-1) locks部分：显式锁(互斥锁和速写锁)相关；
-```
-Lock lock = new ReentrantLock();  
-lock.lock();  
-//critical section  
-lock.unlock();
-```
-   + Lock：一个类似于 synchronized 块的线程同步机制接口。但是 Lock 比 synchronized 块更加灵活、精细。
-     + ReentrantLock
-   + ReadWriteLock：读写锁一种先进的线程锁机制。
-     + ReentrantReadWriteLock
-2) atomic部分：原子变量类相关，是构建非阻塞算法的基础；
-3) executor部分：线程池相关；
-   + ExecutorService
-     + ScheduledThreadPoolExecutor：通过 Executors.newScheduledThreadPool(10)创建的
-     + ThreadPoolExecutor: 除了第一种的其他三种方式创建的
-   + ThreadPoolExecutor：使用其内部池中的线程执行给定任务(Callable 或者 Runnable)。
-   + ForkJoinPool
-4) collections部分：并发容器相关；
-   + BlockingQueue：此接口是一个线程安全的 存取实例的队列。  
-     + ArrayBlockingQueue：数组阻塞队列
-     + DelayQueue：延迟队列
-     + LinkedBlockingQueue：链阻塞队列
-     + PriorityBlockingQueue： 具有优先级的阻塞队列
-     + SynchronousQueue：同步队列
-   + BlockingDeque：此接口表示一个线程安全放入和提取实例的双端队列。
-     + LinkedBlockingDeque：链阻塞双端队列
-   + ConcurrentMap：一个能够对别人的访问(插入和提取)进行并发处理的 java.util.Map接口。
-     + ConcurrentHashMap
-     + ConcurrentNavigableMap
-5) tools部分：同步工具相关，如信号量、闭锁、栅栏等功能；
-   + CountDownLatch：是一个并发构造，它允许一个或多个线程等待一系列指定操作的完成。
-   + CyclicBarrier：是一种同步机制，它能够对处理一些算法的线程实现同步。
-   + Exchanger：表示一种两个线程可以进行互相交换对象的会和点。
-   + Semaphore：是一个计数信号量。acquire()、release()
-     + 保护一个重要(代码)部分防止一次超过 N 个线程进入。
-     + 在两个线程之间发送信号。
-
 #### Lambda 表达式
 1) expression = (variable) -> action
    + variable：这是一个变量，一个占位符。像x、y、z可以是多个变量；
@@ -448,6 +408,39 @@ Consumer|T|void|消费型接口|
 Supplier|none|T|供给型接口|
 Function|T|R|函数型接口|
 Predicate|T|boolean|断言型接口|
+
+#### Stream API
+Stream 是对集合（Collection）对象功能的增强，它专注于对集合对象进行各种非常便利、高效的聚合操作（aggregate operation），或者大批量数据操作 (bulk data operation)。
++ 聚合操作
+```
+List<Integer> transactionsIds = transactions.parallelStream().
+  filter(t -> t.getType() == Transaction.GROCERY).
+  sorted(comparing(Transaction::getValue).reversed()).
+  map(Transaction::getId).
+  collect(toList());
+```
++ 流
+![流管道 (Stream Pipeline) 的构成](https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/img001.png)
+  + 生成 Stream Source
+    1) 
+
+#### IO、NIO
++ 管道（Channel）：实际上就像传统IO中的流，到任何目的地(或来自任何地方)的所有数据都必须通过一个 Channel 对象。一个 Buffer 实质上是一个容器对象。
++ 选择器（Selector）：用于监听多个管道的事件，使用传统的阻塞IO时我们可以方便的知道什么时候可以进行读写，而使用非阻塞通道，我们需要一些方法来知道什么时候通道准备好了，选择器正是为这个需要而诞生的。
+
+IO|NIO
+---|---
+面向流|面向缓冲
+阻塞IO|非阻塞IO
+无|选择器
+
++ 推荐 [🔘IO](https://github.com/GeJinTaiHua/Learn-IO)
+  + 少量的连接。
+  + 连接每次要发送大量的数据。
++ 推荐 [🔘NIO](https://github.com/GeJinTaiHua/Learn-IO)
+  + 大量的连接。
+  + 连接每次发送少量的数据。
+  + 聊天服务器。
 
 #### 集合
 ![集合](http://img.blog.csdn.net/20160706172512559?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
@@ -501,24 +494,46 @@ Predicate|T|boolean|断言型接口|
 + fail-safe（安全失败）
   + 你在迭代的时候会去底层集合做一个拷贝，所以你在修改上层集合的时候是不会受影响的，不会抛出 ConcurrentModification 异常；
   + 在 java.util.concurrent 包下的全是安全失败的。
-
-#### IO、NIO
-+ 管道（Channel）：实际上就像传统IO中的流，到任何目的地(或来自任何地方)的所有数据都必须通过一个 Channel 对象。一个 Buffer 实质上是一个容器对象。
-+ 选择器（Selector）：用于监听多个管道的事件，使用传统的阻塞IO时我们可以方便的知道什么时候可以进行读写，而使用非阻塞通道，我们需要一些方法来知道什么时候通道准备好了，选择器正是为这个需要而诞生的。
-
-IO|NIO
----|---
-面向流|面向缓冲
-阻塞IO|非阻塞IO
-无|选择器
-
-+ 推荐 [🔘IO](https://github.com/GeJinTaiHua/Learn-IO)
-  + 少量的连接。
-  + 连接每次要发送大量的数据。
-+ 推荐 [🔘NIO](https://github.com/GeJinTaiHua/Learn-IO)
-  + 大量的连接。
-  + 连接每次发送少量的数据。
-  + 聊天服务器。
+  
+#### java.util.concurrent
+专为 Java并发编程而设计的包。转发：https://www.xmind.net/m/tJy5/
+1) locks部分：显式锁(互斥锁和速写锁)相关；
+```
+Lock lock = new ReentrantLock();  
+lock.lock();  
+//critical section  
+lock.unlock();
+```
+   + Lock：一个类似于 synchronized 块的线程同步机制接口。但是 Lock 比 synchronized 块更加灵活、精细。
+     + ReentrantLock
+   + ReadWriteLock：读写锁一种先进的线程锁机制。
+     + ReentrantReadWriteLock
+2) atomic部分：原子变量类相关，是构建非阻塞算法的基础；
+3) executor部分：线程池相关；
+   + ExecutorService
+     + ScheduledThreadPoolExecutor：通过 Executors.newScheduledThreadPool(10)创建的
+     + ThreadPoolExecutor: 除了第一种的其他三种方式创建的
+   + ThreadPoolExecutor：使用其内部池中的线程执行给定任务(Callable 或者 Runnable)。
+   + ForkJoinPool
+4) collections部分：并发容器相关；
+   + BlockingQueue：此接口是一个线程安全的 存取实例的队列。  
+     + ArrayBlockingQueue：数组阻塞队列
+     + DelayQueue：延迟队列
+     + LinkedBlockingQueue：链阻塞队列
+     + PriorityBlockingQueue： 具有优先级的阻塞队列
+     + SynchronousQueue：同步队列
+   + BlockingDeque：此接口表示一个线程安全放入和提取实例的双端队列。
+     + LinkedBlockingDeque：链阻塞双端队列
+   + ConcurrentMap：一个能够对别人的访问(插入和提取)进行并发处理的 java.util.Map接口。
+     + ConcurrentHashMap
+     + ConcurrentNavigableMap
+5) tools部分：同步工具相关，如信号量、闭锁、栅栏等功能；
+   + CountDownLatch：是一个并发构造，它允许一个或多个线程等待一系列指定操作的完成。
+   + CyclicBarrier：是一种同步机制，它能够对处理一些算法的线程实现同步。
+   + Exchanger：表示一种两个线程可以进行互相交换对象的会和点。
+   + Semaphore：是一个计数信号量。acquire()、release()
+     + 保护一个重要(代码)部分防止一次超过 N 个线程进入。
+     + 在两个线程之间发送信号。
   
 ### JVM
 #### JVM 类加载机制
