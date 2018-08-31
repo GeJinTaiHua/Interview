@@ -40,6 +40,8 @@
   - [☕️Spring Boot](https://github.com/GeJinTaiHua/Learn-SpringBoot)
   - [☕️Spring Boot 2.0](https://github.com/GeJinTaiHua/Learn-SpringBoot2.0)
   - [☕️Spring Cloud](https://github.com/GeJinTaiHua/Learn-SpringCloud)
+    + [📊Eureka](https://github.com/GeJinTaiHua/Learn-Eureka)：服务的注册与发现。
+  - [Spring Data JPA]
 + Struts
   - 模型（M）
   - 视图（V）
@@ -47,6 +49,7 @@
   - [☕️SpringMVC](https://github.com/GeJinTaiHua/Learn-SpringMVC)
 + [☕️Hibernate](https://github.com/GeJinTaiHua/Learn-Hibernate)
   - ORM（对象关系映射）
+  - [MyBatis]
   
 ### 第三方库
 + [♻️JAXB](https://github.com/GeJinTaiHua/Learn-JAXB)：XML 节点元素和 JavaBean 相互转换工具。
@@ -59,8 +62,6 @@
 ### 中间件
 + RPC框架
   + [💥Dubbo](https://github.com/GeJinTaiHua/Learn-Dubbo)：一款高性能Java RPC框架。
-  + Dubbox
-  + Motan
 + MQ消息
   + [🚗RabbitMQ](https://github.com/GeJinTaiHua/Learn-RabbitMQ)：是一个在AMQP基础上完成的，可复用的企业消息系统。他遵循Mozilla Public License开源协议。
   + ActiveMQ
@@ -68,19 +69,15 @@
 + 分布式协调服务
   + ZooKeeper 
   + Keepalived
-  + [📊Eureka](https://github.com/GeJinTaiHua/Learn-Eureka)：服务的注册与发现。
 + 配置管理
   + Apollo
 + 大数据
   + Hbase
   + Hadoop
   + Hive
-  + Spark
-  + Storm
 + 容器
   + Docker
   + Kubernetes
-  + Mesos
 + 分布式缓存
   + Redis
   + MemCache
