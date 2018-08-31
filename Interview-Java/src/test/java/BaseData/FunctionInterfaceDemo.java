@@ -75,7 +75,7 @@ public class FunctionInterfaceDemo {
         });
 
         List<String> f2 = fruit.stream().filter(f -> f.contains("果") || f.contains("瓜")).collect(Collectors.toList());
-        
+
         fruit.stream().filter(f -> f.contains("果") || f.contains("瓜")).forEach(item -> {
             System.out.println("瓜果有" + item);
         });
