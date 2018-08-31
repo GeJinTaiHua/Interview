@@ -421,13 +421,26 @@ List<Integer> transactionsIds = transactions.parallelStream().
 ```
 + 流
 ![流管道的构成](https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/img001.png)
-  + 生成 Stream Source
+  + 构造
     1) 从 Collection 和数组
        + Collection.stream()
        + Collection.parallelStream()
        + Arrays.stream(T array) or Stream.of()
     2) 从 BufferedReader
        + java.io.BufferedReader.lines()
+    3) 静态工厂
+       + java.util.stream.IntStream.range()
+       + java.nio.file.Files.walk()
+    4) 自己构建
+       + java.util.Spliterator
+    5) 其它
+       + Random.ints()
+       + BitSet.stream()
+       + Pattern.splitAsStream(java.lang.CharSequence)
+       + JarFile.stream()
+   + 操作类型
+     + Intermediate：中间操作
+     + Terminal：终结操作
     
 #### IO、NIO
 + 管道（Channel）：实际上就像传统IO中的流，到任何目的地(或来自任何地方)的所有数据都必须通过一个 Channel 对象。一个 Buffer 实质上是一个容器对象。
