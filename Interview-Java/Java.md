@@ -382,6 +382,15 @@ String str ="hello";
 + 虚引用（PhantomReference）：
   + 并不影响对象的生命周期。
 
+#### 泛型
++ T ？
++ extends（上限）
+  + <? extends Class>  
+  ![extends](https://images2018.cnblogs.com/blog/1043143/201804/1043143-20180414164334299-153062921.jpg)
++ super（下限）
+  + <? super Class>      
+  ![super](https://images2018.cnblogs.com/blog/1043143/201804/1043143-20180414164527508-811736127.jpg)
+
 #### java.util.concurrent
 专为 Java并发编程而设计的包。转发：https://www.xmind.net/m/tJy5/
 1) locks部分：显式锁(互斥锁和速写锁)相关；
