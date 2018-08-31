@@ -420,25 +420,24 @@ List<Integer> transactionsIds = transactions.parallelStream().
   map(Transaction::getId).
   collect(toList());
 ```
-+ 流
++ 流的构造
 ![流管道的构成](https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/img001.png)
-  + 构造
-    1) 从 Collection 和数组
-       + Collection.stream()
-       + Collection.parallelStream()
-       + Arrays.stream(T array) or Stream.of()
-    2) 从 BufferedReader
-       + java.io.BufferedReader.lines()
-    3) 静态工厂
-       + java.util.stream.IntStream.range()
-       + java.nio.file.Files.walk()
-    4) 自己构建
-       + java.util.Spliterator
-    5) 其它
-       + Random.ints()
-       + BitSet.stream()
-       + Pattern.splitAsStream(java.lang.CharSequence)
-       + JarFile.stream()
+  1) 从 Collection 和数组
+     + Collection.stream()
+     + Collection.parallelStream()
+     + Arrays.stream(T array) or Stream.of()
+  2) 从 BufferedReader
+     + java.io.BufferedReader.lines()
+  3) 静态工厂
+     + java.util.stream.IntStream.range()
+     + java.nio.file.Files.walk()
+  4) 自己构建
+     + java.util.Spliterator
+  5) 其它
+     + Random.ints()
+     + BitSet.stream()
+     + Pattern.splitAsStream(java.lang.CharSequence)
+     + JarFile.stream()
 ```
 // 1. Individual values
 Stream stream = Stream.of("a", "b", "c");
@@ -450,9 +449,15 @@ stream = Arrays.stream(strArray);
 List<String> list = Arrays.asList(strArray);
 stream = list.stream();
 ```
-   + 操作类型
-     + Intermediate：中间操作
-     + Terminal：终结操作
++ 流的操作类型
+  + Intermediate：中间操作
+    + map(mapToInt, flatMap 等)：把 input Stream 的每一个元素，映射成 output Stream 的另外一个元素
+    + filter：过滤
+    + distinct、sorted、peek、limit、skip、parallel、sequential、unordered
+  + Terminal：终结操作
+    + forEach、forEachOrdered、toArray、reduce、collect、min、max、count、anyMatch、allMatch、noneMatch、findFirst、findAny、iterator
+  + Short-circuiting：
+    + anyMatch、allMatch、noneMatch、findFirst、findAny、limit
     
     
 #### IO、NIO
