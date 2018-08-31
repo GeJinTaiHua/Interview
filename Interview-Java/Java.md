@@ -440,8 +440,13 @@ lock.unlock();
 \\创建了一个函数，用来计算两个操作数的和。
 int sum = (x, y) -> x + y;
 ```
-2) [函数式接口](/Interview-Java/src/test/java/BaseData/FunctionInterfaceDemo.java)
-![函数式接口](http://incdn1.b0.upaiyun.com/2017/08/7a34cef4b0d56132aab24f78bc68921e.png)
+2) 函数式接口
+接口|参数|返回值|类别|
+---|---|---|---|
+Consumer|T|void|[消费型接口](/Interview-Java/src/test/java/BaseData/FunctionInterfaceDemo.java#L22)|
+Supplier|none|T|[供给型接口](/Interview-Java/src/test/java/BaseData/FunctionInterfaceDemo.java#L32)|
+Function|T|R|[函数型接口](/Interview-Java/src/test/java/BaseData/FunctionInterfaceDemo.java#L48)|
+Predicate|T|boolean|[断言型接口](/Interview-Java/src/test/java/BaseData/FunctionInterfaceDemo.java#L58)|
 
 #### 集合
 ![集合](http://img.blog.csdn.net/20160706172512559?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
