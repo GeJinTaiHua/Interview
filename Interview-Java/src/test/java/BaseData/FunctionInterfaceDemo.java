@@ -14,7 +14,7 @@ public class FunctionInterfaceDemo {
     private static boolean doPredicate(int age, Predicate<Integer> predicate) {
         return predicate.test(age);
     }
-
+    
     public static void main(String args) {
         boolean is = doPredicate(20, x -> x >= 18);
     }
