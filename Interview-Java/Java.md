@@ -384,12 +384,12 @@ String str ="hello";
 
 #### 泛型
 + T ？
-+ extends（上限）
-  + <? extends T>
++ extends
+  + 上界 <? extends T>
   + 不能往里存，只能往外取  
   ![extends](https://images2018.cnblogs.com/blog/1043143/201804/1043143-20180414164334299-153062921.jpg)
-+ super（下限）
-  + <? super T>  
++ super
+  + 下界 <? super T>  
   + 往外取只能赋值给Object变量，不影响往里存  
   ![super](https://images2018.cnblogs.com/blog/1043143/201804/1043143-20180414164527508-811736127.jpg)
 
