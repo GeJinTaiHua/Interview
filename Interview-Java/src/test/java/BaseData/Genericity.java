@@ -18,7 +18,7 @@ public class Genericity {
         GenericHolder<Fruit> fruitGenericHolder = new GenericHolder<>();
         GenericHolder<Apple> appleGenericHolder = new GenericHolder<>();
 
-        Fruit fruit = new Fruit("一堆水果");
+        Fruit fruit = new Fruit("一堆水果"); 
         Apple apple = new Apple("一筐水果");
 
         fruitGenericHolder.setObj(fruit);
