@@ -439,7 +439,7 @@ List<Integer> transactionsIds = transactions.parallelStream().
        + BitSet.stream()
        + Pattern.splitAsStream(java.lang.CharSequence)
        + JarFile.stream()
-   ```
+```
 // 1. Individual values
 Stream stream = Stream.of("a", "b", "c");
 // 2. Arrays
@@ -449,7 +449,7 @@ stream = Arrays.stream(strArray);
 // 3. Collections
 List<String> list = Arrays.asList(strArray);
 stream = list.stream();
-   ```
+```
    + 操作类型
      + Intermediate：中间操作
      + Terminal：终结操作
