@@ -10,6 +10,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 /*
  * @desc 函数式接口
@@ -70,6 +71,12 @@ public class FunctionInterfaceDemo {
         List<String> fruit = Arrays.asList("香蕉", "哈密瓜", "榴莲", "火龙果", "水蜜桃");
         List<String> newFruit = filter(fruit, (f) -> f.contains("果") || f.contains("瓜"));
         newFruit.forEach(item -> {
+            System.out.println("瓜果有" + item);
+        });
+
+        List<String> f2 = fruit.stream().filter(f -> f.contains("果") || f.contains("瓜")).collect(Collectors.toList());
+        
+        fruit.stream().filter(f -> f.contains("果") || f.contains("瓜")).forEach(item -> {
             System.out.println("瓜果有" + item);
         });
     }
