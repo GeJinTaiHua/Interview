@@ -420,10 +420,15 @@ List<Integer> transactionsIds = transactions.parallelStream().
   collect(toList());
 ```
 + 流
-![流管道 (Stream Pipeline) 的构成](https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/img001.png)
+![流管道的构成](https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/img001.png)
   + 生成 Stream Source
-    1) 
-
+    1) 从 Collection 和数组
+       + Collection.stream()
+       + Collection.parallelStream()
+       + Arrays.stream(T array) or Stream.of()
+    2) 从 BufferedReader
+       + java.io.BufferedReader.lines()
+    
 #### IO、NIO
 + 管道（Channel）：实际上就像传统IO中的流，到任何目的地(或来自任何地方)的所有数据都必须通过一个 Channel 对象。一个 Buffer 实质上是一个容器对象。
 + 选择器（Selector）：用于监听多个管道的事件，使用传统的阻塞IO时我们可以方便的知道什么时候可以进行读写，而使用非阻塞通道，我们需要一些方法来知道什么时候通道准备好了，选择器正是为这个需要而诞生的。
