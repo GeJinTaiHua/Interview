@@ -20,13 +20,14 @@
   * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
     * [四种引用](#%E5%9B%9B%E7%A7%8D%E5%BC%95%E7%94%A8)
     * [泛型](#%E6%B3%9B%E5%9E%8B)
-    * [java\.util\.concurrent](#javautilconcurrent)
     * [Lambda 表达式](#lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F)
+    * [Stream API](#stream-api)
+    * [IO、NIO](#ionio)
     * [集合](#%E9%9B%86%E5%90%88)
       * [Collection](#collection)
       * [Map](#map)
       * [fail\-fast、fail\-safe](#fail-fastfail-safe)
-    * [IO、NIO](#ionio)
+    * [java\.util\.concurrent](#javautilconcurrent)
   * [JVM](#jvm)
     * [JVM 类加载机制](#jvm-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6)
     * [JVM 内存模型](#jvm-%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B)
@@ -438,9 +439,21 @@ List<Integer> transactionsIds = transactions.parallelStream().
        + BitSet.stream()
        + Pattern.splitAsStream(java.lang.CharSequence)
        + JarFile.stream()
+   ```
+// 1. Individual values
+Stream stream = Stream.of("a", "b", "c");
+// 2. Arrays
+String [] strArray = new String[] {"a", "b", "c"};
+stream = Stream.of(strArray);
+stream = Arrays.stream(strArray);
+// 3. Collections
+List<String> list = Arrays.asList(strArray);
+stream = list.stream();
+   ```
    + 操作类型
      + Intermediate：中间操作
      + Terminal：终结操作
+    
     
 #### IO、NIO
 + 管道（Channel）：实际上就像传统IO中的流，到任何目的地(或来自任何地方)的所有数据都必须通过一个 Channel 对象。一个 Buffer 实质上是一个容器对象。
