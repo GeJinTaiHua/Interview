@@ -184,11 +184,36 @@
     + 地理 DNS：根据用户所处的地理位置，通过把域名映射到多个不同的IP地址提高可扩展性。
     + Anycast：一个IP地址映射多个物理主机的路由技术。
 ![DNS递归搜索](http://igoro.com/wordpress/wp-content/uploads/2010/02/500pxAn_example_of_theoretical_DNS_recursion_svg.png)
+
 2) 建立连接（[TCP/TP三次握手](#tcp-%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B)）
+
 3) 浏览器向服务器发送HTTP请求
++ HTTP请求：请求行、请求头部、空行、请求数据
+```
+POST / HTTP1.1
+Host: github.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:61.0) Gecko/20100101 Firefox/61.0
+Accept: text/html
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: gzip, deflate, br
+Referer: https://github.com/GeJinTaiHua
+x-requested-with: XMLHttpRequest
+origin: https://github.com
+Connection: keep-alive
+
+name=GeJinTaiHua
+```
+
 4) 服务器接受到请求并返回HTTP响应
++ 301永久重定向响应
+  + 搜索引擎排名
+  + 不同的地址会造成缓存友好性变差
++ HTTP响应：状态行、消息报头、空行、响应正文
+![HTTP响应](http://upload-images.jianshu.io/upload_images/2964446-1c4cab46f270d8ee.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 5) 浏览器解析渲染页面  
 浏览器首先解析HTML文件构建DOM树，然后解析CSS文件构建渲染树，等到渲染树构建完成后，浏览器开始布局渲染树并将其绘制到屏幕上。
+
 6) 断开连接（[四次挥手](#tcp-%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B)）
 
 
