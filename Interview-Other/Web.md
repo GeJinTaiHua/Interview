@@ -204,17 +204,22 @@ Connection: keep-alive
 name=GeJinTaiHua
 ```
 
-4) 服务器接受到请求并返回HTTP响应
+4) 服务器接受到请求并处理
+
+5) 服务器返回HTTP响应
 + 301永久重定向响应
   + 搜索引擎排名
   + 不同的地址会造成缓存友好性变差
 + HTTP响应：状态行、消息报头、空行、响应正文
 ![HTTP响应](http://upload-images.jianshu.io/upload_images/2964446-1c4cab46f270d8ee.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-5) 浏览器解析渲染页面  
+6) 浏览器解析渲染页面  
 浏览器首先解析HTML文件构建DOM树，然后解析CSS文件构建渲染树，等到渲染树构建完成后，浏览器开始布局渲染树并将其绘制到屏幕上。
 
-6) 断开连接（[四次挥手](#tcp-%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B)）
+7) 浏览器获取其他地址内容的标签：图片、视频等
++ 静态文件允许浏览器对其进行缓存（ETag头）
+
+7) 断开连接（[四次挥手](#tcp-%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B)）
 
 
 
