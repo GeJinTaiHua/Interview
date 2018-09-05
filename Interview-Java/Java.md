@@ -12,7 +12,6 @@
     * [Exception](#exception)
     * [synchronized](#synchronized)
     * [switch\.\.\.case\.\.\.default\.\.\.](#switchcasedefault)
-    * [transient](#transient)
     * [Overload、Override](#overloadoverride)
     * [Thread、Runnable](#threadrunnable)
     * [String、StringBuilder、StringBuffer](#stringstringbuilderstringbuffer)
@@ -248,23 +247,6 @@ public class ClassName {
     	System.out.print("default");
     }
 ```
-
-#### transient 
-+ 序列化
-  + 通过在运行时判断类的 serialVersionUID 来验证版本一致性；
-  + serialVersionUID 生成方式：
-    1) 默认的1L；
-    2) 根据类名、接口名、成员方法以及属性等来生成一个64位的Hash字段。
-  + Serializable接口：所有的序列化会自动进行；
-  + Externalizable接口：没有任何东西可以自动序列化，需要在writeExternal方法中进行手工指定所要序列化的变量，这与是否被transient修饰无关。
-```
-public class User extends BaseRequest implements Serializable {
-	      private static final long serialVersionUID = 1L;
-       ... ...
-```
-+ transient：不需要序列化的属性。
-  + 只能修饰变量，不能修饰方法和类；
-  + 一个静态变量不管是否被transient修饰，均不能被序列化。反序列化后类中static型变量的值为当前JVM中对应static变量的值。
 
 #### Overload、Override
 + Overload（重载）：一个类中多态性的表现；
