@@ -1,5 +1,12 @@
 ## 💻计算机
 
+
+  * [线程](#%E7%BA%BF%E7%A8%8B)
+    * [进程、线程](#%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B)
+    * [线程同步的方法](#%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%9A%84%E6%96%B9%E6%B3%95)
+  * [内存溢出和内存泄漏](#%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA%E5%92%8C%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F)
+
+
 ### 线程  
 #### 进程、线程
 ![线程的所有状态](http://mmbiz.qpic.cn/mmbiz_png/Bf4u9qKuXWupl2hClEIRRTBPpWAic4GicZDMAFRRWUIU5qYOYY9Ds9NTrI8GdwGZkOjPkgGZa234kCT7050dDk3g/640?wx_fmt=png&wxfrom=5&wx_lazy=1)  
