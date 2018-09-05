@@ -22,7 +22,7 @@
   + sleep()：睡眠状态，静态方法；
   + notify()：唤醒一个等待状态的线程；
   + Allnotify()：唤醒所有等待状态的线程，竞争。
-+ Java 中 Obj.wait()与Obj.notify()必须要与synchronized(Obj)一起使用
++ Java 中 Obj.wait() 与 Obj.notify() 必须要与 synchronized(Obj) 一起使用
   + wait就是说线程在获取对象锁后，主动释放对象锁，同时本线程休眠。直到有其它线程调用对象的notify()唤醒该线程，才能继续获取对象锁，并继续执行。相应的notify()就是对对象锁的唤醒操作；
   + notify()调用后，并不是马上就释放对象锁的，而是在相应的synchronized(){}语句块执行结束，自动释放锁后，JVM会在wait()对象锁的线程中随机选取一线程，赋予其对象锁，唤醒线程，继续执行。如果是notifyAll()就会释放所有的锁。
 
