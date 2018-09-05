@@ -514,7 +514,7 @@ IO|NIO
   + 在 java.util.concurrent 包下的全是安全失败的。
   
 #### java.util.concurrent
-专为 Java并发编程而设计的包。转发：https://www.xmind.net/m/tJy5/
+专为Java并发编程而设计的包。
 1) locks部分：显式锁(互斥锁和速写锁)相关；
 ```
 Lock lock = new ReentrantLock();  
