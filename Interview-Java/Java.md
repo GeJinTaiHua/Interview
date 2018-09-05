@@ -492,7 +492,7 @@ IO|NIO
 ##### Map 
 1) HashMap：
    + 哈希表算法；
-   + 非线程安全。； 
+   + 非线程安全；  
 ![链表散列](https://images0.cnblogs.com/blog/381060/201401/152128351581.png)
    + linkedHashMap：链表和哈希表算法。
 2) Hashtable（淘汰）
