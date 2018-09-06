@@ -19,6 +19,7 @@
  + [水仙花数](/Interview-.NET/Subject/算法/Narcissus.cs)
  + [交换 a b 的值](/Interview-.NET/Subject/算法/Swap.cs)
  + [100个URL如何找到出现频率最高的前10个](/Interview-Java/src/test/java/Algorithm/MaxUrl.java)
+ + [获取一个字符串在另一个字符串中出现的次数](/Interview-Java/src/test/java/Algorithm/Stringsub.java)
  
 ### Hash 
 #### 哈希函数
