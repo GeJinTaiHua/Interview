@@ -29,4 +29,38 @@ public class Stringsub {
         }
         return count;
     }
+
+    /*
+     * @desc 计算字符串str2在字符串str1中出现的次数
+     * @author wjl
+     * @date 2018/9/6 0006
+     */
+    public static int sub2(String str1, String str2) {
+        int count = 0;
+        int j = 0;
+        int temp = 0;
+
+        if (str1.contains(str2)) {
+            for (int i = 0; i < str1.length(); i++) {
+                if (str1.charAt(i) == str2.charAt(j) && j < str2.length()) {
+                    temp++;
+                    j++;
+
+                    // 存在一个
+                    if (temp == str2.length()) {
+                        count++;
+                        temp = 0;
+                        j = 0;
+                    }
+                } else {
+                    temp = 0;
+                    j = 0;
+                }
+            }
+        } else {
+            return 0;
+        }
+
+        return count;
+    }
 }
