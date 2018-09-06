@@ -16,7 +16,7 @@
   - 进程间通讯依靠IPC资源，例如管道（pipes）、套接字（sockets）等；
   - 线程间通讯依靠JVM提供的API，例如wait方法、notify方法和notifyAll方法，线程间还可以通过共享的主内存来进行值的传递。
 + [阻塞队列](//Interview-Java/src/test/java/Thread/ArrayBlockingQueueN.java)：用Lock和Condition实现一个阻塞队列。
-+ [流量控制](/Interview-Java/src/test/java/Thread/SemaphoreTest.java):30个线程只允许10个同时：30个线程只允许10个同时存在。
++ [流量控制](/Interview-Java/src/test/java/Thread/SemaphoreTest.java)：30个线程只允许10个同时：30个线程只允许10个同时存在。
   
 #### 线程同步的方法
 + 方法
