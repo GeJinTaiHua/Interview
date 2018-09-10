@@ -183,6 +183,18 @@ name=GeJinTaiHua
 ```
 
 4) 服务器接受到请求并处理
++ Spring MVC的处理流程
+  1) 发起请求到前端控制器（DispatcherServlet）；
+  2) 前端控制器请求 HandlerMapping 查找 Handler 可以根据 xml 配置、注解进行查找
+  3) 处理器映射器 HandlerMapping 向前端控制器返回 Handler；
+  4) 前端控制器调用处理器适配器去执行 Handler；
+  5) 处理器适配器去执行 Handler；
+  6) Handler 执行完成给适配器返回 ModelAndView；
+  7) 处理器适配器向前端控制器返回 ModelAndView；
+  8) 前端控制器请求视图解析器去进行视图解析，根据逻辑视图名解析成真正的视图(jsp)；
+  9) 视图解析器向前端控制器返回 View；
+  10) 前端控制器进行视图渲染；视图渲染将模型数据(在ModelAndView对象中)填充到request域；
+  11) 前端控制器向用户响应结果。
 
 5) 服务器返回HTTP响应
 + 301永久重定向响应
