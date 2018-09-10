@@ -440,6 +440,21 @@ Supplier|none|T|供给型接口|
 Function|T|R|函数型接口|
 Predicate|T|boolean|断言型接口|
 
++ 方法引用：仅仅调用特点方法的 Lambda 快捷写法
+```
+inventory.sprt((Apple a1,Apple a2)
+                   ->a1.getWeight().compareTo(a2.getWeight()));
+
+inventory.sort(comparing(Apple::getWeight));
+```
+
+Lambda|等效的方法引用|
+---|---|
+(Apple a)->a.getWeight()|Apple::getWeight|
+()->Thread.currentThread().dumpStack()|Thread.currentThread()::dumpStack|
+(str,i)->str.substring(i)|String::substring|
+(String s)->System.out.println(s)|System.out::println|
+
 #### Stream API
 Stream 是对集合（Collection）对象功能的增强，它专注于对集合对象进行各种非常便利、高效的聚合操作（aggregate operation），或者大批量数据操作 (bulk data operation)。
 + 聚合操作
