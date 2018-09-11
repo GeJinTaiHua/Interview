@@ -125,8 +125,53 @@ public class ConcretePrototype extends Prototype {
  + View（视图）
  + Controller（控制器）
  
- #### ORM
+#### ORM
 &emsp;&emsp;对象-关系映射；用来把对象模型表示的对象映射到基于S Q L 的关系模型数据库结构中去。
+
+### 基本知识
+#### 类之间的关系：继承、依赖、关联、聚合、组合  
++ 继承（实现）：是一种“is-a”关系；
++ 依赖：一个类A中的方法使用到了另一个类B；
+```
+public class Pen {
+    public void write(){
+    }
+}
+
+public class Me {
+    public void write(Pen pen){//pen作为Me类方法的参数
+        pen.write();
+    }
+}
+```
++ 关联：两个类、或者类与接口之间语义级别的一种强依赖关系；
+  + 被关联类B以类属性的形式出现在关联类A中，或者关联类A引用了一个类型为被关联类B的全局变量的这种关系。
+```
+public class You {
+    private Pen pen; // 让pen成为you的类属性 
+
+    public You(Pen p){
+        this.pen = p;
+    }
+
+    public void write(){
+        pen.write();
+    }
+}
+```
++ 聚合：关联关系的一种特例，他体现的是整体与部分、拥有的关系，即has-a的关系；
+```
+public class Family {
+    private List<Child> children; //一个家庭里有许多孩子
+}
+```
++ 组合：一种contains-a的关系，这种关系比聚合更强，也称为强聚合。
+```
+public class Nose {
+    private Eye eye = new Eye();  //一个人有鼻子有眼睛
+    private Nose nose = new Nose();
+}
+```
  
  
  
