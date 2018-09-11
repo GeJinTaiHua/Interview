@@ -737,5 +737,18 @@ lock.unlock();
     + 出现Full GC经常会伴随至少一次的Minor GC；
     + 速度一般比Minor GC慢10倍以上。
 
+### Maven
+#### 依赖范围
++ 依赖范围
+  + compile：默认的范围，编译测试运行都有效；
+  + provided：编译和测试时有效，最后是在运行的时候不会被加入；（官方举了一个例子。比如在JavaEE web项目中我们需要使用servlet的API，但是呢Tomcat中已经提供这个jar，我们在编译和测试的时候需要使用这个api，但是部署到tomcat的时候，如果还加入servlet构建就会产生冲突，这个时候就可以使用provided。）
+  + runtime：在测试和运行时有效；
+  + test：在测试时有效；
+  + system：与本机系统相关联，可移植性差。编译和测试时有效；
+  + import：导入的范围，它只在使用dependencyManagement中，表示从其他pom中导入dependecy的配置。
++ 依赖传递：在正常开发中，我们也会封装maven构建供小伙伴们使用，在我们使用自定义的构建中，那么我们自定义的构建中依赖的构建，也会依赖传递过来。
++ 排除依赖：exclusions 
+
+
 
 
