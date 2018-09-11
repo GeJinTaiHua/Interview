@@ -300,6 +300,20 @@ public class ClassName {
 + Override（重写）：父类和子类多态性的表现；
 ![重载重写](http://www.runoob.com/wp-content/uploads/2013/12/overloading-vs-overriding.png)
 
+#### Comparable 、Comparator
++ Comparable：接口强行对实现它的每个类的对象进行整体排序（自然排序）（内部排序）。
+  + 是由对象自己实现的
+```
+public int compareTo(T o);
+```
++ Comparator：接口新建一个比较器，通过该比较器来对类进行排序（外部排序）。
+  + 由外部实现
+  + 策略模式
+```
+int compare(T o1, T o2);
+boolean equals(Object obj);
+```
+
 #### Thread、Runnable
 + Thread（类）
   + start()：启动一个线程，这时此线程处于就绪（可运行）状态；
