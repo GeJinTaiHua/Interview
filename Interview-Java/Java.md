@@ -566,6 +566,7 @@ IO|NIO
   3) 线程安全：Set set = Collections.synchronizedSet(set 对象)。
     
 ##### Map 
+表示一个键值对 (key-value) 的映射；
 1) HashMap：
    + 哈希表算法；
    + 非线程安全；  
