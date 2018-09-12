@@ -580,7 +580,7 @@ IO|NIO
    + 线程安全；
    + 多线程下效率低下。
    + ConcurrentHashMap
-     + 锁分离（JDK1.8放弃）：在HashMap的基础上，将数据分段存储，ConcurrentHashMap由多个Segment组成，每个Segment都有把锁。
+     + 锁分离（JDK1.8放弃）：在HashMap的基础上，将数据分段存储，ConcurrentHashMap由多个Segment组成，每个Segment都有把锁（可重入锁ReentrantLock）。
      + CAS算法：如果valueOffset位置包含的值与expect值相同，则更新valueOffset位置的值为update，并返回true，否则不更新，返回false。
 3) SortedMap  
    + TreeMap：红黑树算法；有序。
