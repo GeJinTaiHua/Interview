@@ -81,6 +81,9 @@ add constraint FK_stuNo foreign key(stuNo)references stuinfo(stuNo)
 
 #### 5种事务隔离级别
 + DEFAULT 这是一个PlatfromTransactionManager默认的隔离级别，使用数据库默认的事务隔离级别；
+  + MySQL默认：可重复读
+  + Oracle默认：已提交读
+  + SQL Server默认：已提交读
 + 未提交读（read uncommited）：脏读，不可重复读，虚读都有可能发生；
 + 已提交读（read commited）：避免脏读。但是不可重复读和虚读有可能发生；
 + 可重复读（repeatable read）：避免脏读和不可重复读.但是虚读有可能发生；
