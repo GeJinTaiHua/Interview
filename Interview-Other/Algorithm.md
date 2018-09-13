@@ -11,15 +11,7 @@
     * [选择排序](#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F)
     * [归并排序](#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F)
     * [分配排序](#%E5%88%86%E9%85%8D%E6%8E%92%E5%BA%8F)
-    
- 
- ### 常见例子
- + [斐波那契数列](/Interview-.NET/Subject/算法/Fibonacci.cs)
- + [约瑟夫问题 ](/Interview-.NET/Subject/算法/Josephus.cs)
- + [水仙花数](/Interview-.NET/Subject/算法/Narcissus.cs)
- + [交换 a b 的值](/Interview-.NET/Subject/算法/Swap.cs)
- + [100个URL如何找到出现频率最高的前10个](/Interview-Java/src/test/java/Algorithm/MaxUrl.java)
- + [获取一个字符串在另一个字符串中出现的次数](/Interview-Java/src/test/java/Algorithm/Stringsub.java)
+
  
 ### Hash 
 #### 哈希函数
@@ -35,7 +27,10 @@
 + 链地址法（拉链法）
 + 公共溢出区 
 
-### 随机数
+### 数字游戏
++ [水仙花数](/Interview-.NET/Subject/算法/Narcissus.cs)
++ [约瑟夫问题](/Interview-.NET/Subject/算法/Josephus.cs)
++ [斐波那契数列](/Interview-.NET/Subject/算法/Fibonacci.cs)
 + [1-100的随机数](/Interview-Java/src/test/java/Algorithm/RandomNum.java#L16)
 ```
 // Java：randNumber 将被赋值为一个 MIN 和 MAX 范围内的随机数
@@ -45,6 +40,9 @@ int randNumber = new Random().nextInt(MAX - MIN + 1) + MIN;
 // C#：randNumber 将被赋值为一个 MIN 和 MAX 范围内的随机数
 int randNumber = new Random().Next(MIN, MAX + 1); 
 ```
++ [交换 a b 的值](/Interview-.NET/Subject/算法/Swap.cs)
++ [100个URL如何找到出现频率最高的前10个](/Interview-Java/src/test/java/Algorithm/MaxUrl.java)
++ [获取一个字符串在另一个字符串中出现的次数](/Interview-Java/src/test/java/Algorithm/Stringsub.java)
  
 ### 排序算法
 #### 插入排序
