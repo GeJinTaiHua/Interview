@@ -34,6 +34,9 @@
   + 增加了计算时间。
 + 链地址法（拉链法）
 + 公共溢出区 
+
+### 随机数
++ [1-100的随机数](/Interview-Java/src/test/java/Algorithm/RandomNum.java)
  
 ### 排序算法
 #### 插入排序
