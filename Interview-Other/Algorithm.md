@@ -36,7 +36,15 @@
 + 公共溢出区 
 
 ### 随机数
-+ [1-100的随机数](/Interview-Java/src/test/java/Algorithm/RandomNum.java)
++ [1-100的随机数](/Interview-Java/src/test/java/Algorithm/RandomNum.java#L16)
+```
+// Java：randNumber 将被赋值为一个 MIN 和 MAX 范围内的随机数
+int randNumber = new Random().nextInt(MAX - MIN + 1) + MIN;
+```
+```
+// C#：randNumber 将被赋值为一个 MIN 和 MAX 范围内的随机数
+int randNumber = new Random().Next(MIN, MAX + 1); 
+```
  
 ### 排序算法
 #### 插入排序
