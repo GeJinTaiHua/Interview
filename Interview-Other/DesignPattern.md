@@ -10,6 +10,7 @@
   * [框架模式](#%E6%A1%86%E6%9E%B6%E6%A8%A1%E5%BC%8F)
     * [MVC](#mvc)
     * [ORM](#orm)
+    * [RESTful架构风格](#restful%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC)
   * [基本知识](#%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86)
     * [类之间的关系：继承、依赖、关联、聚合、组合](#%E7%B1%BB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB%E7%BB%A7%E6%89%BF%E4%BE%9D%E8%B5%96%E5%85%B3%E8%81%94%E8%81%9A%E5%90%88%E7%BB%84%E5%90%88)
 
@@ -141,9 +142,6 @@ public class ConcretePrototype extends Prototype {
   + PATCH（UPDATE）：在服务器更新资源（客户端提供需要修改的资源数据）；
   + DELETE（DELETE）：从服务器删除资源。
 + 无状态
-
-
-
 
 ### 基本知识
 #### 类之间的关系：继承、依赖、关联、聚合、组合  
