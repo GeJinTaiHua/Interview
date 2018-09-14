@@ -131,6 +131,20 @@ public class ConcretePrototype extends Prototype {
 #### ORM
 &emsp;&emsp;对象-关系映射；用来把对象模型表示的对象映射到基于S Q L 的关系模型数据库结构中去。
 
+#### RESTful架构风格
++ 资源：以json(或其他Representation)为载体的、面向用户的一组数据集。
++ URI：用一个URI（统一资源定位符）指向资源，即每个URI都对应一个特定的资源。
++ 统一接口：数据的元操作，分别对应于HTTP方法：
+  + GET（SELECT）：从服务器取出资源（一项或多项）；
+  + POST（CREATE）：在服务器新建一个资源；
+  + PUT（UPDATE）：在服务器更新资源（客户端提供完整资源数据）；
+  + PATCH（UPDATE）：在服务器更新资源（客户端提供需要修改的资源数据）；
+  + DELETE（DELETE）：从服务器删除资源。
++ 无状态
+
+
+
+
 ### 基本知识
 #### 类之间的关系：继承、依赖、关联、聚合、组合  
 + 继承（实现）：是一种【is-a】关系；
@@ -191,6 +205,9 @@ public class Nose {
     private Nose nose = new Nose();
 }
 ```
+
+
+
  
  
  
