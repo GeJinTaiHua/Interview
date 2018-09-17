@@ -542,30 +542,31 @@ IO|NIO
 
 #### 集合
 ##### Collection
-+ List
++ List：有序，元素可重复。
   1) ArrayList
-     + 底层数据结构是数组；
+     + 底层数据结构【数组】；
      + 查询快，增删慢；
      + 线程不安全，效率高；
-     + CopyOnWriteArrayList（CopyOnWrite）：写时拷贝；java.util.concurrent包。
+     + 默认大小10，1.5倍长度扩容；
+       + CopyOnWriteArrayList（CopyOnWrite）：写时拷贝；java.util.concurrent包。
   2) LinkedList
-     + 底层数据结构是链表；
+     + 底层数据结构【链表】；
      + 查询慢，增删快；
      + 线程不安全，效率高。
-  3) Vector（淘汰）
-     + 底层数据结构是数组；
-     + 查询快，增删慢；
+  3) Vector
+     + 底层数据结构【数组】；
      + 线程安全，效率低；
-+ Set
+     + 默认大小10，2倍长度扩容。
++ Set：不可重复
   1) HashSet
-     + 底层采用哈希表；
+     + 底层数据结构【哈希表】；
      + 无序；
-     + 非线程安全；
-     + linkedHashSet：有序；
+     + 线程不安全，效率高；
+       + linkedHashSet：【链表】，有序，线程不安全；
   2) TreeSet
-     + 底层使用红黑树算法，擅长于范围查询；
+     + 底层数据结构【平衡二叉排序树】；
      + 有序；
-     + 非线程安全；
+     + 线程不安全；
   3) 线程安全：Set set = Collections.synchronizedSet(set 对象)。
     
 ##### Map 
