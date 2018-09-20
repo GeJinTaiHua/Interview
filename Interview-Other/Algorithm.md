@@ -9,10 +9,9 @@
     * [频率](#%E9%A2%91%E7%8E%87)
   * [排序算法](#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95)
     * [插入排序](#%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F)
-    * [交换排序](#%E4%BA%A4%E6%8D%A2%E6%8E%92%E5%BA%8F)
     * [选择排序](#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F)
-    * [归并排序](#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F)
-    * [分配排序](#%E5%88%86%E9%85%8D%E6%8E%92%E5%BA%8F)
+    * [交换排序](#%E4%BA%A4%E6%8D%A2%E6%8E%92%E5%BA%8F)
+    * [其他排序](#%E5%85%B6%E4%BB%96%E6%8E%92%E5%BA%8F)
 
  
 ### Hash 
@@ -52,7 +51,6 @@ int randNumber = new Random().Next(MIN, MAX + 1);
 + [获取一个字符串在另一个字符串中出现的次数](/Interview-Java/src/test/java/Algorithm/Stringsub.java)
  
 ### 排序算法  
-![排序算法](http://img.my.csdn.net/uploads/201207/17/1342514529_5795.jpg)
 ![排序时间复杂度](http://img.my.csdn.net/uploads/201207/19/1342700879_2982.jpg)
 
 #### 插入排序
