@@ -4,6 +4,7 @@
     * [Redis](#redis)
   * [关键字](#%E5%85%B3%E9%94%AE%E5%AD%97)
     * [count(1) count(主键) count(\*)](#count1-count%E4%B8%BB%E9%94%AE-count)
+    * [Limit](#limit)
   * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
     * [三大范式](#%E4%B8%89%E5%A4%A7%E8%8C%83%E5%BC%8F)
     * [五大约束](#%E4%BA%94%E5%A4%A7%E7%BA%A6%E6%9D%9F)
