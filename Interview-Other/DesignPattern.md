@@ -132,7 +132,7 @@ public class ConcretePrototype extends Prototype {
 #### ORM
 &emsp;&emsp;对象-关系映射；用来把对象模型表示的对象映射到基于S Q L 的关系模型数据库结构中去。
 
-#### RESTful架构风格
+#### RESTful 架构风格
 + 资源：以json(或其他Representation)为载体的、面向用户的一组数据集。
 + URI：用一个URI（统一资源定位符）指向资源，即每个URI都对应一个特定的资源。
 + 统一接口：数据的元操作，分别对应于HTTP方法：
