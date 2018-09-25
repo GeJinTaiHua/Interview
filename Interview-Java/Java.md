@@ -580,17 +580,16 @@ IO|NIO
    + 底层数据结构【哈希表】链地址法解决冲突；
    + 可存一个null键，多个null值；
    + 线程不安全； 
-   + Map m = Collections.synchronizeMap(hashMap)实现同步；
-![链表散列](https://images0.cnblogs.com/blog/381060/201401/152128351581.png)
+     + Map m = Collections.synchronizeMap(hashMap)实现同步；  
      + linkedHashMap：【双向链表】，线程不安全。
+     + ConcurrentHashMap
+       + 锁分离（JDK1.8放弃）：在HashMap的基础上，将数据分段存储，ConcurrentHashMap由多个Segment组成，每个Segment都有把锁（可重入锁ReentrantLock）。
+       + CAS算法：如果valueOffset位置包含的值与expect值相同，则更新valueOffset位置的值为update，并返回true，否则不更新，返回false。
 2) Hashtable
    + 底层数据结构【哈希散列表】双重散列法（闭散列法）解决冲突；
    + 不可以存null键，null值；
    + 线程安全；
    + 多线程下效率低下。
-     + ConcurrentHashMap
-       + 锁分离（JDK1.8放弃）：在HashMap的基础上，将数据分段存储，ConcurrentHashMap由多个Segment组成，每个Segment都有把锁（可重入锁ReentrantLock）。
-       + CAS算法：如果valueOffset位置包含的值与expect值相同，则更新valueOffset位置的值为update，并返回true，否则不更新，返回false。
 3) TreeMap  
    + 底层数据结构【平衡二叉排序树】
    + 有序。
