@@ -47,6 +47,14 @@
 + count(主键)>count(1)= count(\*)
 + count(ROWID) 这也是只扫描Index的，效率高
 
+#### Limit 
++ LIMIT N,M：LIMIT首先要找查 N+M 行，然后从N行处，取M行。
++ 优化：让N变的尽可能的小或是不用
+```
+原查询：SELECT * FROM pw_gbook WHERE uid='48' ORDER BY postdate DESC LIMIT 1275480,20;
+转换成：SELECT * FROM pw_gbook WHERE id>1275480 and uid='48' ORDER BY postdate DESC LIMIT 20;
+```
+
 ### 基础知识
 #### 三大范式
 + 第一范式（1NF）：
