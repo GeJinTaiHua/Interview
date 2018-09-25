@@ -317,49 +317,6 @@ int compare(T o1, T o2);
 boolean equals(Object obj);
 ```
 
-#### Thread、Runnable
-+ Thread（类）
-  + start()：启动一个线程，这时此线程处于就绪（可运行）状态；
-  + run()：只是类的一个普通方法而已。
-  + 缺点：
-    1) 每次通过new Thread()创建对象性能不佳；
-    2) 线程缺乏统一管理，可能无限制新建线程，相互之间竞争，及可能占用过多系统资源导致死机或oom；
-    3) 缺乏更多功能，如定时执行、定期执行、线程中断。
-+ Runnable（接口）
-  + 避免继承的局限，一个类可以继承多个接口；
-  + 适合于资源的共享，节约资源。
-```
-public class Thread1 extends Thread{
-    @Override
-    public void run() {
-        System.out.println("extend thread");
-    }
-}
-public class Thread2 implements Runnable{
-    public void run() {
-        System.out.println("runbale interfance");   
-    }    
-}
-public static void main(String[] args) {
-        new Thread1().start();
-	new Thread1().start();
-	
-	Thread2 thread2 = new Thread2()；
-        new Thread(thread2).start();
-	new Thread(thread2).start();
-}
-```
-+ 线程池
-  + 种类：
-    1) newCachedThreadPool：可缓存线程池，如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程。
-    2) newFixedThreadPool：创建一个定长线程池，可控制线程最大并发数，超出的线程会在队列中等待。 
-    3) newScheduledThreadPool：创建一个定长线程池，支持定时及周期性任务执行。 
-    4) newSingleThreadExecutor：创建一个单线程化的线程池，它只会用唯一的工作线程来执行任务，保证所有任务按照指定顺序(FIFO, LIFO, 优先级)执行。
-  + 作用：
-    1) 降低资源消耗：通过重复利用已创建的线程降低线程创建和销毁造成的消耗；
-    2) 提高响应速度：当任务到达时，任务可以不需要等到线程创建就能立即执行；
-    3) 提高线程的可管理性。
-
 #### String、StringBuilder、StringBuffer
 + String
   + 字符串常量；
@@ -524,8 +481,7 @@ stream = list.stream();
   + Terminal：终结操作
     + forEach、forEachOrdered、toArray、reduce、collect、min、max、count、anyMatch、allMatch、noneMatch、findFirst、findAny、iterator
   + Short-circuiting：
-    + anyMatch、allMatch、noneMatch、findFirst、findAny、limit
-    
+    + anyMatch、allMatch、noneMatch、findFirst、findAny、limit 
     
 #### IO、NIO
 + 管道（Channel）：实际上就像传统IO中的流，到任何目的地(或来自任何地方)的所有数据都必须通过一个 Channel 对象。一个 Buffer 实质上是一个容器对象。
@@ -642,6 +598,57 @@ lock.unlock();
      + 保护一个重要(代码)部分防止一次超过 N 个线程进入。
      + 在两个线程之间发送信号。
   
+#### 抽象类和接口的区别
++ 一个类只能继承单个类，但是可以实现多个接口；
++ 抽象类中可以有构造方法，接口中不能有构造方法；
++ 抽象类中的所有方法并不一定要是抽象的，你可以选择在抽象类中实现一些基本的方法。而接口要求所有的方法都必须是抽象的（JDK1.8静态方法、默认方法）；
++ 抽象类中可以有普通成员变量；接口中不可以，可以有public static final 常量。
+
+#### 实现多线程的几种方法
+1) Thread（类）
+   + start()：启动一个线程，这时此线程处于就绪（可运行）状态；
+   + run()：只是类的一个普通方法而已。
+   + 缺点：
+     1) 每次通过new Thread()创建对象性能不佳；
+     2) 线程缺乏统一管理，可能无限制新建线程，相互之间竞争，及可能占用过多系统资源导致死机或oom；
+     3) 缺乏更多功能，如定时执行、定期执行、线程中断。
+2) Runnable（接口）
+   + 避免继承的局限，一个类可以继承多个接口；
+   + 适合于资源的共享，节约资源。
+```
+public class Thread1 extends Thread{
+    @Override
+    public void run() {
+        System.out.println("extend thread");
+    }
+}
+public class Thread2 implements Runnable{
+    public void run() {
+        System.out.println("runbale interfance");   
+    }    
+}
+public static void main(String[] args) {
+        new Thread1().start();
+	new Thread1().start();
+	
+	Thread2 thread2 = new Thread2()；
+        new Thread(thread2).start();
+	new Thread(thread2).start();
+}
+```
++ 线程池
+  + 种类：
+    1) newCachedThreadPool：可缓存线程池，如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程。
+    2) newFixedThreadPool：创建一个定长线程池，可控制线程最大并发数，超出的线程会在队列中等待。 
+    3) newScheduledThreadPool：创建一个定长线程池，支持定时及周期性任务执行。 
+    4) newSingleThreadExecutor：创建一个单线程化的线程池，它只会用唯一的工作线程来执行任务，保证所有任务按照指定顺序(FIFO, LIFO, 优先级)执行。
+  + 作用：
+    1) 降低资源消耗：通过重复利用已创建的线程降低线程创建和销毁造成的消耗；
+    2) 提高响应速度：当任务到达时，任务可以不需要等到线程创建就能立即执行；
+    3) 提高线程的可管理性。
+3) Callable（接口）
+4) ExecutorService、Callable、Future
+
 ### JVM
 #### JVM 类加载机制
 ![类加载](http://incdn1.b0.upaiyun.com/2017/06/2fb054008ca2898e0a17f7d79ce525a1.png)
