@@ -50,7 +50,7 @@
   + Struts
   + [☕️Hibernate](https://github.com/GeJinTaiHua/Learn-Hibernate)
   
-+ [SSM](https://github.com/GeJinTaiHua/Demo-SSM)
++ [☕️SSM](https://github.com/GeJinTaiHua/Demo-SSM)
   + Spring
   + [☕️SpringMVC](https://github.com/GeJinTaiHua/Learn-SpringMVC)
   + MyBatis
