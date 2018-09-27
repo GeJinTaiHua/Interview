@@ -174,7 +174,9 @@ order by a.country,score DESC;
  where 
       (select count(*) 
        from tb_score 
-       where country = a.country and score > a.score )<3
+       where country = a.country  //确定分组字段
+       and score > a.score   //排序条件
+       )<3  //取前三条数据，可以多次修改
  order by a.country,score DESC;
 ```
 
