@@ -654,9 +654,11 @@ lock.unlock();
 ![类加载](http://incdn1.b0.upaiyun.com/2017/06/2fb054008ca2898e0a17f7d79ce525a1.png)
 + 加载阶段：查找和导入Class文件。
   + 类加载器
-    - 启动类加载器（Bootstrap ClassLoader）
-    - 扩展类加载器（Extension ClassLoader）
-    - 应用程序类加载器（Application ClassLoader）：程序默认的类加载器
+    - 启动类加载器：由C++实现，没有父类；
+    - 扩展类加载器：由Java语言实现，父类加载器为null；
+    - 系统类加载器：由Java语言实现，父类加载器为扩展类加载器；
+    - 自定义类加载器：父类加载器肯定为AppClassLoader。
+  + 双亲委派机制：类加载器收到类加载请求，自己不加载，向上委托给父类加载，父类加载不了，再自己加载。
 + 验证阶段：检查载入Class文件数据的正确性；
 + 准备阶段：给类的静态变量分配存储空间；
 + 解析阶段：将符号引用转成直接引用；
