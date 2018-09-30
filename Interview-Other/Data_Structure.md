@@ -5,7 +5,6 @@
   * [队列](#%E9%98%9F%E5%88%97)
     * [顺序队列](#%E9%A1%BA%E5%BA%8F%E9%98%9F%E5%88%97)
     * [循环队列](#%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97)
-    * [Java中的队列](#java%E4%B8%AD%E7%9A%84%E9%98%9F%E5%88%97)
   * [链表](#%E9%93%BE%E8%A1%A8)
     * [单向链表](#%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8)
     * [双向链表](#%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8)
@@ -26,22 +25,6 @@
 先进先出
 
 #### 循环队列   
-
-#### Java中的队列
-+ 普通队列
-  + ArrayDeque（数组双端队列） 
-  + PriorityQueue（优先级队列） 
-  + ConcurrentLinkedQueue（基于链表的并发队列） 
-+ 阻塞队列：当队列是空的时，从队列中获取元素的操作将会被阻塞，或者当队列是满时，往队列里添加元素的操作会被阻塞。
-  + DelayQueue（延期阻塞队列）（阻塞队列实现了BlockingQueue接口） 
-  + ArrayBlockingQueue（基于数组的并发阻塞队列阻塞队列） 
-  + LinkedBlockingQueue（基于链表的FIFO阻塞队列） 
-  + LinkedBlockingDeque（基于链表的FIFO双端阻塞队列） 
-  + PriorityBlockingQueue（带优先级的无界阻塞队列） 
-  + ynchronousQueue（并发同步阻塞队列）
-  + 生产者-消费者模式
-+ 非阻塞算法（nonblocking）：一个线程的失败或挂起不应该影响其他线程的失败或挂起。
-+ 锁自由（lock-free）算法：如果算法的每一个步骤中都有一些线程能够继续执行。
  
 ### 链表
 #### 单向链表
