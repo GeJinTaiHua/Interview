@@ -142,17 +142,17 @@ public class TestInnerClass{
   + import static 代替 import；
   + 导入这个类里的静态方法。
 
-#### Exception
-+ Error：编译和系统的错误，不允许捕获；如：Java环境错误，文件丢失，服务器异常，配置错误等导致。
+#### Error、Exception
++ Error：Java 运行时系统的内部错误和资源耗尽错误。
 + Exception：标准Java库方法所激发的异常。
-  + Runtime_Exception：运行异常类，如：算数异常（如被0除）、下标异常（如数组越界）等。
-  + Non_RuntimeException：非运行异常类
-+ 常见异常
-  + NullPointerException（空指针异常）
-  + ClassCastException（类型强制转换异常）
-  + ArrayIndexOutOfBoundsException（数组下标越界异常）
-  + ArithmeticException（算术运算异常）
-  + NumberFormatException（数字格式异常）
+  + Runtime_Exception
+    + 错误的类型转换（ClassCastException）；
+    + 数组访问越界（ArrayIndexOutOfBoundsException）； 
+    + 访问 null 指针（NullPointerException）； 
+  + 非RuntimeException
+    + 试图在文件尾部后面读取数据；
+    + 试图打开一个不存在的文件；
+    + 试图根据给定的字符串查找 Class 对象， 而这个字符串表示的类并不存在。
 + try catch finally return 执行顺序
   + finally语句总会执行；
   + 如果try、catch中有return语句，finally中没有return，那么在finally中修改除包装类型和静态变量、全局变量以外的数据都不会对try、catch中返回的变量有任何的影响；
@@ -200,6 +200,20 @@ public static List<Object> testWrap(){
         }
 }
 ```
+
+#### final、finally、finalize
++ final
+  + 类
+    + 表明这个类不能被继承。
+    + final类中的所有成员方法都会被隐式地指定为final方法。
+  + 方法
+    + 把方法锁定，以防任何继承类修改它的含义；
+    + 类的private方法会隐式地被指定为final方法。
+  + 变量
+    + 基本数据类型：数值一旦在初始化之后便不能更改；
+    + 引用类型：在对其初始化之后便不能再让其指向另一个对象。	
++ finally：在异常处理时提供 finally 块来执行任何清除操作。
++ finalize：方法名；finalize() 方法在垃圾收集器将对象从内存中清除出去之前做必要的清理工作。
 
 #### synchronized
 + 代码块（同步语句块）
@@ -358,20 +372,6 @@ public synchronized String toString() {
   return new String(toStringCache, true);
 }
 ```
-
-#### final、finally、finalize
-+ final
-  + 类
-    + 表明这个类不能被继承。
-    + final类中的所有成员方法都会被隐式地指定为final方法。
-  + 方法
-    + 把方法锁定，以防任何继承类修改它的含义；
-    + 类的private方法会隐式地被指定为final方法。
-  + 变量
-    + 基本数据类型：数值一旦在初始化之后便不能更改；
-    + 引用类型：在对其初始化之后便不能再让其指向另一个对象。	
-+ finally：在异常处理时提供 finally 块来执行任何清除操作。
-+ finalize：方法名；finalize() 方法在垃圾收集器将对象从内存中清除出去之前做必要的清理工作。
 
 #### abstract class、interface 
 + 一个类只能继承单个类，但是可以实现多个接口；
