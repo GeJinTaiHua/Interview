@@ -21,6 +21,13 @@
 
 ### 线程  
 #### 进程、线程
++ 程的所有状态  
+  + New (新创建）
+  + Runnable (可运行）
+  + Blocked (被阻塞）
+  + Waiting (等待）
+  + Timed waiting (计时等待）
+  + Terminated (被终止）   
 ![线程的所有状态](http://mmbiz.qpic.cn/mmbiz_png/Bf4u9qKuXWupl2hClEIRRTBPpWAic4GicZDMAFRRWUIU5qYOYY9Ds9NTrI8GdwGZkOjPkgGZa234kCT7050dDk3g/640?wx_fmt=png&wxfrom=5&wx_lazy=1)  
 + 进程与线程的区别：
   - 线程是进程的子集，一个进程可以有很多线程，每条线程并行执行不同的任务；
