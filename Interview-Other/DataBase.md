@@ -3,7 +3,7 @@
 
   * [常用数据库](#%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E5%BA%93)
     * [Redis](#redis)
-    * [MongoDB](#MongoDB)
+    * [MongoDB](#mongodb)
   * [关键字](#%E5%85%B3%E9%94%AE%E5%AD%97)
     * [count(1) count(主键) count(\*)](#count1-count%E4%B8%BB%E9%94%AE-count)
     * [Limit](#limit)
