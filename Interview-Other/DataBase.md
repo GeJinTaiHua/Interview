@@ -23,8 +23,6 @@
 ### 常用数据库
 + MySQL 
 + Microsoft SQL Server
-+ MongoDB 
-+ Redis
 + Oracle
 + Microsoft Access
 
@@ -42,6 +40,11 @@
   + List
   + Set
   + Zset
+  
+#### MongoDB
++ 数据库（database）
++ 集合（collection）
++ 文档对象（document）
 
 ### 关键字
 #### count(1) count(主键) count(\*)
