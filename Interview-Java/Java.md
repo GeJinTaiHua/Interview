@@ -313,8 +313,12 @@ public class ClassName {
 ```
 
 #### Overload、Override
-+ Overload（重载）：一个类中多态性的表现；
-+ Override（重写）：父类和子类多态性的表现；
++ Overload（重载）
+  + 一个类中多态性的表现，水平关系；
+  + 多个方法之间的关系。
++ Override（重写）
+  + 父类和子类多态性的表现，垂直关系；
+  + 一个方法或一对方法产生关系。
 ![重载重写](http://www.runoob.com/wp-content/uploads/2013/12/overloading-vs-overriding.png)
 
 #### Comparable 、Comparator
