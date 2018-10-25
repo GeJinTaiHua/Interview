@@ -45,13 +45,16 @@
     - [☕️Spring Boot](https://github.com/GeJinTaiHua/Learn-SpringBoot)
     - [☕️Spring Boot 2.0](https://github.com/GeJinTaiHua/Learn-SpringBoot2.0)
     - [☕️Spring Cloud](https://github.com/GeJinTaiHua/Learn-SpringCloud)
-      + [📊Eureka](https://github.com/GeJinTaiHua/Learn-Eureka)：服务的注册与发现。
+      + [📊Eureka](https://github.com/GeJinTaiHua/Learn-Eureka)：注册中心。
+      + Hystrix：熔断。
+      + Spring Cloud Config：配置中心。
+      + Spring Cloud Zuul：服务网关。
     - Spring Data JPA
   + Struts
   + [☕️Hibernate](https://github.com/GeJinTaiHua/Learn-Hibernate)
   
 + [☕️SSM](https://github.com/GeJinTaiHua/Demo-SSM)
-  + Spring
+  + [☕️Spring](https://github.com/GeJinTaiHua/Learn-Spring)
   + [☕️SpringMVC](https://github.com/GeJinTaiHua/Learn-SpringMVC)
   + MyBatis
   
