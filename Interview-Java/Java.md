@@ -619,25 +619,27 @@ lock.unlock();
      + ReentrantLock
    + ReadWriteLock：读写锁一种先进的线程锁机制。
      + ReentrantReadWriteLock
+     
 2) atomic部分：原子变量类相关，是构建非阻塞算法的基础；
+
 3) executor部分：线程池相关；
-   + 线程池
-     1) newSingleThreadExecutor
-        + 创建一个单线程化的线程池；
-        + 保证所有任务按照指定顺序(FIFO, LIFO, 优先级)执行。
-     2) newFixedThreadPool
-        + 创建一个定长线程池；
-        + 可控制线程最大并发数，超出的线程会在队列中等待。 
-     3) newCachedThreadPool
-        + 创建可缓存线程池；
-        + 如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程。
-     4) newScheduledThreadPool
-        + 创建一个大小无限的线程池；
-        + 支持定时及周期性任务执行。 
-     + 作用：
-       + 降低资源消耗：通过重复利用已创建的线程降低线程创建和销毁造成的消耗；
-       + 提高响应速度：当任务到达时，任务可以不需要等到线程创建就能立即执行；
-       + 提高线程的可管理性。
+   1) newSingleThreadExecutor
+      + 创建一个单线程化的线程池；
+      + 保证所有任务按照指定顺序(FIFO, LIFO, 优先级)执行。
+   2) newFixedThreadPool
+      + 创建一个定长线程池；
+      + 可控制线程最大并发数，超出的线程会在队列中等待。 
+   3) newCachedThreadPool
+      + 创建可缓存线程池；
+      + 如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程。
+   4) newScheduledThreadPool
+      + 创建一个大小无限的线程池；
+      + 支持定时及周期性任务执行。 
+   + 作用：
+     + 降低资源消耗：通过重复利用已创建的线程降低线程创建和销毁造成的消耗；
+     + 提高响应速度：当任务到达时，任务可以不需要等到线程创建就能立即执行；
+     + 提高线程的可管理性。
+     
 4) collections部分：并发容器相关；
    + BlockingQueue：此接口是一个线程安全的 存取实例的队列。  
      + ArrayBlockingQueue：数组阻塞队列
@@ -650,6 +652,7 @@ lock.unlock();
    + ConcurrentMap：一个能够对别人的访问(插入和提取)进行并发处理的 java.util.Map接口。
      + ConcurrentHashMap
      + ConcurrentNavigableMap
+     
 5) tools部分：同步工具相关，如信号量、闭锁、栅栏等功能；
    + CountDownLatch：是一个并发构造，它允许一个或多个线程等待一系列指定操作的完成。
    + CyclicBarrier：是一种同步机制，它能够对处理一些算法的线程实现同步。
