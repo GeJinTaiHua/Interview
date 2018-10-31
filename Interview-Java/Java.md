@@ -52,7 +52,6 @@
     - Spring Data JPA
   + Struts
   + [☕️Hibernate](https://github.com/GeJinTaiHua/Learn-Hibernate)
-  
 + [☕️SSM](https://github.com/GeJinTaiHua/Demo-SSM)
   + [☕️Spring](https://github.com/GeJinTaiHua/Learn-Spring)
   + [☕️SpringMVC](https://github.com/GeJinTaiHua/Learn-SpringMVC)
@@ -800,7 +799,4 @@ IO|NIO
   + 若两个依赖包处于依赖树上的同一层，则谁在前，选择谁；
   + 避免传递依赖引起版本问题：如果工程直接依赖到某一框架的多个模块，最好全部声明这些依赖。
 + 排除依赖（exclusions） 
-
-
-
 
