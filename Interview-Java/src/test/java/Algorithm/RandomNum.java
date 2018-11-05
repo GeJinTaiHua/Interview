@@ -12,6 +12,7 @@ import java.util.Random;
  */
 @SpringBootTest
 public class RandomNum {
+    
     /*
      * @desc 产生1-100内的随机数
      * @author wjl
