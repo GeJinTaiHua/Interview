@@ -88,6 +88,8 @@
   + Redis
   + MemCache
   + EhCache 
++ 自动化
+  + Jenkins
 
 ### 关键字
 #### 8大基本类型
