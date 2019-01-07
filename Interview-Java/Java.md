@@ -221,8 +221,9 @@ public static List<Object> testWrap(){
 
 #### synchronized
 1) 代码块（同步语句块）
-  + 作用的范围是大括号{}括起来的代码；
-  + 作用的对象是调用这个代码块的对象；
+  + 作用的范围：大括号{}括起来的代码；
+  + 作用的对象：调用这个代码块的对象；
+  + 注意：
     + 一个线程访问一个对象中的synchronized(this)同步代码块时，其他试图访问该对象的线程将被阻塞；
     + 当一个线程访问对象的一个synchronized(this)同步代码块时，另一个线程仍然可以访问该对象中的非synchronized(this)同步代码块。
 ```
@@ -240,8 +241,9 @@ public class SyncThread implements Runnable {
 ```
 
 2) 方法（同步方法）
-  + 作用的范围是整个方法；
-  + 作用的对象是调用这个方法的对象；
+  + 作用的范围：整个方法；
+  + 作用的对象：调用这个方法的对象；
+  + 注意：
     + synchronized关键字不能继承；
     + 在定义接口方法时不能使用synchronized关键字；
     + 构造方法不能使用synchronized关键字，但可以使用synchronized代码块来进行同步。
@@ -253,8 +255,9 @@ public synchronized void method()
 ```
 
 3) 静态的方法
-  + 作用的范围是整个静态方法；
-  + 作用的对象是这个类的所有对象；
+  + 作用的范围：整个静态方法；
+  + 作用的对象：这个类的所有对象；
+  + 注意：
     + 静态方法是属于类的而不属于对象的。同样的，synchronized修饰的静态方法锁定的是这个类的所有对象。
 ```
 public synchronized static void method() {
@@ -263,8 +266,9 @@ public synchronized static void method() {
 ```
 
 4) 类
-  + 作用的范围是synchronized后面括号括起来的部分；
-  + 作用主的对象是这个类的所有对象；
+  + 作用的范围：synchronized后面括号括起来的部分；
+  + 作用的对象：这个类的所有对象；
+  + 注意：
     + synchronized作用于一个类T时，是给这个类T加锁，T的所有对象用的是同一把锁。
 ```
 public class ClassName {
@@ -281,7 +285,7 @@ public class ClassName {
   + A的取值只能是整型或者可以转换为整型的数值类型，比如byte、short、int、char、还有枚举；
   + JDK1.7之后，A的取值也支持String了；
 + case B:C
-  + 常量表达式；B的取值只能是常量（需要定义一个final型的常量）或者int、byte、short、char、String；
+  + 常量表达式；B的取值只能是常量（需要定义一个final型的常量）或者byte、short、int、char、String；
 + default
   + 没有符合的case就执行它;
   + 并不是必须的。
