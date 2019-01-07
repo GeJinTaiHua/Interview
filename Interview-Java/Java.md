@@ -220,7 +220,7 @@ public static List<Object> testWrap(){
 + finalize：方法名；finalize() 方法在垃圾收集器将对象从内存中清除出去之前做必要的清理工作。
 
 #### synchronized
-+ 代码块（同步语句块）
+1) 代码块（同步语句块）
   + 作用的范围是大括号{}括起来的代码；
   + 作用的对象是调用这个代码块的对象；
 ```
@@ -239,7 +239,7 @@ public class SyncThread implements Runnable {
   1) 一个线程访问一个对象中的synchronized(this)同步代码块时，其他试图访问该对象的线程将被阻塞；
   2) 当一个线程访问对象的一个synchronized(this)同步代码块时，另一个线程仍然可以访问该对象中的非synchronized(this)同步代码块。
 
-+ 方法（同步方法）
+2) 方法（同步方法）
   + 作用的范围是整个方法；
   + 作用的对象是调用这个方法的对象；
 ```
@@ -252,7 +252,7 @@ public synchronized void method()
   2) 在定义接口方法时不能使用synchronized关键字；
   3) 构造方法不能使用synchronized关键字，但可以使用synchronized代码块来进行同步。
 
-+ 静态的方法
+3) 静态的方法
   + 作用的范围是整个静态方法；
   + 作用的对象是这个类的所有对象；
 ```
@@ -262,7 +262,7 @@ public synchronized static void method() {
 ```
   1) 静态方法是属于类的而不属于对象的。同样的，synchronized修饰的静态方法锁定的是这个类的所有对象。
 
-+ 类
+4) 类
   + 作用的范围是synchronized后面括号括起来的部分；
   + 作用主的对象是这个类的所有对象；
 ```
