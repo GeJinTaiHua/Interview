@@ -587,6 +587,7 @@ IO|NIO
 表示一个键值对 (key-value) 的映射；
 1) HashMap（替代Hashtable）：
    + 底层数据结构【哈希表】链地址法解决冲突；
+      + 链表长度大于阈值（默认为 8）时，将链表转化为红黑树。
    + 可存一个null键，多个null值；
    + 线程不安全； 
      + Map m = Collections.synchronizeMap(hashMap)实现同步；  
