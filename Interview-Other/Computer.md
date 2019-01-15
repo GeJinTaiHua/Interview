@@ -19,7 +19,7 @@
     * [从点击url到显示网页发生了什么](#%E4%BB%8E%E7%82%B9%E5%87%BBurl%E5%88%B0%E6%98%BE%E7%A4%BA%E7%BD%91%E9%A1%B5%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88)
   * [Linux](#Linux)
     * [Crontab表达式](#Crontab表达式)
-    
+    * [Docker命令](#Docker命令)
 
 ### 线程  
 #### 进程、线程
@@ -274,4 +274,22 @@ name=GeJinTaiHua
 每日：0 0 0 * * ? *
 ```
 
+#### Docker命令 
++ 镜像
+  + 查看镜像  
+  ```
+  docker images
+  ```
+  + 发布镜像 
+  ```
+  docker push
+  ```
+拉取镜像  docker pull
+删除镜像  docker rmi
+
++ 容器
+查看使用的容器  docker ps
+查看所有容器  docker ps -a
+停止容器  docker stop
+删除容器  docker rm
 
