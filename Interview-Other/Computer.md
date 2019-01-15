@@ -328,7 +328,7 @@ name=GeJinTaiHua
    docker run -it -d \
                 --name $project  \
                 -p 8085:8084  \
-        "docker.xxx.com:5000/$project:v1"
+   "docker.xxx.com:5000/$project:v1"
   ```
   + 进入容器内
   ```
