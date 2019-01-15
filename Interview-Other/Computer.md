@@ -257,13 +257,13 @@ name=GeJinTaiHua
 
 ### Linux
 #### Crontab表达式
-字段|允许值（整数）|允许的特殊字符|  |
-秒（Seconds）|0~59|, - * /    四个字符||
-分（Minutes）|0~59|, - * /    四个字符||
-小时（Hours）|0~23|, - * /    四个字符||
-日期（DayofMonth）|1~31|,- * ? / L W C     八个字符||
-月份（Month）|1~12 或 JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC|, - * /    四个字符||
-星期（DayofWeek）|1~7 （1=SUN=星期日）或 SUN, MON, TUE, WED, THU, FRI, SAT|, - * ? / L C #     八个字符||
-年(可选，留空)（Year）|1970~2099|, - * /    四个字符||
-
+字段|允许值（整数）|允许的特殊字符| 
+---|---|---|
+秒（Seconds）|0~59|, - * /    四个字符|
+分（Minutes）|0~59|, - * /    四个字符|
+小时（Hours）|0~23|, - * /    四个字符|
+日期（DayofMonth）|1~31|,- * ? / L W C     八个字符|
+月份（Month）|1~12 或 JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC|, - * /    四个字符|
+星期（DayofWeek）|1~7 （1=SUN=星期日）或 SUN, MON, TUE, WED, THU, FRI, SAT|, - * ? / L C #     八个字符|
+年(可选，留空)（Year）|1970~2099|, - * /    四个字符|
 
