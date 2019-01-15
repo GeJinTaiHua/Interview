@@ -17,6 +17,8 @@
     * [Session、Cookie](#sessioncookie)
     * [分布式 session](#%E5%88%86%E5%B8%83%E5%BC%8F-session)
     * [从点击url到显示网页发生了什么](#%E4%BB%8E%E7%82%B9%E5%87%BBurl%E5%88%B0%E6%98%BE%E7%A4%BA%E7%BD%91%E9%A1%B5%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88)
+  * [Linux](#Linux)
+    * [Crontab表达式](#Crontab表达式)
     
 
 ### 线程  
@@ -253,5 +255,15 @@ name=GeJinTaiHua
 
 7) 断开连接（[四次挥手](#tcp-%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B)）
 
+### Linux
+#### Crontab表达式
+字段|允许值（整数）|允许的特殊字符|  |
+秒（Seconds）|0~59|, - * /    四个字符||
+分（Minutes）|0~59|, - * /    四个字符||
+小时（Hours）|0~23|, - * /    四个字符||
+日期（DayofMonth）|1~31|,- * ? / L W C     八个字符||
+月份（Month）|1~12 或 JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC|, - * /    四个字符||
+星期（DayofWeek）|1~7 （1=SUN=星期日）或 SUN, MON, TUE, WED, THU, FRI, SAT|, - * ? / L C #     八个字符||
+年(可选，留空)（Year）|1970~2099|, - * /    四个字符||
 
 
