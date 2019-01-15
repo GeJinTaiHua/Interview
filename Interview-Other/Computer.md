@@ -284,12 +284,55 @@ name=GeJinTaiHua
   ```
   docker push
   ```
-拉取镜像  docker pull
-删除镜像  docker rmi
+  + 拉取镜像  
+  ```
+  docker pull
+  ```
+  + 删除镜像  
+  ```
+  docker rmi
+  ```
+  + 构建镜像
+  ```
+  docker build --no-cache=true -t "docker.xxx.com:5000/$project:v1" .
+  ```
+  + 删除带none的镜像
+  ```
+  docker rmi $(docker images | grep "none" | awk '{print $3}')
+  ```
+  ```
+  $ docker stop $(docker ps -a | grep "Exited" | awk '{print $1 }') 
+  $ docker rm $(docker ps -a | grep "Exited" | awk '{print $1 }') 
+  $ docker rmi $(docker images | grep "none" | awk '{print $3}')
+  ```
 
 + 容器
-查看使用的容器  docker ps
-查看所有容器  docker ps -a
-停止容器  docker stop
-删除容器  docker rm
+  + 查看使用的容器  
+  ```
+  docker ps
+  ```
+  + 查看所有容器  
+  ```
+  docker ps -a
+  ```
+  + 停止容器  
+  ```
+  docker stop
+  ```
+  + 删除容器  
+  ```
+  docker rm
+  ```
+  + 创建容器
+  ```
+   docker run -it -d \
+                --name $project  \
+                -p 8085:8084  \
+        "docker.xxx.com:5000/$project:v1"
+  ```
+  + 进入容器内
+  ```
+  docker exec -it eassasb /bin/bash
+  ```
+
 
