@@ -119,7 +119,7 @@ add constraint FK_stuNo foreign key(stuNo)references stuinfo(stuNo)
 + 已提交读（read commited）：避免脏读。但是不可重复读和虚读有可能发生；
 + 可重复读（repeatable read）：避免脏读和不可重复读.但是虚读有可能发生；
 + 串行化的（serializable）：避免以上所有读问题。  
-![隔离级别](https://images2015.cnblogs.com/blog/1053956/201703/1053956-20170313102548791-1506111244.png)
+
    |脏读|不可重复读|幻读|加锁协议|
 ---|---|---|---|---|
 未提交读|✔️ |✔️ |✔️ |一级加锁协议|
