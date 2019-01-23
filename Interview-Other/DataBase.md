@@ -120,7 +120,7 @@ add constraint FK_stuNo foreign key(stuNo)references stuinfo(stuNo)
 + 可重复读（repeatable read）：避免脏读和不可重复读.但是虚读有可能发生；
 + 串行化的（serializable）：避免以上所有读问题。  
 
-\|脏读|不可重复读|幻读|加锁协议|
+---|脏读|不可重复读|幻读|加锁协议|
 ---|---|---|---|---|
 未提交读|✔️ |✔️ |✔️ |一级加锁协议|
 已提交读|✖️ |✔️ |✔️ |二级加锁协议|
@@ -137,7 +137,7 @@ add constraint FK_stuNo foreign key(stuNo)references stuinfo(stuNo)
 SELECT xxx FOR UPDATE;
 UPDATE xxx;
 ```
-
+ 
 2) 二级加锁协议：
    + 满足一级加锁协议，且事务在读取数据之前必须先加S锁，读完后即可释放S锁。
    + 二级封锁协议除防止了丢失修改，还可以进一步防止读“脏”数据。但在二级封锁协议中，由于读完数据后即可释放S锁，所以它不能保证可重复读。
