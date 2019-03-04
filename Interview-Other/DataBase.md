@@ -166,6 +166,20 @@ UPDATE xxx;
 + 垂直拆分：把表按模块划分到不同数据库表中。
 + 水平拆分：把一个表按照某种规则（时间、用户...）把数据划分到不同表或数据库里。
 
+#### 计数器表
++ 只有一行，更新会串行执行
+```
+update table set cnt=cnt+1 limit 1;
+```
++ 优化：可以加入100行，随机更新
+```
+update table set cnt=cnt+1 where id=RAND()*100 limit 1;
+```
+查询计数：
+```
+select sun(cnt) from table;
+```
+
 #### SQL 一些小技巧
 + 根据已有的表创建新表
 ```
