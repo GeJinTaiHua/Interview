@@ -63,6 +63,9 @@
 转换成：SELECT * FROM pw_gbook WHERE id>1275480 and uid='48' ORDER BY postdate DESC LIMIT 20;
 ```
 
+#### Select For update
++ InnoDB 使用行锁定，BDB 使用页锁定，MyISAM 使用表锁；
+
 ### 基础知识
 #### 三大范式
 + 第一范式（1NF）：
