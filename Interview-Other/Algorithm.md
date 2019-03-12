@@ -12,6 +12,7 @@
     * [选择排序](#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F)
     * [交换排序](#%E4%BA%A4%E6%8D%A2%E6%8E%92%E5%BA%8F)
     * [其他排序](#%E5%85%B6%E4%BB%96%E6%8E%92%E5%BA%8F)
+  * [其他](#其他)
 
 
 ### 数字游戏
@@ -115,7 +116,7 @@ int randNumber = new Random().Next(MIN, MAX + 1);
 ### 其他
 + [球面距离公式](https://baike.baidu.com/item/%E7%90%83%E9%9D%A2%E8%B7%9D%E7%A6%BB%E5%85%AC%E5%BC%8F/5374455?fr=aladdin)
 ```
-S=R·arc cos[cosβ1cosβ2cos（α1-α2）+sinβ1sinβ2]
+S=R·arc cos[cosβ1*cosβ2*cos（α1-α2）+sinβ1*sinβ2]
 ```
 
 
