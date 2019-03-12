@@ -112,6 +112,11 @@ int randNumber = new Random().Next(MIN, MAX + 1);
 
 + 基数排序
 
+### 其他
++ [球面距离公式](https://baike.baidu.com/item/%E7%90%83%E9%9D%A2%E8%B7%9D%E7%A6%BB%E5%85%AC%E5%BC%8F/5374455?fr=aladdin)
+```
+S=R·arc cos[cosβ1cosβ2cos（α1-α2）+sinβ1sinβ2]
+```
 
 
 
