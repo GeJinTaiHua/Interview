@@ -67,10 +67,10 @@
 
 ### 中间件
 + RPC框架
-  + [💥Dubbo](https://github.com/GeJinTaiHua/Learn-Dubbo)：一款高性能Java RPC框架。
+  + [💥Dubbo](https://github.com/GeJinTaiHua/Learn-Dubbo)
   + gRPC
 + MQ消息
-  + [🚗RabbitMQ](https://github.com/GeJinTaiHua/Learn-RabbitMQ)：是一个在AMQP基础上完成的，可复用的企业消息系统。他遵循Mozilla Public License开源协议。
+  + [🚗RabbitMQ](https://github.com/GeJinTaiHua/Learn-RabbitMQ)
   + ActiveMQ
   + Kafka
 + 分布式协调服务
