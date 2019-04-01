@@ -28,7 +28,7 @@
       * [Collection](#collection)
       * [Map](#map)
       * [fail\-fast、fail\-safe](#fail-fastfail-safe)
-    * [java\.util\.concurrent](#javautilconcurrent)
+    * [接口](#接口)
   * [JVM](#jvm)
     * [JVM 类加载机制](#jvm-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6)
     * [JVM 内存模型](#jvm-%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B)
@@ -106,7 +106,7 @@ long|Long|64|整数值型|
 double|Double|64|浮点类型|
 
 + String：引用类型；
-+ var：Java11，本地变量类型推断；
++ var：Java10，本地变量类型推断；
 
 #### static
 + 静态方法
@@ -586,48 +586,12 @@ IO|NIO
   + 你在迭代的时候会去底层集合做一个拷贝，所以你在修改上层集合的时候是不会受影响的，不会抛出 ConcurrentModification 异常；
   + 在 java.util.concurrent 包下的全是安全失败的。
   
-#### java.util.concurrent
-+ locks部分：显式锁(互斥锁和速写锁)相关；
-  + Lock：一个类似于 synchronized 块的线程同步机制接口。但是 Lock 比 synchronized 块更加灵活、精细。
-    + ReentrantLock
-  + ReadWriteLock：读写锁
-    + ReentrantReadWriteLock   
-+ executor部分：线程池相关
-  + newSingleThreadExecutor
-    + 创建一个单线程化的线程池；
-    + 保证所有任务按照指定顺序(FIFO, LIFO, 优先级)执行。
-  + newFixedThreadPool
-    + 创建一个定长线程池；
-    + 可控制线程最大并发数，超出的线程会在队列中等待。 
-  + newCachedThreadPool
-    + 创建可缓存线程池；
-    + 如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程。
-  + newScheduledThreadPool
-    + 创建一个大小无限的线程池；
-    + 支持定时及周期性任务执行。 
-  + 作用：
-    + 降低资源消耗：通过重复利用已创建的线程降低线程创建和销毁造成的消耗；
-    + 提高响应速度：当任务到达时，任务可以不需要等到线程创建就能立即执行；
-    + 提高线程的可管理性。
-+ collections部分：并发容器相关
-  + BlockingQueue：此接口是一个线程安全的 存取实例的队列。  
-    + ArrayBlockingQueue：数组阻塞队列
-    + DelayQueue：延迟队列
-    + LinkedBlockingQueue：链阻塞队列
-    + PriorityBlockingQueue： 具有优先级的阻塞队列
-    + SynchronousQueue：同步队列
-  + BlockingDeque：此接口表示一个线程安全放入和提取实例的双端队列。
-    + LinkedBlockingDeque：链阻塞双端队列
-  + ConcurrentMap：一个能够对别人的访问(插入和提取)进行并发处理的 java.util.Map接口。
-    + ConcurrentHashMap
-    + ConcurrentNavigableMap
-+ tools部分：同步工具相关
-  + CountDownLatch：是一个并发构造，它允许一个或多个线程等待一系列指定操作的完成。
-  + CyclicBarrier：是一种同步机制，它能够对处理一些算法的线程实现同步。
-  + Exchanger：表示一种两个线程可以进行互相交换对象的会和点。
-  + Semaphore：是一个计数信号量。acquire()、release()
-    + 保护一个重要(代码)部分防止一次超过 N 个线程进入。
-    + 在两个线程之间发送信号。
+#### 接口
+|版本    |常量|抽象方法|默认方法|静态方法|私有方法|
+|---    |--- |---    |---    |---    |---   |
+|Java 8 |✅  |✅      |✅     |✅     |      |
+|Java 9 |✅  |✅      |✅     |✅     |✅     |
+|Java 11|✅  |✅      |✅     |✅     |✅     |
 
 ### JVM
 #### JVM 类加载机制
