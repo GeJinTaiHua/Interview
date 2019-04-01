@@ -13,10 +13,8 @@
     * [final、finally、finalize](#finalfinallyfinalize)
     * [synchronized](#synchronized)
     * [switch\.\.\.case\.\.\.default\.\.\.](#switchcasedefault)
-    * [Overload、Override](#overloadoverride)
     * [Comparable 、Comparator](#comparable-comparator)
     * [String、StringBuilder、StringBuffer](#stringstringbuilderstringbuffer)
-    * [abstract class、interface](#abstract-classinterface)
     * [Thread、Runnable、Callable](#threadrunnablecallable)
   * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
     * [四种引用](#%E5%9B%9B%E7%A7%8D%E5%BC%95%E7%94%A8)
@@ -295,15 +293,6 @@ public class ClassName {
   + 没有符合的case就执行它;
   + 并不是必须的。
 
-#### Overload、Override
-+ Overload（重载）
-  + 一个类中多态性的表现，水平关系；
-  + 多个方法之间的关系。
-+ Override（重写）
-  + 父类和子类多态性的表现，垂直关系；
-  + 一个方法或一对方法产生关系。
-![重载重写](http://www.runoob.com/wp-content/uploads/2013/12/overloading-vs-overriding.png)
-
 #### Comparable 、Comparator
 + Comparable：接口强行对实现它的每个类的对象进行整体排序（自然排序）（内部排序）。
   + 是由对象自己实现的
@@ -359,12 +348,6 @@ public synchronized String toString() {
   return new String(toStringCache, true);
 }
 ```
-
-#### abstract class、interface 
-+ 一个类只能继承单个类，但是可以实现多个接口；
-+ 抽象类中可以有构造方法，接口中不能有构造方法；
-+ 抽象类中的所有方法并不一定要是抽象的，你可以选择在抽象类中实现一些基本的方法。而接口要求所有的方法都必须是抽象的（JDK1.8静态方法、默认方法）；
-+ 抽象类中可以有普通成员变量；接口中不可以，可以有public static final 常量。
 
 #### Thread、Runnable、Callable
 1) Thread（类）
