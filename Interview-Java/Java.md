@@ -76,6 +76,7 @@
 + 分布式协调服务
   + ZooKeeper 
   + Keepalived
+  + K8S
 + 配置管理
   + Apollo
 + 大数据
