@@ -21,7 +21,7 @@ MTBF = MTTF + MTTR
   + SLA：意思是服务等级协议。
 
 | 描述 | 通俗叫法 | 可用性级别 | 年度宕机时间 | 每天宕机时间 | |
-|---|---|---|---|---|---| 
+
 |可用|1个9|90%|36.5d|2.4h| | 
 |基本可用性|2个9|99%|87.6h|14min| | 
 |较高可用性|3个9|99.9%|8.76h|86s| | 
@@ -29,5 +29,11 @@ MTBF = MTTF + MTTR
 |极高可用性|5个9|99.999%|5.25min|0.86s| | 
 
 + 可用性的保障：
-![](https://mmbiz.qpic.cn/mmbiz_jpg/C1uDMDqjn19p178oJIhTCbsP1lhSQE9fibUEWLvv4yPJbd2EtGdmpPhicLzcJkyjCoDENfJ9q7MwLKDtEViaKmXuA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+| 问题 | 典型案例 | 增大MTBF | 减小MTTR | 
+|---|---|---|---|
+|程序配置bug|---|---|---|
+|---|---|---|---|
+|---|---|---|---|
+|---|---|---|---|
+|---|---|---|---|
 
