@@ -105,6 +105,9 @@ float|Float|32|浮点类型|
 long|Long|64|整数值型|
 double|Double|64|浮点类型|
 
++ String：引用类型；
++ var：Java11，本地变量类型推断；
+
 #### static
 + 静态方法
   + 不依赖于任何对象就可以进行访问；
