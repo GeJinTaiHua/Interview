@@ -24,13 +24,14 @@
 
 
 ### 常用数据库
-1) [MySQL](https://www.mysql.com/)
-2) [MongoDB](https://www.mongodb.com/)
-3) [PostgreSQL](https://www.postgresql.org/)
-4) [Redis](https://redis.io/)
-5) [Cassandra](http://cassandra.apache.org/)
-6) [Oracle](https://www.oracle.com/cn/index.html)
-+ Microsoft SQL Server
+#### 流行数据库
+1） [Oracle](https://www.oracle.com/cn/index.html)
++ [MySQL](https://www.mysql.com/)
++ [Microsoft SQL Server]()
++ [PostgreSQL](https://www.postgresql.org/)
++ [MongoDB](https://www.mongodb.com/)
++ [Redis](https://redis.io/)
+
 
 + Microsoft Access
 
