@@ -284,42 +284,13 @@ public class ClassName {
 #### switch...case...default...
 + switch(A)
   + A的取值只能是整型或者可以转换为整型的数值类型，比如byte、short、int、char、还有枚举；
-  + JDK1.7之后，A的取值也支持String了；
+  + Java 7：取值支持String；
 + case B:C
   + 常量表达式；B的取值只能是常量（需要定义一个final型的常量）或者byte、short、int、char、String；
+  + Java 12：允许合并多个条件；
 + default
   + 没有符合的case就执行它;
   + 并不是必须的。
-```
-// 运行结果输出：default
-    int i = 6;
-    switch(i){
-    case 0:
-    	System.out.print("0");
-    case 1:
-    	System.out.print("1");
-    case 2:
-    	System.out.print("2");
-    default:
-    	System.out.print("default");
-    }
-```
-```
-// 运行结果输出：2 3
-    int i = 2;
-    switch(i){
-    case 0:
-    	System.out.print("0");
-    case 1:
-    	System.out.print("1");
-    case 2:
-    	System.out.print("2");
-    case 3:
-    	System.out.print("3");break;
-    default:
-    	System.out.print("default");
-    }
-```
 
 #### Overload、Override
 + Overload（重载）
