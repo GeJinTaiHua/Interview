@@ -13,7 +13,8 @@
     * [RESTful 架构风格](#restful-%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC)
   * [基本知识](#%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86)
     * [类之间的关系：继承、依赖、关联、聚合、组合](#%E7%B1%BB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB%E7%BB%A7%E6%89%BF%E4%BE%9D%E8%B5%96%E5%85%B3%E8%81%94%E8%81%9A%E5%90%88%E7%BB%84%E5%90%88)
-
+    * [Overload、Override](#overloadoverride)
+    * [abstract class、interface](#abstract-classinterface)
 
 ### 四大基本特性
 + 抽象
@@ -204,6 +205,21 @@ public class Nose {
 }
 ```
 
+
+#### Overload、Override
++ Overload（重载）
+  + 一个类中多态性的表现，水平关系；
+  + 多个方法之间的关系。
++ Override（重写）
+  + 父类和子类多态性的表现，垂直关系；
+  + 一个方法或一对方法产生关系。
+![重载重写](http://www.runoob.com/wp-content/uploads/2013/12/overloading-vs-overriding.png)
+
+#### abstract class、interface 
++ 一个类只能继承单个类，但是可以实现多个接口；
++ 抽象类中可以有构造方法，接口中不能有构造方法；
++ 抽象类中的所有方法并不一定要是抽象的，你可以选择在抽象类中实现一些基本的方法。而接口要求所有的方法都必须是抽象的（JDK1.8静态方法、默认方法）；
++ 抽象类中可以有普通成员变量；接口中不可以，可以有public static final 常量。
 
 
  
