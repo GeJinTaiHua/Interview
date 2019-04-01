@@ -28,3 +28,6 @@ MTBF = MTTF + MTTR
 |具有故障自动回复能力|4个9|99.99%|52.6min|8.6s|淘宝、JD| 
 |极高可用性|5个9|99.999%|5.25min|0.86s| | 
 
++ 可用性的保障：
+!()[https://mmbiz.qpic.cn/mmbiz_jpg/C1uDMDqjn19p178oJIhTCbsP1lhSQE9fibUEWLvv4yPJbd2EtGdmpPhicLzcJkyjCoDENfJ9q7MwLKDtEViaKmXuA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1]
+
