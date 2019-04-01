@@ -76,7 +76,6 @@
 + 分布式协调服务
   + ZooKeeper 
   + Keepalived
-  + K8S
 + 配置管理
   + Apollo
 + 大数据
@@ -85,7 +84,7 @@
   + Hive
 + 容器
   + Docker
-  + Kubernetes
+  + K8s
 + 分布式缓存
   + Redis
   + MemCache
