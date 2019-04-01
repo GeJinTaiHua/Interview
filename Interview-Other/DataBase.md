@@ -2,6 +2,7 @@
 
 
   * [常用数据库](#%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E5%BA%93)
+    * [流行数据库](#流行数据库)
     * [Redis](#redis)
     * [MongoDB](#mongodb)
   * [关键字](#%E5%85%B3%E9%94%AE%E5%AD%97)
@@ -25,7 +26,7 @@
 
 ### 常用数据库
 #### 流行数据库
-1） [Oracle](https://www.oracle.com/cn/index.html)
++ [Oracle](https://www.oracle.com/cn/index.html)
 + [MySQL](https://www.mysql.com/)
 + [Microsoft SQL Server]()
 + [PostgreSQL](https://www.postgresql.org/)
