@@ -463,14 +463,6 @@ Lambda|等效的方法引用|
 (String s)->System.out.println(s)|System.out::println|
 
 #### Stream API
-+ 聚合操作
-```
-List<Integer> transactionsIds = transactions.parallelStream().
-  filter(t -> t.getType() == Transaction.GROCERY).
-  sorted(comparing(Transaction::getValue).reversed()).
-  map(Transaction::getId).
-  collect(toList());
-```
 + 构造
 ![流管道的构成](https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/img001.png)
   1) 从 Collection 和数组
@@ -509,6 +501,9 @@ stream = list.stream();
     + forEach、forEachOrdered、toArray、reduce、collect、min、max、count、anyMatch、allMatch、noneMatch、findFirst、findAny、iterator
   + Short-circuiting：
     + anyMatch、allMatch、noneMatch、findFirst、findAny、limit 
+    
++ lambda表达式
+  + Java 11：局部变量类型推断var；
     
 #### IO、NIO
 + 管道（Channel）：实际上就像传统IO中的流，到任何目的地(或来自任何地方)的所有数据都必须通过一个 Channel 对象。一个 Buffer 实质上是一个容器对象。
