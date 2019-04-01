@@ -463,7 +463,6 @@ Lambda|等效的方法引用|
 (String s)->System.out.println(s)|System.out::println|
 
 #### Stream API
-Stream 是对集合（Collection）对象功能的增强，它专注于对集合对象进行各种非常便利、高效的聚合操作（aggregate operation），或者大批量数据操作 (bulk data operation)。
 + 聚合操作
 ```
 List<Integer> transactionsIds = transactions.parallelStream().
@@ -472,7 +471,7 @@ List<Integer> transactionsIds = transactions.parallelStream().
   map(Transaction::getId).
   collect(toList());
 ```
-+ 流的构造
++ 构造
 ![流管道的构成](https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/img001.png)
   1) 从 Collection 和数组
      + Collection.stream()
@@ -501,7 +500,7 @@ stream = Arrays.stream(strArray);
 List<String> list = Arrays.asList(strArray);
 stream = list.stream();
 ```
-+ 流的操作类型
++ 操作类型
   + Intermediate：中间操作
     + map(mapToInt, flatMap 等)：把 input Stream 的每一个元素，映射成 output Stream 的另外一个元素
     + filter：过滤
