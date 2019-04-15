@@ -56,17 +56,17 @@ MTBF = MTTF + MTTR
 + 分隔容忍性（Partition tolerance）：系统中任意信息的丢失或失败不会影响系统的继续运作）
 
 #### ACID 
-+ ACID：是指数据库管理系统（DBMS）在写入/异动资料的过程中，为保证交易（transaction）是正确可靠的，所必须具备的四个特性：
-  + 原子性（Atomicity，或称不可分割性）；
-  + 一致性（Consistency）；
-  + 隔离性（Isolation，又称独立性）；
-  + 持久性（Durability）。
+是指数据库管理系统（DBMS）在写入/异动资料的过程中，为保证交易（transaction）是正确可靠的，所必须具备的四个特性：
++ 原子性（Atomicity，或称不可分割性）；
++ 一致性（Consistency）；
++ 隔离性（Isolation，又称独立性）；
++ 持久性（Durability）。
 
 #### BASE 
-+ BASE：完全不同ACID模型，牺牲高一致性，获得可用性或可靠性：
-  + 基本可用（Basically Available）：支持分区失败(e.g. sharding碎片划分数据库)；
-  + 软状态（Soft state）：状态可以有一段时间不同步，异步；
-  + 最终一致（Eventually consistent）：最终数据是一致的就可以了，而不是时时高一致。
+完全不同ACID模型，牺牲高一致性，获得可用性或可靠性：
++ 基本可用（Basically Available）：支持分区失败(e.g. sharding碎片划分数据库)；
++ 软状态（Soft state）：状态可以有一段时间不同步，异步；
++ 最终一致（Eventually consistent）：最终数据是一致的就可以了，而不是时时高一致。
 
 
 
