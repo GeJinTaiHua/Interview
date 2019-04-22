@@ -54,6 +54,7 @@
   2) [饿汉模式](/Interview-Java/src/test/java/Pattern/Singleton/SingletonHungry.java)
   3) [静态内部类](/Interview-Java/src/test/java/Pattern/Singleton/SingletonIODH.java)
   4) [枚举单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonEnum.java)
+  5) [CAS单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonCAS.java)
   + [容器管理单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonManager.java)
   + [破坏单例的2种方法](/Interview-Java/src/test/java/Pattern/DestroySingle.java#L19)
 + 工厂模式：定义一个用于创建对象的接口，让子类决定实例化哪一个类。   
