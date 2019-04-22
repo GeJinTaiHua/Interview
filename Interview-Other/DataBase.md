@@ -190,7 +190,9 @@ UPDATE xxx;
 
 #### 切分技巧
 + 垂直拆分：把表按模块划分到不同数据库表中。
+![垂直拆分](https://mmbiz.qpic.cn/mmbiz_jpg/4MXV7svuTWL5r9fPIGouhodOCQDdD6g8pSOgLOOgraTXACO6u3Mu5ItUMgZBHCr18kiaIw88HxXFk6Cykoj8QDA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 + 水平拆分：把一个表按照某种规则（时间、用户...）把数据划分到不同表或数据库里。
+![水平拆分](https://mmbiz.qpic.cn/mmbiz_jpg/4MXV7svuTWL5r9fPIGouhodOCQDdD6g8wbgYho10FyQRibfe08XUyicu8gsy3pfBsz7bvohx8yKC0S5VAFdNoVJw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 #### 计数器表
 + 只有一行，更新会串行执行
