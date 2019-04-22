@@ -191,7 +191,10 @@ UPDATE xxx;
 #### 切分技巧
 + 垂直拆分：把表按模块划分到不同数据库表中。
 ![垂直拆分](https://mmbiz.qpic.cn/mmbiz_jpg/4MXV7svuTWL5r9fPIGouhodOCQDdD6g8pSOgLOOgraTXACO6u3Mu5ItUMgZBHCr18kiaIw88HxXFk6Cykoj8QDA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
 + 水平拆分：把一个表按照某种规则（时间、用户...）把数据划分到不同表或数据库里。
+  + 会将一段时间以前的数据归档，存放到类似HBase这种非关系型数据库中。
+  + 非每个查询都能携带分库分表键：建立“异构索引表”，即采用异步机制将原表内的每次一创建或更新，都换一个维度保存一份完整的数据表或索引表，拿空间换时间。
 ![水平拆分](https://mmbiz.qpic.cn/mmbiz_jpg/4MXV7svuTWL5r9fPIGouhodOCQDdD6g8wbgYho10FyQRibfe08XUyicu8gsy3pfBsz7bvohx8yKC0S5VAFdNoVJw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 #### 计数器表
