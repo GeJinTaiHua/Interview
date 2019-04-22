@@ -257,6 +257,14 @@ name=GeJinTaiHua
 7) 断开连接（[四次挥手](#tcp-%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B)）
 
 ### Linux
+```
+ps aux|grep java 查看java进程
+ps aux 查看所有进程
+ps –ef|grep tomcat 查看所有有关tomcat的进程
+ps -ef|grep --color java 高亮要查询的关键字
+kill -9 19979 终止线程号位19979的进程
+```
+
 #### Crontab表达式
 字段|允许值（整数）|允许的特殊字符| 
 ---|---|---|
