@@ -268,6 +268,13 @@ order by a.country,score DESC;
        )<3  //取前三条数据，可以多次修改
  order by a.country,score DESC;
 ```
++ 按数字大小排序String字段 str
+```
+ SELECT * FROM  tb WHERE 1 = 1 ORDER BY -str DESC  
+```
+```
+ SELECT * FROM  tb WHERE 1 = 1 ORDER BY (str + 1)   
+```
 
 #### 索引
 + 使用时机
