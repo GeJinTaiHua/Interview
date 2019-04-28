@@ -37,6 +37,7 @@
   - 不同的进程使用不同的内存空间，而所有的线程共享一片相同的内存空间；
   - 进程间通讯依靠IPC资源，例如管道（pipes）、套接字（sockets）等；
   - 线程间通讯依靠JVM提供的API，例如wait方法、notify方法和notifyAll方法，线程间还可以通过共享的主内存来进行值的传递。
++ 纤程（Green Thread）：代指 Sun 公司的 Green Team，他们在20世纪90年代设计了最初的 Java 线程库。今天的 Java 不再使用纤程，早在2000年就已经开始使用本地线程了。一些其他编程语言，比如 Go、Haskell、Rust 等实现了类似纤程的机制代替本地线程。
 + [阻塞队列](/Interview-Java/src/test/java/Thread/ArrayBlockingQueueN.java)：用Lock和Condition实现一个阻塞队列。
 + [流量控制](/Interview-Java/src/test/java/Thread/SemaphoreTest.java)：30个线程只允许10个同时存在。
   
