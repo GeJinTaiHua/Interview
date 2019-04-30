@@ -48,6 +48,7 @@
       + Spring Cloud Config：配置中心。
       + Spring Cloud Zuul：服务网关。
     - Spring Data JPA
+    - [☕️Spring Cloud Alibaba](https://github.com/GeJinTaiHua/Spring-Cloud-Alibaba-Learn)
   + Struts
   + [☕️Hibernate](https://github.com/GeJinTaiHua/Learn-Hibernate)
 + [☕️SSM](https://github.com/GeJinTaiHua/Demo-SSM)
