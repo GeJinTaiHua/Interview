@@ -7,7 +7,7 @@
     * [CAP](#CAP)
     * [ACID](#ACID)
     * [BASE](#BASE)
- 
+  * [DDD](#DDD)
 
 ### 系统
 #### 系统可用性
@@ -68,7 +68,7 @@ MTBF = MTTF + MTTR
 + 软状态（Soft state）：状态可以有一段时间不同步，异步；
 + 最终一致（Eventually consistent）：最终数据是一致的就可以了，而不是时时高一致。
 
-
+### DDD
 
 
 
