@@ -43,12 +43,25 @@
   + 基于非阻塞的IO多路复用机制；
   + 数据结构简单，对数据操作也简单；
   + 底层模型：Redis直接自己构建了VM机制；
+
 + 数据结构
   + String：缓存、限流、计数器、分布式锁、分布式Session
+    + 底层实现：int、raw、embstr
+    + embstr：<=39字节的字符串时使用；
+    + int：8个字节的长整型时使用；
+    + raw：<39个字节的字符串时使用。
   + Hash：存储用户信息、用户主页访问量、组合查询
+    + 底层实现：ziplist（压缩列表）或者hashtable（字典或者也叫哈希表）
   + List：微博关注人时间轴列表、简单队列
+    + 底层实现：quicklist（快速列表，是ziplist 压缩列表 和linkedlist 双端链表 的组合）
+    + linkedlist（双端链表）
+    + ziplist（压缩列表）:当一个列表键只包含少量列表项，且是小整数值或长度比较短的字符串时使用；
   + Set：赞、踩、标签、好友关系
+    + 底层实现：intset（整数集合）或者hashtable（字典或者也叫哈希表）
   + Zset：排行榜
+    + 底层实现：ziplist（压缩列表）或者skiplist（跳跃表）
+  
+![](https://mmbiz.qpic.cn/mmbiz_png/eZzl4LXykQy8y3RicnZarvIuaS7K29Yh9gN6bpoI2kslO06oXCTP23Iv9RqvX5trhu8L1hpaz1UVAmibtNj1r0Ag/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 ![数据建模](https://mmbiz.qpic.cn/mmbiz_png/eZzl4LXykQy8y3RicnZarvIuaS7K29Yh9SdNiaqQLhXqicly18gTw8yITomaeUr3kib3rCV1As2c5sjnqOvhLSrE2Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
   
 #### MongoDB
