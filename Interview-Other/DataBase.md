@@ -33,8 +33,6 @@
 + [PostgreSQL](https://www.postgresql.org/)
 + [MongoDB](https://www.mongodb.com/)
 + [Redis](https://redis.io/)
-
-
 + Microsoft Access
 
 #### Redis
@@ -46,11 +44,12 @@
   + 数据结构简单，对数据操作也简单；
   + 底层模型：Redis直接自己构建了VM机制；
 + 数据结构
-  + String
-  + Hash
-  + List
-  + Set
-  + Zset
+  + String：缓存、限流、计数器、分布式锁、分布式Session
+  + Hash：存储用户信息、用户主页访问量、组合查询
+  + List：微博关注人时间轴列表、简单队列
+  + Set：赞、踩、标签、好友关系
+  + Zset：排行榜
+![数据建模](https://mmbiz.qpic.cn/mmbiz_png/eZzl4LXykQy8y3RicnZarvIuaS7K29Yh9SdNiaqQLhXqicly18gTw8yITomaeUr3kib3rCV1As2c5sjnqOvhLSrE2Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
   
 #### MongoDB
 + 数据库（database）
