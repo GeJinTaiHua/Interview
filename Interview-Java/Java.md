@@ -286,7 +286,7 @@ public class ClassName {
 #### switch...case...default...
 + switch(A)
   + A的取值只能是整型或者可以转换为整型的数值类型，比如byte、short、int、char、还有枚举；
-  + Java 7：取值支持String；
+  + Java 7：取值支持String；通过equals()和hashCode()方法来实现的。
 + case B:C
   + 常量表达式；B的取值只能是常量（需要定义一个final型的常量）或者byte、short、int、char、String；
   + Java 12：允许合并多个条件；
