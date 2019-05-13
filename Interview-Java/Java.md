@@ -96,16 +96,17 @@
 基本类型|包装类|位数|  |
 ---|---|---|---|
 boolean|Boolean|1|布尔型|
-byte|Byte|8|整数值型|
 char|Character|16|字符型|
+byte|Byte|8|整数值型|
 short|Short|16|整数值型|
 int|Integer|32|整数值型|
-float|Float|32|浮点类型|
 long|Long|64|整数值型|
+float|Float|32|浮点类型|
 double|Double|64|浮点类型|
 
 + String：引用类型；
 + var：Java10，本地变量类型推断；
++ 自动装箱与拆箱：装箱过程是通过调用包装器的 valueOf 方法实现的，而拆箱过程是通过调用包装器的 xxxValue 方法实现的。
 
 #### static
 1. 静态方法
@@ -413,7 +414,8 @@ String str ="hello";
   + 下界 <? super T>  
   + 往外取只能赋值给Object变量，不影响往里存  
   ![super](https://images2018.cnblogs.com/blog/1043143/201804/1043143-20180414164527508-811736127.jpg)
-
++ 语法糖实现原理：虚拟机中没有泛型，只有普通类和普通方法；所有泛型类的类型参数在编译时都会被擦除，泛型类并没有自己独有的Class类对象。比如并不存在List<String>.class或是List<Integer>.class，而只有List.class。
+	
 #### Lambda 表达式
 1) expression = (variable) -> action
    + variable：这是一个变量，一个占位符。像x、y、z可以是多个变量；
