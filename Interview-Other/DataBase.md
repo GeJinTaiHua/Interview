@@ -69,6 +69,9 @@
 + 集合（collection）
 + 文档对象（document）
 
+![优势](https://img-blog.csdn.net/20170209135023925?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGluZmVubGlhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![劣势](https://img-blog.csdn.net/20170209135035046?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGluZmVubGlhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
 ### 关键字
 #### count(1) count(主键) count(\*)
 + count(1) 和 count(主键) 这两个只扫描主键Index就可以得到数据
