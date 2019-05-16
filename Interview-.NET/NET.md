@@ -14,7 +14,8 @@
   * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
     * [深拷贝、浅拷贝](#%E6%B7%B1%E6%8B%B7%E8%B4%9D%E6%B5%85%E6%8B%B7%E8%B4%9D)
     * [接口、类、抽象方法、虚方法](#%E6%8E%A5%E5%8F%A3%E7%B1%BB%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95%E8%99%9A%E6%96%B9%E6%B3%95)
-
+    * [Overload、Override](#overloadoverride)
+    * [abstract class、interface](#abstract-classinterface)
 
 ### IOC框架
 + [🅰️Autofac](https://github.com/GeJinTaiHua/Learn-Autofac)
@@ -190,6 +191,21 @@ namespace Demo
     + 抽象方法没有方法体，虚方法有方法体
     + 抽象方法只能在抽象类中声明，虚方法不是
     + 非抽象派生类必须重写抽象类中的抽象方法，虚方法不必
+
+#### Overload、Override
++ Overload（重载）
+  + 一个类中多态性的表现，水平关系；
+  + 多个方法之间的关系。
++ Override（重写）
+  + 父类和子类多态性的表现，垂直关系；
+  + 一个方法或一对方法产生关系。
+![重载重写](http://www.runoob.com/wp-content/uploads/2013/12/overloading-vs-overriding.png)
+
+#### abstract class、interface 
++ 一个类只能继承单个类，但是可以实现多个接口；
++ 抽象类中可以有构造方法，接口中不能有构造方法；
++ 抽象类中的所有方法并不一定要是抽象的，你可以选择在抽象类中实现一些基本的方法。而接口要求所有的方法都必须是抽象的（JDK1.8静态方法、默认方法）；
++ 抽象类中可以有普通成员变量；接口中不可以，可以有public static final 常量。
 
 
  
