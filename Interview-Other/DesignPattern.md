@@ -132,7 +132,7 @@ public class ConcretePrototype extends Prototype {
  + Controller（控制器）
  
 #### ORM
-&emsp;&emsp;对象-关系映射；用来把对象模型表示的对象映射到基于S Q L 的关系模型数据库结构中去。
+&emsp;&emsp;对象-关系映射：用来把对象模型表示的对象映射到基于SQL的关系模型数据库结构中去。
 
 #### RESTful 架构风格
 + 资源：以json(或其他Representation)为载体的、面向用户的一组数据集。
@@ -205,7 +205,6 @@ public class Nose {
     private Nose nose = new Nose();
 }
 ```
-
 
 #### Overload、Override
 + Overload（重载）
