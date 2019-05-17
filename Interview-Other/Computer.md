@@ -248,9 +248,10 @@ name=GeJinTaiHua
   11) 前端控制器向用户响应结果。
 
 5) 服务器返回HTTP响应
-+ 301永久重定向响应
++ 301 永久重定向响应
   + 搜索引擎排名
   + 不同的地址会造成缓存友好性变差
++ 302 临时跳转
 + HTTP响应：状态行、消息报头、空行、响应正文
 ![HTTP响应](http://upload-images.jianshu.io/upload_images/2964446-1c4cab46f270d8ee.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
