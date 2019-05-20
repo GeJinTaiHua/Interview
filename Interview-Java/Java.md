@@ -692,6 +692,7 @@ SSClass
 SuperClass init!
 123
 ```
++ 实例初始化不一定要在类初始化结束之后才开始初始化
 ```
 public class StaticTest
 {
