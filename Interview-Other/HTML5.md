@@ -16,7 +16,6 @@
 3) [Angular ](http://www.angularjs.net.cn/)
 4) [Vue](https://cn.vuejs.org/)
 
-
 ### 关键字
 #### AJAX 
 + url：要求为String类型的参数，（默认为当前页地址）发送请求的地址。
