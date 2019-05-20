@@ -610,18 +610,27 @@ IO|NIO
 
 ### JVM
 #### JVM 类加载机制
-![类加载](http://incdn1.b0.upaiyun.com/2017/06/2fb054008ca2898e0a17f7d79ce525a1.png)
-+ 加载阶段：查找和导入Class文件。
-  + 类加载器
-    - 启动类加载器：由C++实现，没有父类；
-    - 扩展类加载器：由Java语言实现，父类加载器为null；
-    - 系统类加载器：由Java语言实现，父类加载器为扩展类加载器；
-    - 自定义类加载器：父类加载器肯定为AppClassLoader。
-  + 双亲委派机制：类加载器收到类加载请求，自己不加载，向上委托给父类加载，父类加载不了，再自己加载。
-+ 验证阶段：检查载入Class文件数据的正确性；
-+ 准备阶段：给类的静态变量分配存储空间；
-+ 解析阶段：将符号引用转成直接引用；
-+ 初始化阶段：对类的静态变量，静态代码块执行初始化操作。
++ 类加载过程
+  1) 加载（Loading）：查找和导入Class文件。
+     - 启动类加载器
+     - 扩展类加载器
+     - 系统类加载器
+     - 自定义类加载器
+     + 双亲委派机制：类加载器收到类加载请求，自己不加载，向上委托给父类加载，父类加载不了，再自己加载。
+  2) 验证（Verification）：确保Class文件的字节流中包含的信息符合当前虚拟机的要求，并且不会危害虚拟机自身的安全。
+     + 文件格式验证
+     + 元数据验证
+     + 字节码验证
+     + 符号引用验证
+  3) 准备（Preparation）：正式为类变量分配内存并设置类变量初始值的阶段，这些变量所使用的内存都将在方法区中进行分配。
+     + 类变量（被static修饰的变量）
+     + 标注为final之后，value的值在准备阶段初始化
+  4) 解析（Resolution）：将符号引用转成直接引用；
+  5) 初始化（Initialization）：对类的静态变量，静态代码块执行初始化操作。
+  6) 使用（Using）
+  7) 卸载（Unloading）
+  ![类加载过程](http://incdn1.b0.upaiyun.com/2017/06/2fb054008ca2898e0a17f7d79ce525a1.png)
+  
 + 类的实例化顺序
   1) 父类静态变量；
   1) 父类静态代码块；
@@ -631,6 +640,57 @@ IO|NIO
   3) 父类构造函数；
   4) 子类非静态变量；
   4) 子类构造函数。
++ 对于静态字段，只有直接定义这个字段的类才会被初始化，因此通过其子类来引用父类中定义的静态字段，只会触发父类的初始化而不会触发子类的初始化：
+```
+public class SSClass
+{
+    static
+    {
+        System.out.println("SSClass");
+    }
+}    
+public class SuperClass extends SSClass
+{
+    static
+    {
+        System.out.println("SuperClass init!");
+    }
+ 
+    public static int value = 123;
+ 
+    public SuperClass()
+    {
+        System.out.println("init SuperClass");
+    }
+}
+public class SubClass extends SuperClass
+{
+    static
+    {
+        System.out.println("SubClass init");
+    }
+ 
+    static int a;
+ 
+    public SubClass()
+    {
+        System.out.println("init SubClass");
+    }
+}
+public class NotInitialization
+{
+    public static void main(String[] args)
+    {
+        System.out.println(SubClass.value);
+    }
+}
+```
+运行结果：
+```	
+SSClass
+SuperClass init!
+123
+```
 
 #### JVM 内存模型
 ![JDK 1.6](https://mmbiz.qpic.cn/mmbiz_png/iaIdQfEric9TwVibBF785ic5RU2iafKlnVEsCEed3urDicyv4ObhWyriadrWIr293APDicN5gwEAzuQ2WhqDhyF7wwUZIA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
