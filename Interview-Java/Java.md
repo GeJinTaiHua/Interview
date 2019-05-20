@@ -314,7 +314,7 @@ public synchronized String toString() {
 ```
 
 #### Thread、Runnable、Callable
-1) Thread（类）
+1) [Thread](/Interview-Java/src/test/java/Thread/ThreadT.java)（类）
    + start()：启动一个线程，这时此线程处于就绪（可运行）状态；
    + run()：只是类的一个普通方法而已。
    + 缺点：
@@ -324,27 +324,6 @@ public synchronized String toString() {
 2) Runnable（接口）
    + 避免继承的局限，一个类可以继承多个接口；
    + 适合于资源的共享，节约资源。
-```
-public class Thread1 extends Thread{
-    @Override
-    public void run() {
-        System.out.println("extend thread");
-    }
-}
-public class Thread2 implements Runnable{
-    public void run() {
-        System.out.println("runbale interfance");   
-    }    
-}
-public static void main(String[] args) {
-        new Thread1().start();
-	new Thread1().start();
-	
-	Thread2 thread2 = new Thread2()；
-        new Thread(thread2).start();
-	new Thread(thread2).start();
-}
-```
 3) Callable（接口）
 4) ExecutorService、Callable、Future
 

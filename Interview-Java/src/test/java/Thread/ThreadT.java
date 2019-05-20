@@ -1,5 +1,7 @@
 package Thread;
 
+import org.junit.Test;
+
 /*
  * @desc 基础知识
  * @author wjl
@@ -27,4 +29,27 @@ public class ThreadT {
     interrupt(); // 中断线程
     currentThread(); // 获得正在执行的线程对象
     */
+
+    class Thread1 extends Thread {
+        @Override
+        public void run() {
+            System.out.println("extend thread");
+        }
+    }
+
+    class Thread2 implements Runnable {
+        public void run() {
+            System.out.println("runbale interfance");
+        }
+    }
+
+    @Test
+    public void test() {
+        new Thread1().start();
+        new Thread1().start();
+
+        Thread2 thread2 = new Thread2();
+        new Thread(thread2).start();
+        new Thread(thread2).start();
+    }
 }
