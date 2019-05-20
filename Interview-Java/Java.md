@@ -27,6 +27,8 @@
       * [Map](#map)
       * [fail\-fast、fail\-safe](#fail-fastfail-safe)
     * [接口](#接口)
+  * [java锁](#java锁)
+    * [Synchronized](#Synchronized)
   * [JVM](#jvm)
     * [JVM 类加载机制](#jvm-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6)
     * [JVM 内存模型](#jvm-%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B)
@@ -583,6 +585,19 @@ IO|NIO
   3) 默认方法
   4) 静态方法
   5) **私有方法**
+
+### java锁
+#### Synchronized
++ 公平，悲观，独享，互斥，可重入的重量级锁。
++ 实现原理：
+  +  
+  ![实现原理](https://img-blog.csdn.net/20170418221917277?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvenF6X3pxeg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
+#### ReentrantLock
++ 默认非公平但可实现公平的，悲观，独享，互斥，可重入，重量级锁。
+
+#### ReentrantReadWriteLocK
++ 默认非公平但可实现公平的，悲观，写独享，读共享，读写，可重入，重量级锁。
 
 ### JVM
 #### JVM 类加载机制
