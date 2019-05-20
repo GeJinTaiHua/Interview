@@ -7,6 +7,7 @@
   * [Hash](#hash)
     * [哈希函数](#%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0)
     * [哈希冲突处理](#%E5%93%88%E5%B8%8C%E5%86%B2%E7%AA%81%E5%A4%84%E7%90%86)
+    * [hash一致性算法](#hash一致性算法)
   * [排序算法](#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95)
     * [插入排序](#%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F)
     * [选择排序](#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F)
@@ -50,6 +51,13 @@ int randNumber = new Random().Next(MIN, MAX + 1);
   + 增加了计算时间。
 + 链地址法（拉链法）
 + 公共溢出区  
+
+#### hash一致性算法
+对2^32取模
+![](https://ss.csdn.net/p?https://mmbiz.qpic.cn/mmbiz_jpg/UtWdDgynLdbhiae1AfNYAibdp7ib2wTZTrpb4iaIwTkwrloXHV4ebuemEQsqkhTveAlFCN9TQA4YN5mNbAO1tutyow/640)
+
+
+
  
 ### 排序算法  
 
