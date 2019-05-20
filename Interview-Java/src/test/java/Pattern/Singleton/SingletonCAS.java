@@ -1,5 +1,7 @@
 package Pattern.Singleton;
 
+import java.util.concurrent.atomic.AtomicReference;
+
 /*
  * @desc 乐观锁技术
  * 好处：不需要使用传统的锁机制来保证线程安全,CAS是一种基于忙等待的算法,依赖底层硬件的实现,相对于锁它没有线程切换和阻塞的额外消耗,可以支持较大的并行度。
@@ -10,10 +12,11 @@ package Pattern.Singleton;
 public class SingletonCAS {
     private static final AtomicReference<SingletonCAS> INSTANCE = new AtomicReference<SingletonCAS>();
 
-    private SingletonCAS() {}
+    private SingletonCAS() {
+    }
 
     public static SingletonCAS getInstance() {
-        for (;;) {
+        for (; ; ) {
             SingletonCAS singleton = INSTANCE.get();
             if (null != singleton) {
                 return singleton;
