@@ -44,8 +44,6 @@
   - 进程间通讯依靠IPC资源，例如管道（pipes）、套接字（sockets）等；
   - 线程间通讯依靠JVM提供的API，例如wait方法、notify方法和notifyAll方法，线程间还可以通过共享的主内存来进行值的传递。
 + 纤程（Green Thread）：代指 Sun 公司的 Green Team，他们在20世纪90年代设计了最初的 Java 线程库。今天的 Java 不再使用纤程，早在2000年就已经开始使用本地线程了。一些其他编程语言，比如 Go、Haskell、Rust 等实现了类似纤程的机制代替本地线程。
-+ [阻塞队列](/Interview-Java/src/test/java/Thread/ArrayBlockingQueueN.java)：用Lock和Condition实现一个阻塞队列。
-+ [流量控制](/Interview-Java/src/test/java/Thread/SemaphoreTest.java)：30个线程只允许10个同时存在。
   
 #### 线程同步的方法
 + 方法
@@ -53,9 +51,6 @@
   + sleep()：睡眠状态，静态方法；
   + notify()：唤醒一个等待状态的线程；
   + Allnotify()：唤醒所有等待状态的线程，竞争。
-+ Java 中 Obj.wait() 与 Obj.notify() 必须要与 synchronized(Obj) 一起使用
-  + wait就是说线程在获取对象锁后，主动释放对象锁，同时本线程休眠。直到有其它线程调用对象的notify()唤醒该线程，才能继续获取对象锁，并继续执行。相应的notify()就是对对象锁的唤醒操作；
-  + notify()调用后，并不是马上就释放对象锁的，而是在相应的synchronized(){}语句块执行结束，自动释放锁后，JVM会在wait()对象锁的线程中随机选取一线程，赋予其对象锁，唤醒线程，继续执行。如果是notifyAll()就会释放所有的锁。
 
 #### 进程间的通信方式
 1) 管道(pipe)：管道是一种半双工的通信方式，数据只能单向流动，而且只能在具有亲缘关系的进程间使用。进程的亲缘关系通常是指父子进程关系。
