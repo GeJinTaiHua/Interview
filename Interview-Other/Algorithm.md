@@ -54,8 +54,12 @@ int randNumber = new Random().Next(MIN, MAX + 1);
 
 #### hash一致性算法
 考虑到分布式系统每个节点都有可能失效，并且新的节点很可能动态的增加进来的情况。
-+ 环形Hash空间：对2^32取模
-![环形Hash空间](https://img-blog.csdn.net/2018080610272771?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NiX2xjbA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
++ 环形Hash空间
+  + 对2^32取模
+  + 对象与机器处于同一个哈希空间中，这样按顺时针转动object1（对象）存储到了NODE1（机器）中,object3（对象）存储到了NODE2（机器）中,object2、object4（对象）存储到了NODE3（机器）中。   
+![2^32取模](https://img-blog.csdn.net/20180806095553267?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NiX2xjbA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![映射到环上](https://img-blog.csdn.net/2018080610272771?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NiX2xjbA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+
 + 缺点：服务节点太少时，容易因为节点分部不均匀而造成数据倾斜（被缓存的对象大部分集中缓存在某一台服务器上）
   + 引入了虚拟节点机制，即对每一个服务节点计算多个哈希，每个计算结果位置都放置一个此服务节点，称为虚拟节点。多了一步虚拟节点到实际节点的映射。
 
