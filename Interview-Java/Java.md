@@ -598,10 +598,15 @@ IO|NIO
   5) Wait Set：哪些调用wait方法被阻塞的线程被放置在这里；
   6) !Owner：当前释放锁的线程。
   ![实现原理](https://img-blog.csdn.net/20170418221917277?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvenF6X3pxeg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
++ Obj.wait() 与 Obj.notify() 必须要与 synchronized(Obj) 一起使用
+  + wait就是说线程在获取对象锁后，主动释放对象锁，同时本线程休眠。直到有其它线程调用对象的notify()唤醒该线程，才能继续获取对象锁，并继续执行。相应的notify()就是对对象锁的唤醒操作；
+  + notify()调用后，并不是马上就释放对象锁的，而是在相应的synchronized(){}语句块执行结束，自动释放锁后，JVM会在wait()对象锁的线程中随机选取一线程，赋予其对象锁，唤醒线程，继续执行。如果是notifyAll()就会释放所有的锁。
 
 #### Lock锁
 + ReentrantLock：默认非公平但可实现公平的，悲观，独享，互斥，可重入，重量级锁。
 + ReadWriteLock（实现类ReentrantReadWriteLocK）：默认非公平但可实现公平的，悲观，写独享，读共享，读写，可重入，重量级锁。
++ [阻塞队列](/Interview-Java/src/test/java/Thread/ArrayBlockingQueueN.java)：用Lock和Condition实现一个阻塞队列。
++ [流量控制](/Interview-Java/src/test/java/Thread/SemaphoreTest.java)：30个线程只允许10个同时存在。
 
 ### JVM
 #### JVM 类加载机制
