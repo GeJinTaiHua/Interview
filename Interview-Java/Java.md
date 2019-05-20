@@ -119,11 +119,11 @@ double|Double|64|浮点类型|
 2. 静态变量
   + 被所有的对象所共享，在内存中只有一个副本；
   + 当且仅当在类初次加载时会被初始化。
-3. [静态代码块](/Interview-Java/src/test/java/staticDemo/code.java)
+3. [静态代码块](/Interview-Java/src/main/java/www/wjl/com/Interview/staticDemo/code.java)
   + 优化程序性能；
   + 可以置于类中的任何地方，可以有多个static块；
   + 类初次被加载的时候，会按照static块的顺序来执行每个static块，并且只会执行一次。
-4. [静态内部类](/Interview-Java/src/test/java/staticDemo/InnerClass.java)
+4. [静态内部类](/Interview-Java/src/main/java/www/wjl/com/Interview/staticDemo/InnerClass.java)
 5. 静态导包
   + import static 代替 import；
   + 导入这个类里的静态方法。
