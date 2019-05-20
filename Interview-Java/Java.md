@@ -28,7 +28,9 @@
       * [fail\-fast、fail\-safe](#fail-fastfail-safe)
     * [接口](#接口)
   * [java锁](#java锁)
-    * [Synchronized](#Synchronized)
+    * [Synchronized2](#Synchronized2)
+    * [ReentrantLock](#ReentrantLock)
+    * [ReentrantReadWriteLocK](#ReentrantReadWriteLocK)
   * [JVM](#jvm)
     * [JVM 类加载机制](#jvm-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6)
     * [JVM 内存模型](#jvm-%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B)
@@ -587,10 +589,15 @@ IO|NIO
   5) **私有方法**
 
 ### java锁
-#### Synchronized
+#### Synchronized2
 + 公平，悲观，独享，互斥，可重入的重量级锁。
 + 实现原理：
-  +  
+  1) Contention List：竞争队列，所有请求锁的线程首先被放在这个竞争队列中；
+  2) Entry List：Contention List中那些有资格成为候选资源的线程被移动到Entry List中；
+  3) OnDeck：任意时刻，最多只有一个线程正在竞争锁资源，该线程被成为OnDeck；
+  4) Owner：当前已经获取到所资源的线程被称为Owner；
+  5) Wait Set：哪些调用wait方法被阻塞的线程被放置在这里；
+  6) !Owner：当前释放锁的线程。
   ![实现原理](https://img-blog.csdn.net/20170418221917277?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvenF6X3pxeg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 #### ReentrantLock
