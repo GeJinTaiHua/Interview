@@ -2,41 +2,42 @@
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-1.5.13-brightgreen.svg)
 ![build passing](https://img.shields.io/badge/build-passing-brightgreen.svg) 
 
-   * [三大框架](#%E4%B8%89%E5%A4%A7%E6%A1%86%E6%9E%B6)
-   * [第三方库](#%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93)
-   * [中间件](#%E4%B8%AD%E9%97%B4%E4%BB%B6)
-   * [关键字](#%E5%85%B3%E9%94%AE%E5%AD%97)
-     * [8大基本类型](#8%E5%A4%A7%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B)
-     * [static](#static)
-     * [Error、Exception](#errorexception)
-     * [final、finally、finalize](#finalfinallyfinalize)
-     * [synchronized](#synchronized)
-     * [switch\.\.\.case\.\.\.default\.\.\.](#switchcasedefault)
-     * [Comparable 、Comparator](#comparable-comparator)
-     * [String、StringBuilder、StringBuffer](#stringstringbuilderstringbuffer)
-     * [Thread、Runnable、Callable](#threadrunnablecallable)
-   * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
-     * [四种引用](#%E5%9B%9B%E7%A7%8D%E5%BC%95%E7%94%A8)
-     * [泛型](#%E6%B3%9B%E5%9E%8B)
-     * [Lambda 表达式](#lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F)
-     * [Stream API](#stream-api)
-     * [IO、NIO](#ionio)
-     * [集合](#%E9%9B%86%E5%90%88)
-       * [Collection](#collection)
-       * [Map](#map)
-       * [fail\-fast、fail\-safe](#fail-fastfail-safe)
-     * [接口](#%E6%8E%A5%E5%8F%A3)
-   * [java锁](#java%E9%94%81)
-     * [Synchronized锁](#synchronized%E9%94%81)
-     * [Lock锁](#lock%E9%94%81)
-   * [JVM](#jvm)
-     * [JVM 类加载机制](#jvm-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6)
-     * [JVM 内存模型](#jvm-%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B)
-     * [垃圾收集算法](#%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95)
-     * [垃圾收集器](#%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8)
-     * [常见配置汇总](#%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE%E6%B1%87%E6%80%BB)
-   * [Maven](#maven)
-     * [依赖范围、依赖传递、排除依赖](#%E4%BE%9D%E8%B5%96%E8%8C%83%E5%9B%B4%E4%BE%9D%E8%B5%96%E4%BC%A0%E9%80%92%E6%8E%92%E9%99%A4%E4%BE%9D%E8%B5%96)
+  * [三大框架](#%E4%B8%89%E5%A4%A7%E6%A1%86%E6%9E%B6)
+  * [第三方库](#%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93)
+  * [中间件](#%E4%B8%AD%E9%97%B4%E4%BB%B6)
+  * [关键字](#%E5%85%B3%E9%94%AE%E5%AD%97)
+    * [8大基本类型](#8%E5%A4%A7%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B)
+    * [static](#static)
+    * [Error、Exception](#errorexception)
+    * [final、finally、finalize](#finalfinallyfinalize)
+    * [synchronized](#synchronized)
+    * [switch\.\.\.case\.\.\.default\.\.\.](#switchcasedefault)
+    * [Comparable 、Comparator](#comparable-comparator)
+    * [String、StringBuilder、StringBuffer](#stringstringbuilderstringbuffer)
+    * [Thread、Runnable、Callable](#threadrunnablecallable)
+  * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
+    * [四种引用](#%E5%9B%9B%E7%A7%8D%E5%BC%95%E7%94%A8)
+    * [泛型](#%E6%B3%9B%E5%9E%8B)
+    * [Lambda 表达式](#lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F)
+    * [Stream API](#stream-api)
+    * [IO、NIO](#ionio)
+    * [集合](#%E9%9B%86%E5%90%88)
+      * [Collection](#collection)
+      * [Map](#map)
+      * [fail\-fast、fail\-safe](#fail-fastfail-safe)
+    * [接口](#%E6%8E%A5%E5%8F%A3)
+  * [java锁](#java%E9%94%81)
+    * [Synchronized锁](#synchronized%E9%94%81)
+    * [Lock锁](#lock%E9%94%81)
+  * [JVM](#jvm)
+    * [JVM 类加载机制](#jvm-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6)
+    * [JVM 内存模型](#jvm-%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B)
+    * [GC 收集算法](#gc-%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95)
+    * [GC 种类](#gc-%E7%A7%8D%E7%B1%BB)
+    * [GC When What How](#gc-when-what-how)
+    * [常见配置汇总](#%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE%E6%B1%87%E6%80%BB)
+  * [Maven](#maven)
+    * [依赖范围、依赖传递、排除依赖](#%E4%BE%9D%E8%B5%96%E8%8C%83%E5%9B%B4%E4%BE%9D%E8%B5%96%E4%BC%A0%E9%80%92%E6%8E%92%E9%99%A4%E4%BE%9D%E8%B5%96)
 
 ### 三大框架
 + [☕️SSH](https://github.com/GeJinTaiHua/Demo-SSH)
@@ -583,7 +584,7 @@ IO|NIO
   2) 堆：new创建的对象、数组 ；
   3) static修饰的类变量：程序在加载的时候就在堆中为类变量分配内存，堆中的内存地址存放在栈中；
   
-#### 垃圾收集算法
+#### GC 收集算法
 + 标记-清除算法
   1) 首先标记出所有需要回收的对象；
   2) 在标记完成后统一回收所有被标记的对象。  
@@ -608,7 +609,7 @@ IO|NIO
     - Full GC  
   ![新生代老年代](http://images0.cnblogs.com/blog/587773/201409/061921034534396.png)
 
-#### 垃圾收集器
+#### GC 种类
 + 垃圾收集器组合
   + 新生代收集器
     1) Serial：（串行）垃圾收集器是最基本、发展历史最悠久的收集器。
@@ -624,10 +625,10 @@ IO|NIO
        + 目标则是达一个可控制的吞吐量（Throughput），即减少垃圾收集时间，让用户代码获得更长的运行时间。
          + 吞吐量=运行用户代码时间/（运行用户代码时间+垃圾收集时间）
   + 老年代收集器
-    1) Serial Old：Serial收集器的老年代版本。
+    1) Serial MSC：Serial收集器的老年代版本。
        + 采用"标记-整理"算法（还有压缩，Mark-Sweep-Compact）；
        + 单线程收集。
-    2) Parallel Old：Parallel Scavenge收集器的老年代版本。
+    2) Parallel MSC：Parallel Scavenge收集器的老年代版本。
        + 采用"标记-整理"算法；
        + 多线程收集；
     3) CMS：也称为并发低停顿收集器（Concurrent Low Pause Collector）或低延迟（low-latency）垃圾收集器。
@@ -656,6 +657,22 @@ IO|NIO
   + Full GC（Major GC）（老年代GC）
     + 出现Full GC经常会伴随至少一次的Minor GC；
     + 速度一般比Minor GC慢10倍以上。
+    
+#### GC When What How 
++ 触发时机
+  + 在程序空闲的时候；
+  + 程序不可预知的时候、手动调用system.gc()；
+  + Java堆内存不足时。
++ 回收对象
+  + 超出作用域的对象、引用计数为空的对象；
+  + 从GC Root开始搜索，搜索不到的对象；
+  + 从root搜索不到，而且经过第一次标记、清理后，仍然没有复活的对象。
++ 做什么
+  + 回收对象，腾出空间；
+  + 容易内存泄漏时机
+    + 静态集合类（HashMap、ThreadLocal等）；
+    + 各种连接（数据库连接，网络连接，IO连接等）未调用close关闭；
+    + 监听器的使用，在释放对象的同时没有删除对应监听器。
     
 #### 常见配置汇总
 1) 堆设置
