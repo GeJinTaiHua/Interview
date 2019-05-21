@@ -1,4 +1,4 @@
-package www.wjl.com.Interview.staticDemo;
+package StaticD;
 
 /**
  * 静态内部类

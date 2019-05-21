@@ -1,4 +1,4 @@
-package www.wjl.com.Interview.staticDemo;
+package StaticD;
 
 import java.sql.Date;
 
@@ -8,7 +8,7 @@ import java.sql.Date;
  * @author xiaolong
  * @date 2019/5/20 18:11
  */
-public class code {
+public class Code {
     private Date birthDate;
     private static Date startDate, endDate;
 
@@ -17,7 +17,7 @@ public class code {
         endDate = Date.valueOf("1964");
     }
 
-    public code(Date birthDate) {
+    public Code(Date birthDate) {
         this.birthDate = birthDate;
     }
 
