@@ -7,7 +7,7 @@
 
 | Ⅰ | Ⅱ | Ⅲ | Ⅳ | Ⅴ | Ⅵ | Ⅶ | Ⅷ | Ⅸ | Ⅹ |
 | :--------: | :---------: | :---------: | :---------: | :---------: | :---------:| :---------: | :-------: | :-------:| :------:|
-|[✒️算法](Interview-Other/Algorithm.md)|[📐数据结构](Interview-Other/Data_Structure.md)|[💏OO](Interview-Other/DesignPattern.md)|[💻操作系统](Interview-Other/Computer.md)|[❗安全](Interview-Other/Safe.md) | [💦架构](Interview-Other/Frame.md)| | ||[:octocat:GitHub](Interview-Other/GitHub.md)|
+|[✒️算法](Interview-Other/Algorithm.md)|[📐数据结构](Interview-Other/DS.md)|[💏编程思想](Interview-Other/Thinking.md)|[💻计算机基础](Interview-Other/ComputerBasic.md)|| | | ||[:octocat:GitHub](Interview-Other/GitHub.md)|
 
  
  
