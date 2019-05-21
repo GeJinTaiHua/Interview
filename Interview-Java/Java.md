@@ -555,14 +555,24 @@ IO|NIO
 + [顺序](/Interview-Java/src/test/java/ClassLoad/StaticTest.java)：实例初始化不一定要在类初始化结束之后才开始初始化
 
 #### JVM 内存模型
-![JDK 1.6](https://mmbiz.qpic.cn/mmbiz_png/iaIdQfEric9TwVibBF785ic5RU2iafKlnVEsCEed3urDicyv4ObhWyriadrWIr293APDicN5gwEAzuQ2WhqDhyF7wwUZIA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
-![JDK 1.8](https://mmbiz.qpic.cn/mmbiz_png/iaIdQfEric9TwVibBF785ic5RU2iafKlnVEsC8sBjf1qzibUHXxZwy2uz3IysDMNKs5F6iaz8P6rAOjPe1pScoZwziaaGA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
-+ 方法区：用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据（JDK1.8 元数据区取代了永久代）。
-  - 运行时常量池：存放编译期生成的各种字面量和符号引用。
-+ 虚拟机栈：为虚拟机执行 Java 方法（也就是字节码）服务。
-+ 本地方法栈：为虚拟机使用到的 Native 方法服务。
+![内存模型](https://mmbiz.qpic.cn/mmbiz_png/iaIdQfEric9TwVibBF785ic5RU2iafKlnVEsCEed3urDicyv4ObhWyriadrWIr293APDicN5gwEAzuQ2WhqDhyF7wwUZIA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 + 堆：用来存放对象实例。
-+ 程序计数器：这里记录了线程执行的字节码的行号，在分支、循环、跳转、异常、线程恢复等都依赖这个计数器。
+  + 是垃圾收集器管理的主要区域，因此也被称作GC堆；
++ 方法区（Non-Heap 非堆）：用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。
+  + 运行时常量池：存放编译期生成的各种字面量和符号引用。
+  + 在 JDK 1.8中移除整个永久代，取而代之的是一个叫元空间（Metaspace）的区域（永久代使用的是JVM的堆内存空间，而元空间使用的是物理内存，直接受到本机的物理内存限制）。
+![堆](http://incdn1.b0.upaiyun.com/2019/01/19307619b4ddae3ef19002bc6ac51b5c.png)
+    
++ 虚拟机栈：为虚拟机执行 Java 方法（也就是字节码）服务。
+  + 局部变量表：存放了编译器可知的各种数据类型（boolean、byte、char、short、int、float、long、double）、对象引用；
+  + 操作数栈、动态链接、方法出口信息。
++ 本地方法栈：为虚拟机使用到的 Native 方法服务。
+  + 在 HotSpot 虚拟机中和 Java 虚拟机栈合二为一。
++ 程序计数器：是唯不会出现 OutOfMemoryError 的内存区域，它的生命周期随着线程的创建而创建，随着线程的结束而死亡。
+  1) 字节码解释器通过改变程序计数器来依次读取指令，从而实现代码的流程控制，如：顺序执行、选择、循环、异常处理；
+  2) 在多线程的情况下，程序计数器用于记录当前线程执行的位置，从而当线程被切换回来的时候能够知道该线程上次运行到哪儿了。
++ 直接内存：直接内存并不是虚拟机运行时数据区的一部分，也不是虚拟机规范中定义的内存区域，但是这部分内存也被频繁地使用。而且也可能导致OutOfMemoryError异常出现。
+
 + Java 堆栈区别：
   1) 栈：基本数据类型、局部变量、对象的引用；
   2) 堆：new创建的对象、数组 ；
