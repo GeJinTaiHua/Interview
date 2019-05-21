@@ -46,7 +46,7 @@
 
 ### 24种设计模式
 #### 创建型模式
-+ [单例模式](/Interview-.NET/Subject/设计模式/Singleton.cs)：保证一个类仅有一个实例，并提供一个访问它的全局访问点。
++ [单例模式](/Interview-NET/Subject/设计模式/Singleton.cs)：保证一个类仅有一个实例，并提供一个访问它的全局访问点。
   1) [double check](/Interview-Java/src/test/java/Pattern/Singleton/SingletonDC.java)
   2) [饿汉模式](/Interview-Java/src/test/java/Pattern/Singleton/SingletonHungry.java)
   3) [静态内部类](/Interview-Java/src/test/java/Pattern/Singleton/SingletonIODH.java)

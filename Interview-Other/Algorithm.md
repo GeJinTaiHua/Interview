@@ -17,10 +17,10 @@
 
 
 ### 数字游戏
-+ [水仙花数](/Interview-.NET/Subject/算法/Narcissus.cs)
-+ [约瑟夫问题](/Interview-.NET/Subject/算法/Josephus.cs)
-+ [斐波那契数列](/Interview-.NET/Subject/算法/Fibonacci.cs)
-+ [交换 a b 的值](/Interview-.NET/Subject/算法/Swap.cs)
++ [水仙花数](/Interview-NET/Subject/算法/Narcissus.cs)
++ [约瑟夫问题](/Interview-NET/Subject/算法/Josephus.cs)
++ [斐波那契数列](/Interview-NET/Subject/算法/Fibonacci.cs)
++ [交换 a b 的值](/Interview-NET/Subject/算法/Swap.cs)
 
 #### 随机数
 + [1-100的随机数](/Interview-Java/src/test/java/Algorithm/RandomNum.java#L16)

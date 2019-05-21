@@ -26,7 +26,7 @@
  
 ### 链表
 #### 单向链表
-+ [反转单向链表](/Interview-.NET/Subject/数据结构/LinkReverse.cs)
++ [反转单向链表](/Interview-NET/Subject/数据结构/LinkReverse.cs)
   
 #### 双向链表 
 

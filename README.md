@@ -2,7 +2,7 @@
 
 | Ⅰ | Ⅱ | Ⅲ | Ⅳ |
 |---|---|---| ---| 
-| [☕Java️](Interview-Java/Java.md)|[🆚C#](Interview-.NET/NET.md)|[📄HTML5](Interview-Other/HTML5.md)| [💾数据库](Interview-Other/DataBase.md)|
+| [☕Java️](Interview-Java/Java.md)|[🆚C#](Interview-NET/NET.md)|[📄HTML5](Interview-HTML/HTML.md)| [💾数据库](Interview-DB/DB.md)|
 
 
 | Ⅰ | Ⅱ | Ⅲ | Ⅳ | Ⅴ | Ⅵ | Ⅶ | Ⅷ | Ⅸ | Ⅹ |
