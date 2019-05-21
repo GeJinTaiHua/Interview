@@ -9,24 +9,22 @@ import static java.lang.System.out;
  * @date 2019/5/21 14:39
  */
 public class ThreeAlternate {
-    int i = 1;
+    private static volatile int num = 1;
 
     /**
      * 示例来源：https://github.com/maronghe/ODOP/blob/master/src/com/ibm/thread/ThreadPrintTest.java
      */
     public static void main(String[] args) {
-        // 创建该类的对象
-        ThreeAlternate obj = new ThreeAlternate();
         // 使用匿名内部类的形式，没创建runnable对象
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
-                while (obj.i < 100) {
+                while (num <= 100) {
                     // 上锁当前对象
                     synchronized (this) {
                         // 唤醒另一个线程
                         notify();
-                        out.println("Thread " + Thread.currentThread().getName() + " " + obj.i++);
+                        out.println("Thread " + Thread.currentThread().getName() + " " + num++);
                         try {
                             Thread.currentThread();
                             // 使其休眠100毫秒，放大线程差异
