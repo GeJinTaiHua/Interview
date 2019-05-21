@@ -20,6 +20,7 @@ public class ThreadByOrder {
         @Override
         public void run() {
             try {
+                // 等待T1线程结束
                 T1.join();
                 Thread.sleep(1000);
             } catch (Exception e) {

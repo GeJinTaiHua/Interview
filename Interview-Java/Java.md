@@ -299,6 +299,11 @@ public synchronized String toString() {
    + 适合于资源的共享，节约资源。
 3) Callable（接口）
 4) ExecutorService、Callable、Future
++ 简单示例：
+  + [3个线程交替输出 1-100](/Interview-Java/src/test/java/Thread/ThreeAlternate.java)
+  + [3个线程顺序执行](/Interview-Java/src/test/java/Thread/ThreadByOrder.java)
+  + [30个线程只允许10个同时存在](/Interview-Java/src/test/java/Thread/SemaphoreTest.java)
+  + [阻塞队列](/Interview-Java/src/test/java/Thread/ArrayBlockingQueueN.java)
 
 ### 基础知识
 #### 四种引用
