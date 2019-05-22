@@ -66,33 +66,8 @@
 ![抽象工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601916-7298-DP-AbstractFactory.png)
 + 建造者模式：使用多个简单的对象一步一步构建成一个复杂的对象。
   + JDK1.8 流的流水线理念
-+ 原型模式：用于创建重复的对象，同时又能保证性能。    
++ [原型模式](/Interview-Java/src/main/java/www/wjl/com/Interview/entity/ConcretePrototype.java)：用于创建重复的对象，同时又能保证性能。    
 ![原型模式](http://www.runoob.com/wp-content/uploads/2014/08/prototype_pattern_uml_diagram.jpg) 
-```
-public abstract class Prototype {
-    abstract Prototype myClone();
-}
-```
-```
-public class ConcretePrototype extends Prototype {
-
-    private String filed;
-
-    public ConcretePrototype(String filed) {
-        this.filed = filed;
-    }
-
-    @Override
-    Prototype myClone() {
-        return new ConcretePrototype(filed);
-    }
-
-    @Override
-    public String toString() {
-        return filed;
-    }
-}
-```
 
 #### 结构型模式
 + 适配器模式：作为两个不兼容的接口之间的桥梁。       
