@@ -203,31 +203,11 @@ select sun(cnt) from table;
 在2NF基础上，表中的每一列只能依赖于主键（在2NF基础上消除传递依赖）。
 
 #### 五大约束
-+ 主键约束（Primay Key Coustraint）：唯一性，非空性；  
-```
-alter table stuInfo
-add constraint PK_stuNo primary key (stuNo)
-```
-+ 唯一约束（Unique Counstraint）：唯一性，可以空，但只能有一个；  
-```
-alter table stuInfo
-add constraint UQ_stuID unique(stuID)
-```
-+ 检查约束 (Check Counstraint) ：对该列数据的范围、格式的限制（如：年龄、性别等）；  
-```
-alter table stuInfo
-add constraint CK_stuAge check (stuAge between 15 and 40)
-```
-+ 默认约束 (Default Counstraint) ：该数据的默认值；  
-```
-alter table stuInfo
-add constraint DF_stuAddress default (‘地址不详’) for stuAddress
-```
-+ 外键约束 (Foreign Key Counstraint) ：需要建立两表间的关系并引用主表的列。  
-```
-alter table stuInfo
-add constraint FK_stuNo foreign key(stuNo)references stuinfo(stuNo)
-```
++ [主键约束](/Interview-DB/SQL/coustraint.sql#L1)（Primay Key Coustraint）：唯一性，非空性；  
++ [唯一约束](/Interview-DB/SQL/coustraint.sql#L6)（Unique Counstraint）：唯一性，可以空，但只能有一个；  
++ [检查约束](/Interview-DB/SQL/coustraint.sql#L11) (Check Counstraint) ：对该列数据的范围、格式的限制（如：年龄、性别等）；  
++ [默认约束](/Interview-DB/SQL/coustraint.sql#L16) (Default Counstraint) ：该数据的默认值；  
++ [外键约束](/Interview-DB/SQL/coustraint.sql#L21) (Foreign Key Counstraint) ：需要建立两表间的关系并引用主表的列。  
 
 #### 索引
 + 使用时机
