@@ -186,7 +186,7 @@ select sun(cnt) from table;
 ```
 
 #### SQL技巧
-+ 根据已有的表创建新表
++ [根据已有的表创建新表](/Interview-DB/SQL/根据已有的表创建新表.sql)
 ```
 create table tab_new like tab_old 
 ```
