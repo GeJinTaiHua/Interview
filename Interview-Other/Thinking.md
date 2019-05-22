@@ -144,41 +144,11 @@
     + 支持扩展，但是往往以增加系统结构的复杂度为代价；
     + 不支持动态继承。在运行时，子类无法选择不同的父类；
     + 子类不能改变父类的接口。
-+ 依赖：一个类A中的方法使用到了另一个类B；
-```
-public class Pen {
-    public void write(){
-    }
-}
-
-public class Me {
-    public void write(Pen pen){//pen作为Me类方法的参数
-        pen.write();
-    }
-}
-```
-+ 关联：两个类、或者类与接口之间语义级别的一种强依赖关系；
++ [依赖](/Interview-Java/src/main/java/www/wjl/com/Interview/entity/Me.java)：一个类A中的方法使用到了另一个类B；
++ [关联](/Interview-Java/src/main/java/www/wjl/com/Interview/entity/You.java)：两个类、或者类与接口之间语义级别的一种强依赖关系；
   + 被关联类B以类属性的形式出现在关联类A中，或者关联类A引用了一个类型为被关联类B的全局变量的这种关系。
-```
-public class You {
-    private Pen pen; // 让pen成为you的类属性 
-
-    public You(Pen p){
-        this.pen = p;
-    }
-
-    public void write(){
-        pen.write();
-    }
-}
-```
-+ 聚合：关联关系的一种特例，他体现的是整体与部分、拥有的关系，即【has-a】的关系；
-```
-public class Family {
-    private List<Child> children; //一个家庭里有许多孩子
-}
-```
-+ 组合：一种【contains-a】的关系，这种关系比聚合更强，也称为强聚合。
++ [聚合](/Interview-Java/src/main/java/www/wjl/com/Interview/entity/Family.java)：关联关系的一种特例，他体现的是整体与部分、拥有的关系，即【has-a】的关系；
++ [组合](/Interview-Java/src/main/java/www/wjl/com/Interview/entity/Nose.java)：一种【contains-a】的关系，这种关系比聚合更强，也称为强聚合。
   + 优点：
     + 不破坏封装，整体类与局部类之间松耦合，彼此相对独立；
     + 具有较好的可扩展性；
@@ -187,12 +157,6 @@ public class Family {
   + 缺点：
     + 整体类不能自动获得和局部类同样的接口；
     + 创建整体类的对象时，需要创建所有局部类的对象。
-```
-public class Nose {
-    private Eye eye = new Eye();  //一个人有鼻子有眼睛
-    private Nose nose = new Nose();
-}
-```
 
 #### 系统可用性
 + 重要指标：
