@@ -160,65 +160,30 @@ double|Double|64|浮点类型|
 + finalize：方法名；finalize() 方法在垃圾收集器将对象从内存中清除出去之前做必要的清理工作。
 
 #### synchronized
-1) 代码块（同步语句块）
+1) [代码块](/Interview-Java/src/test/java/Synchronized/SyncThread.java#L14)（同步语句块）
   + 作用的范围：大括号{}括起来的代码；
   + 作用的对象：调用这个代码块的对象；
   + 注意：
     + 一个线程访问一个对象中的synchronized(this)同步代码块时，其他试图访问该对象的线程将被阻塞；
     + 当一个线程访问对象的一个synchronized(this)同步代码块时，另一个线程仍然可以访问该对象中的非synchronized(this)同步代码块。
-```
-public class SyncThread implements Runnable {
-   private static int count;
 
-   public void run() {
-      synchronized(this) {
-         for (int i = 0; i < 5; i++) {
-            // todo
-         }
-      }
-   }
-}
-```
-
-2) 方法（同步方法）
+2) [方法](/Interview-Java/src/test/java/Synchronized/SyncThread.java#L22)（同步方法）
   + 作用的范围：整个方法；
   + 作用的对象：调用这个方法的对象；
   + 注意：
     + synchronized关键字不能继承；
     + 在定义接口方法时不能使用synchronized关键字；
     + 构造方法不能使用synchronized关键字，但可以使用synchronized代码块来进行同步。
-```
-public synchronized void method()
-{
-   // todo
-}
-```
 
-3) 静态的方法
+3) [静态的方法](/Interview-Java/src/test/java/Synchronized/SyncThread.java#L29)
   + 作用的范围：整个静态方法；
   + 作用的对象：这个类的所有对象；
-  + 注意：
-    + 静态方法是属于类的而不属于对象的。同样的，synchronized修饰的静态方法锁定的是这个类的所有对象。
-```
-public synchronized static void method() {
-   // todo
-}
-```
+  + 注意：静态方法是属于类的而不属于对象的。同样的，synchronized修饰的静态方法锁定的是这个类的所有对象。
 
-4) 类
+4) [类](/Interview-Java/src/test/java/Synchronized/SyncThread.java#L36)
   + 作用的范围：synchronized后面括号括起来的部分；
   + 作用的对象：这个类的所有对象；
-  + 注意：
-    + synchronized作用于一个类T时，是给这个类T加锁，T的所有对象用的是同一把锁。
-```
-public class ClassName {
-   public void method() {
-      synchronized(ClassName.class) {
-         // todo
-      }
-   }
-}
-```
+  + 注意：synchronized作用于一个类T时，是给这个类T加锁，T的所有对象用的是同一把锁。
 
 #### switch...case...default...
 + switch(A)
