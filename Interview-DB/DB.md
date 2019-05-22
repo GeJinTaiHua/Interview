@@ -28,12 +28,12 @@
 
 ### 数据库
 #### 常用数据库
-+ [Oracle](https://www.oracle.com/cn/index.html)
-+ [MySQL](https://www.mysql.com/)
-+ [Microsoft SQL Server]()
-+ [PostgreSQL](https://www.postgresql.org/)
-+ [MongoDB](https://www.mongodb.com/)
-+ [Redis](https://redis.io/)
++ Oracle
++ MongoDB
++ Redis
++ MySQL
++ PostgreSQL
++ Microsoft SQL Server
 + Microsoft Access
 
 #### Redis
