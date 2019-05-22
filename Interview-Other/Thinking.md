@@ -1,34 +1,33 @@
 ## 💏编程思想
 
-  * [四大基本特性](#%E5%9B%9B%E5%A4%A7%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7)
-  * [七大设计原则](#%E4%B8%83%E5%A4%A7%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99)
+  * [面向过程](#面向过程)
+  * [面向对象](#面向对象)
+    * [四大基本特性](#四大基本特性)
+    * [七大设计原则](#七大设计原则)
   * [24种设计模式](#24%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
     * [创建型模式](#%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F)
     * [结构型模式](#%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F)
     * [行为型模式](#%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F)
-  * [框架模式](#%E6%A1%86%E6%9E%B6%E6%A8%A1%E5%BC%8F)
-    * [MVC](#mvc)
-    * [ORM](#orm)
-    * [RESTful 架构风格](#restful-%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC)
   * [理论](#%E7%90%86%E8%AE%BA)
     * [CAP](#cap)
     * [ACID](#acid)
     * [BASE](#base)
-  * [基本知识](#%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86)
+    * [RESTful](#RESTful)
+  * [其他](#其他)
     * [类之间的关系：继承、依赖、关联、聚合、组合](#%E7%B1%BB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB%E7%BB%A7%E6%89%BF%E4%BE%9D%E8%B5%96%E5%85%B3%E8%81%94%E8%81%9A%E5%90%88%E7%BB%84%E5%90%88)
     * [系统可用性](#%E7%B3%BB%E7%BB%9F%E5%8F%AF%E7%94%A8%E6%80%A7)
     * [中台](#%E4%B8%AD%E5%8F%B0)
+
+### 面向过程    
     
-### 四大基本特性
+### 面向对象
+#### 四大基本特性
 + 抽象
-  - 数据抽象 
-  - 过程抽象 
 + 封装
 + 继承
 + 多态
-  - 动态链接 
 
-### 七大设计原则
+#### 七大设计原则
 + 单一职责原则（SRP）
   + 单一功能
   + 解耦和增强内聚性（高内聚，低耦合）
@@ -127,26 +126,6 @@ public class ConcretePrototype extends Prototype {
 + 访问者模式
 + 中介者模式
 + 解释器模式
- 
- ### 框架模式
- #### MVC
- + Model（模型）
- + View（视图）
- + Controller（控制器）
- 
-#### ORM
-&emsp;&emsp;对象-关系映射：用来把对象模型表示的对象映射到基于SQL的关系模型数据库结构中去。
-
-#### RESTful 架构风格
-+ 资源：以json(或其他Representation)为载体的、面向用户的一组数据集。
-+ URI：用一个URI（统一资源定位符）指向资源，即每个URI都对应一个特定的资源。
-+ 统一接口：数据的元操作，分别对应于HTTP方法：
-  + GET（SELECT）：从服务器取出资源（一项或多项）；
-  + POST（CREATE）：在服务器新建一个资源；
-  + PUT（UPDATE）：在服务器更新资源（客户端提供完整资源数据）；
-  + PATCH（UPDATE）：在服务器更新资源（客户端提供需要修改的资源数据）；
-  + DELETE（DELETE）：从服务器删除资源。
-+ 无状态
 
 ### 理论
 #### CAP
@@ -156,7 +135,7 @@ public class ConcretePrototype extends Prototype {
 + 分隔容忍性（Partition tolerance）：系统中任意信息的丢失或失败不会影响系统的继续运作。
 
 #### ACID 
-是指数据库管理系统（DBMS）在写入/异动资料的过程中，为保证交易（transaction）是正确可靠的，所必须具备的四个特性：
+指数据库管理系统（DBMS）在写入/异动资料的过程中，为保证交易（transaction）是正确可靠的，所必须具备的四个特性：
 + 原子性（Atomicity，或称不可分割性）；
 + 一致性（Consistency）；
 + 隔离性（Isolation，又称独立性）；
@@ -168,7 +147,18 @@ public class ConcretePrototype extends Prototype {
 + 软状态（Soft state）：状态可以有一段时间不同步，异步；
 + 最终一致（Eventually consistent）：最终数据是一致的就可以了，而不是时时高一致。
 
-### 基本知识
+#### RESTful
++ 资源：以json(或其他Representation)为载体的、面向用户的一组数据集。
++ URI：用一个URI（统一资源定位符）指向资源，即每个URI都对应一个特定的资源。
++ 统一接口：数据的元操作，分别对应于HTTP方法：
+  + GET（SELECT）：从服务器取出资源（一项或多项）；
+  + POST（CREATE）：在服务器新建一个资源；
+  + PUT（UPDATE）：在服务器更新资源（客户端提供完整资源数据）；
+  + PATCH（UPDATE）：在服务器更新资源（客户端提供需要修改的资源数据）；
+  + DELETE（DELETE）：从服务器删除资源。
++ 无状态
+
+### 其他
 #### 类之间的关系：继承、依赖、关联、聚合、组合  
 + 继承（实现）：是一种【is-a】关系；
   + 优点：
