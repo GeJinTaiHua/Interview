@@ -1,10 +1,5 @@
 package www.wjl.com.Interview.entity.Genericity;
 
-/*
- * @desc
- * @author wjl
- * @date 2018/8/31 0031
- */
 public class GenericHolder<T> {
     private T obj;
 

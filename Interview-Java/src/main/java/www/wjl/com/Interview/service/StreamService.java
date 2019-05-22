@@ -1,6 +1,10 @@
 package www.wjl.com.Interview.service;
 
+import www.wjl.com.Interview.entity.Genericity.Apple;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -26,5 +30,16 @@ public class StreamService {
         // 3. Collections
         List<String> list = Arrays.asList(strArray);
         stream = list.stream();
+    }
+
+    /**
+     * 方法引用
+     */
+    public void use() {
+        List<Apple> apples = new ArrayList<>();
+
+        apples.sort((Apple p, Apple q)
+                -> p.getWeight().compareTo(q.getWeight()));
+        apples.sort(Comparator.comparing(Apple::getWeight));
     }
 }

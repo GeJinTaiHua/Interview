@@ -1,5 +1,7 @@
 package www.wjl.com.Interview.entity;
 
+import lombok.Data;
+
 import java.util.List;
 
 /**
@@ -8,6 +10,7 @@ import java.util.List;
  * @author xiaolong
  * @date 2019/5/22 14:26
  */
+@Data
 public class Family {
     // 一个家庭里有许多You
     private List<You> children;

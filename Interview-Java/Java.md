@@ -318,13 +318,7 @@ Supplier|none|T|供给型接口|
 Function|T|R|函数型接口|
 Predicate|T|boolean|断言型接口|
 
-+ 方法引用：仅仅调用特点方法的 Lambda 快捷写法
-```
-inventory.sprt((Apple a1,Apple a2)
-                   ->a1.getWeight().compareTo(a2.getWeight()));
-
-inventory.sort(comparing(Apple::getWeight));
-```
++ [方法引用](/Interview-Java/src/main/java/www/wjl/com/Interview/service/StreamService.java#L38)：仅仅调用特点方法的 Lambda 快捷写法
 
 Lambda|等效的方法引用|
 ---|---|

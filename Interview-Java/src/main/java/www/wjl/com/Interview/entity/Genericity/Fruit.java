@@ -1,8 +1,8 @@
 package www.wjl.com.Interview.entity.Genericity;
 
-/*
- * @desc 水果
- * @author wjl
+/**
+ * 水果
+ *
  * @date 2018/8/31 0031
  */
 public class Fruit {
