@@ -28,13 +28,24 @@
 
 ### 数据库
 #### 常用数据库
-+ Oracle
-+ MongoDB
-+ Redis
-+ MySQL
-+ PostgreSQL
-+ Microsoft SQL Server
-+ Microsoft Access
++ 关系数据库
+  + Oracle
+  + MySQL
+  + PostgreSQL
+  + Microsoft SQL Server
+  + Microsoft Access
++ 非关系数据库（NoSQL）
+  + 面向检索的列式存储（Column-Oriented） 
+    + BigTable
+    + HaBase
+  + 面向高性能并发读/写的缓存存储（Key-Value）
+    + Redis
+    + MemcacheDB
+    + BerkeleyDB
+    + Flare
+  + 面向海量数据访问的文档存储（Document-Oriented）
+    + MongoDB
+    + CouchDB
 
 #### Redis
 基于内存的采用的【单进程单线程】模型的KV数据库，由C语言编写。
