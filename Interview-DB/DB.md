@@ -186,17 +186,9 @@ select sun(cnt) from table;
 ```
 
 #### SQL技巧
-+ [根据已有的表创建新表](/Interview-DB/SQL/根据已有的表创建新表.sql)
-+ [复制表（只复制结构）](/Interview-DB/SQL/复制表结构.sql)
-+ 删除重复记录
-```
-delete from tablename where id not in (select max(id) from tablename group by col1,col2,...)（推荐）
-```
-```
-select distinct * into temp from tablename
-delete from tablename
-insert into tablename select * from temp
-```
++ [根据已有的表创建新表](/Interview-DB/SQL/skill.sql#1)
++ [复制表（只复制结构）](/Interview-DB/SQL/skill.sql#9)
++ [删除重复记录](/Interview-DB/SQL/skill.sql#19)
 + 随机取出10条数据
 ```
 select top 10 * from tablename order by newid()
