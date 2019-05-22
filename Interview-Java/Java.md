@@ -334,8 +334,7 @@ Lambda|等效的方法引用|
 (String s)->System.out.println(s)|System.out::println|
 
 #### Stream API
-+ 构造
-![流管道的构成](https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/img001.png)
++ [构造](/Interview-Java/src/main/java/www/wjl/com/Interview/service/StreamService.java#L17)
   1) 从 Collection 和数组
      + Collection.stream()
      + Collection.parallelStream()
@@ -352,17 +351,6 @@ Lambda|等效的方法引用|
      + BitSet.stream()
      + Pattern.splitAsStream(java.lang.CharSequence)
      + JarFile.stream()
-```
-// 1. Individual values
-Stream stream = Stream.of("a", "b", "c");
-// 2. Arrays
-String [] strArray = new String[] {"a", "b", "c"};
-stream = Stream.of(strArray);
-stream = Arrays.stream(strArray);
-// 3. Collections
-List<String> list = Arrays.asList(strArray);
-stream = list.stream();
-```
 + 操作类型
   + Intermediate：中间操作
     + map(mapToInt, flatMap 等)：把 input Stream 的每一个元素，映射成 output Stream 的另外一个元素
