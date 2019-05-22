@@ -187,19 +187,7 @@ select sun(cnt) from table;
 
 #### SQL技巧
 + [根据已有的表创建新表](/Interview-DB/SQL/根据已有的表创建新表.sql)
-```
-create table tab_new like tab_old 
-```
-```
-create table tab_new as select col1,col2… from tab_old definition only
-```
-+ 复制表（只复制结构）
-```
-select * into tab_new from tab_old where 1<>1（仅用于SQlServer）
-```
-```
-select top 0 * into tab_new from tab_old
-```
++ [复制表（只复制结构）](/Interview-DB/SQL/复制表结构.sql)
 + 删除重复记录
 ```
 delete from tablename where id not in (select max(id) from tablename group by col1,col2,...)（推荐）
