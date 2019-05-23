@@ -405,7 +405,7 @@ IO|NIO
     
 2. Map 
 表示一个键值对 (key-value) 的映射；
-1) HashMap（替代Hashtable）：
++  HashMap（替代Hashtable）：
    + 底层数据结构【哈希表】链地址法解决冲突；
       + 链表长度大于阈值（默认为 8）时，将链表转化为红黑树。
    + 可存一个null键，多个null值；
@@ -415,12 +415,12 @@ IO|NIO
      + ConcurrentHashMap
        + 锁分离（JDK1.8放弃）：在HashMap的基础上，将数据分段存储，ConcurrentHashMap由多个Segment组成，每个Segment都有把锁（可重入锁ReentrantLock）。
        + CAS算法：如果valueOffset位置包含的值与expect值相同，则更新valueOffset位置的值为update，并返回true，否则不更新，返回false。
-2) Hashtable
++  Hashtable
    + 底层数据结构【哈希散列表】双重散列法（闭散列法）解决冲突；
    + 不可以存null键，null值；
    + 线程安全；
    + 多线程下效率低下。
-3) TreeMap  
++  TreeMap  
    + 底层数据结构【平衡二叉排序树】
    + 有序。
 
