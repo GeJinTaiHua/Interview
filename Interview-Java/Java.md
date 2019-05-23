@@ -22,9 +22,6 @@
     * [Stream API](#stream-api)
     * [IO、NIO](#ionio)
     * [集合](#%E9%9B%86%E5%90%88)
-      * [Collection](#collection)
-      * [Map](#map)
-      * [fail\-fast、fail\-safe](#fail-fastfail-safe)
     * [接口](#%E6%8E%A5%E5%8F%A3)
   * [java锁](#java%E9%94%81)
     * [Synchronized锁](#synchronized%E9%94%81)
@@ -378,7 +375,7 @@ IO|NIO
   + 聊天服务器。
 
 #### 集合
-##### Collection
+1. Collection
 + List：有序，元素可重复。
   1) ArrayList
      + 底层数据结构【数组】；
@@ -406,7 +403,7 @@ IO|NIO
      + 线程不安全；
   3) 线程安全：Set set = Collections.synchronizedSet(set 对象)。
     
-##### Map 
+2. Map 
 表示一个键值对 (key-value) 的映射；
 1) HashMap（替代Hashtable）：
    + 底层数据结构【哈希表】链地址法解决冲突；
@@ -427,7 +424,7 @@ IO|NIO
    + 底层数据结构【平衡二叉排序树】
    + 有序。
 
-##### fail-fast、fail-safe
+3. fail-fast、fail-safe
 + fail-fast（快速失败）
   + 当你在迭代一个集合的时候，如果有另一个线程正在修改你正在访问的那个集合时，就会抛出一个 ConcurrentModification 异常；
   + 在 java.util 包下的都是快速失败。
