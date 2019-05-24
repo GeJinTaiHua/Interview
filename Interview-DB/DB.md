@@ -141,7 +141,7 @@ UPDATE xxx;
 + 2PC（two-phase commit protocol）：强一致、中心化的原子提交协议。中心化协调者节点（coordinator）和N个参与者节点（partcipant）。
   + 第一阶段：请求/表决阶段；
   + 第二阶段：提交/执行阶段。
-  ![2PC](https://images2017.cnblogs.com/blog/250417/201710/250417-20171016132145537-970496141.png)
+  ![2PC](/Interview-DB/Pic/2pc.jpg)
   + 牺牲了一部分可用性来换取的一致性。
 + 3PC：增加了CanCommit阶段，并引入了超时机制。
   + 第一阶段：CanCommit阶段；
