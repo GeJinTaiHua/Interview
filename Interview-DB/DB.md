@@ -141,11 +141,13 @@ UPDATE xxx;
 + 2PC（two-phase commit protocol）：强一致、中心化的原子提交协议。中心化协调者节点（coordinator）和N个参与者节点（partcipant）。
   + 第一阶段：请求/表决阶段；
   + 第二阶段：提交/执行阶段。
+  ![2PC](https://images2017.cnblogs.com/blog/250417/201710/250417-20171016132145537-970496141.png)
+  + 牺牲了一部分可用性来换取的一致性。
 + 3PC：增加了CanCommit阶段，并引入了超时机制。
   + 第一阶段：CanCommit阶段；
   + 第二阶段：PreCommit阶段；
   + 第三阶段：DoCommit阶段。
-+ TCC（Try-Confirm-Cancel）：补偿事务
++ TCC（Try-Confirm-Cancel）：针对每个操作，都要注册一个与其对应的确认和补偿（撤销）操作。
   + Try阶段：主要是对业务系统做检测及资源预留；
   + Confirm阶段：确认执行业务操作；
   + Cancel阶段：取消执行业务操作。
