@@ -27,7 +27,7 @@
   * [攻击](#%E6%94%BB%E5%87%BB)
     * [重放攻击](#%E9%87%8D%E6%94%BE%E6%94%BB%E5%87%BB)
     * [文件上传漏洞攻击](#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%E6%94%BB%E5%87%BB)
-  * [Linux](#linux)
+  * [命令](#命令)
     * [Crontab表达式](#crontab%E8%A1%A8%E8%BE%BE%E5%BC%8F)
     * [Docker命令](#docker%E5%91%BD%E4%BB%A4)
     * [Shell命令](#shell%E5%91%BD%E4%BB%A4)
@@ -322,7 +322,7 @@ name=GeJinTaiHua
   4) 使用随机数改写文件名和文件路径，使得用户不能轻易访问自己上传的文件；
   5) 单独设置文件服务器的域名。
 
-### Linux
+### 命令
 ```
 ps aux|grep java 查看java进程
 ps aux 查看所有进程
