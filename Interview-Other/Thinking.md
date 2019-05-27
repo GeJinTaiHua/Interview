@@ -59,7 +59,13 @@
   5) [CAS单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonCAS.java)
   + [容器管理单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonManager.java)
   + [破坏单例的2种方法](/Interview-Java/src/test/java/Pattern/DestroySingle.java#L19)
-+ 工厂模式：定义一个用于创建对象的接口，让子类决定实例化哪一个类。   
++ 工厂模式：定义一个用于创建对象的接口，让子类决定实例化哪一个类。  
+  + 简单工厂模式
+    + 优点：使用者不需要关心具体实现；
+    + 缺点：工厂中集中了所有实例的创建逻辑，违法了高内聚责任分配原则。
+  + 工厂模式
+    + 优点：增加新的产品类时无需修改现有系统，并封装了产品对象的创建细节，系统具有良好的灵活性和可扩展性；
+    + 缺点：增加新产品时需要增加新的工厂，导致系统类的个数成对增加，在一定程度上增加了系统的复杂性。
 ![简单工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601914-2143-DP-SimpleFactory.png)   
 ![工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601917-1999-DP-Factory.png)
 + 抽象工厂模式：围绕一个超级工厂创建其他工厂。   
