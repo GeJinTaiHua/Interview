@@ -4,7 +4,7 @@
   * [面向对象](#面向对象)
     * [四大基本特性](#四大基本特性)
     * [七大设计原则](#七大设计原则)
-  * [24种设计模式](#24%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
+  * [23种设计模式](#23种设计模式)
     * [创建型模式](#%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F)
     * [结构型模式](#%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F)
     * [行为型模式](#%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F)
@@ -49,7 +49,7 @@
   + 一个对象应当对其他对象有尽可能少的了解。
   + 类间解耦，低耦合
 
-### 24种设计模式
+### 23种设计模式
 #### 创建型模式
 1. [单例模式](/Interview-NET/Subject/设计模式/Singleton.cs)：保证一个类仅有一个实例，并提供一个访问它的全局访问点。
    + 一些单例写法：
@@ -61,57 +61,77 @@
    + [容器管理单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonManager.java)
    + [破坏单例的2种方法](/Interview-Java/src/test/java/Pattern/DestroySingle.java#L19)
   
-+ 工厂模式：定义一个用于创建对象的接口，让子类决定实例化哪一个类。  
-  + 简单工厂模式
-    + 优点：使用者不需要关心具体实现；
-    + 缺点：工厂中集中了所有实例的创建逻辑，违法了高内聚责任分配原则。
-    ![简单工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601914-2143-DP-SimpleFactory.png)   
-  + 工厂模式
-    + 优点：增加新的产品类时无需修改现有系统，并封装了产品对象的创建细节，系统具有良好的灵活性和可扩展性；
-    + 缺点：增加新产品时需要增加新的工厂，导致系统类的个数成对增加，在一定程度上增加了系统的复杂性。
-    ![工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601917-1999-DP-Factory.png)
+2. 工厂模式
+   + 简单工厂模式：用来生产同一等级结构中的任意产品。
+     + 优点：
+       1. 屏蔽产品的具体实现，调用者只关心产品的接口；
+       2. 实现简单。
+     + 缺点：
+       1. 增加产品，需要增加新的工厂类，导致系统类的个数成对增加，在一定程度上增加了系统的复杂性。
+   ![简单工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601914-2143-DP-SimpleFactory.png)   
+   + 工厂模式：用来生产同一等级结构中的固定产品。
+     + 优点：
+       1. 继承了简单工厂模式的优点；
+       2. 符合开放-封闭原则。
+     + 缺点：
+       1. 增加产品，需要增加新的工厂类，导致系统类的个数成对增加，在一定程度上增加了系统的复杂性。
+   ![工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601917-1999-DP-Factory.png)
     
-+ 抽象工厂模式：围绕一个超级工厂创建其他工厂。   
-![抽象工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601916-7298-DP-AbstractFactory.png)
+3. 抽象工厂模式：用来生产不同产品族的全部产品。
+   + 优点：
+     1. 隔离了具体类的生成，使得客户并不需要知道什么被创建；
+     2. 每次可以通过具体工厂类创建一个产品族中的多个对象，增加或者替换产品族比较方便，增加新的具体工厂和产品族很方便。
+   + 缺点：
+     1. 增加新的产品等级结构很复杂，需要修改抽象工厂和所有的具体工厂类，对“开闭原则”的支持呈现倾斜性。
+   ![抽象工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601916-7298-DP-AbstractFactory.png)
 
-+ 建造者模式：使用多个简单的对象一步一步构建成一个复杂的对象。
-  + JDK1.8 流的流水线理念
+4. 建造者模式：使用多个简单的对象一步一步构建成一个复杂的对象。
+   + JDK1.8 流的流水线理念
   
-+ [原型模式](/Interview-Java/src/main/java/www/wjl/com/Interview/entity/ConcretePrototype.java)：用于创建重复的对象，同时又能保证性能。    
-![原型模式](http://www.runoob.com/wp-content/uploads/2014/08/prototype_pattern_uml_diagram.jpg) 
+5. [原型模式](/Interview-Java/src/main/java/www/wjl/com/Interview/entity/ConcretePrototype.java)：用于创建重复的对象，同时又能保证性能。
 
 #### 结构型模式
-+ 适配器模式：作为两个不兼容的接口之间的桥梁。       
-![适配器模式](https://raw.githubusercontent.com/aalansehaiyang/technology-talk/master/basic-knowledge/img/5.png)
-+ 装饰器模式：允许向一个现有的对象添加新的功能，同时又不改变其结构。    
-![装饰器模式](http://www.runoob.com/wp-content/uploads/2014/08/decorator_pattern_uml_diagram.jpg)
-+ 代理模式
-+ 外观模式
-+ 桥接模式
-+ 组合模式（整体模式）：把一组相似的对象当作一个单一的对象。
-  + 创建了一个包含自己对象组的类。
-  + 据树形结构来组合对象，用来表示部分以及整体层次。    
-![组合模式](http://www.runoob.com/wp-content/uploads/2014/08/composite_pattern_uml_diagram.jpg)
-+ 享元模式
+6. 适配器模式：作为两个不兼容的接口之间的桥梁。
+
+7. 装饰器模式：允许向一个现有的对象添加新的功能，同时又不改变其结构。
+
+8. 代理模式
+
+9. 外观模式
+
+10. 桥接模式
+
+11. 组合模式（整体模式）：把一组相似的对象当作一个单一的对象。
+    + 创建了一个包含自己对象组的类。
+    + 据树形结构来组合对象，用来表示部分以及整体层次。    
+
+12. 享元模式
 
 #### 行为型模式 
-+ 策略模式
-  + java的 Comparator 和 Comparable
-+ 模板方法模式
-+ 观察者模式（发布—订阅模式）（事件监听模式）
-  + 对象间存在一对多关系
-  + 当一个对象被修改时，则会自动通知它的依赖对象。    
-![观察者模式](http://www.runoob.com/wp-content/uploads/2014/08/observer_pattern_uml_diagram.jpg)
-+ 迭代子模式
-+ 责任链模式：通常每个接收者都包含对另一个接收者的引用。如果一个对象不能处理该请求，那么它会把相同的请求传给下一个接收者，依此类推。    
-![责任链模式](http://www.runoob.com/wp-content/uploads/2014/08/chain_pattern_uml_diagram.jpg)
-+ 命令模式
-+ 备忘录模式
-+ 状态模式：类的行为是基于它的状态改变的     
-![状态模式](http://www.runoob.com/wp-content/uploads/2014/08/state_pattern_uml_diagram_1.png)
-+ 访问者模式
-+ 中介者模式
-+ 解释器模式
+13. 策略模式
+    + java的 Comparator 和 Comparable
+    
+14. 模板方法模式
+
+15. 观察者模式（发布—订阅模式）（事件监听模式）
+    + 对象间存在一对多关系
+    + 当一个对象被修改时，则会自动通知它的依赖对象。    
+
+16. 迭代子模式
+
+17. 责任链模式：通常每个接收者都包含对另一个接收者的引用。如果一个对象不能处理该请求，那么它会把相同的请求传给下一个接收者，依此类推。
+
+18. 命令模式
+
+19. 备忘录模式
+
+20. 状态模式：类的行为是基于它的状态改变的。
+
+21. 访问者模式
+
+22. 中介者模式
+
+23. 解释器模式
 
 ### 理论
 #### CAP
@@ -206,7 +226,4 @@ MTBF = MTTF + MTTR
 + SOA：面向服务的架构
 + ESB：企业服务总线
 + 分布式微服务
-
- 
- 
  
