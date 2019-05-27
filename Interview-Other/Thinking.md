@@ -52,13 +52,14 @@
 ### 24种设计模式
 #### 创建型模式
 1. [单例模式](/Interview-NET/Subject/设计模式/Singleton.cs)：保证一个类仅有一个实例，并提供一个访问它的全局访问点。
-  1) [double check](/Interview-Java/src/test/java/Pattern/Singleton/SingletonDC.java)
-  2) [饿汉模式](/Interview-Java/src/test/java/Pattern/Singleton/SingletonHungry.java)
-  3) [静态内部类](/Interview-Java/src/test/java/Pattern/Singleton/SingletonIODH.java)
-  4) [枚举单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonEnum.java)
-  5) [CAS单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonCAS.java)
-  + [容器管理单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonManager.java)
-  + [破坏单例的2种方法](/Interview-Java/src/test/java/Pattern/DestroySingle.java#L19)
+   + 一些单例写法：
+     + [double check](/Interview-Java/src/test/java/Pattern/Singleton/SingletonDC.java)
+     + [饿汉模式](/Interview-Java/src/test/java/Pattern/Singleton/SingletonHungry.java)
+     + [静态内部类](/Interview-Java/src/test/java/Pattern/Singleton/SingletonIODH.java)
+     + [枚举单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonEnum.java)
+     + [CAS单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonCAS.java)
+   + [容器管理单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonManager.java)
+   + [破坏单例的2种方法](/Interview-Java/src/test/java/Pattern/DestroySingle.java#L19)
   
 + 工厂模式：定义一个用于创建对象的接口，让子类决定实例化哪一个类。  
   + 简单工厂模式
