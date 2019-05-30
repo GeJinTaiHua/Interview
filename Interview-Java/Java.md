@@ -33,8 +33,6 @@
     * [GC 种类](#gc-%E7%A7%8D%E7%B1%BB)
     * [GC When What How](#gc-when-what-how)
     * [常见配置汇总](#%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE%E6%B1%87%E6%80%BB)
-  * [Maven](#maven)
-    * [依赖范围、依赖传递、排除依赖](#%E4%BE%9D%E8%B5%96%E8%8C%83%E5%9B%B4%E4%BE%9D%E8%B5%96%E4%BC%A0%E9%80%92%E6%8E%92%E9%99%A4%E4%BE%9D%E8%B5%96)
 
 ### 三大框架
 + [☕️SSH](https://github.com/GeJinTaiHua/Demo-SSH)
@@ -640,17 +638,4 @@ IO|NIO
    + -XX:+CMSIncrementalMode:设置为增量模式。适用于单CPU情况。
    + -XX:ParallelGCThreads=n:设置并发收集器年轻代收集方式为并行收集时，使用的CPU数。并行收集线程数。
 
-### Maven
-#### 依赖范围、依赖传递、排除依赖
-+ 依赖范围
-  + compile：默认的范围，编译测试运行都有效；
-  + provided：编译和测试时有效，最后是在运行的时候不会被加入；（官方举了一个例子。比如在JavaEE web项目中我们需要使用servlet的API，但是呢Tomcat中已经提供这个jar，我们在编译和测试的时候需要使用这个api，但是部署到tomcat的时候，如果还加入servlet构建就会产生冲突，这个时候就可以使用provided。）
-  + runtime：在测试和运行时有效；
-  + test：在测试时有效；
-  + system：与本机系统相关联，可移植性差。编译和测试时有效；
-  + import：导入的范围，它只在使用dependencyManagement中，表示从其他pom中导入dependecy的配置。
-+ 依赖传递：在正常开发中，我们也会封装maven构建供小伙伴们使用，在我们使用自定义的构建中，那么我们自定义的构建中依赖的构建，也会依赖传递过来。
-  + 在工程的依赖树上，深度越浅，越被优先选择；
-  + 若两个依赖包处于依赖树上的同一层，则谁在前，选择谁；
-  + 避免传递依赖引起版本问题：如果工程直接依赖到某一框架的多个模块，最好全部声明这些依赖。
-+ 排除依赖（exclusions） 
+
