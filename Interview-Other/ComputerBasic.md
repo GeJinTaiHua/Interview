@@ -29,7 +29,6 @@
     * [文件上传漏洞攻击](#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%E6%94%BB%E5%87%BB)
   * [命令](#命令)
     * [Crontab表达式](#crontab%E8%A1%A8%E8%BE%BE%E5%BC%8F)
-    * [Docker命令](#docker%E5%91%BD%E4%BB%A4)
     * [Shell命令](#shell%E5%91%BD%E4%BB%A4)
 
 ### 线程  
@@ -349,67 +348,6 @@ kill -9 19979 终止线程号位19979的进程
 每日：0 0 0 * * ? *
 ```
 
-#### Docker命令 
-+ 镜像
-  + 查看镜像  
-  ```
-  docker images
-  ```
-  + 发布镜像 
-  ```
-  docker push
-  ```
-  + 拉取镜像  
-  ```
-  docker pull
-  ```
-  + 删除镜像  
-  ```
-  docker rmi
-  ```
-  + 构建镜像
-  ```
-  docker build --no-cache=true -t "docker.xxx.com:5000/$project:v1" .
-  ```
-  + 删除带none的镜像
-  ```
-  docker rmi $(docker images | grep "none" | awk '{print $3}')
-  ```
-  ```
-  $ docker stop $(docker ps -a | grep "Exited" | awk '{print $1 }') 
-  $ docker rm $(docker ps -a | grep "Exited" | awk '{print $1 }') 
-  $ docker rmi $(docker images | grep "none" | awk '{print $3}')
-  ```
-
-+ 容器
-  + 查看使用的容器  
-  ```
-  docker ps
-  ```
-  + 查看所有容器  
-  ```
-  docker ps -a
-  ```
-  + 停止容器  
-  ```
-  docker stop
-  ```
-  + 删除容器  
-  ```
-  docker rm
-  ```
-  + 创建容器
-  ```
-   docker run -it -d \
-                --name $project  \
-                -p 8085:8084  \
-   "docker.xxx.com:5000/$project:v1"
-  ```
-  + 进入容器内
-  ```
-  docker exec -it eassasb /bin/bash
-  ```
-  
 #### Shell命令
 + 返回当前路径的"." 
 $(cd `dirname $0`; pwd)
@@ -422,8 +360,5 @@ $(cd `dirname $0`; pwd)
   + $@：传递给脚本或函数的所有参数。被双引号(" ")包含时，与 $* 稍有不同，下面将会讲到。
   + $?：上个命令的退出状态，或函数的返回值。
   + $$：当前Shell进程ID。对于 Shell 脚本，就是这些脚本所在的进程ID
-
-
-
 
 
