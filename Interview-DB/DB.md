@@ -79,9 +79,16 @@
 + 数据库（database）
 + 集合（collection）
 + 文档对象（document）
-
-![优势](https://img-blog.csdn.net/20170209135023925?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGluZmVubGlhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-![劣势](https://img-blog.csdn.net/20170209135035046?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGluZmVubGlhbmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
++ 优势：
+  + 快速：将热数据存储在内存中；
+  + 高扩展性；
+  + failover机制，故障切换；
+  + 存储格式Json、Bson。
++ 劣势：
+  + 4.0之前不支持事务；
+  + 全局锁机制；
+  + 占用空间大；
+  + 无成熟的维护工具。
 
 ### 事务
 #### 3种并发问题
