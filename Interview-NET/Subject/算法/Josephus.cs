@@ -16,7 +16,7 @@ namespace Subject
         /// <summary>
         /// 队列
         /// </summary>
-        /// <param name="n"></param>
+        /// <param name="n">n个人</param>
         /// <param name="k">第k个开始</param>
         /// <param name="m"></param>
         public List<int> GetRemoveList(int n, int k, int m)

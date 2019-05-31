@@ -18,10 +18,10 @@
 + [水仙花数](/Interview-NET/Subject/算法/Narcissus.cs)
 + [约瑟夫问题](/Interview-NET/Subject/算法/Josephus.cs)
 + [斐波那契数列](/Interview-NET/Subject/算法/Fibonacci.cs)
-+ [交换 a b 的值](/Interview-NET/Subject/算法/Swap.cs)
++ [交换ab的值](/Interview-NET/Subject/算法/Swap.cs)
 
 #### 随机数
-+ [1-100的随机数](/Algorithm/RandomNum.java#L16)
++ [1-100的随机数](/Interview-Java/src/test/java/Algorithm/RandomNum.java#L16)
 ```
 // Java：randNumber 将被赋值为一个 MIN 和 MAX 范围内的随机数
 int randNumber = new Random().nextInt(MAX - MIN + 1) + MIN;
@@ -30,11 +30,11 @@ int randNumber = new Random().nextInt(MAX - MIN + 1) + MIN;
 // C#：randNumber 将被赋值为一个 MIN 和 MAX 范围内的随机数
 int randNumber = new Random().Next(MIN, MAX + 1); 
 ```
-+ [随机数字和字母](/Algorithm/RandomNum.java#L37)
++ [随机数字和字母](/Interview-Java/src/test/java/Algorithm/RandomNum.java#L37)
 
 #### 频率
-+ [100个URL如何找到出现频率最高的前10个](/Algorithm/MaxUrl.java)
-+ [获取一个字符串在另一个字符串中出现的次数](/Algorithm/Stringsub.java)
++ [100个URL如何找到出现频率最高的前10个](/Interview-Java/src/test/java/Algorithm/MaxUrl.java)
++ [获取一个字符串在另一个字符串中出现的次数](/Interview-Java/src/test/java/Algorithm/Stringsub.java)
  
 ### Hash 
 #### 哈希函数
@@ -55,13 +55,13 @@ int randNumber = new Random().Next(MIN, MAX + 1);
 
 + 环形Hash空间
   + 对2^32取模
-  + 对象与机器处于同一个哈希空间中，这样按顺时针转动object1（对象）存储到了NODE1（机器）中,object3（对象）存储到了NODE2（机器）中,object2、object4（对象）存储到了NODE3（机器）中。   
-![2^32取模](https://img-blog.csdn.net/20180806095553267?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NiX2xjbA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
-![映射到环上](https://img-blog.csdn.net/2018080610272771?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NiX2xjbA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+  ![2^32取模](/Interview-DSAndA/A_Pic/2mod.png)
+  + 对象与机器处于同一个哈希空间中，这样按顺时针转动object1（对象）存储到了NODE1（机器）中,object3（对象）存储到了NODE2（机器）中,object2、object4（对象）存储到了NODE3（机器）中。
+  ![映射到环上](/Interview-DSAndA/A_Pic/Huan.png)
 
 + 缺点：服务节点太少时，容易因为节点分部不均匀而造成数据倾斜（被缓存的对象大部分集中缓存在某一台服务器上）
   + 虚拟节点：是实际节点（机器）在hash空间的复制品，一个实际节点对应了若干个“虚拟节点”，这个对应个数也称为“复制个数”，“虚拟节点”在hash空间中以hash值排列。    
-![虚拟节点映射](https://img-blog.csdn.net/20140411001540656?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY3l3b3Nw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+  ![虚拟节点映射](/Interview-DSAndA/A_Pic/XLNode.png)
  
 ### 排序算法  
 
@@ -123,8 +123,3 @@ int randNumber = new Random().Next(MIN, MAX + 1);
 ```
 S=R·arc cos[cosβ1*cosβ2*cos（α1-α2）+sinβ1*sinβ2]
 ```
-
-
-
-
-
