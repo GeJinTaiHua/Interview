@@ -192,7 +192,7 @@ UPDATE xxx;
 + 使用联合查询（union）手动创建临时表；
 + 开启事务；
 + 使用外键保证数据的关联性；
-+ 使用索引提高检索特定行的速度；
++ 使用索引提高检索特定行的速度。
 
 #### 数据库切分
 + 垂直拆分：把表按模块划分到不同数据库表中。
@@ -260,10 +260,16 @@ select sun(cnt) from table;
   + 如果MySQL估计使用全表扫描要比使用索引快，则不使用索引。
 
 #### count(1) count(主键) count(\*)
-+ count(1) 和 count(主键) 这两个只扫描主键Index就可以得到数据
-+ count(\*) 是扫描表的
-+ count(主键)>count(1)= count(\*)
-+ count(ROWID) 这也是只扫描Index的，效率高
++ count(1)：
+  + 只扫描主键；
+  + 考虑null；
++ count(主键)：
+  + 只扫描主键；
+  + 忽略null；
++ count(\*)：
+  + 扫描表；
+  + 考虑null；
+  + 系统会对count(\*)做优化；
 
 #### Limit 
 + LIMIT N,M：LIMIT首先要找查 N+M 行，然后从N行处，取M行。
@@ -275,3 +281,4 @@ select sun(cnt) from table;
 
 #### Select For update
 + InnoDB 使用行锁定，BDB 使用页锁定，MyISAM 使用表锁；
+
