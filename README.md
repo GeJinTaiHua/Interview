@@ -6,7 +6,7 @@
 
 | Ⅴ | Ⅵ | Ⅶ | Ⅷ | Ⅸ | Ⅹ |
 |----|----|----|----|----|----|
-|[✒️算法](Interview-Other/Algorithm.md)|[📐数据结构](Interview-Other/DS.md)|[💏编程思想](Interview-Other/Thinking.md)|[💻计算机基础](Interview-Other/ComputerBasic.md)| | |
+|[✒️算法](Interview-DSAndA/Algorithm.md)|[📐数据结构](Interview-DSAndA/DS.md)|[💏编程思想](Interview-Other/Thinking.md)|[💻计算机基础](Interview-Other/ComputerBasic.md)| | |
 
 | Ⅺ | Ⅻ | XIII | XIV | XV |
 |----|----| ---- | ----|----| 

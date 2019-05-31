@@ -21,7 +21,7 @@
 + [交换 a b 的值](/Interview-NET/Subject/算法/Swap.cs)
 
 #### 随机数
-+ [1-100的随机数](/Interview-Java/src/test/java/Algorithm/RandomNum.java#L16)
++ [1-100的随机数](/Algorithm/RandomNum.java#L16)
 ```
 // Java：randNumber 将被赋值为一个 MIN 和 MAX 范围内的随机数
 int randNumber = new Random().nextInt(MAX - MIN + 1) + MIN;
@@ -30,11 +30,11 @@ int randNumber = new Random().nextInt(MAX - MIN + 1) + MIN;
 // C#：randNumber 将被赋值为一个 MIN 和 MAX 范围内的随机数
 int randNumber = new Random().Next(MIN, MAX + 1); 
 ```
-+ [随机数字和字母](/Interview-Java/src/test/java/Algorithm/RandomNum.java#L37)
++ [随机数字和字母](/Algorithm/RandomNum.java#L37)
 
 #### 频率
-+ [100个URL如何找到出现频率最高的前10个](/Interview-Java/src/test/java/Algorithm/MaxUrl.java)
-+ [获取一个字符串在另一个字符串中出现的次数](/Interview-Java/src/test/java/Algorithm/Stringsub.java)
++ [100个URL如何找到出现频率最高的前10个](/Algorithm/MaxUrl.java)
++ [获取一个字符串在另一个字符串中出现的次数](/Algorithm/Stringsub.java)
  
 ### Hash 
 #### 哈希函数

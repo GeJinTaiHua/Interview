@@ -34,10 +34,10 @@
 #### 二叉树  
 ![二叉树](https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D220/sign=7e9edc97a9773912c0268263c8188675/3c6d55fbb2fb4316e5bfe05020a4462309f7d37c.jpg)
 + 遍历
-  + [前序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L17)：ABDECF
-  + [中序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L57)：DBEAFC
-  + [后序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L95)：DEBFCA
-  + [层序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L108)：ABCDEF
+  + [前序遍历](/DataStructure/BinaryTree.java#L17)：ABDECF
+  + [中序遍历](/DataStructure/BinaryTree.java#L57)：DBEAFC
+  + [后序遍历](/DataStructure/BinaryTree.java#L95)：DEBFCA
+  + [层序遍历](/DataStructure/BinaryTree.java#L108)：ABCDEF
 + 完全二叉树
 + 满二叉树   
 ![完全二叉树 和 满二叉树](http://jbcdn2.b0.upaiyun.com/2017/07/a5952ec741b60202c7b377bfb8e8f368.png)
