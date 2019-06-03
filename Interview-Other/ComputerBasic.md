@@ -218,7 +218,7 @@ synchronized void setB() {
   + 优点：实现简单、配置较少、当网络中有机器Down掉时不影响用户访问。
   + 缺点：在机器较少，网络流量较小广播式复制到其余机器上，当机器数量增多时候会有一定廷时，带来一定网络开销。
 + 基于TT/Redis 或 jbosscache 进行 session 共享
-  + 优点：memcache或则redis本身就是一个分布式缓存，便于扩展。网络开销较小，几乎没有IO。性能也更好。
+  + 优点：memcache、redis本身就是一个分布式缓存，便于扩展。网络开销较小，几乎没有IO。性能也更好。
   + 缺点：受制于Memcache的容量，如果用户量突然增多cache由于容量的限制会将一些数据挤出缓存，另外memcache故障或重启session会完全丢失掉。所以更偏向于redis。
 + 基于cookie 进行session共享
   + 原理：将用户的session数据全部存放在cookie中。
@@ -261,16 +261,16 @@ name=GeJinTaiHua
 4) 服务器接受到请求并处理
 + Spring MVC的处理流程
   1) 发起请求到前端控制器（DispatcherServlet）；
-  2) 前端控制器请求 HandlerMapping 查找 Handler 可以根据 xml 配置、注解进行查找
-  3) 处理器映射器 HandlerMapping 向前端控制器返回 Handler；
-  4) 前端控制器调用处理器适配器去执行 Handler；
-  5) 处理器适配器去执行 Handler；
+  2) DispatcherServlet 请求 处理器映射器（HandlerMapping） 查找 Handler，可以根据 xml 配置、注解进行查找；
+  3) HandlerMapping 向 DispatcherServlet 返回 Handler；
+  4) DispatcherServlet 调用处理器适配器去执行 Handler；
+  5) 处理器适配器执行 Handler；
   6) Handler 执行完成给适配器返回 ModelAndView；
-  7) 处理器适配器向前端控制器返回 ModelAndView；
-  8) 前端控制器请求视图解析器去进行视图解析，根据逻辑视图名解析成真正的视图(jsp)；
-  9) 视图解析器向前端控制器返回 View；
-  10) 前端控制器进行视图渲染；视图渲染将模型数据(在ModelAndView对象中)填充到request域；
-  11) 前端控制器向用户响应结果。
+  7) 处理器适配器向 DispatcherServlet 返回 ModelAndView；
+  8) DispatcherServlet 请求视图解析器去进行视图解析，根据逻辑视图名解析成真正的视图(jsp)；
+  9) 视图解析器向 DispatcherServlet 返回 View；
+  10) DispatcherServlet 进行视图渲染；视图渲染将模型数据(在ModelAndView对象中)填充到request域；
+  11) DispatcherServlet 向用户响应结果。
 
 5) 服务器返回HTTP响应
 + 301 永久重定向响应
@@ -280,8 +280,10 @@ name=GeJinTaiHua
 + HTTP响应：状态行、消息报头、空行、响应正文
 ![HTTP响应](http://upload-images.jianshu.io/upload_images/2964446-1c4cab46f270d8ee.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-6) 浏览器解析渲染页面  
-浏览器首先解析HTML文件构建DOM树，然后解析CSS文件构建渲染树，等到渲染树构建完成后，浏览器开始布局渲染树并将其绘制到屏幕上。
+6) 浏览器解析渲染页面
++ 浏览器首先解析HTML文件构建DOM树；
++ 然后解析CSS文件构建渲染树；
++ 等到渲染树构建完成后，浏览器开始布局渲染树并将其绘制到屏幕上。
 
 7) 浏览器获取其他地址内容的标签：图片、视频等
 + 浏览器缓存静态文件（ETag头）
