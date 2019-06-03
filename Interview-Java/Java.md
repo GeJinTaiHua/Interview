@@ -23,6 +23,7 @@
     * [IO、NIO](#ionio)
     * [集合](#%E9%9B%86%E5%90%88)
     * [接口](#%E6%8E%A5%E5%8F%A3)
+    * [Spring事务](#Spring事务)
   * [java锁](#java%E9%94%81)
     * [Synchronized锁](#synchronized%E9%94%81)
     * [Lock锁](#lock%E9%94%81)
@@ -445,6 +446,29 @@ IO|NIO
   3) 默认方法
   4) 静态方法
   5) **私有方法**
+  
+#### Spring事务
++ 5种事务隔离级别
+
+|Isolation|隔离级别|不可避免|
+|----|----|----|
+|DEFAULT|默认|使用数据库默认级别|
+|READ_UNCOMMITTED|读未提交|脏读、不可重复读、幻读|
+|READ_COMMITTED|读已提交|不可重复读、幻读|
+|REPEATABLE_READ|可重复读|幻读|
+|SERIALIZABLE|串行化||
+
++ 7种事务传播行为
+
+|Propagation|传播行为|
+|----|----|
+|REQUIRED|如果当前无事务则开启一个事务，否则加入当前事务。|
+|SUPPORTS|如果当前有事务则加入当前事务。|
+|MANDATORY|如果当前无事务则抛出异常，否则加入当前事务。|
+|REQUIRES_NEW|如果当前无事务则开启一个事务，否则挂起当前事务并开启新事务。|
+|NOT_SUPPORTED|如果当前有事务，则挂起当前事务以无事务状态执行方法。|
+|NEVER|如果当前有事务，则抛出异常。|
+|NESTED|创建一个嵌套事务，如果当前无事务则创建一个事务。|
 
 ### java锁
 #### Synchronized锁

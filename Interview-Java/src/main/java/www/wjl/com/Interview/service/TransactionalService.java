@@ -28,9 +28,9 @@ public class TransactionalService {
     /**
      * 四种事务隔离级别：
      * DEFAULT：默认
-     * READ_UNCOMMITTED：读未提交，发送脏读、不可重复读和幻像读。
-     * READ_COMMITTED：读已提交，发送不可重复读和幻像读。
-     * REPEATABLE_READ：可重复读，发送幻像读。
+     * READ_UNCOMMITTED：读未提交，发生脏读、不可重复读和幻像读。
+     * READ_COMMITTED：读已提交，发生不可重复读和幻像读。
+     * REPEATABLE_READ：可重复读，发生幻像读。
      * SERIALIZABLE：串行化
      */
     @Transactional(isolation = Isolation.SERIALIZABLE, rollbackFor = Exception.class)
