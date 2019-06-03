@@ -7,9 +7,9 @@
 
 | Ⅴ | Ⅵ | Ⅶ | Ⅷ | Ⅸ | Ⅹ |
 |----|----|----|----|----|----|
-|[📐数据结构](Interview-DSAndA/DS.md)|[✒️算法](Interview-DSAndA/Algorithm.md)|[💏编程思想](Interview-Other/Thinking.md)|[💻计算机基础](Interview-Other/ComputerBasic.md)| | |
+|[📐数据结构](Interview-DSAndA/DS.md)|[✒️算法](Interview-DSAndA/Algorithm.md)|[💏编程思想](Thinking.md)|[💻计算机基础](ComputerBasic.md)| | |
 
 
 | Ⅺ | Ⅻ | XIII | XIV | XV |
 |----|----| ---- | ----|----| 
-|[🔧工具](Interview-Other/Tool.md)|[:octocat:GitHub](Interview-Other/GitHub.md)| | | | 
+|[🔧工具](Tool.md)|[:octocat:GitHub](GitHub.md)| | | | 

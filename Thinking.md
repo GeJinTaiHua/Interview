@@ -58,13 +58,13 @@
 #### 创建型模式
 1. [单例模式](/Interview-NET/Subject/设计模式/Singleton.cs)：保证一个类仅有一个实例，并提供一个访问它的全局访问点。
    + 一些单例写法：
-     + [double check](/Interview-Java/src/test/java/Pattern/Singleton/SingletonDC.java)
-     + [饿汉模式](/Interview-Java/src/test/java/Pattern/Singleton/SingletonHungry.java)
-     + [静态内部类](/Interview-Java/src/test/java/Pattern/Singleton/SingletonIODH.java)
-     + [枚举单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonEnum.java)
-     + [CAS单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonCAS.java)
-   + [容器管理单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonManager.java)
-   + [破坏单例的2种方法](/Interview-Java/src/test/java/Pattern/DestroySingle.java#L19)
+     + [double check](/Pattern/Singleton/SingletonDC.java)
+     + [饿汉模式](/Pattern/Singleton/SingletonHungry.java)
+     + [静态内部类](/Pattern/Singleton/SingletonIODH.java)
+     + [枚举单例](/Pattern/Singleton/SingletonEnum.java)
+     + [CAS单例](/Pattern/Singleton/SingletonCAS.java)
+   + [容器管理单例](/Pattern/Singleton/SingletonManager.java)
+   + [破坏单例的2种方法](/Pattern/DestroySingle.java#L19)
   
 2. 工厂模式
    + 简单工厂模式：用来生产同一等级结构中的任意产品。
@@ -93,7 +93,7 @@
 4. 建造者模式：使用多个简单的对象一步一步构建成一个复杂的对象。
    + JDK1.8 流的流水线理念
   
-5. [原型模式](/Interview-Java/src/main/java/www/wjl/com/Interview/entity/ConcretePrototype.java)：用于创建重复的对象，同时又能保证性能。
+5. [原型模式](/www/wjl/com/Interview/entity/ConcretePrototype.java)：用于创建重复的对象，同时又能保证性能。
 
 #### 结构型模式
 6. 适配器模式：作为两个不兼容的接口之间的桥梁。
@@ -180,11 +180,11 @@
     + 支持扩展，但是往往以增加系统结构的复杂度为代价；
     + 不支持动态继承。在运行时，子类无法选择不同的父类；
     + 子类不能改变父类的接口。
-+ [依赖](/Interview-Java/src/main/java/www/wjl/com/Interview/entity/Me.java)：一个类A中的方法使用到了另一个类B；
-+ [关联](/Interview-Java/src/main/java/www/wjl/com/Interview/entity/You.java)：两个类、或者类与接口之间语义级别的一种强依赖关系；
++ [依赖](/www/wjl/com/Interview/entity/Me.java)：一个类A中的方法使用到了另一个类B；
++ [关联](/www/wjl/com/Interview/entity/You.java)：两个类、或者类与接口之间语义级别的一种强依赖关系；
   + 被关联类B以类属性的形式出现在关联类A中，或者关联类A引用了一个类型为被关联类B的全局变量的这种关系。
-+ [聚合](/Interview-Java/src/main/java/www/wjl/com/Interview/entity/Family.java)：关联关系的一种特例，他体现的是整体与部分、拥有的关系，即【has-a】的关系；
-+ [组合](/Interview-Java/src/main/java/www/wjl/com/Interview/entity/Nose.java)：一种【contains-a】的关系，这种关系比聚合更强，也称为强聚合。
++ [聚合](/www/wjl/com/Interview/entity/Family.java)：关联关系的一种特例，他体现的是整体与部分、拥有的关系，即【has-a】的关系；
++ [组合](/www/wjl/com/Interview/entity/Nose.java)：一种【contains-a】的关系，这种关系比聚合更强，也称为强聚合。
   + 优点：
     + 不破坏封装，整体类与局部类之间松耦合，彼此相对独立；
     + 具有较好的可扩展性；
