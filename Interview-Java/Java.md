@@ -555,7 +555,7 @@ IO|NIO
 ![堆](http://incdn1.b0.upaiyun.com/2019/01/19307619b4ddae3ef19002bc6ac51b5c.png)
     
 + 虚拟机栈：为虚拟机执行 Java 方法（也就是字节码）服务。
-  + 局部变量表：存放了编译器可知的各种数据类型（boolean、byte、char、short、int、float、long、double）、对象引用；
+  + 局部变量表：存放了编译器可知的各种数据类型（boolean、byte、char、short、int、float、long、double）、对象引用（reference类型）、returnAddress类型（指向一套字节码指令的地地址）；
   + 操作数栈、动态链接、方法出口信息。
 + 本地方法栈：为虚拟机使用到的 Native 方法服务。
   + 在 HotSpot 虚拟机中和 Java 虚拟机栈合二为一。
