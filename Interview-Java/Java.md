@@ -24,6 +24,7 @@
     * [集合](#%E9%9B%86%E5%90%88)
     * [接口](#%E6%8E%A5%E5%8F%A3)
     * [Spring事务](#Spring事务)
+    * [Crontab表达式](#crontab%E8%A1%A8%E8%BE%BE%E5%BC%8F)
   * [java锁](#java%E9%94%81)
     * [Synchronized锁](#synchronized%E9%94%81)
     * [Lock锁](#lock%E9%94%81)
@@ -469,6 +470,24 @@ IO|NIO
 |NOT_SUPPORTED|如果当前有事务，则挂起当前事务以无事务状态执行方法。|
 |NEVER|如果当前有事务，则抛出异常。|
 |NESTED|创建一个嵌套事务，如果当前无事务则创建一个事务。|
+
+#### Crontab表达式
+字段|允许值（整数）|允许的特殊字符| 
+---|---|---|
+秒（Seconds）|0~59|, - * /    四个字符|
+分（Minutes）|0~59|, - * /    四个字符|
+小时（Hours）|0~23|, - * /    四个字符|
+日期（DayofMonth）|1~31|,- * ? / L W C     八个字符|
+月份（Month）|1~12 或 <br>JAN, FEB, MAR, APR, MAY, JUN, <br>JUL, AUG, SEP, OCT, NOV, DEC|, - * /    四个字符|
+星期（DayofWeek）|1~7 （1=SUN=星期日）或 <br>SUN, MON, TUE, WED, THU, FRI, SAT|, - * ? / L C #     八个字符|
+年(可选，留空)（Year）|1970~2099|, - * /    四个字符|
+
+```
+每秒：* * * * * ? *
+每分：0 * * * * ? *
+每时：0 0 * * * ? *
+每日：0 0 0 * * ? *
+```
 
 ### java锁
 #### Synchronized锁
