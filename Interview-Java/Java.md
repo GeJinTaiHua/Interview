@@ -31,10 +31,16 @@
   * [JVM](#jvm)
     * [JVM 类加载机制](#jvm-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6)
     * [JVM 内存模型](#jvm-%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B)
+    * [JVM 种类](#jvm-%E5%86%85%E5种类)
     * [GC 收集算法](#gc-%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95)
     * [GC 种类](#gc-%E7%A7%8D%E7%B1%BB)
     * [GC When What How](#gc-when-what-how)
     * [常见配置汇总](#%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE%E6%B1%87%E6%80%BB)
+  * [JIT](#JIT)
+    * [逃逸分析](#逃逸分析)
+    * [同步省略](#同步省略)
+    * [标量替换](#标量替换)
+    * [栈上分配](#栈上分配) 
 
 ### 三大框架
 + [☕️SSH](https://github.com/GeJinTaiHua/Demo-SSH)
@@ -568,7 +574,12 @@ IO|NIO
   1) 栈内存（虚拟机栈中局部变量表部分）：基本数据类型、局部变量、对象的引用；
   2) 堆内存：new创建的对象、数组 ；
   3) static修饰的类变量：程序在加载的时候就在堆中为类变量分配内存，堆中的内存地址存放在栈中；
-  
+
+#### JVM 种类
++ HotSpot JVM
++ Oracle JRockit
++ IBM JVM
+
 #### GC 收集算法
 + 引用计数法
   + 引用计数是垃圾收集器中的早期策略。
@@ -695,5 +706,74 @@ IO|NIO
 5) 并发收集器设置
    + -XX:+CMSIncrementalMode:设置为增量模式。适用于单CPU情况。
    + -XX:ParallelGCThreads=n:设置并发收集器年轻代收集方式为并行收集时，使用的CPU数。并行收集线程数。
++ 逃逸分析
+  + -XX:+DoEscapeAnalysis：开启逃逸分析（JDK1.7后默认开启）
+  + -XX:-DoEscapeAnalysis：关闭逃逸分析
 
+###  JIT
+#### 逃逸分析
++ 方法逃逸：当一个对象在方法中被定义后，它可能被外部方法所引用，例如作为调用参数传递到其他地方中。
+```
+public static StringBuffer craeteStringBuffer(String s1, String s2) {
+    StringBuffer sb = new StringBuffer();
+    sb.append(s1);
+    sb.append(s2);
+    return sb;//sb逃逸了
+}
+```
+使用逃逸分析，编译器可以对代码做如下优化：
++ [同步省略](#同步省略)
++ [分离对象或标量替换](#标量替换)
++ [将堆分配转化为栈分配](#栈上分配)
+
+#### 同步省略
++ 同步省略（锁消除）：在动态编译同步块的时候，JIT编译器可以借助逃逸分析来判断同步块所使用的锁对象是否只能够被一个线程访问而没有被发布到其他线程。
+如果同步块所使用的锁对象通过这种分析被证实只能够被一个线程访问，那么JIT编译器在编译这个同步块的时候就会取消对这部分代码的同步。
+```
+public void f() {
+    Object hollis = new Object();
+    synchronized(hollis) {
+        System.out.println(hollis);
+    }
+}
+```
+优化为：
+```
+public void f() {
+    Object hollis = new Object();
+    System.out.println(hollis);
+}
+```
+
+#### 标量替换
++ 标量（Scalar）：指一个无法再分解成更小数据的数据；Java中的原始数据类型就是标量。
++ 聚合量（Aggregate）：还可以分解的数据；Java中的对象就是聚合量。
++ 标量替换：在JIT阶段，如果经过逃逸分析，发现一个对象不会被外界访问的话，那么经过JIT优化，就会把这个对象拆解成若干个其中包含的若干个成员变量来代替。
+  + 优点：大大减少堆内存的占用；为栈上分配提供了很好的基础。
+```
+public static void main(String[] args) {
+   alloc();
+}
+ 
+private static void alloc() {
+   Point point = new Point（1,2）;
+   System.out.println("point.x="+point.x+"; point.y="+point.y);
+}
+class Point{
+    private int x;
+    private int y;
+}
+```
+被替换为：
+```
+private static void alloc() {
+   int x = 1;
+   int y = 2;
+   System.out.println("point.x="+x+"; point.y="+y);
+}
+```
+
+#### 栈上分配
++ 栈上分配：如果经过逃逸分析后发现，一个对象并没有逃逸出方法的话，那么就可能被优化成栈上分配。
+  + 优点：这样就无需在堆上分配内存，也无须进行垃圾回收了。
 
