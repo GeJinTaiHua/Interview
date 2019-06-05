@@ -66,11 +66,11 @@ int randNumber = new Random().Next(MIN, MAX + 1);
 ### 排序算法  
 
 #### 插入排序
-+ 直接插入排序
++ [直接插入排序](/Interview-Java/src/test/java/Algorithm/InsertionSort.java#L10)
   + 基本思想：将一个记录插入到已排序好的有序表中，从而得到一个新，记录数增1的有序表。
   + 设立哨兵，作为临时存储和判断数组边界之用。  
 
-+ 希尔排序（缩小增量排序）
++ [希尔排序（缩小增量排序）](/Interview-Java/src/test/java/Algorithm/ShellSort.java#L10)
   + 基本思想：先将整个待排序的记录序列分割成为若干子序列分别进行直接插入排序，待整个序列中的记录“基本有序”时，再对全体记录进行依次直接插入排序。  
 
 #### 选择排序
