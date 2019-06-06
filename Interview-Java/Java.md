@@ -29,6 +29,7 @@
     * [Synchronized](#Synchronized)
     * [Lock](#Lock)
     * [ThreadLocal](#ThreadLocal)
+    * [BlockingQueue](#BlockingQueue)
   * [JVM](#jvm)
     * [JVM 类加载机制](#jvm-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6)
     * [JVM 内存模型](#jvm-%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B)
@@ -273,7 +274,6 @@ public synchronized String toString() {
   + [3个线程交替输出 1-100](/Interview-Java/src/test/java/Thread/ThreeAlternate.java)
   + [3个线程顺序执行](/Interview-Java/src/test/java/Thread/ThreadByOrder.java)
   + [30个线程只允许10个同时存在](/Interview-Java/src/test/java/Thread/SemaphoreTest.java)
-  + [阻塞队列](/Interview-Java/src/test/java/Thread/ArrayBlockingQueueN.java)
 
 ### 基础知识
 #### 四种引用
@@ -531,6 +531,22 @@ IO|NIO
   + 数据库连接；
   + Session管理；
   + 用户上下文；
+  
+#### BlockingQueue
++ 不接受 null 元素，NullPointerException；
++ 线程安全；
++ 具体实现：
+  + ArrayBlockingQueue
+  + DelayQueue
+  + LinkedBlockingQueue
+  + PriorityBlockingQueue
+  + SynchronousQueue
+
+| |抛出异常|特殊值|阻塞|超时|
+|:----:|:----:|:----:|:----:|:----:|
+|插入|add(e)|offer(e)|put(e)|offer(e, time, unit)|
+|移除|remove()|poll()|take()|poll(time, unit)|
+|检查|element()|peek()|-|-|
 
 ### JVM
 #### JVM 类加载机制
