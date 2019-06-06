@@ -1,5 +1,7 @@
 package Algorithm.Sort;
 
+import org.springframework.boot.test.context.SpringBootTest;
+
 /**
  * 插入排序
  * [12] 15 9 20 6 31 24
@@ -13,6 +15,7 @@ package Algorithm.Sort;
  * @author xiaolong
  * @date 2019/6/5 18:30
  */
+@SpringBootTest
 public class InsertionSort {
     /**
      * 基本写法

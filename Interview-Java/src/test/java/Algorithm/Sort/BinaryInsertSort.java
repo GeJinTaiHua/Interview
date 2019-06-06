@@ -1,11 +1,20 @@
 package Algorithm.Sort;
 
+import org.junit.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
 /**
  * 二分插入排序
+ * 1 3 2 7 5 4 8
+ * 1 2 3 7 5 4 8
+ * 1 2 3 7 5 4 8
+ * 1 2 3 5 7 4 8
+ * 1 2 3 4 8 7 8
  *
  * @author xiaolong
  * @date 2019/6/6 10:51
  */
+@SpringBootTest
 public class BinaryInsertSort {
     public static void binaryInsertSort_Base(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
@@ -28,5 +37,11 @@ public class BinaryInsertSort {
             }
             arr[low] = temp;
         }
+    }
+
+    @Test
+    public void test() {
+        int[] arr = {1, 3, 2, 7, 5, 4, 8};
+        binaryInsertSort_Base(arr);
     }
 }

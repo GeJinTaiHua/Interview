@@ -25,7 +25,7 @@
 + [二分插入排序](/Interview-Java/src/test/java/Algorithm/Sort/BinaryInsertSort.java)
   + 基本思想：在插入第i个元素时，对前面的0～i-1元素进行折半，先跟他们中间的那个元素比，如果小，则对前半再进行折半，否则对后半进行折半，直到left<right，然后再把第i个元素前1位与目标位置之间的所有元素后移，再把第i个元素放在目标位置上。
   + 时间复杂度：O(n^2)
-  + 空间复杂度：
+  + 空间复杂度：O(1)
 
 + [希尔排序](/Interview-Java/src/test/java/Algorithm/Sort/ShellSort.java)（缩小增量排序）
   + 基本思想：先将整个待排序的记录序列分割成为若干子序列分别进行直接插入排序，待整个序列中的记录“基本有序”时，再对全体记录进行依次直接插入排序。  

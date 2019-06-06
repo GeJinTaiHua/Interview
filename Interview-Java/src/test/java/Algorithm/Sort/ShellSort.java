@@ -1,11 +1,14 @@
 package Algorithm.Sort;
 
+import org.springframework.boot.test.context.SpringBootTest;
+
 /**
  * 希尔排序
  *
  * @author xiaolong
  * @date 2019/6/5 18:36
  */
+@SpringBootTest
 public class ShellSort {
     /**
      * 基本写法
