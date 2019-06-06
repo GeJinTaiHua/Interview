@@ -25,9 +25,10 @@
     * [接口](#%E6%8E%A5%E5%8F%A3)
     * [Spring事务](#Spring事务)
     * [Crontab表达式](#crontab%E8%A1%A8%E8%BE%BE%E5%BC%8F)
-  * [java锁](#java%E9%94%81)
-    * [Synchronized锁](#synchronized%E9%94%81)
-    * [Lock锁](#lock%E9%94%81)
+  * [并发](#并发)
+    * [Synchronized](#Synchronized)
+    * [Lock](#Lock)
+    * [ThreadLocal](#ThreadLocal)
   * [JVM](#jvm)
     * [JVM 类加载机制](#jvm-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6)
     * [JVM 内存模型](#jvm-%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B)
@@ -499,8 +500,8 @@ IO|NIO
 每日：0 0 0 * * ? *
 ```
 
-### java锁
-#### Synchronized锁
+### 并发
+#### Synchronized
 + 公平，悲观，独享，互斥，可重入的重量级锁。
 + 实现原理：
   1) Contention List：竞争队列，所有请求锁的线程首先被放在这个竞争队列中；
@@ -514,11 +515,22 @@ IO|NIO
   + wait就是说线程在获取对象锁后，主动释放对象锁，同时本线程休眠。直到有其它线程调用对象的notify()唤醒该线程，才能继续获取对象锁，并继续执行。相应的notify()就是对对象锁的唤醒操作；
   + notify()调用后，并不是马上就释放对象锁的，而是在相应的synchronized(){}语句块执行结束，自动释放锁后，JVM会在wait()对象锁的线程中随机选取一线程，赋予其对象锁，唤醒线程，继续执行。如果是notifyAll()就会释放所有的锁。
 
-#### Lock锁
+#### Lock
 + ReentrantLock：默认非公平但可实现公平的，悲观，独享，互斥，可重入，重量级锁。
 + ReadWriteLock（实现类ReentrantReadWriteLocK）：默认非公平但可实现公平的，悲观，写独享，读共享，读写，可重入，重量级锁。
 + [阻塞队列](/Interview-Java/src/test/java/Thread/ArrayBlockingQueueN.java)：用Lock和Condition实现一个阻塞队列。
 + [流量控制](/Interview-Java/src/test/java/Thread/SemaphoreTest.java)：30个线程只允许10个同时存在。
+
+#### ThreadLocal
++ 线程本地变量，内部使用ThreadLocalMap维护值；
++ 方法：
+  + get()
+  + set()
+  + remove()：必须，否则会发生内存泄漏！
++ 使用场景：
+  + 数据库连接；
+  + Session管理；
+  + 用户上下文；
 
 ### JVM
 #### JVM 类加载机制
