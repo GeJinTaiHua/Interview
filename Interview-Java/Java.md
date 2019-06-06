@@ -757,8 +757,9 @@ IO|NIO
 
 #### 常用命令
 + jps -l：显示虚拟机执行主类名称和进程唯一ID；
-![jps](/Pic/jps.png)
+![jps](/Interview-Java/Pic/jps.png)
 + jstat -gc 4124 250 20：每250毫秒查询进程4124详细信息，一共查询20次；
+![jstat](/Interview-Java/Pic/jstat.png)
 + jinfo 4124：查看和调整虚拟机各项参数；
 + jmap 4124：生成堆转储快照；
 
