@@ -1,70 +1,20 @@
 ﻿## ✏️算法
  
-  * [数字游戏](#%E6%95%B0%E5%AD%97%E6%B8%B8%E6%88%8F)
-    * [随机数](#%E9%9A%8F%E6%9C%BA%E6%95%B0)
-    * [频率](#%E9%A2%91%E7%8E%87)
-  * [Hash](#hash)
-    * [哈希函数](#%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0)
-    * [哈希冲突处理](#%E5%93%88%E5%B8%8C%E5%86%B2%E7%AA%81%E5%A4%84%E7%90%86)
-    * [hash一致性算法](#hash一致性算法)
   * [排序算法](#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95)
     * [插入排序](#%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F)
     * [选择排序](#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F)
     * [交换排序](#%E4%BA%A4%E6%8D%A2%E6%8E%92%E5%BA%8F)
     * [其他排序](#%E5%85%B6%E4%BB%96%E6%8E%92%E5%BA%8F)
+  * [Hash](#hash)
+    * [哈希函数](#%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0)
+    * [哈希冲突处理](#%E5%93%88%E5%B8%8C%E5%86%B2%E7%AA%81%E5%A4%84%E7%90%86)
+    * [hash一致性算法](#hash一致性算法)
   * [其他](#其他)
+    * [数字频率](#数字频率)
+    * [随机数](#%E9%9A%8F%E6%9C%BA%E6%95%B0)
+    * [频率](#%E9%A2%91%E7%8E%87)
 
-### 数字游戏
-+ [水仙花数](/Interview-NET/Subject/算法/Narcissus.cs)
-+ [约瑟夫问题](/Interview-NET/Subject/算法/Josephus.cs)
-+ [斐波那契数列](/Interview-NET/Subject/算法/Fibonacci.cs)
-+ [交换ab的值](/Interview-NET/Subject/算法/Swap.cs)
-
-#### 随机数
-+ [1-100的随机数](/Interview-Java/src/test/java/Algorithm/RandomNum.java#L16)
-```
-// Java：randNumber 将被赋值为一个 MIN 和 MAX 范围内的随机数
-int randNumber = new Random().nextInt(MAX - MIN + 1) + MIN;
-```
-```
-// C#：randNumber 将被赋值为一个 MIN 和 MAX 范围内的随机数
-int randNumber = new Random().Next(MIN, MAX + 1); 
-```
-+ [随机数字和字母](/Interview-Java/src/test/java/Algorithm/RandomNum.java#L37)
-
-#### 频率
-+ [100个URL如何找到出现频率最高的前10个](/Interview-Java/src/test/java/Algorithm/MaxUrl.java)
-+ [获取一个字符串在另一个字符串中出现的次数](/Interview-Java/src/test/java/Algorithm/Stringsub.java)
- 
-### Hash 
-#### 哈希函数
-+ 直接取余法：f(x):= x mod maxM ; maxM一般是不太接近 2^t 的一个质数。
-+ 乘法取整法：f(x):=trunc((x/maxX)\*maxlongit) mod maxM，主要用于实数。
-+ 平方取中法：f(x):=(x*x div 1000 ) mod 1000000); 平方后取中间的，每位包含信息比较多。
-
-#### 哈希冲突处理
-+ 开放寻址法：把所有的元素都存放在散列表中，也就是每个表项包含动态集合的一个元素，或者包含NIL。
-+ 再散列法：即在同义词产生地址冲突时计算另一个散列函数地址，直到冲突不再发生。
-  + 不易产生“聚集”；
-  + 增加了计算时间。
-+ 链地址法（拉链法）
-+ 公共溢出区  
-
-#### hash一致性算法
-考虑到分布式系统每个节点都有可能失效，并且新的节点很可能动态的增加进来的情况。
-
-+ 环形Hash空间
-  + 对2^32取模
-  ![2^32取模](/Interview-DSAndA/A_Pic/2mod.png)
-  + 对象与机器处于同一个哈希空间中，这样按顺时针转动object1（对象）存储到了NODE1（机器）中,object3（对象）存储到了NODE2（机器）中,object2、object4（对象）存储到了NODE3（机器）中。
-  ![映射到环上](/Interview-DSAndA/A_Pic/Huan.png)
-
-+ 缺点：服务节点太少时，容易因为节点分部不均匀而造成数据倾斜（被缓存的对象大部分集中缓存在某一台服务器上）
-  + 虚拟节点：是实际节点（机器）在hash空间的复制品，一个实际节点对应了若干个“虚拟节点”，这个对应个数也称为“复制个数”，“虚拟节点”在hash空间中以hash值排列。    
-  ![虚拟节点映射](/Interview-DSAndA/A_Pic/XLNode.png)
- 
 ### 排序算法  
-
 #### 插入排序
 + [直接插入排序](/Interview-Java/src/test/java/Algorithm/InsertionSort.java#L10)
   + 基本思想：将一个记录插入到已排序好的有序表中，从而得到一个新，记录数增1的有序表。
@@ -118,8 +68,54 @@ int randNumber = new Random().Next(MIN, MAX + 1);
 
 + 基数排序
 
+### Hash 
+#### 哈希函数
++ 直接取余法：f(x):= x mod maxM ; maxM一般是不太接近 2^t 的一个质数。
++ 乘法取整法：f(x):=trunc((x/maxX)\*maxlongit) mod maxM，主要用于实数。
++ 平方取中法：f(x):=(x*x div 1000 ) mod 1000000); 平方后取中间的，每位包含信息比较多。
+
+#### 哈希冲突处理
++ 开放寻址法：把所有的元素都存放在散列表中，也就是每个表项包含动态集合的一个元素，或者包含NIL。
++ 再散列法：即在同义词产生地址冲突时计算另一个散列函数地址，直到冲突不再发生。
+  + 不易产生“聚集”；
+  + 增加了计算时间。
++ 链地址法（拉链法）
++ 公共溢出区  
+
+#### hash一致性算法
+考虑到分布式系统每个节点都有可能失效，并且新的节点很可能动态的增加进来的情况。
+
++ 环形Hash空间
+  + 对2^32取模
+  ![2^32取模](/Interview-DSAndA/A_Pic/2mod.png)
+  + 对象与机器处于同一个哈希空间中，这样按顺时针转动object1（对象）存储到了NODE1（机器）中,object3（对象）存储到了NODE2（机器）中,object2、object4（对象）存储到了NODE3（机器）中。
+  ![映射到环上](/Interview-DSAndA/A_Pic/Huan.png)
+
++ 缺点：服务节点太少时，容易因为节点分部不均匀而造成数据倾斜（被缓存的对象大部分集中缓存在某一台服务器上）
+  + 虚拟节点：是实际节点（机器）在hash空间的复制品，一个实际节点对应了若干个“虚拟节点”，这个对应个数也称为“复制个数”，“虚拟节点”在hash空间中以hash值排列。    
+  ![虚拟节点映射](/Interview-DSAndA/A_Pic/XLNode.png)
+
 ### 其他
-+ 球面距离公式
+#### 数字游戏
++ [水仙花数](/Interview-NET/Subject/算法/Narcissus.cs)
++ [约瑟夫问题](/Interview-NET/Subject/算法/Josephus.cs)
++ [斐波那契数列](/Interview-NET/Subject/算法/Fibonacci.cs)
++ [交换ab的值](/Interview-NET/Subject/算法/Swap.cs)
+
+#### 随机数
++ [1-100的随机数](/Interview-Java/src/test/java/Algorithm/RandomNum.java#L16)
 ```
-S=R·arc cos[cosβ1*cosβ2*cos（α1-α2）+sinβ1*sinβ2]
+// Java：randNumber 将被赋值为一个 MIN 和 MAX 范围内的随机数
+int randNumber = new Random().nextInt(MAX - MIN + 1) + MIN;
 ```
+```
+// C#：randNumber 将被赋值为一个 MIN 和 MAX 范围内的随机数
+int randNumber = new Random().Next(MIN, MAX + 1); 
+```
++ [随机数字和字母](/Interview-Java/src/test/java/Algorithm/RandomNum.java#L37)
+
+#### 频率
++ [100个URL如何找到出现频率最高的前10个](/Interview-Java/src/test/java/Algorithm/MaxUrl.java)
++ [获取一个字符串在另一个字符串中出现的次数](/Interview-Java/src/test/java/Algorithm/Stringsub.java)
+
+
