@@ -30,6 +30,7 @@
     * [Lock](#Lock)
     * [ThreadLocal](#ThreadLocal)
     * [BlockingQueue](#BlockingQueue)
+    * [Semaphore](#Semaphore)
   * [JVM](#jvm)
     * [JVM 类加载机制](#jvm-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6)
     * [JVM 内存模型](#jvm-%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B)
@@ -273,7 +274,6 @@ public synchronized String toString() {
 + 简单示例：
   + [3个线程交替输出 1-100](/Interview-Java/src/test/java/Thread/ThreeAlternate.java)
   + [3个线程顺序执行](/Interview-Java/src/test/java/Thread/ThreadByOrder.java)
-  + [30个线程只允许10个同时存在](/Interview-Java/src/test/java/Thread/SemaphoreTest.java)
 
 ### 基础知识
 #### 四种引用
@@ -519,7 +519,6 @@ IO|NIO
 + ReentrantLock：默认非公平但可实现公平的，悲观，独享，互斥，可重入，重量级锁。
 + ReadWriteLock（实现类ReentrantReadWriteLocK）：默认非公平但可实现公平的，悲观，写独享，读共享，读写，可重入，重量级锁。
 + [阻塞队列](/Interview-Java/src/test/java/Thread/ArrayBlockingQueueN.java)：用Lock和Condition实现一个阻塞队列。
-+ [流量控制](/Interview-Java/src/test/java/Thread/SemaphoreTest.java)：30个线程只允许10个同时存在。
 
 #### ThreadLocal
 + 线程本地变量，内部使用ThreadLocalMap维护值；
@@ -549,6 +548,13 @@ IO|NIO
 |插入|add(e)|offer(e)|put(e)|offer(e, time, unit)|
 |移除|remove()|poll()|take()|poll(time, unit)|
 |检查|element()|peek()|-|-|
+
+#### Semaphore
++ 一个计数信号量，必须由获取它的线程释放；
++ 操作：
+  + acquire()：获取许可证
+  + release()：归还许可证
++ [流量控制](/Interview-Java/src/test/java/Thread/SemaphoreTest.java)：30个线程只允许10个同时存在。
 
 ### JVM
 #### JVM 类加载机制
