@@ -536,11 +536,13 @@ IO|NIO
 + 不接受 null 元素，NullPointerException；
 + 线程安全；
 + 具体实现：
-  + ArrayBlockingQueue
-  + DelayQueue
-  + LinkedBlockingQueue
-  + PriorityBlockingQueue
-  + SynchronousQueue
+  + 数组阻塞队列：ArrayBlockingQueue
+  + 延迟队列：DelayQueue
+  + 链阻塞队列：LinkedBlockingQueue
+  + 具有优先级的阻塞队列：PriorityBlockingQueue
+  + 同步队列：SynchronousQueue
+  + 阻塞双端队列：BlockingDeque
+  + 链阻塞双端队列：LinkedBlockingDeque
 
 | |抛出异常|特殊值|阻塞|超时|
 |:----:|:----:|:----:|:----:|:----:|
