@@ -3,7 +3,7 @@ package Algorithm;
 /**
  * 希尔排序
  *
- * @author xiaolong
+ * @author xiaolong.
  * @date 2019/6/5 18:36
  */
 public class ShellSort {
