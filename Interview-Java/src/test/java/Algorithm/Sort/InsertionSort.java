@@ -1,21 +1,26 @@
-package Algorithm;
+package Algorithm.Sort;
 
 /**
  * 插入排序
- *
- *[12] 15 9 20 6 31 24
- *[15 15] 9 20 6 31 24
- *[9 12 15] 20 6 31 24
- *[9 12 15 20] 6 31 24
- *[6 9 12 15 20] 31 24
- *[6 9 12 15 20 31] 24
- *[6 9 12 15 20 24 31]
+ * [12] 15 9 20 6 31 24
+ * [15 15] 9 20 6 31 24
+ * [9 12 15] 20 6 31 24
+ * [9 12 15 20] 6 31 24
+ * [6 9 12 15 20] 31 24
+ * [6 9 12 15 20 31] 24
+ * [6 9 12 15 20 24 31]
  *
  * @author xiaolong
  * @date 2019/6/5 18:30
  */
 public class InsertionSort {
-    public static int[] insertSort(int[] arr) {
+    /**
+     * 基本写法
+     *
+     * @param arr 待排序的数组
+     * @return 排序结果
+     */
+    public static int[] insertSort_Basic(int[] arr) {
         if (arr == null || arr.length < 2) {
             return arr;
         }
@@ -35,7 +40,13 @@ public class InsertionSort {
         return arr;
     }
 
-    private static int[] insertSort2(int[] arr) {
+    /**
+     * 哨兵
+     *
+     * @param arr 待排序的数组
+     * @return 排序结果
+     */
+    public static int[] insertSort_Sentry(int[] arr) {
         if (arr == null || arr.length < 2) {
             return arr;
         }
