@@ -272,7 +272,7 @@ public synchronized String toString() {
    + 避免继承的局限，一个类可以继承多个接口；
    + 适合于资源的共享，节约资源。
 3) Callable（接口）
-4) ExecutorService、Callable、Future
+4) [ExecutorService、Callable、Future](/Interview-Java/src/test/java/Thread/ESF.java)
 + 简单示例：
   + [3个线程交替输出 1-100](/Interview-Java/src/test/java/Thread/ThreeAlternate.java)
   + [3个线程顺序执行](/Interview-Java/src/test/java/Thread/ThreadByOrder.java)
