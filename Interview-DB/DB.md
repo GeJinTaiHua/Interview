@@ -72,8 +72,8 @@
   + Zset：排行榜
     + 底层实现：ziplist（压缩列表）或者skiplist（跳跃表）
   
-![](https://mmbiz.qpic.cn/mmbiz_png/eZzl4LXykQy8y3RicnZarvIuaS7K29Yh9gN6bpoI2kslO06oXCTP23Iv9RqvX5trhu8L1hpaz1UVAmibtNj1r0Ag/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
-![数据建模](https://mmbiz.qpic.cn/mmbiz_png/eZzl4LXykQy8y3RicnZarvIuaS7K29Yh9SdNiaqQLhXqicly18gTw8yITomaeUr3kib3rCV1As2c5sjnqOvhLSrE2Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![内部存储结构](/Interview-DB/Pic/dictEntyr.png)
+![object encoding 对应不同编码](/Interview-DB/Pic/encoding.png)
   
 #### MongoDB
 + 数据库（database）
