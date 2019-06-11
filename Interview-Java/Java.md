@@ -25,6 +25,7 @@
     * [接口](#%E6%8E%A5%E5%8F%A3)
     * [Spring事务](#Spring事务)
     * [Crontab表达式](#crontab%E8%A1%A8%E8%BE%BE%E5%BC%8F)
+    * [四种访问修饰符](#四种访问修饰符)
   * [并发](#并发)
     * [Synchronized](#Synchronized)
     * [Lock](#Lock)
@@ -501,6 +502,14 @@ IO|NIO
 每时：0 0 * * * ? *
 每日：0 0 0 * * ? *
 ```
+
+#### 四种访问修饰符
+|访问权限|类|包|子类|其他包| 
+|:----:|:----:|:----:|:----:|:----:|
+|public|✔|✔|✔|✔|
+|protect|✔|✔|✔|❌|
+|default|✔|✔|❌|❌|
+|private|✔|❌|❌|❌|
 
 ### 并发
 #### Synchronized
