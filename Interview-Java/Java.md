@@ -427,6 +427,7 @@ IO|NIO
      + ConcurrentHashMap
        + 锁分离（JDK1.8放弃）：在HashMap的基础上，将数据分段存储，ConcurrentHashMap由多个Segment组成，每个Segment都有把锁（可重入锁ReentrantLock）。
        + CAS算法：如果valueOffset位置包含的值与expect值相同，则更新valueOffset位置的值为update，并返回true，否则不更新，返回false。
+       ![HashMap](/Interview-Java/Pic/HashMap.png)
 +  Hashtable
    + 底层数据结构【哈希散列表】双重散列法（闭散列法）解决冲突；
    + 不可以存null键，null值；
