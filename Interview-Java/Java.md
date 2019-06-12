@@ -27,6 +27,7 @@
     * [Crontab表达式](#crontab%E8%A1%A8%E8%BE%BE%E5%BC%8F)
     * [四种访问修饰符](#四种访问修饰符)
   * [并发](#并发)
+    * [volatile](#volatile)
     * [Synchronized](#Synchronized)
     * [Lock](#Lock)
     * [ThreadLocal](#ThreadLocal)
@@ -518,6 +519,14 @@ IO|NIO
 |private|✔|❌|❌|❌|
 
 ### 并发
+#### volatile
++ 作用：
+  + 保证此变量对所有的线程的可见性；
+  + 禁止指令重排序优化。
++ 在不符合以下2条情况，仍需加锁保证原子性：
+  + 运算结果并不依赖变量的当前值，或者能够确保只有单一的线程修改变量的值；
+  + 变量不需要与其他的状态变量公共参与不变约束。
+
 #### Synchronized
 + 公平，悲观，独享，互斥，可重入的重量级锁。
 + 实现原理：
