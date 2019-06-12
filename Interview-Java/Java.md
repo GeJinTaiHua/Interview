@@ -857,7 +857,7 @@ private static void alloc() {
   2. 基于计数器的热点探测：为每个方法建立计数器，统计方法的执行次数。（HotSpot使用）
      + 方法调用计数器：一段时间内被调用的次数；计数器热度的衰减；
      + 回边计数器
-+ [即时编译器优化技术一览](/Interview-Java/src/test/java/JIT/Skills.java)：
++ [即时编译器优化技术一览](/Interview-Java/src/test/java/JIT/Skills.java)
   
 
 
