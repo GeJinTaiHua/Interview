@@ -27,6 +27,7 @@
     * [Crontab表达式](#crontab%E8%A1%A8%E8%BE%BE%E5%BC%8F)
     * [四种访问修饰符](#四种访问修饰符)
   * [并发](#并发)
+    * [Java的5种线程状态](#Java的5种线程状态)
     * [volatile](#volatile)
     * [Synchronized](#Synchronized)
     * [Lock](#Lock)
@@ -519,6 +520,14 @@ IO|NIO
 |private|✔|❌|❌|❌|
 
 ### 并发
+#### Java的5种线程状态
++ 新建（new）
++ 运行（runable）：包括了操作系统线程状态中的running和ready；
++ 无限期等待（waiting）
++ 限期等待（timed waiting）
++ 阻塞（blocked）
++ 结束（terminated）
+
 #### volatile
 + 作用：
   + 保证此变量对所有的线程的可见性；
