@@ -538,7 +538,7 @@ IO|NIO
 + 其他实现可见性的关键字：Synchronized、final
 
 #### Synchronized
-+ 公平，悲观，独享，互斥，可重入的重量级锁。
++ 非公平，悲观，独享，互斥，可重入的重量级锁。
 + 实现原理：
   1) Contention List：竞争队列，所有请求锁的线程首先被放在这个竞争队列中；
   2) Entry List：Contention List中那些有资格成为候选资源的线程被移动到Entry List中；
