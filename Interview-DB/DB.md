@@ -51,10 +51,9 @@
 基于内存的采用的【单进程单线程】模型的KV数据库，由C语言编写。
 + 为什么快
   + 完全基于内存；
-  + 单线程避免了多线程的频繁上下文切换问题；
+  + 单线程，避免了多线程的频繁上下文切换问题；
   + 基于非阻塞的IO多路复用机制；
   + 数据结构简单，对数据操作也简单；
-  + 底层模型：Redis直接自己构建了VM机制；
 + 五种数据结构：
   + String：缓存、限流、计数器、分布式锁、分布式Session
     + 底层实现：int、raw、embstr-54
@@ -74,7 +73,13 @@
   
 ![内部存储结构](/Interview-DB/Pic/dictEntyr.png)
 ![object encoding 对应不同编码](/Interview-DB/Pic/encoding.png)
-  
+
++ 四种持久化存储方案
+  + RDB（快照/内存快照）：按照一定的时间周期将目前服务中的所有数据全部写入到磁盘中；
+  + AOF
+  + VM（虚拟内存）：从 Redis Version 2.4 开始就被官方明确表示不再建议使用；
+  + DISKSTORE：Redis Version 2.8 开始提出的一个存储设想，官方没有明确建议使用这用方式。
+
 #### MongoDB
 + 数据库（database）
 + 集合（collection）
