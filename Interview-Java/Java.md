@@ -488,6 +488,10 @@ IO|NIO
 |NEVER|如果当前有事务，则抛出异常。|
 |NESTED|创建一个嵌套事务，如果当前无事务则创建一个事务。|
 
++ 2种开启事务的方法
+  + 声明式：注解@transactional、@EnableTransactionManagement
+  + 编程式：Xml配Aop、tx标签
+
 + @transactional 失效情况：
   + 方法不是public；
   + 新建了调用对象；
