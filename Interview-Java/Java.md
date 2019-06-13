@@ -226,42 +226,43 @@ boolean equals(Object obj);
   + 字符串常量；
   + final 修饰，不可被继承；
   + hashCode() 源码：
-```
-    public int hashCode() {
-        int h = hash;
-        if (h == 0 && value.length > 0) {
-            char val[] = value;
- 
-            for (int i = 0; i < value.length; i++) {
-                h = 31 * h + val[i];
+    ```
+        public int hashCode() {
+            int h = hash;
+            if (h == 0 && value.length > 0) {
+                char val[] = value;
+     
+                for (int i = 0; i < value.length; i++) {
+                    h = 31 * h + val[i];
+                }
+                hash = h;
             }
-            hash = h;
+            return h;
         }
-        return h;
-    }
-```
+    ```
+  + String常量池
 + StringBuilder 
   + 字符串变量（非线程安全）；
   + 默认容量16；
   + toString() 源码：
-```
-public String toString() {
-  // Create a copy, don't share the array
-  return new String(value, 0, count);
-}
-```
+    ```
+    public String toString() {
+      // Create a copy, don't share the array
+      return new String(value, 0, count);
+    }
+    ```
 + StringBuffer 
   + 字符串变量（线程安全）；
   + toString()方法会进行对象缓存，以减少元素的复制开销；
   + toString() 源码：
-```
-public synchronized String toString() {
-  if (toStringCache == null) {
-    toStringCache = Arrays.copyOfRange(value, 0, count);
-  }
-  return new String(toStringCache, true);
-}
-```
+    ```
+    public synchronized String toString() {
+      if (toStringCache == null) {
+        toStringCache = Arrays.copyOfRange(value, 0, count);
+      }
+      return new String(toStringCache, true);
+    }
+    ```
 
 #### Thread、Runnable、Callable
 1) [Thread](/Interview-Java/src/test/java/Thread/ThreadT.java)（类）
@@ -312,7 +313,7 @@ String str ="hello";
   + 下界 <? super T>  
   + 往外取只能赋值给Object变量，不影响往里存  
   ![super](https://images2018.cnblogs.com/blog/1043143/201804/1043143-20180414164527508-811736127.jpg)
-+ 语法糖实现原理：虚拟机中没有泛型，只有普通类和普通方法；所有泛型类的类型参数在编译时都会被擦除，泛型类并没有自己独有的Class类对象。比如并不存在List<String>.class或是List<Integer>.class，而只有List.class。
++ 类型擦除：虚拟机中没有泛型，只有普通类和普通方法；所有泛型类的类型参数在编译时都会被擦除，泛型类并没有自己独有的Class类对象；比如并不存在List<String>.class或是List<Integer>.class，而只有List.class。
 	
 #### Lambda 表达式
 1) expression = (variable) -> action
@@ -418,13 +419,16 @@ IO|NIO
      + 有序；
      + 线程不安全；
   3) 线程安全：Set set = Collections.synchronizedSet(set 对象)。
-    
-2. Map 
-表示一个键值对 (key-value) 的映射；
+
+2. Map：表示一个键值对 (key-value) 的映射；
 +  HashMap（替代Hashtable）：
    + 底层数据结构【哈希表】链地址法解决冲突；
       + 链表长度大于阈值（默认为 8）时，将链表转化为红黑树。
    + 可存一个null键，多个null值；
+   + 初始化容量：
+     + 我们设置HashMap的初始化容量时，实际上HashMap会采用第一个大于该数值的2的幂作为初始化容量；
+     + 当HashMap内部维护的哈希表的容量达到75%时（默认情况下），会触发rehash。
+     + initialCapacity=（需要容量）/0.75+1；
    + 线程不安全； 
      + Map m = Collections.synchronizeMap(hashMap)实现同步；  
      + linkedHashMap：【双向链表】，线程不安全。
