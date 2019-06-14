@@ -1,11 +1,12 @@
 package Algorithm.Sort;
 
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /**
  * 插入排序
  * [12] 15 9 20 6 31 24
- * [15 15] 9 20 6 31 24
+ * [12 15] 9 20 6 31 24
  * [9 12 15] 20 6 31 24
  * [9 12 15 20] 6 31 24
  * [6 9 12 15 20] 31 24
@@ -17,6 +18,12 @@ import org.springframework.boot.test.context.SpringBootTest;
  */
 @SpringBootTest
 public class InsertionSort {
+    @Test
+    public void test() {
+        int[] test = new int[]{12, 15, 9, 20, 6, 31, 24};
+        insertSort_Basic(test);
+    }
+
     /**
      * 基本写法
      *
