@@ -125,6 +125,7 @@
 + [约瑟夫问题](/Interview-NET/Subject/算法/Josephus.cs)
 + [斐波那契数列](/Interview-NET/Subject/算法/Fibonacci.cs)
 + [交换ab的值](/Interview-NET/Subject/算法/Swap.cs)
++ [在字符串中找出连续最长的数字串](/Interview-Java/src/test/java/Algorithm/FindMaxNum.java)
 
 #### 随机数
 + [1-100的随机数](/Interview-Java/src/test/java/Algorithm/RandomNum.java#L16)
