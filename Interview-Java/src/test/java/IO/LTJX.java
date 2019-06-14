@@ -7,6 +7,9 @@ import java.io.*;
 import java.util.Arrays;
 
 /**
+ * 文件夹操作
+ * 暂时不考虑异常关闭close等问题
+ *
  * @author xiaolong
  * @date 2019/6/14 13:59
  */

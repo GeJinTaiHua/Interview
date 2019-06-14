@@ -390,6 +390,8 @@ IO|NIO
   + 大量的连接。
   + 连接每次发送少量的数据。
   + 聊天服务器。
++ 示例
+  + [文件夹操作](/Interview-Java/src/test/java/IO/LTJX.java)
 
 #### 集合
 1. Collection
