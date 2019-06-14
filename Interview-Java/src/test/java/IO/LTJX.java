@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.*;
+import java.util.Arrays;
 
 /**
  * @author xiaolong
@@ -19,14 +20,15 @@ public class LTJX {
         File oldFile = new File("Pic" + File.separator + "test1old.txt");
         File newFile = new File("Pic" + File.separator + "test1new.txt");
 
-        if (oldFile.isFile() && oldFile.exists()) {
+        if (oldFile.exists() && oldFile.isFile()) {
             InputStream inputStream = new FileInputStream(oldFile);
             OutputStream outputStream = new FileOutputStream(newFile);
 
             byte[] temp = new byte[1024];
             int len = -1;
             while ((len = inputStream.read(temp)) > 0) {
-                outputStream.write(temp);
+                outputStream.write(temp, 0, len);
+                //outputStream.flush();
             }
 
             inputStream.close();
@@ -34,8 +36,32 @@ public class LTJX {
         }
     }
 
+    /**
+     * 读文件，对文件内容排序，输出另外文件
+     */
     @Test
-    public void test12() throws Exception {
+    public void test2() throws Exception {
+        File oldFile = new File("Pic" + File.separator + "test2old.txt");
+        File newFile = new File("Pic" + File.separator + "test2new.txt");
 
+        if (oldFile.exists() && oldFile.isFile()) {
+            InputStreamReader reader = new InputStreamReader(new FileInputStream(oldFile), "UTF-8");
+            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(newFile), "UTF-8");
+
+            char[] temp = new char[8];
+            StringBuilder sb = new StringBuilder();
+            while (reader.read(temp) > 0) {
+                sb.append(temp);
+            }
+
+            String oldStr = sb.toString();
+            char[] newStr = oldStr.toCharArray();
+
+            Arrays.sort(newStr);
+            writer.write(newStr);
+
+            reader.close();
+            writer.close();
+        }
     }
 }
