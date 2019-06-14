@@ -19,22 +19,22 @@ import java.util.stream.Collectors;
 public class FindMaxNum {
     @Test
     public void test() {
-        String str = "A123A2A98A521A75A1A99A65478A2222A23A111A78A5A33A22A1A3432423A123211A123";
+        String str = "A123CCCC2A98A521A75A1A99A65478A2222A23A111A78A5A33A22A1A3432423A123211A123";
         findMaxNumByStr2(str);
     }
 
     private String findMaxNumByStr(String str) {
+        String result = "";
+
         if (StringUtils.isEmpty(str)) {
             return null;
         }
 
-        String result = "";
+        int maxsize = 0;// 当前已知字符串的最大长度
+        int count = 0;// 循环里字符串长度
+        StringBuilder sb = new StringBuilder();
 
         char[] chars = str.toCharArray();
-
-        int maxsize = 0;
-        int count = 0;
-        StringBuilder sb = new StringBuilder();
         for (char item : chars) {
             if (item >= '0' && item <= '9') {
                 sb.append(item);
@@ -57,16 +57,16 @@ public class FindMaxNum {
     }
 
     private String findMaxNumByStr2(String str) {
+        List<String> resultList = new ArrayList<>();
+
         if (StringUtils.isEmpty(str)) {
             return null;
         }
 
-        List<String> resultList = new ArrayList<>();
-
-        char[] chars = str.toCharArray();
-
         int count = 0;
         StringBuilder sb = new StringBuilder();
+
+        char[] chars = str.toCharArray();
         for (char item : chars) {
             if (item >= '0' && item <= '9') {
                 sb.append(item);
@@ -80,7 +80,9 @@ public class FindMaxNum {
             }
         }
 
-        resultList = resultList.stream().sorted(Comparator.comparing(String::length).reversed()).collect(Collectors.toList());
+        resultList = resultList.stream()
+                .sorted(Comparator.comparing(String::length).reversed())
+                .collect(Collectors.toList());
 
         if (resultList.size() > 0) {
             return resultList.get(0);
