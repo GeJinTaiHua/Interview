@@ -2,289 +2,75 @@
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-1.5.13-brightgreen.svg)
 ![build passing](https://img.shields.io/badge/build-passing-brightgreen.svg) 
 
-  * [三大框架](#%E4%B8%89%E5%A4%A7%E6%A1%86%E6%9E%B6)
-  * [第三方库](#%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93)
-  * [中间件](#%E4%B8%AD%E9%97%B4%E4%BB%B6)
-  * [关键字](#%E5%85%B3%E9%94%AE%E5%AD%97)
+  * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
     * [8大基本类型](#8%E5%A4%A7%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B)
+    * [4种访问修饰符](#4%E7%A7%8D%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6)
+    * [4种引用](#4%E7%A7%8D%E5%BC%95%E7%94%A8)
+    * [集合](#%E9%9B%86%E5%90%88)
+    * [接口](#%E6%8E%A5%E5%8F%A3)
+    * [Spring事务](#spring%E4%BA%8B%E5%8A%A1)
+    * [IO、NIO](#ionio)
     * [static](#static)
     * [Error、Exception](#errorexception)
     * [final、finally、finalize](#finalfinallyfinalize)
-    * [synchronized](#synchronized)
-    * [switch\.\.\.case\.\.\.default\.\.\.](#switchcasedefault)
     * [Comparable 、Comparator](#comparable-comparator)
     * [String、StringBuilder、StringBuffer](#stringstringbuilderstringbuffer)
-    * [Thread、Runnable、Callable](#threadrunnablecallable)
-  * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
-    * [四种引用](#%E5%9B%9B%E7%A7%8D%E5%BC%95%E7%94%A8)
+  * [语法糖](#%E8%AF%AD%E6%B3%95%E7%B3%96)
     * [泛型](#%E6%B3%9B%E5%9E%8B)
-    * [Lambda 表达式](#lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F)
     * [Stream API](#stream-api)
-    * [IO、NIO](#ionio)
-    * [集合](#%E9%9B%86%E5%90%88)
-    * [接口](#%E6%8E%A5%E5%8F%A3)
-    * [Spring事务](#Spring事务)
-    * [Crontab表达式](#crontab%E8%A1%A8%E8%BE%BE%E5%BC%8F)
-    * [四种访问修饰符](#四种访问修饰符)
-  * [并发](#并发)
-    * [Java的5种线程状态](#Java的5种线程状态)
+    * [Lambda 表达式](#lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F)
+    * [switch\.\.\.case\.\.\.default\.\.\.](#switchcasedefault)
+  * [线程与并发](#%E7%BA%BF%E7%A8%8B%E4%B8%8E%E5%B9%B6%E5%8F%91)
+    * [5种线程状态](#5%E7%A7%8D%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81)
+    * [Thread、Runnable、Callable](#threadrunnablecallable)
     * [volatile](#volatile)
-    * [Synchronized](#Synchronized)
-    * [Lock](#Lock)
-    * [ThreadLocal](#ThreadLocal)
-    * [BlockingQueue](#BlockingQueue)
-    * [Semaphore](#Semaphore)
+    * [synchronized](#synchronized)
+    * [Lock](#lock)
+    * [ThreadLocal](#threadlocal)
+    * [BlockingQueue](#blockingqueue)
+    * [Semaphore](#semaphore)
   * [JVM](#jvm)
     * [JVM 类加载机制](#jvm-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6)
     * [JVM 内存模型](#jvm-%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B)
-    * [JVM 种类](#jvm-%E5%86%85%E5种类)
+    * [JVM 种类](#jvm-%E7%A7%8D%E7%B1%BB)
     * [GC 收集算法](#gc-%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95)
     * [GC 种类](#gc-%E7%A7%8D%E7%B1%BB)
     * [GC When What How](#gc-when-what-how)
-    * [常见配置](#常见配置)
-    + [常用命令](#常用命令)
-  * [JIT](#JIT)
-    * [逃逸分析](#逃逸分析)
-    * [同步省略](#同步省略)
-    * [标量替换](#标量替换)
-    * [栈上分配](#栈上分配) 
-    * [即时编译](#即时编译) 
+    * [常见配置](#%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE)
+    * [常用命令](#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4)
+  * [JIT](#jit)
+    * [逃逸分析](#%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90)
+    * [同步省略](#%E5%90%8C%E6%AD%A5%E7%9C%81%E7%95%A5)
+    * [标量替换](#%E6%A0%87%E9%87%8F%E6%9B%BF%E6%8D%A2)
+    * [栈上分配](#%E6%A0%88%E4%B8%8A%E5%88%86%E9%85%8D)
+    * [即时编译](#%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91)
 
-### 三大框架
-+ [☕️SSH](https://github.com/GeJinTaiHua/Demo-SSH)
-  + [☕️Spring](https://github.com/GeJinTaiHua/Learn-Spring)
-    - [☕️Spring Boot](https://github.com/GeJinTaiHua/Learn-SpringBoot)
-    - [☕️Spring Boot 2.0](https://github.com/GeJinTaiHua/Learn-SpringBoot2.0)
-    - [☕️Spring Cloud](https://github.com/GeJinTaiHua/Learn-SpringCloud)
-      + [📊Eureka](https://github.com/GeJinTaiHua/Learn-Eureka)：注册中心。
-      + Hystrix：熔断。
-      + Spring Cloud Config：配置中心。
-      + Spring Cloud Zuul：服务网关。
-    - Spring Data JPA
-    - [☕️Spring Cloud Alibaba](https://github.com/GeJinTaiHua/Spring-Cloud-Alibaba-Learn)
-  + Struts
-  + [☕️Hibernate](https://github.com/GeJinTaiHua/Learn-Hibernate)
-+ [☕️SSM](https://github.com/GeJinTaiHua/Demo-SSM)
-  + [☕️Spring](https://github.com/GeJinTaiHua/Learn-Spring)
-  + [☕️SpringMVC](https://github.com/GeJinTaiHua/Learn-SpringMVC)
-  + MyBatis
-  
-### 第三方库
-+ [♻️JAXB](https://github.com/GeJinTaiHua/Learn-JAXB)：XML 节点元素和 JavaBean 相互转换工具。
-+ [♻️Gson](https://github.com/GeJinTaiHua/Learn-Gson)：Josn 序列化与反序列化工具。
-+ [📆SLF4J](https://github.com/GeJinTaiHua/Learn-SLF4J)：日志工具。
-+ [👫STOMP](https://github.com/GeJinTaiHua/STOMP)：面向消息的简单文本协议。
-+ [☁️REST](https://github.com/GeJinTaiHua/Learn-HTTP)：HTTP 协议的 GET，POST，DELETE ...
-+ [🌐WebService](https://github.com/GeJinTaiHua/Learn-WebService)：一种跨编程语言和跨操作系统平台的远程调用技术。
-
-### 中间件
-+ RPC框架
-  + [💥Dubbo](https://github.com/GeJinTaiHua/Learn-Dubbo)
-  + [☀️gRPC](https://github.com/GeJinTaiHua/Learn-gRPC)
-+ MQ消息
-  + [🚗RabbitMQ](https://github.com/GeJinTaiHua/Learn-RabbitMQ)
-  + ActiveMQ
-  + Kafka
-+ 分布式协调服务
-  + ZooKeeper 
-  + Keepalived
-+ 配置管理
-  + Apollo
-+ 大数据
-  + Hbase
-  + Hadoop
-  + Hive
-+ 容器
-  + Docker
-  + K8s
-+ 分布式缓存
-  + Redis
-  + MemCache
-  + EhCache 
-+ 自动化
-  + Jenkins
-
-### 关键字
+### 基础知识
 #### 8大基本类型
-基本类型|包装类|位数|  |
----|---|---|---|
-boolean|Boolean|1|布尔型|
-char|Character|16|字符型|
-byte|Byte|8|整数值型|
-short|Short|16|整数值型|
-int|Integer|32|整数值型|
-long|Long|64|整数值型|
-float|Float|32|浮点类型|
-double|Double|64|浮点类型|
+|基本类型|包装类|位数|  |
+|:----:|:----:|:----:|:----:|
+|boolean|Boolean|1|布尔型|
+|char|Character|16|字符型|
+|byte|Byte|8|整数值型|
+|short|Short|16|整数值型|
+|int|Integer|32|整数值型|
+|long|Long|64|整数值型|
+|float|Float|32|浮点类型|
+|double|Double|64|浮点类型|
 
 + String：引用类型；
 + var：Java10，本地变量类型推断；
 + 自动装箱与拆箱：装箱过程是通过调用包装器的 valueOf 方法实现的，而拆箱过程是通过调用包装器的 xxxValue 方法实现的。
 
-#### static
-1. 静态方法
-  + 不依赖于任何对象就可以进行访问；
-  + 在静态方法中不能访问类的非静态成员方法/变量；
-  + 在非静态成员方法中可以访问静态成员方法/变量。
-2. 静态变量
-  + 被所有的对象所共享，在内存中只有一个副本；
-  + 当且仅当在类初次加载时会被初始化。
-3. [静态代码块](/Interview-Java/src/test/java/StaticD/Code.java)
-  + 优化程序性能；
-  + 可以置于类中的任何地方，可以有多个static块；
-  + 类初次被加载的时候，会按照static块的顺序来执行每个static块，并且只会执行一次。
-4. [静态内部类](/Interview-Java/src/test/java/StaticD/InnerClass.java)
-5. 静态导包
-  + import static 代替 import；
-  + 导入这个类里的静态方法。
+#### 4种访问修饰符
+|访问权限|同类|同包|子类|其他包| 
+|:----:|:----:|:----:|:----:|:----:|
+|public|✔|✔|✔|✔|
+|protect|✔|✔|✔|❌|
+|default|✔|✔|❌|❌|
+|private|✔|❌|❌|❌|
 
-#### Error、Exception
-+ Error：Java 运行时系统的内部错误和资源耗尽错误。
-+ Exception：标准Java库方法所激发的异常。
-  + Runtime_Exception
-    + 错误的类型转换（ClassCastException）；
-    + 数组访问越界（ArrayIndexOutOfBoundsException）； 
-    + 访问 null 指针（NullPointerException）； 
-  + 非RuntimeException
-    + 试图在文件尾部后面读取数据；
-    + 试图打开一个不存在的文件；
-    + 试图根据给定的字符串查找 Class 对象， 而这个字符串表示的类并不存在。
-+ try catch finally return 执行顺序
-  + finally语句总会执行；
-  + 如果try、catch中有return语句，finally中没有return，那么在finally中修改除包装类型和静态变量、全局变量以外的数据都不会对try、catch中返回的变量有任何的影响；
-  + 在finally中使用return语句，会忽略try、catch中的return语句，也会忽略try、catch中的异常，屏蔽了错误的发生；
-  + finally中避免再次抛出异常，一旦finally中发生异常，代码执行将会抛出finally中的异常信息，try、catch中的异常将被忽略
-  + [示例](/Interview-Java/src/test/java/TryExceptionFinally/tryTest.java)
-
-#### final、finally、finalize
-+ final
-  + 类
-    + 表明这个类不能被继承。
-    + final类中的所有成员方法都会被隐式地指定为final方法。
-  + 方法
-    + 把方法锁定，以防任何继承类修改它的含义；
-    + 类的private方法会隐式地被指定为final方法。
-  + 变量
-    + 基本数据类型：数值一旦在初始化之后便不能更改；
-    + 引用类型：在对其初始化之后便不能再让其指向另一个对象。	
-+ finally：在异常处理时提供 finally 块来执行任何清除操作。
-+ finalize：方法名；finalize() 方法在垃圾收集器将对象从内存中清除出去之前做必要的清理工作。
-
-#### synchronized
-1) [代码块](/Interview-Java/src/test/java/Synchronized/SyncThread.java#L14)（同步语句块）
-  + 作用的范围：大括号{}括起来的代码；
-  + 作用的对象：调用这个代码块的对象；
-  + 注意：
-    + 一个线程访问一个对象中的synchronized(this)同步代码块时，其他试图访问该对象的线程将被阻塞；
-    + 当一个线程访问对象的一个synchronized(this)同步代码块时，另一个线程仍然可以访问该对象中的非synchronized(this)同步代码块。
-
-2) [方法](/Interview-Java/src/test/java/Synchronized/SyncThread.java#L22)（同步方法）
-  + 作用的范围：整个方法；
-  + 作用的对象：调用这个方法的对象；
-  + 注意：
-    + synchronized关键字不能继承；
-    + 在定义接口方法时不能使用synchronized关键字；
-    + 构造方法不能使用synchronized关键字，但可以使用synchronized代码块来进行同步。
-
-3) [静态的方法](/Interview-Java/src/test/java/Synchronized/SyncThread.java#L29)
-  + 作用的范围：整个静态方法；
-  + 作用的对象：这个类的所有对象；
-  + 注意：静态方法是属于类的而不属于对象的。同样的，synchronized修饰的静态方法锁定的是这个类的所有对象。
-
-4) [类](/Interview-Java/src/test/java/Synchronized/SyncThread.java#L36)
-  + 作用的范围：synchronized后面括号括起来的部分；
-  + 作用的对象：这个类的所有对象；
-  + 注意：synchronized作用于一个类T时，是给这个类T加锁，T的所有对象用的是同一把锁。
-
-#### switch...case...default...
-+ switch(A)
-  + A的取值只能是整型或者可以转换为整型的数值类型，比如byte、short、int、char、还有枚举；
-  + Java 7：取值支持String；通过equals()和hashCode()方法来实现的。
-+ case B:C
-  + 常量表达式；B的取值只能是常量（需要定义一个final型的常量）或者byte、short、int、char、String；
-  + Java 12：允许合并多个条件；
-+ default
-  + 没有符合的case就执行它;
-  + 并不是必须的。
-
-#### Comparable 、Comparator
-+ Comparable：接口强行对实现它的每个类的对象进行整体排序（自然排序）（内部排序）。
-  + 是由对象自己实现的
-```
-public int compareTo(T o);
-```
-+ Comparator：接口新建一个比较器，通过该比较器来对类进行排序（外部排序）。
-  + 由外部实现
-  + 策略模式
-```
-int compare(T o1, T o2);
-boolean equals(Object obj);
-```
-
-#### String、StringBuilder、StringBuffer
-+ String
-  + 字符串常量；
-  + final 修饰，不可被继承；
-  + hashCode() 源码：
-    ```
-        public int hashCode() {
-            int h = hash;
-            if (h == 0 && value.length > 0) {
-                char val[] = value;
-     
-                for (int i = 0; i < value.length; i++) {
-                    h = 31 * h + val[i];
-                }
-                hash = h;
-            }
-            return h;
-        }
-    ```
-  + String常量池
-+ StringBuilder 
-  + 字符串变量（非线程安全）；
-  + 默认容量16；
-  + toString() 源码：
-    ```
-    public String toString() {
-      // Create a copy, don't share the array
-      return new String(value, 0, count);
-    }
-    ```
-+ StringBuffer 
-  + 字符串变量（线程安全）；
-  + toString()方法会进行对象缓存，以减少元素的复制开销；
-  + toString() 源码：
-    ```
-    public synchronized String toString() {
-      if (toStringCache == null) {
-        toStringCache = Arrays.copyOfRange(value, 0, count);
-      }
-      return new String(toStringCache, true);
-    }
-    ```
-
-#### Thread、Runnable、Callable
-1) [Thread](/Interview-Java/src/test/java/Thread/ThreadT.java)（类）
-   + start()：启动一个线程，这时此线程处于就绪（可运行）状态；
-   + run()：只是类的一个普通方法而已。
-   + 缺点：
-     + 每次通过new Thread()创建对象性能不佳；
-     + 线程缺乏统一管理，可能无限制新建线程，相互之间竞争，及可能占用过多系统资源导致死机或oom；
-     + 缺乏更多功能，如定时执行、定期执行、线程中断。
-2) Runnable（接口）
-   + 避免继承的局限，一个类可以继承多个接口；
-   + 适合于资源的共享，节约资源。
-3) Callable（接口）
-4) [ExecutorService、Callable、Future](/Interview-Java/src/test/java/Thread/ESF.java)
-5) CompletableFuture：JDK1.8
-
-+ 简单示例：
-  + [3个线程交替输出 1-100](/Interview-Java/src/test/java/Thread/ThreeAlternate.java)
-  + [3个线程顺序执行](/Interview-Java/src/test/java/Thread/ThreadByOrder.java)
-
-### 基础知识
-#### 四种引用
+#### 4种引用
 1) 强引用：是指创建一个对象并把这个对象赋给一个引用变量。
   + 强引用有引用变量指向时永远不会被垃圾回收，JVM宁愿抛出OutOfMemory错误也不会回收这种对象；
   + 想中断强引用和某个对象之间的关联，可以显式地将引用赋值为null。
@@ -304,96 +90,6 @@ String str ="hello";
   + 并不影响对象的生命周期；
   + 唯一作用：在这个对象被收集器回收时收到一个系统通知。
 ![四种引用](https://images2015.cnblogs.com/blog/249993/201703/249993-20170306195851516-1068507269.png)
-
-#### 泛型
-+ T 
-+ extends
-  + 上界 <? extends T>
-  + 不能往里存，只能往外取  
-  ![extends](https://images2018.cnblogs.com/blog/1043143/201804/1043143-20180414164334299-153062921.jpg)
-+ super
-  + 下界 <? super T>  
-  + 往外取只能赋值给Object变量，不影响往里存  
-  ![super](https://images2018.cnblogs.com/blog/1043143/201804/1043143-20180414164527508-811736127.jpg)
-+ 类型擦除：虚拟机中没有泛型，只有普通类和普通方法；所有泛型类的类型参数在编译时都会被擦除，泛型类并没有自己独有的Class类对象；比如并不存在List<String>.class或是List<Integer>.class，而只有List.class。
-	
-#### Lambda 表达式
-1) expression = (variable) -> action
-   + variable：这是一个变量，一个占位符。像x、y、z可以是多个变量；
-   + action：这是我们实现的代码逻辑部分，它可以是一行代码也可以是一个代码片段。
-```
-\\创建了一个函数，用来计算两个操作数的和。
-int sum = (x, y) -> x + y;
-```
-2) [函数式接口](/Interview-Java/src/test/java/BaseData/FunctionInterfaceDemo.java)
-
-接口|参数|返回值|类别|
----|---|---|---|
-Consumer|T|void|消费型接口|
-Supplier|none|T|供给型接口|
-Function|T|R|函数型接口|
-Predicate|T|boolean|断言型接口|
-
-+ [方法引用](/Interview-Java/src/main/java/www/wjl/com/Interview/service/StreamService.java#L38)：仅仅调用特点方法的 Lambda 快捷写法
-
-Lambda|等效的方法引用|
----|---|
-(Apple a)->a.getWeight()|Apple::getWeight|
-()->Thread.currentThread().dumpStack()|Thread.currentThread()::dumpStack|
-(str,i)->str.substring(i)|String::substring|
-(String s)->System.out.println(s)|System.out::println|
-
-#### Stream API
-+ [构造](/Interview-Java/src/main/java/www/wjl/com/Interview/service/StreamService.java#L17)
-  1) 从 Collection 和数组
-     + Collection.stream()
-     + Collection.parallelStream()
-     + Arrays.stream(T array) or Stream.of()
-  2) 从 BufferedReader
-     + java.io.BufferedReader.lines()
-  3) 静态工厂
-     + java.util.stream.IntStream.range()
-     + java.nio.file.Files.walk()
-  4) 自己构建
-     + java.util.Spliterator
-  5) 其它
-     + Random.ints()
-     + BitSet.stream()
-     + Pattern.splitAsStream(java.lang.CharSequence)
-     + JarFile.stream()
-+ 操作类型
-  + Intermediate：中间操作
-    + map(mapToInt, flatMap 等)：把 input Stream 的每一个元素，映射成 output Stream 的另外一个元素
-    + filter：过滤
-    + distinct、sorted、peek、limit、skip、parallel、sequential、unordered
-  + Terminal：终结操作
-    + forEach、forEachOrdered、toArray、reduce、collect、min、max、count、anyMatch、allMatch、noneMatch、findFirst、findAny、iterator
-  + Short-circuiting：
-    + anyMatch、allMatch、noneMatch、findFirst、findAny、limit 
-    
-+ lambda表达式
-  + Java 11：局部变量类型推断var；
-  + 实现其实是依赖了一些底层的api，在编译阶段，编译器会把lambda表达式进行解糖，转换成调用内部api的方式。
-    
-#### IO、NIO
-+ 管道（Channel）：实际上就像传统IO中的流，到任何目的地(或来自任何地方)的所有数据都必须通过一个 Channel 对象。一个 Buffer 实质上是一个容器对象。
-+ 选择器（Selector）：用于监听多个管道的事件，使用传统的阻塞IO时我们可以方便的知道什么时候可以进行读写，而使用非阻塞通道，我们需要一些方法来知道什么时候通道准备好了，选择器正是为这个需要而诞生的。
-
-IO|NIO
----|---
-面向流|面向缓冲
-阻塞IO|非阻塞IO
-无|选择器
-
-+ 推荐 [🔘IO](https://github.com/GeJinTaiHua/Learn-IO)
-  + 少量的连接。
-  + 连接每次要发送大量的数据。
-+ 推荐 [🔘NIO](https://github.com/GeJinTaiHua/Learn-IO)
-  + 大量的连接。
-  + 连接每次发送少量的数据。
-  + 聊天服务器。
-+ 示例
-  + [文件夹操作](/Interview-Java/src/test/java/IO/LTJX.java)
 
 #### 集合
 1. Collection
@@ -505,40 +201,253 @@ IO|NIO
   + 新建了调用对象；
   + unchecked、捕获异常；
 
-#### Crontab表达式
-字段|允许值（整数）|允许的特殊字符| 
----|---|---|
-秒（Seconds）|0~59|, - * /    四个字符|
-分（Minutes）|0~59|, - * /    四个字符|
-小时（Hours）|0~23|, - * /    四个字符|
-日期（DayofMonth）|1~31|,- * ? / L W C     八个字符|
-月份（Month）|1~12 或 <br>JAN, FEB, MAR, APR, MAY, JUN, <br>JUL, AUG, SEP, OCT, NOV, DEC|, - * /    四个字符|
-星期（DayofWeek）|1~7 （1=SUN=星期日）或 <br>SUN, MON, TUE, WED, THU, FRI, SAT|, - * ? / L C #     八个字符|
-年(可选，留空)（Year）|1970~2099|, - * /    四个字符|
+#### IO、NIO
++ 管道（Channel）：实际上就像传统IO中的流，到任何目的地(或来自任何地方)的所有数据都必须通过一个 Channel 对象。一个 Buffer 实质上是一个容器对象。
++ 选择器（Selector）：用于监听多个管道的事件，使用传统的阻塞IO时我们可以方便的知道什么时候可以进行读写，而使用非阻塞通道，我们需要一些方法来知道什么时候通道准备好了，选择器正是为这个需要而诞生的。
 
+|IO|NIO
+|---|---
+|面向流|面向缓冲
+|阻塞IO|非阻塞IO
+|无|选择器
+
++ 推荐 [🔘IO](https://github.com/GeJinTaiHua/Learn-IO)
+  + 少量的连接。
+  + 连接每次要发送大量的数据。
++ 推荐 [🔘NIO](https://github.com/GeJinTaiHua/Learn-IO)
+  + 大量的连接。
+  + 连接每次发送少量的数据。
+  + 聊天服务器。
++ 示例
+  + [文件夹操作](/Interview-Java/src/test/java/IO/LTJX.java)
+
+#### static
+1. 静态方法
+  + 不依赖于任何对象就可以进行访问；
+  + 在静态方法中不能访问类的非静态成员方法/变量；
+  + 在非静态成员方法中可以访问静态成员方法/变量。
+2. 静态变量
+  + 被所有的对象所共享，在内存中只有一个副本；
+  + 当且仅当在类初次加载时会被初始化。
+3. [静态代码块](/Interview-Java/src/test/java/StaticD/Code.java)
+  + 优化程序性能；
+  + 可以置于类中的任何地方，可以有多个static块；
+  + 类初次被加载的时候，会按照static块的顺序来执行每个static块，并且只会执行一次。
+4. [静态内部类](/Interview-Java/src/test/java/StaticD/InnerClass.java)
+5. 静态导包
+  + import static 代替 import；
+  + 导入这个类里的静态方法。
+
+#### Error、Exception
++ Error：Java 运行时系统的内部错误和资源耗尽错误。
++ Exception：标准Java库方法所激发的异常。
+  + Runtime_Exception
+    + 错误的类型转换（ClassCastException）；
+    + 数组访问越界（ArrayIndexOutOfBoundsException）； 
+    + 访问 null 指针（NullPointerException）； 
+  + 非RuntimeException
+    + 试图在文件尾部后面读取数据；
+    + 试图打开一个不存在的文件；
+    + 试图根据给定的字符串查找 Class 对象， 而这个字符串表示的类并不存在。
++ try catch finally return 执行顺序
+  + finally语句总会执行；
+  + 如果try、catch中有return语句，finally中没有return，那么在finally中修改除包装类型和静态变量、全局变量以外的数据都不会对try、catch中返回的变量有任何的影响；
+  + 在finally中使用return语句，会忽略try、catch中的return语句，也会忽略try、catch中的异常，屏蔽了错误的发生；
+  + finally中避免再次抛出异常，一旦finally中发生异常，代码执行将会抛出finally中的异常信息，try、catch中的异常将被忽略
+  + [示例](/Interview-Java/src/test/java/TryExceptionFinally/tryTest.java)
+
+#### final、finally、finalize
++ final
+  + 类
+    + 表明这个类不能被继承。
+    + final类中的所有成员方法都会被隐式地指定为final方法。
+  + 方法
+    + 把方法锁定，以防任何继承类修改它的含义；
+    + 类的private方法会隐式地被指定为final方法。
+  + 变量
+    + 基本数据类型：数值一旦在初始化之后便不能更改；
+    + 引用类型：在对其初始化之后便不能再让其指向另一个对象。	
++ finally：在异常处理时提供 finally 块来执行任何清除操作。
++ finalize：方法名；finalize() 方法在垃圾收集器将对象从内存中清除出去之前做必要的清理工作。
+
+#### Comparable 、Comparator
++ Comparable：接口强行对实现它的每个类的对象进行整体排序（自然排序）（内部排序）。
+  + 是由对象自己实现的
 ```
-每秒：* * * * * ? *
-每分：0 * * * * ? *
-每时：0 0 * * * ? *
-每日：0 0 0 * * ? *
+public int compareTo(T o);
+```
++ Comparator：接口新建一个比较器，通过该比较器来对类进行排序（外部排序）。
+  + 由外部实现
+  + 策略模式
+```
+int compare(T o1, T o2);
+boolean equals(Object obj);
 ```
 
-#### 四种访问修饰符
-|访问权限|同类|同包|子类|其他包| 
-|:----:|:----:|:----:|:----:|:----:|
-|public|✔|✔|✔|✔|
-|protect|✔|✔|✔|❌|
-|default|✔|✔|❌|❌|
-|private|✔|❌|❌|❌|
+#### String、StringBuilder、StringBuffer
++ String
+  + 字符串常量；
+  + final 修饰，不可被继承；
+  + hashCode() 源码：
+    ```
+        public int hashCode() {
+            int h = hash;
+            if (h == 0 && value.length > 0) {
+                char val[] = value;
+     
+                for (int i = 0; i < value.length; i++) {
+                    h = 31 * h + val[i];
+                }
+                hash = h;
+            }
+            return h;
+        }
+    ```
+  + String常量池
++ StringBuilder 
+  + 字符串变量（非线程安全）；
+  + 默认容量16；
+  + toString() 源码：
+    ```
+    public String toString() {
+      // Create a copy, don't share the array
+      return new String(value, 0, count);
+    }
+    ```
++ StringBuffer 
+  + 字符串变量（线程安全）；
+  + toString()方法会进行对象缓存，以减少元素的复制开销；
+  + toString() 源码：
+    ```
+    public synchronized String toString() {
+      if (toStringCache == null) {
+        toStringCache = Arrays.copyOfRange(value, 0, count);
+      }
+      return new String(toStringCache, true);
+    }
+    ```
 
-### 并发
-#### Java的5种线程状态
+### 语法糖
++ switch 支持 String 与枚举
++ 泛型
++ 自动装箱与拆箱
++ 方法变长参数
++ 枚举
++ 内部类
++ 遍历循环
++ 条件编译
++ 断言语句
++ try语句中定义和关闭资源
+
+#### 泛型
++ T 
++ extends
+  + 上界 <? extends T>
+  + 不能往里存，只能往外取  
+  ![extends](https://images2018.cnblogs.com/blog/1043143/201804/1043143-20180414164334299-153062921.jpg)
++ super
+  + 下界 <? super T>  
+  + 往外取只能赋值给Object变量，不影响往里存  
+  ![super](https://images2018.cnblogs.com/blog/1043143/201804/1043143-20180414164527508-811736127.jpg)
++ 类型擦除：虚拟机中没有泛型，只有普通类和普通方法；所有泛型类的类型参数在编译时都会被擦除，泛型类并没有自己独有的Class类对象；比如并不存在List<String>.class或是List<Integer>.class，而只有List.class。
+
+#### Stream API
++ [构造](/Interview-Java/src/main/java/www/wjl/com/Interview/service/StreamService.java#L17)
+  1) 从 Collection 和数组
+     + Collection.stream()
+     + Collection.parallelStream()
+     + Arrays.stream(T array) or Stream.of()
+  2) 从 BufferedReader
+     + java.io.BufferedReader.lines()
+  3) 静态工厂
+     + java.util.stream.IntStream.range()
+     + java.nio.file.Files.walk()
+  4) 自己构建
+     + java.util.Spliterator
+  5) 其它
+     + Random.ints()
+     + BitSet.stream()
+     + Pattern.splitAsStream(java.lang.CharSequence)
+     + JarFile.stream()
++ 操作类型
+  + Intermediate：中间操作
+    + map(mapToInt, flatMap 等)：把 input Stream 的每一个元素，映射成 output Stream 的另外一个元素
+    + filter：过滤
+    + distinct、sorted、peek、limit、skip、parallel、sequential、unordered
+  + Terminal：终结操作
+    + forEach、forEachOrdered、toArray、reduce、collect、min、max、count、anyMatch、allMatch、noneMatch、findFirst、findAny、iterator
+  + Short-circuiting：
+    + anyMatch、allMatch、noneMatch、findFirst、findAny、limit 
+    
++ lambda表达式
+  + Java 11：局部变量类型推断var；
+  + 实现其实是依赖了一些底层的api，在编译阶段，编译器会把lambda表达式进行解糖，转换成调用内部api的方式。
+
+#### Lambda 表达式
+1) expression = (variable) -> action
+   + variable：这是一个变量，一个占位符。像x、y、z可以是多个变量；
+   + action：这是我们实现的代码逻辑部分，它可以是一行代码也可以是一个代码片段。
+```
+\\创建了一个函数，用来计算两个操作数的和。
+int sum = (x, y) -> x + y;
+```
+2) [函数式接口](/Interview-Java/src/test/java/BaseData/FunctionInterfaceDemo.java)
+
+接口|参数|返回值|类别|
+---|---|---|---|
+Consumer|T|void|消费型接口|
+Supplier|none|T|供给型接口|
+Function|T|R|函数型接口|
+Predicate|T|boolean|断言型接口|
+
++ [方法引用](/Interview-Java/src/main/java/www/wjl/com/Interview/service/StreamService.java#L38)：仅仅调用特点方法的 Lambda 快捷写法
+
+Lambda|等效的方法引用|
+---|---|
+(Apple a)->a.getWeight()|Apple::getWeight|
+()->Thread.currentThread().dumpStack()|Thread.currentThread()::dumpStack|
+(str,i)->str.substring(i)|String::substring|
+(String s)->System.out.println(s)|System.out::println|
+
+#### switch...case...default...
++ switch(A)
+  + A的取值只能是整型或者可以转换为整型的数值类型，比如byte、short、int、char、还有枚举；
+  + Java 7：取值支持String；通过equals()和hashCode()方法来实现的。
++ case B:C
+  + 常量表达式；B的取值只能是常量（需要定义一个final型的常量）或者byte、short、int、char、String；
+  + Java 12：允许合并多个条件；
++ default
+  + 没有符合的case就执行它;
+  + 并不是必须的。
+
+### 线程与并发
+#### 5种线程状态
 + 新建（new）
 + 运行（runable）：包括了操作系统线程状态中的running和ready；
-+ 无限期等待（waiting）
-+ 限期等待（timed waiting）
++ 等待
+  + 无限期等待（waiting）
+  + 限期等待（timed waiting）
 + 阻塞（blocked）
 + 结束（terminated）
+
+#### Thread、Runnable、Callable
+1) [Thread](/Interview-Java/src/test/java/Thread/ThreadT.java)（类）
+   + start()：启动一个线程，这时此线程处于就绪（可运行）状态；
+   + run()：只是类的一个普通方法而已。
+   + 缺点：
+     + 每次通过new Thread()创建对象性能不佳；
+     + 线程缺乏统一管理，可能无限制新建线程，相互之间竞争，及可能占用过多系统资源导致死机或oom；
+     + 缺乏更多功能，如定时执行、定期执行、线程中断。
+2) Runnable（接口）
+   + 避免继承的局限，一个类可以继承多个接口；
+   + 适合于资源的共享，节约资源。
+3) Callable（接口）
+4) [ExecutorService、Callable、Future](/Interview-Java/src/test/java/Thread/ESF.java)
+5) CompletableFuture：JDK1.8
+
++ 简单示例：
+  + [3个线程交替输出 1-100](/Interview-Java/src/test/java/Thread/ThreeAlternate.java)
+  + [3个线程顺序执行](/Interview-Java/src/test/java/Thread/ThreadByOrder.java)
 
 #### volatile
 + 作用：
@@ -549,8 +458,9 @@ IO|NIO
   + 变量不需要与其他的状态变量公共参与不变约束。
 + 其他实现可见性的关键字：Synchronized、final
 
-#### Synchronized
+#### synchronized
 + 非公平，悲观，独享，互斥，可重入的重量级锁。
+
 + 实现原理：
   1) Contention List：竞争队列，所有请求锁的线程首先被放在这个竞争队列中；
   2) Entry List：Contention List中那些有资格成为候选资源的线程被移动到Entry List中；
@@ -559,9 +469,36 @@ IO|NIO
   5) Wait Set：哪些调用wait方法被阻塞的线程被放置在这里；
   6) !Owner：当前释放锁的线程。
   ![实现原理](https://img-blog.csdn.net/20170418221917277?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvenF6X3pxeg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
 + Obj.wait() 与 Obj.notify() 必须要与 synchronized(Obj) 一起使用
   + wait就是说线程在获取对象锁后，主动释放对象锁，同时本线程休眠。直到有其它线程调用对象的notify()唤醒该线程，才能继续获取对象锁，并继续执行。相应的notify()就是对对象锁的唤醒操作；
   + notify()调用后，并不是马上就释放对象锁的，而是在相应的synchronized(){}语句块执行结束，自动释放锁后，JVM会在wait()对象锁的线程中随机选取一线程，赋予其对象锁，唤醒线程，继续执行。如果是notifyAll()就会释放所有的锁。
+
++ 作用对象：
+  1) [代码块](/Interview-Java/src/test/java/Synchronized/SyncThread.java#L14)（同步语句块）
+     + 作用的范围：大括号{}括起来的代码；
+     + 作用的对象：调用这个代码块的对象；
+     + 注意：
+       + 一个线程访问一个对象中的synchronized(this)同步代码块时，其他试图访问该对象的线程将被阻塞；
+       + 当一个线程访问对象的一个synchronized(this)同步代码块时，另一个线程仍然可以访问该对象中的非synchronized(this)同步代码块。
+
+  2) [方法](/Interview-Java/src/test/java/Synchronized/SyncThread.java#L22)（同步方法）
+     + 作用的范围：整个方法；
+     + 作用的对象：调用这个方法的对象；
+     + 注意：
+       + synchronized关键字不能继承；
+       + 在定义接口方法时不能使用synchronized关键字；
+       + 构造方法不能使用synchronized关键字，但可以使用synchronized代码块来进行同步。
+
+   3) [静态的方法](/Interview-Java/src/test/java/Synchronized/SyncThread.java#L29)
+      + 作用的范围：整个静态方法；
+      + 作用的对象：这个类的所有对象；
+      + 注意：静态方法是属于类的而不属于对象的。同样的，synchronized修饰的静态方法锁定的是这个类的所有对象。
+
+   4) [类](/Interview-Java/src/test/java/Synchronized/SyncThread.java#L36)
+      + 作用的范围：synchronized后面括号括起来的部分；
+      + 作用的对象：这个类的所有对象；
+      + 注意：synchronized作用于一个类T时，是给这个类T加锁，T的所有对象用的是同一把锁。
 
 #### Lock
 + ReentrantLock：默认非公平但可实现公平的，悲观，独享，互斥，可重入，重量级锁。
@@ -890,7 +827,3 @@ private static void alloc() {
      + 回边计数器
 + [即时编译器优化技术一览](/Interview-Java/src/test/java/JIT/Skills.java)
   
-
-
-
-
