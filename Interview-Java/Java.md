@@ -550,7 +550,7 @@ Lambda|等效的方法引用|
      - 系统类加载器（Application ClassLoader）
      - 自定义类加载器
      + 双亲委派机制：类加载器收到类加载请求，自己不加载，向上委托给父类加载，父类加载不了，再自己加载。
-     ![](https://upload-images.jianshu.io/upload_images/1986868-7ed5dc72e8f95e41.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/661)
+     ![类加载过程](https://upload-images.jianshu.io/upload_images/1986868-7ed5dc72e8f95e41.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/661)
   2) 验证（Verification）：确保Class文件的字节流中包含的信息符合当前虚拟机的要求，并且不会危害虚拟机自身的安全。
      + 文件格式验证
      + 元数据验证
