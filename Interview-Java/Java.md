@@ -22,6 +22,7 @@
     * [switch\.\.\.case\.\.\.default\.\.\.](#switchcasedefault)
   * [线程与并发](#%E7%BA%BF%E7%A8%8B%E4%B8%8E%E5%B9%B6%E5%8F%91)
     * [5种线程状态](#5%E7%A7%8D%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81)
+    * [守护线程](#守护线程)
     * [Thread、Runnable、Callable](#threadrunnablecallable)
     * [volatile](#volatile)
     * [synchronized](#synchronized)
@@ -429,6 +430,21 @@ Lambda|等效的方法引用|
   + 限期等待（timed waiting）
 + 阻塞（blocked）
 + 结束（terminated）
+
+#### 守护线程
++ 用户线程（User Thread）
++ 守护线程（Daemon Thread）
+  + 只要当前JVM实例中尚存在任何一个非守护线程没有结束，守护线程就全部工作；只有当最后一个非守护线程结束时，守护线程随着JVM一同结束工作；
+  + 最典型的应用：GC(垃圾回收器)
+```
+Thread daemonTread = new Thread();  
+
+// 设定 daemonThread 为 守护线程，default false(非守护线程)  
+daemonThread.setDaemon(true);  
+
+// 验证当前线程是否为守护线程，返回 true 则为守护线程  
+daemonThread.isDaemon();
+```
 
 #### Thread、Runnable、Callable
 1) [Thread](/Interview-Java/src/test/java/Thread/ThreadT.java)（类）
