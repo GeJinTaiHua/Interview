@@ -80,6 +80,7 @@
 + Redis事务：将多个命令打包， 然后一次性、按顺序地执行
   + MULTI：开始一个事务
   + EXEC：执行事务
+  ![流程](/Interview-DB/Pic/RedisTran.png)
 
 #### MongoDB
 + 数据库（database）
