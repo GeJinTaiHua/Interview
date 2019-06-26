@@ -22,14 +22,16 @@
     * [switch\.\.\.case\.\.\.default\.\.\.](#switchcasedefault)
   * [线程与并发](#%E7%BA%BF%E7%A8%8B%E4%B8%8E%E5%B9%B6%E5%8F%91)
     * [5种线程状态](#5%E7%A7%8D%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81)
-    * [守护线程](#守护线程)
+    * [守护线程](#%E5%AE%88%E6%8A%A4%E7%BA%BF%E7%A8%8B)
     * [Thread、Runnable、Callable](#threadrunnablecallable)
     * [volatile](#volatile)
     * [synchronized](#synchronized)
     * [Lock](#lock)
     * [ThreadLocal](#threadlocal)
-    * [BlockingQueue](#blockingqueue)
-    * [Semaphore](#semaphore)
+    * [java\.util\.concurrent包](#javautilconcurrent%E5%8C%85)
+      * [BlockingQueue](#blockingqueue)
+      * [Semaphore](#semaphore)
+      * [CountDownLatch](#countdownlatch)
   * [JVM](#jvm)
     * [JVM 类加载机制](#jvm-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6)
     * [JVM 内存模型](#jvm-%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B)
@@ -531,8 +533,10 @@ daemonThread.isDaemon();
   + 数据库连接；
   + Session管理；
   + 用户上下文；
-  
-#### BlockingQueue
+
+#### java.util.concurrent包
+![concurrent包](/Interview-Java/Pic/concurrent.png)
+##### BlockingQueue
 + 不接受 null 元素，NullPointerException；
 + 线程安全；
 + 具体实现：
@@ -550,12 +554,24 @@ daemonThread.isDaemon();
 |移除|remove()|poll()|take()|poll(time, unit)|
 |检查|element()|peek()|-|-|
 
-#### Semaphore
-+ 一个计数信号量，必须由获取它的线程释放；
+##### Semaphore
+一个计数信号量，必须由获取它的线程释放；
 + 操作：
   + acquire()：获取许可证
   + release()：归还许可证
 + [流量控制](/Interview-Java/src/test/java/Thread/SemaphoreTest.java)：30个线程只允许10个同时存在。
+
+##### CountDownLatch
+实现类似计数器的功能，一个线程等待其他N个线程执行完在执行；
+```
+// 调用await()方法的线程会被挂起，它会等待直到count值为0才继续执行
+public void await() throws InterruptedException { };   
+// 和await()类似，只不过等待一定的时间后count值还没变为0的话就会继续执行
+public boolean await(long timeout, TimeUnit unit) throws InterruptedException { };  
+// 将count值减1
+public void countDown() { }; 
+```
+[示例](/Interview-Java/src/main/java/www/wjl/com/Interview/CountDownLatchTest.java)
 
 ### JVM
 #### JVM 类加载机制
