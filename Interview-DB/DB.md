@@ -48,12 +48,12 @@
     + CouchDB
 
 #### Redis
-基于内存的采用的【单进程单线程】模型的KV数据库，由C语言编写。
 + 为什么快
   + 完全基于内存；
   + 单线程，避免了多线程的频繁上下文切换问题；
   + 基于非阻塞的IO多路复用机制；
   + 数据结构简单，对数据操作也简单；
+
 + 五种数据结构：
   + String：缓存、限流、计数器、分布式锁、分布式Session
     + 底层实现：int、raw、embstr-54
@@ -70,15 +70,16 @@
     + 底层实现：intset（整数集合）或者hashtable（字典或者也叫哈希表）
   + Zset：排行榜
     + 底层实现：ziplist（压缩列表）或者skiplist（跳跃表）
-  
-![内部存储结构](/Interview-DB/Pic/dictEntyr.png)
-![object encoding 对应不同编码](/Interview-DB/Pic/encoding.png)
 
-+ 四种持久化存储方案
++ 四种持久化存储方案：
   + RDB（快照/内存快照）：按照一定的时间周期将目前服务中的所有数据全部写入到磁盘中；
   + AOF
   + VM（虚拟内存）：从 Redis Version 2.4 开始就被官方明确表示不再建议使用；
   + DISKSTORE：Redis Version 2.8 开始提出的一个存储设想，官方没有明确建议使用这用方式。
+
++ Redis事务：将多个命令打包， 然后一次性、按顺序地执行
+  + MULTI：开始一个事务
+  + EXEC：执行事务
 
 #### MongoDB
 + 数据库（database）
