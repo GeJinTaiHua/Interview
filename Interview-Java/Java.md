@@ -678,7 +678,7 @@ public void countDown() { };
   + 老年代：
     - 对象存活的时间比较长，比较稳定，因此采用**标记（Mark）算法**来进行回收。
     - Full GC  
-  ![新生代老年代](http://images0.cnblogs.com/blog/587773/201409/061921034534396.png)
+  ![新生代老年代](/Interview-Java/Pic/FD.png)
 
 3.按照系统线程分类：
 + 串行收集

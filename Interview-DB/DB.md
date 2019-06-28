@@ -94,6 +94,14 @@
     + 一致性：保证；
     + 隔离性：保证；
 
++ 查询慢原因
+  + 慢查询语句；
+  ``
+   INFO commandstats
+  ``
+  + 排队等待时间；
+  + RDB备份时，数据量比较大；
+
 #### MongoDB
 + 数据库（database）
 + 集合（collection）
