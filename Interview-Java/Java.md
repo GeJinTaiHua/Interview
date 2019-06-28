@@ -647,25 +647,25 @@ public void countDown() { };
 + IBM J9
 
 #### GC 收集算法
-+ 引用计数法
++ 引用计数法（Reference Counting）
   + 引用计数是垃圾收集器中的早期策略。
   + 堆中每个对象实例都有一个引用计数。
   + 优点：引用计数收集器可以很快的执行，交织在程序运行中；对程序需要不被长时间打断的实时环境比较有利。
   + 缺点：无法检测出循环引用。
-+ 标记-清除算法
++ 标记-清除算法（Mark-Sweep）
   1) 首先标记出所有需要回收的对象；
   2) 在标记完成后统一回收所有被标记的对象。  
-  ![标记-清除算法](https://upload-images.jianshu.io/upload_images/3985563-1b31d5ebe8dec659.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/267)
+  ![标记-清除算法](/Interview-Java/Pic/Mark-Sweep.png)
   + 缺点：标记和清除两个过程的效率都不高；产生大量不连续的内存碎片。
-+ 复制算法（商业虚拟机采用）
++ 复制算法（商业虚拟机采用）（Copying）
   1) 将可用内存按容量大小划分为大小相等的两块，每次只使用其中的一块；
   2) 当一块内存使用完了，就将还存活着的对象复制到另一块上面，然后再把已使用过的内存空间一次清理掉。  
-  ![复制算法](https://upload-images.jianshu.io/upload_images/3985563-1b7d8f53a44cdfdb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+  ![复制算法](/Interview-Java/Pic/Copying.png)
   + 缺点：将内存缩小为了原来的一半。
-+ 标记-整理算法
++ 标记-整理算法（Mark-Compact）
   1) 首先标记出所有需要回收的对象；
   2) 让所有存活的对象都向一端移动，然后直接清理掉边界以外的内存。  
-  ![标记-整理算法](https://upload-images.jianshu.io/upload_images/3985563-1bd60604e0c0f46a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/571)
+  ![标记-整理算法](/Interview-Java/Pic/Mark-Compact.png)
 + 分代收集算法
   + 新生代：
     - 存活时间较短，因此基于**复制算法**来进行回收。
