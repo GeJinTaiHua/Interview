@@ -337,7 +337,7 @@ name=GeJinTaiHua
   + 内部类和外部模块的引用；
   + 不正确的单例。
 
-+ Java内存泄漏分析：
++ Java 内存泄漏分析
   + java.lang.OutOfMemoryError: Java heap space
     + 老年代堆空间被占满
     + 最典型的内存泄漏方式，所有堆空间都被无法回收的垃圾对象占满，虚拟机无法再在分配新空间。
