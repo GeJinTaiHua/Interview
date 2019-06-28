@@ -2,51 +2,52 @@
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-1.5.13-brightgreen.svg)
 ![build passing](https://img.shields.io/badge/build-passing-brightgreen.svg) 
 
-  * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
-    * [8大基本类型](#8%E5%A4%A7%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B)
-    * [4种访问修饰符](#4%E7%A7%8D%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6)
-    * [4种引用](#4%E7%A7%8D%E5%BC%95%E7%94%A8)
-    * [集合](#%E9%9B%86%E5%90%88)
-    * [接口](#%E6%8E%A5%E5%8F%A3)
-    * [Spring事务](#spring%E4%BA%8B%E5%8A%A1)
-    * [IO、NIO](#ionio)
-    * [static](#static)
-    * [Error、Exception](#errorexception)
-    * [final、finally、finalize](#finalfinallyfinalize)
-    * [Comparable 、Comparator](#comparable-comparator)
-    * [String、StringBuilder、StringBuffer](#stringstringbuilderstringbuffer)
-  * [语法糖](#%E8%AF%AD%E6%B3%95%E7%B3%96)
-    * [泛型](#%E6%B3%9B%E5%9E%8B)
-    * [Stream API](#stream-api)
-    * [Lambda 表达式](#lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F)
-    * [switch\.\.\.case\.\.\.default\.\.\.](#switchcasedefault)
-  * [线程与并发](#%E7%BA%BF%E7%A8%8B%E4%B8%8E%E5%B9%B6%E5%8F%91)
-    * [5种线程状态](#5%E7%A7%8D%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81)
-    * [守护线程](#%E5%AE%88%E6%8A%A4%E7%BA%BF%E7%A8%8B)
-    * [Thread、Runnable、Callable](#threadrunnablecallable)
-    * [volatile](#volatile)
-    * [synchronized](#synchronized)
-    * [Lock](#lock)
-    * [ThreadLocal](#threadlocal)
-    * [java\.util\.concurrent包](#javautilconcurrent%E5%8C%85)
-      * [BlockingQueue](#blockingqueue)
-      * [Semaphore](#semaphore)
-      * [CountDownLatch](#countdownlatch)
-  * [JVM](#jvm)
-    * [JVM 类加载机制](#jvm-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6)
-    * [JVM 内存模型](#jvm-%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B)
-    * [JVM 种类](#jvm-%E7%A7%8D%E7%B1%BB)
-    * [GC 收集算法](#gc-%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95)
-    * [GC 种类](#gc-%E7%A7%8D%E7%B1%BB)
-    * [GC When What How](#gc-when-what-how)
-    * [常见配置](#%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE)
-    * [常用命令](#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4)
-  * [JIT](#jit)
-    * [逃逸分析](#%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90)
-    * [同步省略](#%E5%90%8C%E6%AD%A5%E7%9C%81%E7%95%A5)
-    * [标量替换](#%E6%A0%87%E9%87%8F%E6%9B%BF%E6%8D%A2)
-    * [栈上分配](#%E6%A0%88%E4%B8%8A%E5%88%86%E9%85%8D)
-    * [即时编译](#%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91)
+   * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
+     * [8大基本类型](#8%E5%A4%A7%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B)
+     * [4种访问修饰符](#4%E7%A7%8D%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6)
+     * [4种引用](#4%E7%A7%8D%E5%BC%95%E7%94%A8)
+     * [集合](#%E9%9B%86%E5%90%88)
+     * [接口](#%E6%8E%A5%E5%8F%A3)
+     * [Spring事务](#spring%E4%BA%8B%E5%8A%A1)
+     * [IO、NIO](#ionio)
+     * [static](#static)
+     * [Error、Exception](#errorexception)
+     * [final、finally、finalize](#finalfinallyfinalize)
+     * [Comparable 、Comparator](#comparable-comparator)
+     * [String、StringBuilder、StringBuffer](#stringstringbuilderstringbuffer)
+   * [语法糖](#%E8%AF%AD%E6%B3%95%E7%B3%96)
+     * [泛型](#%E6%B3%9B%E5%9E%8B)
+     * [Stream API](#stream-api)
+     * [Lambda 表达式](#lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F)
+     * [switch\.\.\.case\.\.\.default\.\.\.](#switchcasedefault)
+   * [线程与并发](#%E7%BA%BF%E7%A8%8B%E4%B8%8E%E5%B9%B6%E5%8F%91)
+     * [5种线程状态](#5%E7%A7%8D%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81)
+     * [守护线程](#%E5%AE%88%E6%8A%A4%E7%BA%BF%E7%A8%8B)
+     * [Thread、Runnable、Callable](#threadrunnablecallable)
+     * [sleep()、wait()、yeild()](#sleepwaityeild)
+     * [volatile](#volatile)
+     * [synchronized](#synchronized)
+     * [Lock](#lock)
+     * [ThreadLocal](#threadlocal)
+     * [java\.util\.concurrent包](#javautilconcurrent%E5%8C%85)
+       * [BlockingQueue](#blockingqueue)
+       * [Semaphore](#semaphore)
+       * [CountDownLatch](#countdownlatch)
+   * [JVM](#jvm)
+     * [JVM 类加载机制](#jvm-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6)
+     * [JVM 内存模型](#jvm-%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B)
+     * [JVM 种类](#jvm-%E7%A7%8D%E7%B1%BB)
+     * [GC 收集算法](#gc-%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95)
+     * [GC 种类](#gc-%E7%A7%8D%E7%B1%BB)
+     * [GC When What How](#gc-when-what-how)
+     * [常见配置](#%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE)
+     * [常用命令](#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4)
+   * [JIT](#jit)
+     * [逃逸分析](#%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90)
+     * [同步省略](#%E5%90%8C%E6%AD%A5%E7%9C%81%E7%95%A5)
+     * [标量替换](#%E6%A0%87%E9%87%8F%E6%9B%BF%E6%8D%A2)
+     * [栈上分配](#%E6%A0%88%E4%B8%8A%E5%88%86%E9%85%8D)
+     * [即时编译](#%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91)
 
 ### 基础知识
 #### 8大基本类型
@@ -459,6 +460,20 @@ daemonThread.isDaemon();
 + 简单示例：
   + [3个线程交替输出 1-100](/Interview-Java/src/test/java/Thread/ThreeAlternate.java)
   + [3个线程顺序执行](/Interview-Java/src/test/java/Thread/ThreadByOrder.java)
+
+#### sleep()、wait()、yeild()
++ sleep()：让当前正在执行的线程在指定的时间内暂停执行，进入阻塞状态。
+  + 不会释放“锁标志”；
+  + 让其他同优先级或者高优先级的线程得到执行的机会，也可以让低优先级的线程得到执行机会；
++ wait()：
+  + 会释放对象的“锁标志”；
+  + 需要和 notify() 及 notifyAll() 方法一起使用；
+  + 必须在 synchronized 语句块内使用；
++ yeild()：使当前线程重新回到可执行状态。
+  + 不会释放“锁标志”；
+  + 有可能在进入到可执行状态后马上又被执行；
+  + 只能使同优先级或者高优先级的线程得到执行机会；
++ join()：使当前线程等待调用join()方法的线程结束后才能继续执行。
 
 #### volatile
 + 作用：
