@@ -205,24 +205,17 @@ String str ="hello";
   + unchecked、捕获异常；
 
 #### IO、NIO
+|-     |面向  |阻塞  |特点  |推荐场景|
+|:----:|:----:|:----:|:----:|:----:|
+|IO    |流    |阻塞IO|无    |少量的连接，每次要发送大量的数据|
+|NIO   |缓冲  |非阻塞IO|选择器|大量的连接，每次发送少量的数据|
+
 + 管道（Channel）：实际上就像传统IO中的流，到任何目的地(或来自任何地方)的所有数据都必须通过一个 Channel 对象。一个 Buffer 实质上是一个容器对象。
 + 选择器（Selector）：用于监听多个管道的事件，使用传统的阻塞IO时我们可以方便的知道什么时候可以进行读写，而使用非阻塞通道，我们需要一些方法来知道什么时候通道准备好了，选择器正是为这个需要而诞生的。
-
-|IO|NIO
-|---|---
-|面向流|面向缓冲
-|阻塞IO|非阻塞IO
-|无|选择器
-
-+ 推荐 [🔘IO](https://github.com/GeJinTaiHua/Learn-IO)
-  + 少量的连接。
-  + 连接每次要发送大量的数据。
-+ 推荐 [🔘NIO](https://github.com/GeJinTaiHua/Learn-IO)
-  + 大量的连接。
-  + 连接每次发送少量的数据。
-  + 聊天服务器。
-+ 示例
-  + [文件夹操作](/Interview-Java/src/test/java/IO/LTJX.java)
++ 标准数据流
+  + [标准输入流](/Interview-Java/src/test/java/IO/LTJX.java)
+  + 标准输出流
+  + 标准错误输出流
 
 #### static
 1. 静态方法
