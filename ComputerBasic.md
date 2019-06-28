@@ -336,6 +336,26 @@ name=GeJinTaiHua
   + 监听器，在释放对象的同时没有删除对应监听器；
   + 内部类和外部模块的引用；
   + 不正确的单例。
+
++ Java内存泄漏分析：
+  + java.lang.OutOfMemoryError: Java heap space
+    + 老年代堆空间被占满
+    + 最典型的内存泄漏方式，所有堆空间都被无法回收的垃圾对象占满，虚拟机无法再在分配新空间。
+    + 解决方法：根据垃圾回收前后情况对比，同时根据对象引用情况（常见的集合对象引用）分析，基本可以找到泄漏点。
+    ![](/Pic/JavaHeadSpace.png)
+  + java.lang.OutOfMemoryError: PermGen space
+    + 持久代被占满
+    + 原因：大量动态反射生成的类不断被加载，最终导致Perm区被占满。
+  + java.lang.StackOverflowError
+    + 堆栈溢出
+    + 原因：递归没返回，或者循环调用造成。
+  + Fatal: Stack size too small
+    + 线程堆栈满
+    + 解决方法：增加线程栈大小，-Xss2m；分析代码造成泄露部分。
+  + java.lang.OutOfMemoryError: unable to create new native thread
+    + 系统内存被占满
+    + 原因：操作系统没有足够的资源来产生这个线程。
+    + 解决方法：重新设计系统减少线程数量；线程数量不能减少的情况下，通过-Xss减小单个线程大小，以便能生产更多的线程。
   
 ### 安全
 #### 重放攻击

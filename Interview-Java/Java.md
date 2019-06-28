@@ -744,6 +744,7 @@ public void countDown() { };
        3. 最终标记
        4. 筛选回收
      + 可预测的停顿：低停顿的同时实现高吞吐量。
+     ![G1](/Interview-Java/Pic/G1.png)
     
 #### GC When What How 
 + 触发时机
