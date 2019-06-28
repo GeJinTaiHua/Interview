@@ -21,10 +21,12 @@
   * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
     * [三大范式](#%E4%B8%89%E5%A4%A7%E8%8C%83%E5%BC%8F)
     * [五大约束](#%E4%BA%94%E5%A4%A7%E7%BA%A6%E6%9D%9F)
+    * [数据仓库](#数据仓库)
     * [索引](#%E7%B4%A2%E5%BC%95)
     * [count(1) count(主键) count(\*)](#count1-count%E4%B8%BB%E9%94%AE-count)
     * [Limit](#limit)
     * [Select For update](#select-for-update)
+   
 
 ### 数据库
 #### 常用数据库
@@ -258,6 +260,21 @@ select sun(cnt) from table;
 + [默认约束](/Interview-DB/SQL/coustraint.sql#L16) (Default Counstraint) ：该数据的默认值；  
 + [外键约束](/Interview-DB/SQL/coustraint.sql#L21) (Foreign Key Counstraint) ：需要建立两表间的关系并引用主表的列。  
 
+#### 数据仓库
++ 特点
+  + 主题性：是针对某个主题来进行组织。
+  + 集成性：需要将多个数据源的数据存到一起，但是这些数据以前的存储方式不同，所以需要经过抽取、清洗、转换的过程。
+  + 稳定性：保存的数据是一系列历史快照，不允许修改，只能分析。
+  + 时变性：会定期接收到新的数据，反应出最新的数据变化。
++ ETL
+  + 数据抽取(Extract)：把数据从数据源读出来；
+  + 数据转换(Transform)：把数据转换为特定的格式；
+  + 数据加载(Load)：把处理后的数据加载到目标处。
+  ![](/Interview-DB/Pic/ETL.png)
++ 主流的数据仓库
+  + Hive：基于Hadoop
+  + Teradata    
+  
 #### 索引
 + 使用时机
   + 经常出现在 group by,order by 和 distinc 关键字后面的字段；
