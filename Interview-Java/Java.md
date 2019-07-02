@@ -2,7 +2,6 @@
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-1.5.13-brightgreen.svg)
 ![build passing](https://img.shields.io/badge/build-passing-brightgreen.svg) 
 
-   * [框架](#框架)
    * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
      * [8大基本类型](#8%E5%A4%A7%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B)
      * [4种访问修饰符](#4%E7%A7%8D%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6)
@@ -49,21 +48,10 @@
      * [标量替换](#%E6%A0%87%E9%87%8F%E6%9B%BF%E6%8D%A2)
      * [栈上分配](#%E6%A0%88%E4%B8%8A%E5%88%86%E9%85%8D)
      * [即时编译](#%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91)
-
-### 框架
-+ SSH
-  + Struts2
-  + Spring
-  + [Hibernate](https://github.com/GeJinTaiHua/Learn-Hibernate)
-
-+ SSM
-  + SpringMVC 
-  + Spring
-  + MyBatis  
-
-+ RPC
-  + [Dubbo](https://github.com/GeJinTaiHua/Learn-Dubbo)
-  + [gRPC](https://github.com/GeJinTaiHua/Learn-gRPC)
+   * [框架](#框架)
+     * [Spring](#Spring)
+       * [Spring Bean的生命周期](#Spring-Bean的生命周期)
+       * [Spring Bean的作用域](#Spring-Bean的作用域)
 
 ### 基础知识
 #### 8大基本类型
@@ -894,3 +882,34 @@ private static void alloc() {
      + 回边计数器
 + [即时编译器优化技术一览](/Interview-Java/src/test/java/JIT/Skills.java)
   
+### 框架
++ SSH
+  + Struts2
+  + Spring
+  + [Hibernate](https://github.com/GeJinTaiHua/Learn-Hibernate)
+
++ SSM
+  + SpringMVC 
+  + Spring
+  + MyBatis  
+
++ RPC
+  + [Dubbo](https://github.com/GeJinTaiHua/Learn-Dubbo)
+  + [gRPC](https://github.com/GeJinTaiHua/Learn-gRPC)
+  
+#### Spring
+##### Spring Bean的生命周期
+1. 实例化Bean
+2. 设置对象属性（依赖注入）
+3. 处理Aware接口
+4. BeanPostProcessor
+5. InitializingBean 与 init-method
+6. DisposableBean
+7. destroy-method
+
+##### Spring Bean的作用域
++ singleton：默认，单例。
++ prototype：每次返回的都是一个新的实例。
++ request：每次HTTP请求都会创建一个新的Bean，适用于WebApplicationContext环境。
++ session：不同Session使用不同的实例。
++ global-session：同session作用域不同的是，所有的Session共享一个Bean实例。
