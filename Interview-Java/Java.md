@@ -867,13 +867,19 @@ private static void alloc() {
   
 #### Spring
 ##### Spring Bean的生命周期
-1. 实例化Bean
+![bean](/Interview-Java/Pic/bean.png)
+1. 实例化Bean对象
 2. 设置对象属性（依赖注入）
 3. 处理Aware接口
+   + BeanNameAware接口：setBeanName()
+   + BeanFactoryAware接口：setBeanFactory()
 4. BeanPostProcessor
+   + postProcessBeforeInitialization接口：前置处理器
+   + postProcessAfterInitialization接口：后置处理器
 5. InitializingBean 与 init-method
-6. DisposableBean
-7. destroy-method
+6. 使用Bean
+7. DisposableBean
+8. destroy-method
 
 ##### Spring Bean的作用域
 + singleton：默认，单例。
