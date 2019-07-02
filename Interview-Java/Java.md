@@ -8,7 +8,6 @@
      * [4种引用](#4%E7%A7%8D%E5%BC%95%E7%94%A8)
      * [集合](#%E9%9B%86%E5%90%88)
      * [接口](#%E6%8E%A5%E5%8F%A3)
-     * [Spring事务](#spring%E4%BA%8B%E5%8A%A1)
      * [IO、NIO](#ionio)
      * [static](#static)
      * [Error、Exception](#errorexception)
@@ -52,6 +51,7 @@
      * [Spring](#Spring)
        * [Spring Bean的生命周期](#Spring-Bean的生命周期)
        * [Spring Bean的作用域](#Spring-Bean的作用域)
+       * [Spring事务](#spring%E4%BA%8B%E5%8A%A1)
 
 ### 基础知识
 #### 8大基本类型
@@ -177,38 +177,6 @@ String str ="hello";
   4) 静态方法
   5) **私有方法**
   
-#### Spring事务
-+ 5种事务隔离级别
-
-|Isolation|隔离级别|不可避免|
-|----|----|----|
-|DEFAULT|默认|使用数据库默认级别|
-|READ_UNCOMMITTED|读未提交|脏读、不可重复读、幻读|
-|READ_COMMITTED|读已提交|不可重复读、幻读|
-|REPEATABLE_READ|可重复读|幻读|
-|SERIALIZABLE|串行化||
-
-+ 7种事务传播行为
-
-|Propagation|传播行为|
-|----|----|
-|REQUIRED|如果当前无事务则开启一个事务，否则加入当前事务。|
-|SUPPORTS|如果当前有事务则加入当前事务。|
-|MANDATORY|如果当前无事务则抛出异常，否则加入当前事务。|
-|REQUIRES_NEW|如果当前无事务则开启一个事务，否则挂起当前事务并开启新事务。|
-|NOT_SUPPORTED|如果当前有事务，则挂起当前事务以无事务状态执行方法。|
-|NEVER|如果当前有事务，则抛出异常。|
-|NESTED|创建一个嵌套事务，如果当前无事务则创建一个事务。|
-
-+ 2种开启事务的方法
-  + 声明式：注解@transactional、@EnableTransactionManagement
-  + 编程式：Xml配Aop、tx标签
-
-+ @transactional 失效情况：
-  + 方法不是public；
-  + 新建了调用对象；
-  + unchecked、捕获异常；
-
 #### IO、NIO
 |-     |面向  |阻塞  |特点  |推荐场景|
 |:----:|:----:|:----:|:----:|:----:|
@@ -913,3 +881,36 @@ private static void alloc() {
 + request：每次HTTP请求都会创建一个新的Bean，适用于WebApplicationContext环境。
 + session：不同Session使用不同的实例。
 + global-session：同session作用域不同的是，所有的Session共享一个Bean实例。
+
+##### Spring事务
++ 5种事务隔离级别
+
+|Isolation|隔离级别|不可避免|
+|----|----|----|
+|DEFAULT|默认|使用数据库默认级别|
+|READ_UNCOMMITTED|读未提交|脏读、不可重复读、幻读|
+|READ_COMMITTED|读已提交|不可重复读、幻读|
+|REPEATABLE_READ|可重复读|幻读|
+|SERIALIZABLE|串行化||
+
++ 7种事务传播行为
+
+|Propagation|传播行为|
+|----|----|
+|REQUIRED|如果当前无事务则开启一个事务，否则加入当前事务。|
+|SUPPORTS|如果当前有事务则加入当前事务。|
+|MANDATORY|如果当前无事务则抛出异常，否则加入当前事务。|
+|REQUIRES_NEW|如果当前无事务则开启一个事务，否则挂起当前事务并开启新事务。|
+|NOT_SUPPORTED|如果当前有事务，则挂起当前事务以无事务状态执行方法。|
+|NEVER|如果当前有事务，则抛出异常。|
+|NESTED|创建一个嵌套事务，如果当前无事务则创建一个事务。|
+
++ 2种开启事务的方法
+  + 声明式：注解@transactional、@EnableTransactionManagement
+  + 编程式：Xml配Aop、tx标签
+
++ @transactional 失效情况：
+  + 方法不是public；
+  + 新建了调用对象；
+  + unchecked、捕获异常；
+
