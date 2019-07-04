@@ -20,7 +20,8 @@
      * [Lambda 表达式](#lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F)
      * [switch\.\.\.case\.\.\.default\.\.\.](#switchcasedefault)
    * [线程与并发](#%E7%BA%BF%E7%A8%8B%E4%B8%8E%E5%B9%B6%E5%8F%91)
-     * [5种线程状态](#5%E7%A7%8D%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81)
+     * [并发的5种级别](#并发的5种级别)
+     * [线程的5种状态](#线程的5种状态)
      * [守护线程](#%E5%AE%88%E6%8A%A4%E7%BA%BF%E7%A8%8B)
      * [Thread、Runnable、Callable](#threadrunnablecallable)
      * [sleep()、wait()、yeild()](#sleepwaityeild)
@@ -390,7 +391,14 @@ Lambda|等效的方法引用|
   + 并不是必须的。
 
 ### 线程与并发
-#### 5种线程状态
+#### 并发的5种级别
++ 阻塞（Blocking）：synchronized关键字，或者重入锁时就会产生阻塞的线程；
++ 无饥饿（Starvation-Free）:低优先级线程被插队，产生饥饿；
++ 无障碍（Obstruction-Free）：不加锁，都进入临界区执行，冲突就回滚；
++ 无锁（Lock-Free）：无障碍基础上，要求必然有一个线程能够在有限步内完成操作离开临界区 , compareAndSet；
++ 无等待（Wait-Free）：要求所有的线程都必须在有限步内完成，一种典型的无等待结构就是RCU(Read-Copy-Update)，有点像svn解决冲突的方式；
+
+#### 线程的5种状态
 + 新建（new）
 + 运行（runable）：包括了操作系统线程状态中的running和ready；
 + 等待
