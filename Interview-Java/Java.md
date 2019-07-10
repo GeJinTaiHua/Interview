@@ -440,7 +440,7 @@ daemonThread.isDaemon();
   + STOP：指调用了 shutdownNow() 方法，不再接受新任务，同时抛弃阻塞队列里的所有任务并中断所有正在执行任务。
   + TIDYING：所有任务都执行完毕，在调用 shutdown()/shutdownNow() 中都会尝试更新为这个状态。
   + TERMINATED：终止状态，当执行 terminated() 后会更新为这个状态。
-  ![线程池状态](/Interview-Java/Pic/XXC.png)
+  ![线程池状态](/Interview-Java/Pic/XXC.jpg)
 
 #### Thread、Runnable、Callable
 1) [Thread](/Interview-Java/src/test/java/Thread/ThreadT.java)（类）
