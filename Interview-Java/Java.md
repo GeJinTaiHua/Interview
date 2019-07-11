@@ -545,6 +545,9 @@ daemonThread.isDaemon();
 #### java.util.concurrent包
 ![concurrent包](/Interview-Java/Pic/concurrent.png)
 
+##### ConcurrentLinkedQueue
++ 高并发环境中性能最好的队列了；
+
 ##### BlockingQueue
 + 不接受 null 元素，NullPointerException；
 + 线程安全；
