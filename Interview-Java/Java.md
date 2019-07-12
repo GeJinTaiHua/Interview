@@ -561,7 +561,7 @@ public void countDown() { };
      - 系统类加载器（Application ClassLoader）
      - 自定义类加载器
      + 双亲委派机制：类加载器收到类加载请求，自己不加载，向上委托给父类加载，父类加载不了，再自己加载。
-     ![类加载过程](https://upload-images.jianshu.io/upload_images/1986868-7ed5dc72e8f95e41.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/661)
+     ![类加载器](/Interview-Java/Pic/LJZ.png)
   2) 验证（Verification）：确保Class文件的字节流中包含的信息符合当前虚拟机的要求，并且不会危害虚拟机自身的安全。
      + 文件格式验证
      + 元数据验证
@@ -574,6 +574,7 @@ public void countDown() { };
   5) 初始化（Initialization）：对类的静态变量，静态代码块执行初始化操作。
   6) 使用（Using）
   7) 卸载（Unloading）
+  ![类加载过程](/Interview-Java/Pic/ClassLoad.jpg)
   
 + 类的实例化顺序
   1) 父类静态变量；
@@ -588,9 +589,10 @@ public void countDown() { };
 + [顺序](/Interview-Java/src/test/java/ClassLoad/StaticTest.java)：实例初始化不一定要在类初始化结束之后才开始初始化
 
 #### JVM 内存模型
-![内存模型](https://mmbiz.qpic.cn/mmbiz_png/iaIdQfEric9TwVibBF785ic5RU2iafKlnVEsCEed3urDicyv4ObhWyriadrWIr293APDicN5gwEAzuQ2WhqDhyF7wwUZIA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![内存模型](/Interview-Java/Pic/JVM.jpg)
 + 堆：用来存放对象实例。
   + 是垃圾收集器管理的主要区域，因此也被称作GC堆；
+  
 + 方法区（Non-Heap 非堆）：用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。
   + 运行时常量池：存放编译期生成的各种字面量和符号引用。
   + Hotspot在 JDK 1.8中移除整个永久代，取而代之的是一个叫元空间（Metaspace）的区域（永久代使用的是JVM的堆内存空间，而元空间使用的是物理内存，直接受到本机的物理内存限制）。
@@ -598,16 +600,19 @@ public void countDown() { };
 + 虚拟机栈：为虚拟机执行 Java 方法（也就是字节码）服务。
   + 局部变量表：存放了编译器可知的各种数据类型（boolean、byte、char、short、int、float、long、double）、对象引用（reference类型）、returnAddress类型（指向一套字节码指令的地地址）；
   + 操作数栈、动态链接、方法出口信息。
+  
 + 本地方法栈：为虚拟机使用到的 Native 方法服务。
   + 在 HotSpot 虚拟机中和 Java 虚拟机栈合二为一。
+  
 + 程序计数器：是唯不会出现 OutOfMemoryError 的内存区域，它的生命周期随着线程的创建而创建，随着线程的结束而死亡。
   1) 字节码解释器通过改变程序计数器来依次读取指令，从而实现代码的流程控制，如：顺序执行、选择、循环、异常处理；
   2) 在多线程的情况下，程序计数器用于记录当前线程执行的位置，从而当线程被切换回来的时候能够知道该线程上次运行到哪儿了。
+
 + 直接内存：直接内存并不是虚拟机运行时数据区的一部分，也不是虚拟机规范中定义的内存区域，但是这部分内存也被频繁地使用。而且也可能导致OutOfMemoryError异常出现。
 
 + Java堆栈区别：
-  1) 栈内存（虚拟机栈中局部变量表部分）：基本数据类型、局部变量、对象的引用；
-  2) 堆内存：new创建的对象、数组 ；
+  1) 堆内存：new创建的对象、数组 ；
+  2) 栈内存（虚拟机栈中局部变量表部分）：基本数据类型、局部变量、对象的引用；
   3) static修饰的类变量：程序在加载的时候就在堆中为类变量分配内存，堆中的内存地址存放在栈中；
 
 #### JVM 种类
