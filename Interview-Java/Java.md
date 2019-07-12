@@ -574,7 +574,6 @@ public void countDown() { };
   5) 初始化（Initialization）：对类的静态变量，静态代码块执行初始化操作。
   6) 使用（Using）
   7) 卸载（Unloading）
-  ![类加载过程](http://incdn1.b0.upaiyun.com/2017/06/2fb054008ca2898e0a17f7d79ce525a1.png)
   
 + 类的实例化顺序
   1) 父类静态变量；
@@ -595,7 +594,6 @@ public void countDown() { };
 + 方法区（Non-Heap 非堆）：用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。
   + 运行时常量池：存放编译期生成的各种字面量和符号引用。
   + Hotspot在 JDK 1.8中移除整个永久代，取而代之的是一个叫元空间（Metaspace）的区域（永久代使用的是JVM的堆内存空间，而元空间使用的是物理内存，直接受到本机的物理内存限制）。
-![堆](http://incdn1.b0.upaiyun.com/2019/01/19307619b4ddae3ef19002bc6ac51b5c.png)
     
 + 虚拟机栈：为虚拟机执行 Java 方法（也就是字节码）服务。
   + 局部变量表：存放了编译器可知的各种数据类型（boolean、byte、char、short、int、float、long、double）、对象引用（reference类型）、returnAddress类型（指向一套字节码指令的地地址）；
