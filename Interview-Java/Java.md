@@ -16,7 +16,6 @@
      * [String、StringBuilder、StringBuffer](#stringstringbuilderstringbuffer)
    * [语法糖](#%E8%AF%AD%E6%B3%95%E7%B3%96)
      * [泛型](#%E6%B3%9B%E5%9E%8B)
-     * [Stream API](#stream-api)
      * [Lambda 表达式](#lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F)
      * [switch\.\.\.case\.\.\.default\.\.\.](#switchcasedefault)
    * [线程与并发](#%E7%BA%BF%E7%A8%8B%E4%B8%8E%E5%B9%B6%E5%8F%91)
@@ -322,38 +321,6 @@ boolean equals(Object obj);
   ![super](https://images2018.cnblogs.com/blog/1043143/201804/1043143-20180414164527508-811736127.jpg)
 + 类型擦除：虚拟机中没有泛型，只有普通类和普通方法；所有泛型类的类型参数在编译时都会被擦除，泛型类并没有自己独有的Class类对象；比如并不存在List<String>.class或是List<Integer>.class，而只有List.class。
 
-#### Stream API
-+ [构造](/Interview-Java/src/main/java/www/wjl/com/Interview/service/StreamService.java#L17)
-  1) 从 Collection 和数组
-     + Collection.stream()
-     + Collection.parallelStream()
-     + Arrays.stream(T array) or Stream.of()
-  2) 从 BufferedReader
-     + java.io.BufferedReader.lines()
-  3) 静态工厂
-     + java.util.stream.IntStream.range()
-     + java.nio.file.Files.walk()
-  4) 自己构建
-     + java.util.Spliterator
-  5) 其它
-     + Random.ints()
-     + BitSet.stream()
-     + Pattern.splitAsStream(java.lang.CharSequence)
-     + JarFile.stream()
-+ 操作类型
-  + Intermediate：中间操作
-    + map(mapToInt, flatMap 等)：把 input Stream 的每一个元素，映射成 output Stream 的另外一个元素
-    + filter：过滤
-    + distinct、sorted、peek、limit、skip、parallel、sequential、unordered
-  + Terminal：终结操作
-    + forEach、forEachOrdered、toArray、reduce、collect、min、max、count、anyMatch、allMatch、noneMatch、findFirst、findAny、iterator
-  + Short-circuiting：
-    + anyMatch、allMatch、noneMatch、findFirst、findAny、limit 
-    
-+ lambda表达式
-  + Java 11：局部变量类型推断var；
-  + 实现其实是依赖了一些底层的api，在编译阶段，编译器会把lambda表达式进行解糖，转换成调用内部api的方式。
-
 #### Lambda 表达式
 1) expression = (variable) -> action
    + variable：这是一个变量，一个占位符。像x、y、z可以是多个变量；
@@ -379,6 +346,9 @@ Lambda|等效的方法引用|
 ()->Thread.currentThread().dumpStack()|Thread.currentThread()::dumpStack|
 (str,i)->str.substring(i)|String::substring|
 (String s)->System.out.println(s)|System.out::println|
+
++ Java 11：局部变量类型推断var；
++ 实现其实是依赖了一些底层的api，在编译阶段，编译器会把lambda表达式进行解糖，转换成调用内部api的方式。
 
 #### switch...case...default...
 + switch(A)
