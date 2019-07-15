@@ -541,7 +541,7 @@ daemonThread.isDaemon();
 + [流量控制](/Interview-Java/src/test/java/Thread/SemaphoreTest.java)：30个线程只允许10个同时存在。
 
 ##### CountDownLatch
-实现类似计数器的功能，一个线程等待其他N个线程执行完在执行；
+实现类似计数器的功能，[一个线程等待其他N个线程执行完在执行](/Interview-Java/src/main/java/www/wjl/com/Interview/CountDownLatchTest.java)；
 ```
 // 调用await()方法的线程会被挂起，它会等待直到count值为0才继续执行
 public void await() throws InterruptedException { };   
@@ -550,7 +550,6 @@ public boolean await(long timeout, TimeUnit unit) throws InterruptedException { 
 // 将count值减1
 public void countDown() { }; 
 ```
-[示例](/Interview-Java/src/main/java/www/wjl/com/Interview/CountDownLatchTest.java)
 
 ### JVM
 #### JVM 类加载机制
