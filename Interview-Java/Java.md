@@ -588,7 +588,7 @@ public void countDown() { };
 + [顺序](/Interview-Java/src/test/java/ClassLoad/StaticTest.java)：实例初始化不一定要在类初始化结束之后才开始初始化
 
 #### JVM 内存模型
-![内存模型](/Interview-Java/Pic/JVM.jpg)
+![内存模型](/Interview-Java/Pic/JVM.png)
 + 堆：用来存放对象实例。
   + 是垃圾收集器管理的主要区域，因此也被称作GC堆；
   
