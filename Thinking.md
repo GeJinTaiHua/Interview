@@ -67,7 +67,9 @@
    + [容器管理单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonManager.java)
    + [破坏单例的2种方法](/Interview-Java/src/test/java/Pattern/DestroySingle.java#L19)
    + 使用场景：
-     1. Spring 下默认的 bean 均为单利，提供一个全局访问点。 
+     1. Spring 下默认的 bean 均为单利，提供一个全局访问点；
+     2. Mybatis 中 ErrorContext 用在每个线程范围内的单例，用于记录该线程的执行环境错误信息；
+     3. Mybatis 中 LogFactory 是提供给整个 Mybatis 使用的日志工厂，用于获得针对项目配置好的日志对象。
   
 2. 工厂模式
    + 简单工厂模式：用来生产同一等级结构中的任意产品。
@@ -78,15 +80,15 @@
        1. 增加产品，需要增加新的工厂类，导致系统类的个数成对增加，在一定程度上增加了系统的复杂性。
      + 使用场景：
        1. Spring 中的 BeanFactory，根据传入一个唯一的标识来获得 bean 对象；
-       
-   ![简单工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601914-2143-DP-SimpleFactory.png)   
+       2. Mybatis 中的 SqlSessionFactory、ObjectFactory、MapperProxyFactory。
+   ![简单工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601914-2143-DP-SimpleFactory.png)  
+    
    + 工厂模式：用来生产同一等级结构中的固定产品。
      + 优点：
        1. 继承了简单工厂模式的优点；
        2. 符合开放-封闭原则。
      + 缺点：
-       1. 增加产品，需要增加新的工厂类，导致系统类的个数成对增加，在一定程度上增加了系统的复杂性。
-       
+       1. 增加产品，需要增加新的工厂类，导致系统类的个数成对增加，在一定程度上增加了系统的复杂性。 
    ![工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601917-1999-DP-Factory.png)
     
 3. 抽象工厂模式：用来生产不同产品族的全部产品。
@@ -99,7 +101,8 @@
 
 4. 建造者模式：使用多个简单的对象一步一步构建成一个复杂的对象。
    + 使用场景：
-     1. JDK1.8 stream 的流水线理念。
+     1. JDK1.8 stream 的流水线理念；
+     2. Mybatis 环境的初始化过程中，SqlSessionFactoryBuilder 会调用 XMLConfigBuilder 构建 Configuration 对象。
   
 5. [原型模式](/Interview-Java/src/main/java/www/wjl/com/Interview/entity/ConcretePrototype.java)：用于创建重复的对象，同时又能保证性能。
 
@@ -122,7 +125,10 @@
 
 11. 组合模式（整体模式）：把一组相似的对象当作一个单一的对象。
     + 创建了一个包含自己对象组的类。
-    + 据树形结构来组合对象，用来表示部分以及整体层次。    
+    + 据树形结构来组合对象，用来表示部分以及整体层次。 
+    + 使用场景：
+      1. Mybatis 动态SQL中的 if、trim 等动态元素，根据条件来生成不同情况下的SQL，SqlSource、tSqlNode。
+      ![](/Pic/SqlNode.jpg)
 
 12. 享元模式
 
