@@ -66,6 +66,8 @@
      + [CAS单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonCAS.java)
    + [容器管理单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonManager.java)
    + [破坏单例的2种方法](/Interview-Java/src/test/java/Pattern/DestroySingle.java#L19)
+   + 使用场景：
+     1. Spring下默认的bean均为单利，提供一个全局访问点。 
   
 2. 工厂模式
    + 简单工厂模式：用来生产同一等级结构中的任意产品。
@@ -74,6 +76,9 @@
        2. 实现简单。
      + 缺点：
        1. 增加产品，需要增加新的工厂类，导致系统类的个数成对增加，在一定程度上增加了系统的复杂性。
+     + 使用场景：
+       1. Spring中的BeanFactory，根据传入一个唯一的标识来获得bean对象。
+       
    ![简单工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601914-2143-DP-SimpleFactory.png)   
    + 工厂模式：用来生产同一等级结构中的固定产品。
      + 优点：
@@ -81,6 +86,7 @@
        2. 符合开放-封闭原则。
      + 缺点：
        1. 增加产品，需要增加新的工厂类，导致系统类的个数成对增加，在一定程度上增加了系统的复杂性。
+       
    ![工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601917-1999-DP-Factory.png)
     
 3. 抽象工厂模式：用来生产不同产品族的全部产品。
@@ -92,18 +98,23 @@
    ![抽象工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601916-7298-DP-AbstractFactory.png)
 
 4. 建造者模式：使用多个简单的对象一步一步构建成一个复杂的对象。
-   + JDK1.8 流的流水线理念
+   + 使用场景：
+     1. JDK1.8 流的流水线理念。
   
 5. [原型模式](/Interview-Java/src/main/java/www/wjl/com/Interview/entity/ConcretePrototype.java)：用于创建重复的对象，同时又能保证性能。
 
 #### 结构型模式
 6. 适配器模式：作为两个不兼容的接口之间的桥梁。
+   + 使用场景：
+     + slf4j与各种日志（log4j、logging）适配；
 
 7. 装饰器模式：允许向一个现有的对象添加新的功能，同时又不改变其结构。
 
 8. 代理模式
    + 静态代理
    + 动态代理
+   + 使用场景：
+     1. 在Spring的Aop中，原理就是使用代理模式对类进行方法级别的切面增强。
 
 9. 外观模式：隐藏系统的复杂性，并向客户端提供了一个客户端可以访问系统的接口。
 
@@ -117,9 +128,12 @@
 
 #### 行为型模式 
 13. 策略模式
-    + java的 Comparator 和 Comparable
+    + 使用场景：
+      1. java的 Comparator 和 Comparable。
     
 14. 模板方法模式
+    + 使用场景：
+      1. Spring的JdbcTemplate数据库操作模板。
 
 15. 观察者模式（发布—订阅模式）（事件监听模式）
     + 对象间存在一对多关系
