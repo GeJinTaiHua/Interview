@@ -55,6 +55,15 @@ awk [选项参数] 'script' var=value file(s)
 ```
 awk [选项参数] -f scriptfile var=value file(s)
 ```
+
++ 进程
+```
+ps aux|grep java 查看java进程
+ps aux 查看所有进程
+ps –ef|grep tomcat 查看所有有关tomcat的进程
+ps -ef|grep --color java 高亮要查询的关键字
+kill -9 19979 终止线程号位19979的进程
+```
  
 #### Shell命令
 + 返回当前路径的"." 
