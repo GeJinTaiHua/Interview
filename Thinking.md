@@ -77,7 +77,7 @@
      + 缺点：
        1. 增加产品，需要增加新的工厂类，导致系统类的个数成对增加，在一定程度上增加了系统的复杂性。
      + 使用场景：
-       1. Spring中的BeanFactory，根据传入一个唯一的标识来获得bean对象。
+       1. Spring 中的 BeanFactory，根据传入一个唯一的标识来获得 bean 对象；
        
    ![简单工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601914-2143-DP-SimpleFactory.png)   
    + 工厂模式：用来生产同一等级结构中的固定产品。
@@ -99,7 +99,7 @@
 
 4. 建造者模式：使用多个简单的对象一步一步构建成一个复杂的对象。
    + 使用场景：
-     1. JDK1.8 stream 中的流水线理念。
+     1. JDK1.8 stream 的流水线理念。
   
 5. [原型模式](/Interview-Java/src/main/java/www/wjl/com/Interview/entity/ConcretePrototype.java)：用于创建重复的对象，同时又能保证性能。
 
@@ -145,9 +145,12 @@
 
 17. 责任链模式：通常每个接收者都包含对另一个接收者的引用。如果一个对象不能处理该请求，那么它会把相同的请求传给下一个接收者，依此类推。
     + 使用场景：
-      1. Servlet 中的 FilterChain；
-      2. Dubbo 中 的 Invoker；
+      1. Servlet 中的 Filter；
+      ![](/Pic/ServletFilter.jpg)
+      2. Dubbo 中 的 Filter；
+      ![](/Pic/DubboFilter.jpg)
       3. MyBatis  中 的 Plugin。
+      ![](/Pic/MybatisPlugin.jpg)
 
 18. 命令模式
 
