@@ -151,11 +151,11 @@
 
 17. 责任链模式：通常每个接收者都包含对另一个接收者的引用。如果一个对象不能处理该请求，那么它会把相同的请求传给下一个接收者，依此类推。
     + 使用场景：
-      1. Servlet 中的 Filter；
+      1. Servlet 中的 Filter；  
       ![](/Pic/ServletFilter.jpg)
-      2. Dubbo 中 的 Filter；
+      2. Dubbo 中 的 Filter；  
       ![](/Pic/DubboFilter.jpg)
-      3. MyBatis  中 的 Plugin。
+      3. MyBatis  中 的 Plugin。  
       ![](/Pic/MybatisPlugin.jpg)
 
 18. 命令模式
