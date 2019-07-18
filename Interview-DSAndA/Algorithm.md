@@ -111,13 +111,13 @@
 考虑到分布式系统每个节点都有可能失效，并且新的节点很可能动态的增加进来的情况。
 
 + 环形Hash空间
-  + 对2^32取模
+  + 对2^32取模  
   ![2^32取模](/Interview-DSAndA/A_Pic/2mod.png)
   + 对象与机器处于同一个哈希空间中，这样按顺时针转动object1（对象）存储到了NODE1（机器）中,object3（对象）存储到了NODE2（机器）中,object2、object4（对象）存储到了NODE3（机器）中。
   ![映射到环上](/Interview-DSAndA/A_Pic/Huan.png)
 
 + 缺点：服务节点太少时，容易因为节点分部不均匀而造成数据倾斜（被缓存的对象大部分集中缓存在某一台服务器上）
-  + 虚拟节点：是实际节点（机器）在hash空间的复制品，一个实际节点对应了若干个“虚拟节点”，这个对应个数也称为“复制个数”，“虚拟节点”在hash空间中以hash值排列。    
+  + 虚拟节点：是实际节点（机器）在hash空间的复制品，一个实际节点对应了若干个“虚拟节点”，这个对应个数也称为“复制个数”，“虚拟节点”在hash空间中以hash值排列。      
   ![虚拟节点映射](/Interview-DSAndA/A_Pic/XLNode.png)
 
 ### 其他
@@ -146,5 +146,9 @@ int randNumber = new Random().Next(MIN, MAX + 1);
 
 #### 雪花算法
 分布式一致性自增ID
++ [SnowFlake](/Interview-Java/src/main/java/www/wjl/com/interview/SnowFlake.java)
+  + twitter的SnowFlake生成ID能够按照时间有序生成；
+  + 结果是一个64bit大小的整数；
+  + 分布式系统内不会产生重复id（用 datacenterId 和 machineId 来做区分）。
 
 
