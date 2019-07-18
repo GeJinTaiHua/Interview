@@ -145,10 +145,10 @@ int randNumber = new Random().Next(MIN, MAX + 1);
 + [获取一个字符串在另一个字符串中出现的次数](/Interview-Java/src/test/java/Algorithm/Stringsub.java)
 
 #### 雪花算法
-分布式一致性自增ID
-+ [SnowFlake](/Interview-Java/src/main/java/www/wjl/com/interview/SnowFlake.java)
-  + twitter的SnowFlake生成ID能够按照时间有序生成；
-  + 结果是一个64bit大小的整数；
-  + 分布式系统内不会产生重复id（用 datacenterId 和 machineId 来做区分）。
+Twitter 的分布式自增ID SnowFlake算法
++ [SnowFlake](/Interview-Java/src/main/java/www/wjl/com/Interview/SnowFlake.java)
+  + 组合：1位 + 41位毫秒级时间 + 5位数据中心datacenterId + 5位机器标识workerId + 12位的计数顺序号 = 64位Long型(转换成字符串长度为18)；
+  + 算法核心：把时间戳，工作机器id，序列号组合在一起。
+  ![](/Interview-DSAndA/A_Pic/Snowflake.png)
 
 
