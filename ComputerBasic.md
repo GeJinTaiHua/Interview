@@ -34,7 +34,6 @@
     * [文件上传漏洞攻击](#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%E6%94%BB%E5%87%BB)
     * [Web防盗链](#web%E9%98%B2%E7%9B%97%E9%93%BE)
   * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
-    * [linux命令](#linux%E5%91%BD%E4%BB%A4)
     * [同步、异步、阻塞、非阻塞](#%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5%E9%98%BB%E5%A1%9E%E9%9D%9E%E9%98%BB%E5%A1%9E)
     * [CPU调度算法](#cpu%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95)
     
@@ -401,15 +400,6 @@ name=GeJinTaiHua
 + 打包下载
 
 ### 基础知识
-#### linux命令
-```
-ps aux|grep java 查看java进程
-ps aux 查看所有进程
-ps –ef|grep tomcat 查看所有有关tomcat的进程
-ps -ef|grep --color java 高亮要查询的关键字
-kill -9 19979 终止线程号位19979的进程
-```
-
 #### 同步、异步、阻塞、非阻塞
 + 描述网络通信模式，适用于请求-响应模型
   + 同步：发送方发送请求后，需要等待接收响应，否则将一直等待。
