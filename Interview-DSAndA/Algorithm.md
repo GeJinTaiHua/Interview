@@ -13,6 +13,7 @@
     * [数字频率](#数字频率)
     * [随机数](#%E9%9A%8F%E6%9C%BA%E6%95%B0)
     * [频率](#%E9%A2%91%E7%8E%87)
+    * [雪花算法](#雪花算法)
 
 ### 排序算法  
 #### 插入排序
@@ -142,5 +143,8 @@ int randNumber = new Random().Next(MIN, MAX + 1);
 #### 频率
 + [100个URL如何找到出现频率最高的前10个](/Interview-Java/src/test/java/Algorithm/MaxUrl.java)
 + [获取一个字符串在另一个字符串中出现的次数](/Interview-Java/src/test/java/Algorithm/Stringsub.java)
+
+#### 雪花算法
+分布式一致性自增ID
 
 
