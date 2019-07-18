@@ -67,7 +67,7 @@
    + [容器管理单例](/Interview-Java/src/test/java/Pattern/Singleton/SingletonManager.java)
    + [破坏单例的2种方法](/Interview-Java/src/test/java/Pattern/DestroySingle.java#L19)
    + 使用场景：
-     1. Spring下默认的bean均为单利，提供一个全局访问点。 
+     1. Spring 下默认的 bean 均为单利，提供一个全局访问点。 
   
 2. 工厂模式
    + 简单工厂模式：用来生产同一等级结构中的任意产品。
@@ -99,14 +99,14 @@
 
 4. 建造者模式：使用多个简单的对象一步一步构建成一个复杂的对象。
    + 使用场景：
-     1. JDK1.8 流的流水线理念。
+     1. JDK1.8 stream 中的流水线理念。
   
 5. [原型模式](/Interview-Java/src/main/java/www/wjl/com/Interview/entity/ConcretePrototype.java)：用于创建重复的对象，同时又能保证性能。
 
 #### 结构型模式
 6. 适配器模式：作为两个不兼容的接口之间的桥梁。
    + 使用场景：
-     + slf4j与各种日志（log4j、logging）适配；
+     + slf4j 与各种日志（log4j、logging）适配。
 
 7. 装饰器模式：允许向一个现有的对象添加新的功能，同时又不改变其结构。
 
@@ -114,7 +114,7 @@
    + 静态代理
    + 动态代理
    + 使用场景：
-     1. 在Spring的Aop中，原理就是使用代理模式对类进行方法级别的切面增强。
+     1. Spring 的 Aop，原理就是使用代理模式对类进行方法级别的切面增强。
 
 9. 外观模式：隐藏系统的复杂性，并向客户端提供了一个客户端可以访问系统的接口。
 
@@ -129,19 +129,25 @@
 #### 行为型模式 
 13. 策略模式
     + 使用场景：
-      1. java的 Comparator 和 Comparable。
+      1. Java 的 Comparator 外部排序。
     
 14. 模板方法模式
     + 使用场景：
-      1. Spring的JdbcTemplate数据库操作模板。
+      1. Spring 的 JdbcTemplate 数据库操作模板。
 
 15. 观察者模式（发布—订阅模式）（事件监听模式）
     + 对象间存在一对多关系
     + 当一个对象被修改时，则会自动通知它的依赖对象。    
+    + 使用场景：
+      1. Spring 的监听事件 ApplicationListener 和 ApplicationEvent。
 
 16. 迭代子模式
 
 17. 责任链模式：通常每个接收者都包含对另一个接收者的引用。如果一个对象不能处理该请求，那么它会把相同的请求传给下一个接收者，依此类推。
+    + 使用场景：
+      1. Servlet 中的 FilterChain；
+      2. Dubbo 中 的 Invoker；
+      3. MyBatis  中 的 Plugin。
 
 18. 命令模式
 
