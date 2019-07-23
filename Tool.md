@@ -68,14 +68,18 @@ kill -9 19979 终止线程号位19979的进程
 #### Shell命令
 + 环境变量  
 ![变量](/Pic/param.png)
-  + set：输出所有的变量，包括全局变量和局部变量；
-  + env(printenv)：只显示全局变量；
-  + declare：输出所有的变量，函数，整数，和已经导出的变量；
-  + 自定义环境变量；
+  + 输出所有的变量，包括全局变量和局部变量：set
+  + 只显示全局变量：env(printenv)
+  + 输出所有的变量，函数，整数，和已经导出的变量：declare
+  + 自定义环境变量
   ```
   export 变量名 = value
   变量名 = value ; export 变量名
   declare - x 变量名 = value
+  ```
+  + 取消变量或取消变量赋值
+  ```
+  unset <Name_of_Variable>
   ```
 
 + 测试文件
