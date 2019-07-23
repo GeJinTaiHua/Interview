@@ -89,6 +89,11 @@ $(cd `dirname $0`; pwd)
   declare - x 变量名 = value
   ```
 
++ 使脚本可执行
+```
+chmod a+x myscript.sh
+```
+
 #### Docker命令 
 + 镜像
   + 查看镜像  
