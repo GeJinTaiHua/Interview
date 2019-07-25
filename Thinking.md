@@ -18,6 +18,7 @@
     * [系统可用性](#%E7%B3%BB%E7%BB%9F%E5%8F%AF%E7%94%A8%E6%80%A7)
     * [中台](#%E4%B8%AD%E5%8F%B0)
     * [分布式一致性ID](#分布式一致性ID)
+    * [微服务跨域问题](#微服务跨域问题)
 
 ### 面向过程    
     
@@ -278,5 +279,30 @@ MTBF = MTTF + MTTR
   + 数据库生成
   + Leaf-segment数据库方案
   + Leaf-snowflake方案
+
+#### 微服务跨域问题
++ 同源策略
+  + 同源：指"协议+域名+端口"三者相同；
+  + 限制内容：
+    + Cookie、LocalStorage、IndexedDB 等存储性内容；
+    + DOM 节点；
+    + AJAX 请求发送后，结果被浏览器拦截了；
+    ```
+    允许跨域的标签：
+    <img src=XXX>
+    <link href=XXX>
+    <script src=XXX>
+    ```
+
++ 解决方法：
+  1. jsonp：非同源策略（跨域请求）。
+  2. cors
+  3. postMessage
+  4. websocket
+  5. Node 中间件代理(两次跨域)：同源策略是浏览器需要遵循的标准，而如果是服务器向服务器请求就无需遵循同源策略。
+  6. nginx 反向代理
+  7. window.name/location.hash/document.domain + iframe
+
+
 
 
