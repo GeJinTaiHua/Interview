@@ -295,14 +295,10 @@ MTBF = MTTF + MTTR
     ```
 
 + 解决方法：
-  1. jsonp：非同源策略（跨域请求）。
-  2. cors
+  1. jsonp：只支持 GET 请求，优势在于支持老式浏览器，以及可以向不支持 CORS 的网站请求数据。
+  2. cors：支持所有类型的 HTTP 请求，是跨域 HTTP 请求的根本解决方案。
   3. postMessage
   4. websocket
-  5. Node 中间件代理(两次跨域)：同源策略是浏览器需要遵循的标准，而如果是服务器向服务器请求就无需遵循同源策略。
-  6. nginx 反向代理
-  7. window.name/location.hash/document.domain + iframe
-
-
-
+  5. Node 中间件代理/nginx 反向代理：同源策略是浏览器需要遵循的标准，而如果是服务器向服务器请求就无需遵循同源策略。
+  6. window.name/location.hash/document.domain + iframe
 
