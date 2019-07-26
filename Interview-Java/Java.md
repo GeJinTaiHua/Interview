@@ -320,6 +320,7 @@ boolean equals(Object obj);
   + 往外取只能赋值给Object变量，不影响往里存  
   ![super](https://images2018.cnblogs.com/blog/1043143/201804/1043143-20180414164527508-811736127.jpg)
 + 类型擦除：虚拟机中没有泛型，只有普通类和普通方法；所有泛型类的类型参数在编译时都会被擦除，泛型类并没有自己独有的Class类对象；比如并不存在List<String>.class或是List<Integer>.class，而只有List.class。
++ 类型推断：编译器能从上下文推断出类型参数。
 
 #### Lambda 表达式
 1) expression = (variable) -> action
