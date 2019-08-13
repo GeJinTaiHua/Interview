@@ -148,7 +148,8 @@
     + 对象间存在一对多关系
     + 当一个对象被修改时，则会自动通知它的依赖对象。    
     + 使用场景：
-      1. Spring 的监听事件 ApplicationListener 和 ApplicationEvent。
+      1. Spring 的监听事件 ApplicationListener 和 ApplicationEvent；
+      2. Dubbo的customer启动时从注册中心订阅需要的服务，开启一个listener。注册中心会每5秒定时检查是否有服务更新。
 
 16. 迭代子模式
 
