@@ -283,7 +283,7 @@ synchronized void setB() {
     + 负载平衡器：以一个特定IP地址进行侦听并将网络请求转发到集群服务器上的硬件设备；一些大型的站点一般都会使用这种昂贵的高性能负载平衡器。 
     + 地理 DNS：根据用户所处的地理位置，通过把域名映射到多个不同的IP地址提高可扩展性。
     + Anycast：一个IP地址映射多个物理主机的路由技术。
-![DNS递归搜索](http://igoro.com/wordpress/wp-content/uploads/2010/02/500pxAn_example_of_theoretical_DNS_recursion_svg.png)
+![DNS递归搜索](/Pic/DNS.png)
 
 2) 建立连接（[TCP/TP三次握手](#tcp-%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B)）
 
@@ -306,8 +306,8 @@ name=GeJinTaiHua
 
 4) 服务器接受到请求并处理
 + Spring MVC的处理流程
-  1) 发起请求到前端控制器（DispatcherServlet）；
-  2) DispatcherServlet 请求 处理器映射器（HandlerMapping） 查找 Handler，可以根据 xml 配置、注解进行查找；
+  1) 发起请求到前置控制器（DispatcherServlet）；
+  2) DispatcherServlet 请求处理器映射器（HandlerMapping）查找 Handler，可以根据xml配置、注解进行查找；
   3) HandlerMapping 向 DispatcherServlet 返回 Handler；
   4) DispatcherServlet 调用处理器适配器去执行 Handler；
   5) 处理器适配器执行 Handler；
@@ -324,7 +324,7 @@ name=GeJinTaiHua
   + 不同的地址会造成缓存友好性变差
 + 302 临时跳转
 + HTTP响应：状态行、消息报头、空行、响应正文
-![HTTP响应](http://upload-images.jianshu.io/upload_images/2964446-1c4cab46f270d8ee.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![HTTP响应](/Pic/HTTPresponse.jpg)
 
 6) 浏览器解析渲染页面
 + 浏览器首先解析HTML文件构建DOM树；
