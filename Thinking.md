@@ -278,7 +278,7 @@ MTBF = MTTF + MTTR
   + UUID
     优点：性能非常高；本地生成，没有网络消耗；
     缺点：UUID太长，不易于存储；信息不安全。
-  + snowflake方案
+  + [snowflake方案](https://github.com/GeJinTaiHua/Sum-Up-Up-Up/blob/master/Interview-DSAndA/Algorithm.md#%E9%9B%AA%E8%8A%B1%E7%AE%97%E6%B3%95)
   + 数据库生成
   + Leaf-segment数据库方案
   + Leaf-snowflake方案
