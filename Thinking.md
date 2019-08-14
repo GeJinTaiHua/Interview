@@ -183,10 +183,10 @@
 
 #### ACID 
 指数据库管理系统（DBMS）在写入/异动资料的过程中，为保证交易（transaction）是正确可靠的，所必须具备的四个特性：
-+ 原子性（Atomicity，或称不可分割性）；
-+ 一致性（Consistency）；
-+ 隔离性（Isolation，又称独立性）；
-+ 持久性（Durability）。
++ 原子性（Atomicity，或称不可分割性）
++ 一致性（Consistency）
++ 隔离性（Isolation，又称独立性）
++ 持久性（Durability）
 
 #### BASE 
 完全不同ACID模型，牺牲高一致性，获得可用性或可靠性：
