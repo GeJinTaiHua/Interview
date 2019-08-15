@@ -406,6 +406,12 @@ daemonThread.isDaemon();
   ThreadPoolExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue, RejectedExecutionHandler handler)
   ```
   
++ 4种线程池：
+  + newCachedThreadPool（可缓存线程池）：如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程。
+  + newFixedThreadPool（定长线程池）：可控制线程最大并发数，超出的线程会在队列中等待。
+  + newScheduledThreadPool(定时线程池)：支持定时及周期性任务执行。
+  + newSingleThreadExecutor（单线程化线程池）：它只会用唯一的工作线程来执行任务，保证所有任务按照指定顺序（FIFO， LIFO， 优先级）执行。
+
 + 5种状态：
   + RUNNING：运行状态，指可以接受任务执行队列里的任务。
   + SHUTDOWN：指调用了 shutdown() 方法，不再接受新任务了，但是队列里的任务得执行完毕。
@@ -414,11 +420,9 @@ daemonThread.isDaemon();
   + TERMINATED：终止状态，当执行 terminated() 后会更新为这个状态。
   ![线程池状态](/Interview-Java/Pic/XXC.jpg)
   
-+ 4种线程池
-  + newCachedThreadPool（可缓存线程池）：如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程。
-  + newFixedThreadPool（定长线程池）：可控制线程最大并发数，超出的线程会在队列中等待。
-  + newScheduledThreadPool(定时线程池)：支持定时及周期性任务执行。
-  + newSingleThreadExecutor（单线程化线程池）：它只会用唯一的工作线程来执行任务，保证所有任务按照指定顺序（FIFO， LIFO， 优先级）执行。
++ 运行原理
+  + 核心线程（corePool）、等待队列 (workQueue)、线程活动保持时间 (keepAliveTime)、饱和策略 (RejectedExecutionHandler)
+  ![线程池运行原理](/Interview-Java/Pic/ThreadPoolYL.png)
 
 #### Thread、Runnable、Callable
 1) [Thread](/Interview-Java/src/test/java/Thread/ThreadT.java)（类）
