@@ -13,6 +13,6 @@
 
 |  Ⅺ  |  Ⅻ  | XIII |  XIV |  XV  |
 |:----:|:----:|:----:|:----:|:----:| 
-|[🔧工具](Tool.md)|[:octocat:GitHub](GitHub.md)| | | | 
+|[🔧工具](Interview-Other/Tool.md)|[:octocat:GitHub](Interview-Other/GitHub.md)| | | | 
 
 
