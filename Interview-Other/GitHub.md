@@ -13,13 +13,13 @@ https://github.com/trending
 + [原文链接](https://blog.csdn.net/esa_dsq/article/details/79617041#2-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88gh-md-toc)
 1) 下载[工具](https://github.com/ekalinin/github-markdown-toc.go/releases)，直接在文件名后面加上.exe，放到README.md同一级目录；
 2) 接着按住shift键同时右击；  
-![](/Pic/powershell.png)
+![](/Interview-Other/Github_Pic/powershell.png)
 3) 打开Powershell窗口后，直接键入
 ```
 ./gh-md-toc.exe README.md
 ```
 4) 接下来只需将这段话复制粘贴到README.md里面即可。  
-![](/Pic/powershell2.png)
+![](/Interview-Other/Github_Pic/powershell2.png)
 
 ### 徽章
 [官方徽章：](http://shields.io/)  

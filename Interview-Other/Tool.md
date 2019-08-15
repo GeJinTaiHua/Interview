@@ -67,7 +67,7 @@ kill -9 19979 终止线程号位19979的进程
  
 #### Shell命令
 + 环境变量  
-![变量](/Pic/param.png)
+![变量](/Interview-Other/Tool_Pic/param.png)
   + 输出所有的变量，包括全局变量和局部变量：set
   + 只显示全局变量：env(printenv)
   + 输出所有的变量，函数，整数，和已经导出的变量：declare
@@ -83,7 +83,7 @@ kill -9 19979 终止线程号位19979的进程
   ```
 
 + 测试文件
-![测试文件](/Pic/test.png)
+![测试文件](/Interview-Other/Tool_Pic/test.png)
 
 + 使脚本可执行
 ```
