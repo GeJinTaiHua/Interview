@@ -402,6 +402,10 @@ daemonThread.isDaemon();
   + keepAliveTime 和 unit：是线程空闲后的存活时间；
   + workQueue：用于存放任务的阻塞队列；
   + handler：当队列和最大线程池都满了之后的饱和策略。
+    + AbortPolicy（默认）：直接抛出异常；
+    + CallerRunsPolicy：只用调用所在的线程运行任务；
+    + DiscardOldestPolicy：丢弃队列里最近的一个任务，并执行当前任务；
+    + DiscardPolicy：不处理，丢弃掉。
   ```
   ThreadPoolExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue, RejectedExecutionHandler handler)
   ```
