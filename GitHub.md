@@ -19,7 +19,7 @@ https://github.com/trending
 ./gh-md-toc.exe README.md
 ```
 4) 接下来只需将这段话复制粘贴到README.md里面即可。  
-![](https://img-blog.csdn.net/2018031920320553?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L0VTQV9EU1E=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![](/Pic/powershell2.png)
 
 ### 徽章
 [官方徽章：](http://shields.io/)  
