@@ -1,6 +1,5 @@
 ## 💻计算机基础
 
-
   * [线程](#%E7%BA%BF%E7%A8%8B)
     * [基本概念](#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5)
     * [5种基本状态](#5%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%8A%B6%E6%80%81)
@@ -36,7 +35,6 @@
   * [基础知识](#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
     * [同步、异步、阻塞、非阻塞](#%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5%E9%98%BB%E5%A1%9E%E9%9D%9E%E9%98%BB%E5%A1%9E)
     * [CPU调度算法](#cpu%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95)
-    
 
 ### 线程  
 #### 基本概念
@@ -56,7 +54,7 @@
   + 同步阻塞：在获取synchronized同步锁失败；
   + 其他阻塞
 + 死亡状态（Dead）  
-![线程5种基本状态](/Pic/ThreadStatus.jpg)
+![线程5种基本状态](/Interview-ComAndThink/Com_Pic/ThreadStatus.jpg)
 
 #### 同步的方法
 + wait()：等待状态，释放所持有对象的lock；
@@ -170,14 +168,14 @@ synchronized void setB() {
 
 #### TCP 三次握手和四次挥手
 + 三次握手:   
-![三次握手](/Pic/3CWS.png)  
+![三次握手](/Interview-ComAndThink/Com_Pic/3CWS.png)  
   - 第一次握手：A的TCP客户进程也是首先创建传输控制块TCB，然后向B发出连接请求报文段，（首部的同步位SYN=1，初始序号seq=x），（SYN=1的报文段不能携带数据）但要消耗掉一个序号，此时TCP客户进程进入SYN-SENT（同步已发送）状态;
   - 第二次握手：B收到连接请求报文段后，如同意建立连接，则向A发送确认，在确认报文段中（SYN=1，ACK=1，确认号ack=x+1，初始序号seq=y），测试TCP服务器进程进入SYN-RCVD（同步收到）状态；
   - 第三次握手：TCP客户进程收到B的确认后，要向B给出确认报文段（ACK=1，确认号ack=y+1，序号seq=x+1）（初始为seq=x，第二个报文段所以要+1），ACK报文段可以携带数据，不携带数据则不消耗序号。TCP连接已经建立，A进入ESTABLISHED（已建立连接）;当B收到A的确认后，也进入ESTABLISHED状态。
   - 为什么A还要发送一次确认呢：主要为了防止已失效的连接请求报文段突然又传送到了B，因而产生错误。
 
 + 四次挥手:  
-![四次挥手](/Pic/4CHS.png)  
+![四次挥手](/Interview-ComAndThink/Com_Pic/4CHS.png)  
   - 第一次握手：A的应用进程先向其TCP发出连接释放报文段（FIN=1，序号seq=u），并停止再发送数据，主动关闭TCP连接，进入FIN-WAIT-1（终止等待1）状态，等待B的确认；
   - 第二次握手：B收到连接释放报文段后即发出确认报文段，（ACK=1，确认号ack=u+1，序号seq=v），B进入CLOSE-WAIT（关闭等待）状态，此时的TCP处于半关闭状态，A到B的连接释放；A收到B的确认后，进入FIN-WAIT-2（终止等待2）状态，等待B发出的连接释放报文段
   - 第三次握手：B没有要向A发出的数据，B发出连接释放报文段（FIN=1，ACK=1，序号seq=w，确认号ack=u+1），B进入LAST-ACK（最后确认）状态，等待A的确认；
@@ -283,7 +281,7 @@ synchronized void setB() {
     + 负载平衡器：以一个特定IP地址进行侦听并将网络请求转发到集群服务器上的硬件设备；一些大型的站点一般都会使用这种昂贵的高性能负载平衡器。 
     + 地理 DNS：根据用户所处的地理位置，通过把域名映射到多个不同的IP地址提高可扩展性。
     + Anycast：一个IP地址映射多个物理主机的路由技术。
-![DNS递归搜索](/Pic/DnsAddress.png)
+![DNS递归搜索](/Interview-ComAndThink/Com_Pic/DnsAddress.png)
 
 2) 建立连接（[TCP/TP三次握手](#tcp-%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B)）
 
@@ -324,7 +322,7 @@ name=GeJinTaiHua
   + 不同的地址会造成缓存友好性变差
 + 302 临时跳转
 + HTTP响应：状态行、消息报头、空行、响应正文
-![HTTP响应](/Pic/HTTResponse.jpg)
+![HTTP响应](/Interview-ComAndThink/Com_Pic/HTTResponse.jpg)
 
 6) 浏览器解析渲染页面
 + 浏览器首先解析HTML文件构建DOM树；
@@ -355,7 +353,7 @@ name=GeJinTaiHua
     + 老年代堆空间被占满
     + 最典型的内存泄漏方式，所有堆空间都被无法回收的垃圾对象占满，虚拟机无法再在分配新空间。
     + 解决方法：根据垃圾回收前后情况对比，同时根据对象引用情况（常见的集合对象引用）分析，基本可以找到泄漏点。
-    ![](/Pic/JavaHeadSpace.png)
+    ![](/Interview-ComAndThink/Com_Pic/JavaHeadSpace.png)
   + java.lang.OutOfMemoryError: PermGen space
     + 持久代被占满
     + 原因：大量动态反射生成的类不断被加载，最终导致Perm区被占满。

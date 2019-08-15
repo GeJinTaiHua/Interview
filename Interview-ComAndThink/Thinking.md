@@ -82,7 +82,7 @@
      + 使用场景：
        1. Spring 中的 BeanFactory，根据传入一个唯一的标识来获得 bean 对象；
        2. Mybatis 中的 SqlSessionFactory、ObjectFactory、MapperProxyFactory。
-   ![简单工厂模式](/Pic/SimpleFactory.png)  
+   ![简单工厂模式](/Interview-ComAndThink/Think_Pic/SimpleFactory.png)  
     
    + 工厂模式：用来生产同一等级结构中的固定产品。
      + 优点：
@@ -90,7 +90,7 @@
        2. 符合开放-封闭原则。
      + 缺点：
        1. 增加产品，需要增加新的工厂类，导致系统类的个数成对增加，在一定程度上增加了系统的复杂性。 
-   ![工厂模式](/Pic/Factory.png)
+   ![工厂模式](/Interview-ComAndThink/Think_Pic/Factory.png)
     
 3. 抽象工厂模式：用来生产不同产品族的全部产品。
    + 优点：
@@ -98,7 +98,7 @@
      2. 每次可以通过具体工厂类创建一个产品族中的多个对象，增加或者替换产品族比较方便，增加新的具体工厂和产品族很方便。
    + 缺点：
      1. 增加新的产品等级结构很复杂，需要修改抽象工厂和所有的具体工厂类，对“开闭原则”的支持呈现倾斜性。
-   ![抽象工厂模式](/Pic/AbstractFactory.png)
+   ![抽象工厂模式](/Interview-ComAndThink/Think_Pic/AbstractFactory.png)
 
 4. 建造者模式：使用多个简单的对象一步一步构建成一个复杂的对象。
    + 使用场景：
@@ -131,7 +131,7 @@
     + 据树形结构来组合对象，用来表示部分以及整体层次。 
     + 使用场景：
       1. Mybatis 动态SQL中的 if、trim 等动态元素，根据条件来生成不同情况下的SQL，SqlSource、tSqlNode。
-      ![](/Pic/SqlNode.jpg)
+      ![](/Interview-ComAndThink/Think_Pic/SqlNode.jpg)
 
 12. 享元模式
 
@@ -156,11 +156,11 @@
 17. 责任链模式：通常每个接收者都包含对另一个接收者的引用。如果一个对象不能处理该请求，那么它会把相同的请求传给下一个接收者，依此类推。
     + 使用场景：
       1. Servlet 中的 Filter；  
-      ![](/Pic/ServletFilter.jpg)
+      ![](/Interview-ComAndThink/Think_Pic/ServletFilter.jpg)
       2. Dubbo 中 的 Filter；  
-      ![](/Pic/DubboFilter.jpg)
+      ![](/Interview-ComAndThink/Think_Pic/DubboFilter.jpg)
       3. MyBatis  中 的 Plugin。  
-      ![](/Pic/MybatisPlugin.jpg)
+      ![](/Interview-ComAndThink/Think_Pic/MybatisPlugin.jpg)
 
 18. 命令模式
 
@@ -278,7 +278,7 @@ MTBF = MTTF + MTTR
   + UUID
     优点：性能非常高；本地生成，没有网络消耗；
     缺点：UUID太长，不易于存储；信息不安全。
-  + [snowflake方案](https://github.com/GeJinTaiHua/Sum-Up-Up-Up/blob/master/Interview-DSAndA/Algorithm.md#%E9%9B%AA%E8%8A%B1%E7%AE%97%E6%B3%95)
+  + [snowflake方案](/Interview-DSAndA/Algorithm.md#雪花算法)
   + 数据库生成
   + Leaf-segment数据库方案
   + Leaf-snowflake方案
