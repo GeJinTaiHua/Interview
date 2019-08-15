@@ -82,7 +82,7 @@
      + 使用场景：
        1. Spring 中的 BeanFactory，根据传入一个唯一的标识来获得 bean 对象；
        2. Mybatis 中的 SqlSessionFactory、ObjectFactory、MapperProxyFactory。
-   ![简单工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601914-2143-DP-SimpleFactory.png)  
+   ![简单工厂模式](/Pic/SimpleFactory.png)  
     
    + 工厂模式：用来生产同一等级结构中的固定产品。
      + 优点：
@@ -90,7 +90,7 @@
        2. 符合开放-封闭原则。
      + 缺点：
        1. 增加产品，需要增加新的工厂类，导致系统类的个数成对增加，在一定程度上增加了系统的复杂性。 
-   ![工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601917-1999-DP-Factory.png)
+   ![工厂模式](/Pic/Factory.png)
     
 3. 抽象工厂模式：用来生产不同产品族的全部产品。
    + 优点：
@@ -98,7 +98,7 @@
      2. 每次可以通过具体工厂类创建一个产品族中的多个对象，增加或者替换产品族比较方便，增加新的具体工厂和产品族很方便。
    + 缺点：
      1. 增加新的产品等级结构很复杂，需要修改抽象工厂和所有的具体工厂类，对“开闭原则”的支持呈现倾斜性。
-   ![抽象工厂模式](http://www.runoob.com/wp-content/uploads/2018/07/1530601916-7298-DP-AbstractFactory.png)
+   ![抽象工厂模式](/Pic/AbstractFactory.png)
 
 4. 建造者模式：使用多个简单的对象一步一步构建成一个复杂的对象。
    + 使用场景：

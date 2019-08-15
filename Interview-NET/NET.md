@@ -198,7 +198,7 @@ namespace Demo
 + Override（重写）
   + 父类和子类多态性的表现，垂直关系；
   + 一个方法或一对方法产生关系。
-![重载重写](http://www.runoob.com/wp-content/uploads/2013/12/overloading-vs-overriding.png)
+![重载重写](/Interview-NET/Override.png)
 
 #### abstract class、interface 
 + 一个类只能继承单个类，但是可以实现多个接口；

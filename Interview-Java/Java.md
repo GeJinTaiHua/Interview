@@ -99,7 +99,7 @@ String str ="hello";
 4) 虚引用（PhantomReference）：幽灵引用、幻影引用；是最弱的一种引用关系。
   + 并不影响对象的生命周期；
   + 唯一作用：在这个对象被收集器回收时收到一个系统通知。
-![四种引用](https://images2015.cnblogs.com/blog/249993/201703/249993-20170306195851516-1068507269.png)
+![四种引用](/Interview-Java/Pic/javaRenfence.png)
 
 #### 集合
 1. Collection
