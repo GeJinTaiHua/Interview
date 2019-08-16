@@ -55,13 +55,20 @@
     ![红黑树](/Interview-DSAndA/DS_Pic/RedBlackTree.png)  
 
 #### B树
-+ B树：一种树状数据结构，能够用来存储排序后的数据。   
++ B树：一种树状数据结构，能够用来存储排序后的数据。     
 ![B树](/Interview-DSAndA/DS_Pic/BTree.jpg)
 
-+ B+树：B+树只有达到叶子结点才命中（B树可以在非叶子结点命中）。  
-![B+树](/Interview-DSAndA/DS_Pic/B+Tree.jpg)
-  + B\*树：在B+树的非根和非叶子结点再增加指向兄弟的指针，将结点的最低利用率从1/2提高到2/3。
-  ![B\*树](/Interview-DSAndA/DS_Pic/BXTree.jpg)
++ B-树：  
+![B+树](/Interview-DSAndA/DS_Pic/B-Tree.png)
+
++ B+树：B+树只有达到叶子结点才命中（B树可以在非叶子结点命中）。   
+  + 非叶子节点只存储键值信息；
+  + 所有叶子节点之间都有一个链指针；
+  + 数据记录都存放在叶子节点中。  
+![B+树](/Interview-DSAndA/DS_Pic/B+Tree.png)
+
++ B\*树：在B+树的非根和非叶子结点再增加指向兄弟的指针，将结点的最低利用率从1/2提高到2/3。  
+![B\*树](/Interview-DSAndA/DS_Pic/BXTree.jpg)
     
 #### Trie树（字典树）（单词查找树）
 利用字符串的公共前缀来减少查询时间，最大限度地减少无谓的字符串比较，查询效率比哈希树高。
