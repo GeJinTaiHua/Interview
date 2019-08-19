@@ -31,30 +31,26 @@
 
 ### 命令
 #### Linux命令
-+ less：使用 less 可以随意浏览文件，而 more 仅能向前移动，却不能向后移动，而且 less 在查看之前不会加载整个文件。
-  + Shift+G：跳转到文件尾部
-  + Shift+g：跳转到文件头部
-```
-less [参数] 文件 
-```
++ 清理屏幕
+  + clear
+  + reset：完全刷新终端屏幕，之前的终端输入操作信息将都会被清空。
 
-+ sed：利用脚本来处理文本文件
-```
-sed [-hnV][-e<script>][-f<script文件>][文本文件]
-```
-
-+ grep：查找文件里符合条件的字符串
-```
-grep [-abcEFGhHilLnqrsvVwxy][-A<显示列数>][-B<显示列数>][-C<显示列数>][-d<进行动作>][-e<范本样式>][-f<范本文件>][--help][范本样式][文件或目录...]
-```
-
-+ awk：处理文本文件
-```
-awk [选项参数] 'script' var=value file(s)
-```
-```
-awk [选项参数] -f scriptfile var=value file(s)
-```
++ 查看文件
+  + tail：看后多少行日志；
+  ```
+  tail -100f   test.log   实时监控100行日志
+  tail -n  10  test.log   查询日志尾部最后10行的日志;
+  tail -n +10  test.log   查询10行之后的所有日志;
+  ```
+  + head：看前多少行日志；
+  ```
+  head -n  10  test.log   查询日志文件中的头10行日志;
+  head -n -10  test.log   查询日志文件除了最后10行的其他所有日志;
+  ```
+  + cat：倒序查看；
+  ```
+  cat -n test.log |grep "debug"   查询关键字的日志
+  ```
 
 + 进程
 ```
