@@ -51,9 +51,9 @@
      * [即时编译](#%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91)
 
 ### 框架
-+ [☕️SpringCloud](https://github.com/GeJinTaiHua/Learn-SpringCloud)
-+ [💥Dubbo](https://github.com/GeJinTaiHua/Learn-Dubbo)
-+ [☀️gRPC](https://github.com/GeJinTaiHua/Learn-gRPC)
++ [☕️SpringCloud](https://github.com/GeJinTaiHua/SpringCloud-learning)
++ [💥Dubbo](https://github.com/GeJinTaiHua/Dubbo-learning)
++ [☀️gRPC](https://github.com/GeJinTaiHua/gRPC-learning)
 
 ### 基础知识
 #### 8大基本类型
