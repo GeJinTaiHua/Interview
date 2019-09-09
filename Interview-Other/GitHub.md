@@ -8,6 +8,8 @@
 
 ### 热门项目
 https://github.com/trending
+  
+项目生成：https://start.spring.io/
 
 ### README.md 的目录
 + [原文链接](https://blog.csdn.net/esa_dsq/article/details/79617041#2-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88gh-md-toc)
