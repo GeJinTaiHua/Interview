@@ -11,10 +11,12 @@
     * [选择器性能优化](#%E9%80%89%E6%8B%A9%E5%99%A8%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96)
     
 ### 框架
-+ React
-+ Angular
-+ Vue
-+ jQuery
++ MVVM（Model-View-ViewModel）
++ JavaScript框架
+  + React
+  + Vue
+  + Angular
+  + jQuery
 
 ### 关键字
 #### AJAX 
