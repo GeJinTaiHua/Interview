@@ -314,6 +314,12 @@ select sun(cnt) from table;
   + 如果MySQL估计使用全表扫描要比使用索引快，则不使用索引；
   + B-tree索引 is null不会走，is not null会走；位图索引 is null，is not null  都会走；联合索引 is not null 只要在建立的索引列（不分先后）都会走；
 + MySQL一条查询语句一般只使用一个索引，因为N条独立索引同时在一条语句使用的消耗比只使用一个索引还要慢。
++ EXPLAIN
+  + type列：连接类型。一个好的sql语句至少要达到range级别，杜绝出现all级别；
+  + key列：使用到的索引名。如果没有选择索引，值是NULL，可以采取强制索引方式；
+  + key_len列：索引长度；
+  + rows列：扫描行数。该值是个预估值；
+  + extra列：详细说明。注意常见的不太友好的值有：Using filesort, Using temporary。
 
 #### count(1) count(主键) count(\*)
 + count(1)：
