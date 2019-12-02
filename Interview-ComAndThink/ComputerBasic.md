@@ -138,7 +138,7 @@ synchronized void setB() {
         <td >HTTP、TFTP, FTP, NFS, WAIS、SMTP</td>      
     </tr>
     <tr>
-        <td >表示层（Presentation</td>    
+        <td >表示层（Presentation）</td>    
         <td >Telnet, Rlogin, SNMP, Gopher</td>      
     </tr>
     <tr>
