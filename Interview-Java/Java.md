@@ -52,8 +52,11 @@
 
 ### 框架
 + [☕️SpringCloud](https://github.com/GeJinTaiHua/SpringCloud-learning)
+  + [☕️SpringCloud Netflix](https://github.com/GeJinTaiHua/SpringCloud-Netflix-learning)
+  + [☕️SpringCloud Alibaba](https://github.com/GeJinTaiHua/SpringCloud-Alibaba-learning)
 + [💥Dubbo](https://github.com/GeJinTaiHua/Dubbo-learning)
 + [☀️gRPC](https://github.com/GeJinTaiHua/gRPC-learning)
++ [📀EDAS](https://github.com/GeJinTaiHua/EDAS-learning)
 
 ### 基础知识
 #### 8大基本类型
