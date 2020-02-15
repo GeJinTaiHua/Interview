@@ -21,6 +21,7 @@
     * [云平台](#云平台)
     * [分布式一致性ID](#分布式一致性ID)
     * [微服务跨域](#微服务跨域)
+    * [单元测试](#单元测试)
 
 ### 面向过程    
     
@@ -323,4 +324,17 @@ MTBF = MTTF + MTTR
   4. websocket
   5. Node 中间件代理/nginx 反向代理：同源策略是浏览器需要遵循的标准，而如果是服务器向服务器请求就无需遵循同源策略。
   6. window.name/location.hash/document.domain + iframe
+
+#### 单元测试
++ AIR原则：
+  + A（automatic）自动化
+  + I（independent）独立性
+  + R（repeatable）可重复
+
++ BCDI原则：
+  + B（broder）边界值测试，包括循环边界、特殊取值、特殊时间点、数据顺序等；
+  + C（correct）正确输入，得到预期结果；
+  + D（design）与设计文档相结合，编写单元测试；
+  + I（error）强制错误信息输入（如：非法数据、异常流程、业务允许外等）得到预期结果。
+
 
