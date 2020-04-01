@@ -291,6 +291,17 @@ select * from A Left join B on
 where a.id = b.id where b.id is null
 ```
   
++ 清空表
+   + id从1开始
+   ```
+   truncate table table_name
+   ```
+   + id继承
+   ```
+   delete from table_name
+   ```
+   + 效率上 truncate 比 delete 快，但 truncate 删除后不记录 mysql 日志，不可以恢复数据。
+  
 ### 基础知识
 #### 三大范式
 + 第一范式（1NF）：
