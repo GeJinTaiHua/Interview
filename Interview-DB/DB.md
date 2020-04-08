@@ -167,8 +167,13 @@
 
 + Select For update
   + InnoDB 使用行锁定，BDB 使用页锁定，MyISAM 使用表锁；
-  
-+ 慢日志查询
+
++ 慢SQL
+  + 开启日志
+  ```
+  set global slow_query_log=1; set long_query_time=1；
+  ```
+  + 慢日志查询
   ```
   show variables like 'slow_query%'; show variables like '%long_query%';
   ```  
