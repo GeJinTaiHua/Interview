@@ -4,6 +4,7 @@
     * [常用数据库](#常用数据库)
     * [Redis](#redis)
     * [MongoDB](#mongodb)
+    * [MySql](#MySql)
   * [事务](#%E4%BA%8B%E5%8A%A1)
     * [3种并发问题](#3种并发问题)
     * [4大特性](#4大特性)
@@ -22,10 +23,6 @@
     * [三大范式](#%E4%B8%89%E5%A4%A7%E8%8C%83%E5%BC%8F)
     * [五大约束](#%E4%BA%94%E5%A4%A7%E7%BA%A6%E6%9D%9F)
     * [数据仓库](#数据仓库)
-    * [索引](#%E7%B4%A2%E5%BC%95)
-    * [count(1) count(主键) count(\*)](#count1-count%E4%B8%BB%E9%94%AE-count)
-    * [Limit](#limit)
-    * [Select For update](#select-for-update)
     * [视图](#视图)
    
 
@@ -125,6 +122,56 @@
   + 全局锁机制；
   + 占用空间大；
   + 无成熟的维护工具。
+
+#### MySql
++ 索引
+  + 使用时机
+    + 经常出现在 group by,order by 和 distinc 关键字后面的字段；
+    + 经常与其他表进行连接的表，在连接字段上应该建立索引；
+    + 经常出现在 Where 子句中的字段；
+    + 经常出现用作查询选择的字段。
+  + 单列索引
+    + 多个单列索引在多条件查询时只会生效第一个索引；
+  + 联合索引
+    + 最左前缀原则：以最左边的为起点任何连续的索引都能匹配上；
+    + 当创建(a,b,c)联合索引时，相当于创建了(a)单列索引，(a,b)联合索引以及(a,b,c)联合索引（a,c组合也可以，但实际上只用到了a的索引，c并没有用到！）。
+  + 索引失效情况：
+    + where 子句中使用 !=、in、or、函数操作；
+    + 模糊查询：like 的前通配（%XX） 索引失效，后通配（XX%）走索引；
+    + 使用<>、not in 、not exist，对于这三种情况大多数情况下认为结果集很大，一般大于5%-15%就不走索引而走FTS；
+    + 多列索引，不使用的第一部分，则不会使用索引；
+    + 列类型是字符串，那一定要在条件中将数据使用引号引用起来，否则不会使用索引；
+    + 如果MySQL估计使用全表扫描要比使用索引快，则不使用索引；
+    + B-tree索引 is null不会走，is not null会走；位图索引 is null，is not null  都会走；联合索引 is not null 只要在建立的索引列（不分先后）都会走；
+  + MySQL一条查询语句一般只使用一个索引，因为N条独立索引同时在一条语句使用的消耗比只使用一个索引还要慢。
+
++ count(1) count(主键) count(\*)
+  + count(1)：
+    + 只扫描主键；
+    + 考虑null；
+  + count(主键)：
+    + 只扫描主键；
+    + 忽略null；
+  + count(\*)：
+    + 扫描表；
+    + 考虑null；
+    + 系统会对count(\*)做优化；
+
++ Limit 
+  + LIMIT N,M：LIMIT首先要找查 N+M 行，然后从N行处，取M行。
+  + 优化：让N变的尽可能的小或是不用
+  ```
+  原查询：SELECT * FROM pw_gbook WHERE uid='48' ORDER BY postdate DESC LIMIT 1275480,20;
+  转换成：SELECT * FROM pw_gbook WHERE id>1275480 and uid='48' ORDER BY postdate DESC LIMIT 20;
+  ```
+
++ Select For update
+  + InnoDB 使用行锁定，BDB 使用页锁定，MyISAM 使用表锁；
+  
++ 慢日志查询
+  ```
+  show variables like 'slow_query%'; show variables like '%long_query%';
+  ```  
 
 ### 事务
 #### 3种并发问题
@@ -332,50 +379,6 @@ where a.id = b.id where b.id is null
 + 主流的数据仓库
   + Hive：基于Hadoop
   + Teradata    
-  
-#### 索引
-+ 使用时机
-  + 经常出现在 group by,order by 和 distinc 关键字后面的字段；
-  + 经常与其他表进行连接的表，在连接字段上应该建立索引；
-  + 经常出现在 Where 子句中的字段；
-  + 经常出现用作查询选择的字段。
-+ 单列索引
-  + 多个单列索引在多条件查询时只会生效第一个索引；
-+ 联合索引
-  + 最左前缀原则：以最左边的为起点任何连续的索引都能匹配上；
-  + 当创建(a,b,c)联合索引时，相当于创建了(a)单列索引，(a,b)联合索引以及(a,b,c)联合索引（a,c组合也可以，但实际上只用到了a的索引，c并没有用到！）。
-+ 索引失效情况：
-  + where 子句中使用 !=、in、or、函数操作；
-  + 模糊查询：like 的前通配（%XX） 索引失效，后通配（XX%）走索引；
-  + 使用<>、not in 、not exist，对于这三种情况大多数情况下认为结果集很大，一般大于5%-15%就不走索引而走FTS；
-  + 多列索引，不使用的第一部分，则不会使用索引；
-  + 列类型是字符串，那一定要在条件中将数据使用引号引用起来，否则不会使用索引；
-  + 如果MySQL估计使用全表扫描要比使用索引快，则不使用索引；
-  + B-tree索引 is null不会走，is not null会走；位图索引 is null，is not null  都会走；联合索引 is not null 只要在建立的索引列（不分先后）都会走；
-+ MySQL一条查询语句一般只使用一个索引，因为N条独立索引同时在一条语句使用的消耗比只使用一个索引还要慢。
-
-#### count(1) count(主键) count(\*)
-+ count(1)：
-  + 只扫描主键；
-  + 考虑null；
-+ count(主键)：
-  + 只扫描主键；
-  + 忽略null；
-+ count(\*)：
-  + 扫描表；
-  + 考虑null；
-  + 系统会对count(\*)做优化；
-
-#### Limit 
-+ LIMIT N,M：LIMIT首先要找查 N+M 行，然后从N行处，取M行。
-+ 优化：让N变的尽可能的小或是不用
-```
-原查询：SELECT * FROM pw_gbook WHERE uid='48' ORDER BY postdate DESC LIMIT 1275480,20;
-转换成：SELECT * FROM pw_gbook WHERE id>1275480 and uid='48' ORDER BY postdate DESC LIMIT 20;
-```
-
-#### Select For update
-+ InnoDB 使用行锁定，BDB 使用页锁定，MyISAM 使用表锁；
 
 #### 视图
 视图是基于一张表或多张表或另外一个视图的逻辑表。
