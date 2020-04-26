@@ -1,5 +1,6 @@
 ﻿## 🔧工具
-
+  * [Nginx](#Nginx)
+    * [安装](#安装)
   * [XML](#XML)
     * [约束模式](#约束模式)
   * [Maven](#Maven)
@@ -10,7 +11,63 @@
     * [Docker命令](#docker%E5%91%BD%E4%BB%A4)
     * [Crontab表达式](#Crontab表达式)
 
-### 约束模式 
+### Nginx
+#### 安装
++ 1、安装make
+  + ftp://ftp.gnu.org/gnu/make/
+  ```
+  yum -y install make
+  ```
+
++ 2、安装gcc
+  + http://ftp.gnu.org/gnu/gcc/
+  ```
+  yum install gcc-c++
+  ```
+
++ 3、安装pcre库
+  + https://sourceforge.net/projects/pcre/files/latest/download
+  ```
+  yum install -y pcre  pcre-devel
+
+  rpm -qa pcre
+  ```
+
++ 4、安装zlib库
+  + http://rpmfind.net/linux/rpm2html/search.php?query=zlib
+  ```
+  yum install zlib zlib-d
+  ```
+
++ 5、安装openssl
+  + https://www.openssl.org/source/
+  ```
+  yum install openssl openssl-devel
+
+  openssl version
+  ```
+
++ 6、安装nginx
+  + http://nginx.org/download/
+  ```
+  wget http://nginx.org/download/nginx-1.16.2.tar.gz
+  tar -xvf nginx-1.16.2.tar.gz  ##解压
+  cd nginx-1.16.2 ##进入目录
+  ./configure  --prefix=/usr/local/ngnix --with-http_ssl_module  ##执行命令
+  make && make install ##编译安装(默认安装在/usr/local/nginx)
+
+  /usr/local/nginx/sbin ##先进入到nginx的安装位置的sbin目录下
+  ./nginx ##启动
+
+  ./nginx -s reload ##重启
+
+  ./nginx -s stop ##停止
+
+  ps -ef | grep nginx ##查看进程命令
+  ```
+
+### XML
+#### 约束模式 
 + DTD
 + Schema（推荐）
     
