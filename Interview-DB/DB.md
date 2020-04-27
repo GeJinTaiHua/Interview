@@ -178,6 +178,51 @@
   show variables like 'slow_query%'; show variables like '%long_query%';
   ```  
 
++ Linux安装
+  + 先卸载CentOS自带的MariaDB
+  ```
+  rpm -qa | grep mariadb
+  rpm -e --nodeps mariadb-libs-5.5.64-1.el7.x86_64
+  ```
+  + 解压安装
+  ```
+  tar -xvf mysql-5.7.27-1.el7.x86_64.rpm-bundle.tar 
+  rpm -ivh mysql-community-common-8.0.15-1.el7.x86_64.rpm
+  rpm -ivh mysql-community-libs-8.0.15-1.el7.x86_64.rpm
+  rpm -ivh mysql-community-libs-compat-5.7.27-1.el7.x86_64.rpm 
+  rpm -ivh mysql-community-client-8.0.15-1.el7.x86_64.rpm
+  rpm -ivh mysql-community-server-8.0.15-1.el7.x86_64.rpm
+  ```
+  + 启动
+  ``` 
+  systemctl start mysqld  # 启动
+  systemctl enable mysqld # 设置开机启动
+  ```
+  + 设置密码
+  ```
+  cat /var/log/mysqld.log|grep password # 查询初始密码
+  mysql -u root -p 
+  mysql>update mysql.user set authentication_string=password('1213') where user='root'; # 修改密码
+  mysql>grant all privileges on *.* to 'root'@'%' identified by '1213'; # 允许远程
+  ```
+  + 配置my.cnf
+  ```
+  vi /etc/my.cnf
+
+  [client]
+  default-character-set=utf8
+  port=3306
+  socket=/var/lib/mysql/mysql.sock
+  [mysqld]
+  datadir=/var/lib/mysql
+  socket=/var/lib/mysql/mysql.sock
+  character-set-server=utf8
+  port=3306
+  max_allowed_packet=100M
+  validate_password_policy=0
+  validate_password_length=4
+  ```
+
 ### 事务
 #### 3种并发问题
 + 脏读：一个事务读到了另一个事务的未提交的数据；
