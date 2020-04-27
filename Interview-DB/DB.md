@@ -28,7 +28,7 @@
 
 ### 数据库
 #### 常用数据库
-+ 关系数据库
++ 关系数据库（SQL）
   + Oracle
   + MySQL
   + PostgreSQL
@@ -46,8 +46,10 @@
   + 面向海量数据访问的文档存储（Document-Oriented）
     + MongoDB
     + CouchDB
-      
-![流程](/Interview-DB/Pic/NOSQL.jpg)
+  ![流程](/Interview-DB/Pic/NOSQL.jpg)
++ NewSql
+  + SAP HANA
+  + MemSQL
    
 #### Redis
 + 为什么快
