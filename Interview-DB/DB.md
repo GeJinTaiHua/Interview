@@ -108,6 +108,29 @@
   + RDB备份时，数据量比较大；
   + slowlog get {n} :获取最近的n条慢查询命令，默认对于执行超过10毫秒(可配置)的命令都会记录到一个定长队列中。
 
++ Linux安装
+   + 安装
+   ```
+   yum install gcc-c++  
+   tar zxvf redis-5.0.8.tar.gz #解压
+   cd redis-5.0.8 
+   make
+   mkdir /usr/local/redis
+   make install PREFIX=/usr/local/redis #编译
+   ```
+   + 启动
+   ```
+   cd /usr/local/redis/bin 
+   ./redis-server  #启动
+   cd /root/redis-5.0.8 #进入解压目录
+   cp redis.conf /usr/local/redis/bin #拷贝解压目录中的配置文件到安装目录
+   cd /usr/local/redis/bin
+   vi  redis.conf   设置后台运行
+      daemonize yes
+      requirepass 12355
+   ./redis-server redis.conf  启动redis
+   ```
+
 #### MongoDB
 + 数据库（database）
 + 集合（collection）
