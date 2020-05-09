@@ -119,6 +119,22 @@ kill -9 19979 终止线程号位19979的进程
 ```
  
 #### Shell命令
++ 启动jar包
+```
+#!/bin/bash
+PID=`netstat -nlpt|grep -w "8084"|awk '{print $7}'|grep -oE "[0-9]+"`
+if [ -z ${PID} ];then
+    echo "PID:{PID} not exist, start Server.jar......" 
+    nohup java -jar Server.jar >/dev/null 2>&1 & 
+	echo "start end......" 
+else
+    echo "PID:{PID} exist, restart Server.jar......"
+    kill -9 ${PID}
+    nohup java -jar Server.jar >/dev/null 2>&1 & 
+	echo "restart end......" 
+fi
+```
+
 + 环境变量  
 ![变量](/Interview-Other/Tool_Pic/param.png)
   + 输出所有的变量，包括全局变量和局部变量：set
