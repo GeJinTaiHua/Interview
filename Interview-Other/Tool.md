@@ -126,12 +126,12 @@ PID=`netstat -nlpt|grep -w "8084"|awk '{print $7}'|grep -oE "[0-9]+"`
 if [ -z ${PID} ];then
     echo "PID:{PID} not exist, start Server.jar......" 
     nohup java -jar Server.jar >/dev/null 2>&1 & 
-	echo "start end......" 
+    echo "start end......" 
 else
     echo "PID:{PID} exist, restart Server.jar......"
     kill -9 ${PID}
     nohup java -jar Server.jar >/dev/null 2>&1 & 
-	echo "restart end......" 
+    echo "restart end......" 
 fi
 ```
 
@@ -253,5 +253,4 @@ pwd，显示当前工作目录(cd执行后的)
 每时：0 0 * * * ? *
 每日：0 0 0 * * ? *
 ```
-
 
