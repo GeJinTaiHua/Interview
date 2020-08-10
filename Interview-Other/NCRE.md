@@ -230,6 +230,34 @@
   </tr>
 </table>
 
+#### 分频
+<table>
+  <tr>
+    <td>FDM</td>
+    <td>频分多路</td>
+    <td>AMPS</td>
+    <td>D-AMPS、GSM</td>
+  </tr>
+  <tr>
+    <td>TDM</td>
+    <td>时分多路</td>
+    <td></td>
+    <td>D-AMPS、GSM</td>
+  </tr>
+  <tr>
+    <td>WDM</td>
+    <td>波分多路</td>
+    <td>光迁信道</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>CDMA</td>
+    <td>码分多址</td>
+    <td>3G、TD-CDMA（中国）、WCDMA（欧洲）、CDMA2000（美国）</td>
+    <td></td>
+  </tr>
+</table>
+
 #### OSI七层
 <table>
   <tr>
