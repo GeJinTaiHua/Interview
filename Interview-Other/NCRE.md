@@ -207,6 +207,28 @@
           <br>广播地址：主机号部分全为1</td>
     <tr>
   </table>
+  
+#### 光纤
+<table>
+  <tr>
+    <td></td>
+    <td>特点</td>
+    <td>发光源</td>
+    <td>芯线</td>
+  </tr>
+  <tr>
+    <td>单模光纤</td>
+    <td>高速度、长距离、成本高</td>
+    <td>激光</td>
+    <td>宅芯线</td>
+  </tr>
+  <tr>
+    <td>多磨光纤</td>
+    <td>低速度、短距离、成本低</td>
+    <td>LED</td>
+    <td>宽芯线</td>
+  </tr>
+</table>
 
 #### OSI七层
 <table>
