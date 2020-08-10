@@ -100,6 +100,50 @@
   + 周期 = 最大单条指令执行时间
   + 公式1：(指令条数+2)*周期
   + 公式2：第一条指令顺序执行时间+(指令条数-1)*周期
+
+#### 存储
+<table>
+  <tr>
+    <td>寻址方式</td>
+    <td>特点</td>
+    <td>访问内存次数</td>
+  </tr>
+   <tr>
+    <td>立即寻址方式</td>
+    <td>操作数本身</td>
+    <td>0</td>
+  </tr>
+   <tr>
+    <td>直接寻址方式</td>
+    <td>操作数在内存的地址</td>
+    <td>1</td>
+  </tr>
+   <tr>
+    <td>间接寻址方式</td>
+    <td>操作数地址的指示器，现已弃用</td>
+    <td>2</td>
+  </tr>
+   <tr>
+    <td>寄存器（间接）寻址方式</td>
+    <td>通用寄存器的编号</td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>相对寻址方式</td>
+    <td>程序计数器PC+形式地址，无需绝对地址编码，可以存内存任何地方</td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>基址寻址方式</td>
+    <td>基址寄存器+形式地址，扩大寻址能力</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>变址寻址方式</td>
+    <td>变址寄存器+形式地址，程序块的规律性变化</td>
+    <td></td>
+  </tr>
+</table>
   
 #### 操作指令
 <table>
@@ -198,13 +242,13 @@
     <td >网络层（Network）</td> 
     <td >网络层</td> 
     <td >IP, ICMP, ARP, RARP, AKP, UUCP</td> 
-    <td></td>
+    <td>路由器</td>
   </tr>
   <tr>
     <td >数据链路层（Data Link）</td> 
     <td rowspan="2">数据链路层</td> 
     <td >FDDI, Ethernet, Arpanet, PDN, SLIP, PPP</td> 
-    <td></td>
+    <td>网桥、交换机</td>
   </tr>
   <tr>
     <td >物理层（Physical）</td> 
@@ -338,13 +382,7 @@
   </tr>
 </table>
 
-<table>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
+
  	
 
 
