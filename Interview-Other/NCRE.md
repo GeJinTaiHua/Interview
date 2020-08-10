@@ -1,6 +1,44 @@
 ## 📃软考（软件设计师）
 
 ### 一、计算机系统知识
+#### 原码、反码、补码、移码
+<table>
+  <tr>
+    <td></td>
+    <td>正数</td>
+    <td>负数</td>
+    <td>正负零</td>
+    <td>功能</td>
+  </tr>
+  <tr>
+    <td>原码</td>
+    <td>相同</td>
+    <td>不同</td>
+    <td>不同</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>反码</td>
+    <td>相同</td>
+    <td>不同</td>
+    <td>不同</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>补码</td>
+    <td>相同</td>
+    <td>不同</td>
+    <td>相同</td>
+    <td>简化运算</td>
+  </tr>
+  <tr>
+    <td>移码</td>
+    <td></td>
+    <td></td>
+    <td>相同</td>
+    <td></td>
+  </tr>
+</table>
 
 ### 二、程序语言基础知识
 
