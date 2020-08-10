@@ -62,22 +62,24 @@
     <td>语义分析</td>
     <td>静态语义检查</td>
     <td>静态语义错误：类型不一致、参数不匹配
-     <br>动态语义错误：逻辑错误（死循环、除数为零）</td>
+        <br>动态语义错误：逻辑错误（死循环、除数为零）</td>
   </tr>
   <tr>
     <td>中间代码生成</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
     <td>优化</td>
     <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>目标代码生成</td>
     <td></td>
+    <td></td>
   </tr>
 </table>
-
 
 ### 三、操作系统知识
 + 重叠流水线时间计算：
@@ -129,43 +131,51 @@
 
 #### OSI七层
 <table>
-    <tr>
-        <td >OSI 七层网络模型</td> 
-        <td >TCP/IP 四层概念模型</td> 
-        <td >对应网络协议</td> 
-    </tr>
-    <tr>
-        <td >应用层（Application）</td>    
-        <td rowspan="3">应用层</td>  
-        <td >HTTP、TFTP, FTP, NFS, WAIS、SMTP</td>      
-    </tr>
-    <tr>
-        <td >表示层（Presentation）</td>    
-        <td >Telnet, Rlogin, SNMP, Gopher</td>      
-    </tr>
-    <tr>
-        <td >会话层（Session）</td>    
-        <td >SMTP, DNS</td>      
-    </tr>
-    <tr>
-        <td >传输层（Transport）</td> 
-        <td >传输层</td> 
-        <td >TCP, UDP</td> 
-    </tr>
-    <tr>
-        <td >网络层（Network）</td> 
-        <td >网络层</td> 
-        <td >IP, ICMP, ARP, RARP, AKP, UUCP</td> 
-    </tr>
-    <tr>
-        <td >数据链路层（Data Link）</td> 
-        <td rowspan="2">数据链路层</td> 
-        <td >FDDI, Ethernet, Arpanet, PDN, SLIP, PPP</td> 
-    </tr>
-    <tr>
-        <td >物理层（Physical）</td> 
-        <td >IEEE 802.1A, IEEE 802.2到IEEE 802.11</td> 
-    </tr>
+  <tr>
+    <td >OSI 七层网络模型</td> 
+    <td >TCP/IP 四层概念模型</td> 
+    <td >对应网络协议</td> 
+    <td>应用</td>
+  </tr>
+  <tr>
+    <td >应用层（Application）</td>    
+    <td rowspan="3">应用层</td>  
+    <td >HTTP、TFTP, FTP, NFS, WAIS、SMTP</td>      
+    <td></td>
+  </tr>
+  <tr>
+    <td >表示层（Presentation）</td>    
+    <td >Telnet, Rlogin, SNMP, Gopher</td>      
+    <td></td>
+  </tr>
+  <tr>
+    <td >会话层（Session）</td>    
+    <td >SMTP, DNS</td> 
+    <td></td>
+  </tr>
+  <tr>
+    <td >传输层（Transport）</td> 
+    <td >传输层</td> 
+    <td >TCP, UDP</td> 
+    <td></td>
+  </tr>
+  <tr>
+    <td >网络层（Network）</td> 
+    <td >网络层</td> 
+    <td >IP, ICMP, ARP, RARP, AKP, UUCP</td> 
+    <td></td>
+  </tr>
+  <tr>
+    <td >数据链路层（Data Link）</td> 
+    <td rowspan="2">数据链路层</td> 
+    <td >FDDI, Ethernet, Arpanet, PDN, SLIP, PPP</td> 
+    <td></td>
+  </tr>
+  <tr>
+    <td >物理层（Physical）</td> 
+    <td >IEEE 802.1A, IEEE 802.2到IEEE 802.11</td> 
+    <td></td>
+  </tr>
 </table>
 
 ### 六、多媒体基础知识
@@ -242,9 +252,9 @@
   <tr>
     <td>内容耦合</td>
     <td>一个模块访问另一个模块的内部数据；
-      <br>一个模块不通过正常入口转到另一个模块内部；
-      <br>两个模块有一部分程序代码重叠；
-      <br>一个模块有多个入口。</td>
+       <br>一个模块不通过正常入口转到另一个模块内部；
+       <br>两个模块有一部分程序代码重叠；
+       <br>一个模块有多个入口。</td>
   </tr>
   <tr>
     <td>公共耦合</td>
