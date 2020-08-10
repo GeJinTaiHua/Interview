@@ -159,7 +159,7 @@ synchronized void setB() {
     <tr>
         <td >数据链路层（Data Link）</td> 
         <td rowspan="2">数据链路层</td> 
-        <td >FDDI, Ethernet, Arpanet, PDN, SLIP, PPP/td> 
+        <td >FDDI, Ethernet, Arpanet, PDN, SLIP, PPP</td> 
     </tr>
     <tr>
         <td >物理层（Physical）</td> 
