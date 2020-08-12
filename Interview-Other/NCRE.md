@@ -27,7 +27,7 @@
 <table>
   <tr>
     <td></td>
-    <td>正数</td>
+    <td color="red">正数</td>
     <td>负数</td>
     <td>正负零</td>
     <td>功能</td>
@@ -135,7 +135,7 @@
     <td>1</td>
   </tr>
    <tr>
-    <td>~~间接寻址方式~~</td>
+    <td>间接寻址方式</td>
     <td>操作数地址的指示器，现已弃用</td>
     <td>2</td>
   </tr>
