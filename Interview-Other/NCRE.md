@@ -120,7 +120,7 @@
 #### 寻址方式
 <table>
   <tr>
-    <td bgcolor=Aqua>寻址方式</td>
+    <td bgcolor=yellow>>寻址方式</td>
     <td>特点</td>
     <td>访问内存次数</td>
   </tr>
