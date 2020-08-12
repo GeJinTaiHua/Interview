@@ -27,7 +27,7 @@
 <table>
   <tr>
     <td></td>
-    <td>**正数**</td>
+    <td>正数</td>
     <td>负数</td>
     <td>正负零</td>
     <td>功能</td>
