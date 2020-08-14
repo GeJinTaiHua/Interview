@@ -58,7 +58,7 @@
     <td></td>
     <td></td>
     <td>相同</td>
-    <td></td>
+    <td>阶码运算</td>
   </tr>
 </table>
 
