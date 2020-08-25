@@ -245,40 +245,40 @@
   <tr>
     <td >应用层（Application）</td>    
     <td rowspan="3">应用层</td>  
-    <td >HTTP、TFTP, FTP, NFS, WAIS、SMTP</td>      
+    <td >HTTP、FTP、SNMP（简单网络管理协议）</td>      
     <td></td>
   </tr>
   <tr>
     <td >表示层（Presentation）</td>    
-    <td >Telnet, Rlogin, SNMP, Gopher</td>      
+    <td >Telnet</td>      
     <td></td>
   </tr>
   <tr>
     <td >会话层（Session）</td>    
-    <td >SMTP, DNS</td> 
+    <td >DNS</td> 
     <td></td>
   </tr>
   <tr>
     <td >传输层（Transport）</td> 
     <td >传输层</td> 
-    <td >TCP, UDP</td> 
+    <td >TCP、UDP</td> 
     <td></td>
   </tr>
   <tr>
     <td >网络层（Network）</td> 
     <td >网络层</td> 
-    <td >IP, ICMP, ARP, RARP, AKP, UUCP</td> 
+    <td >IP、ICMP、ARP、X.25</td> 
     <td>路由器</td>
   </tr>
   <tr>
     <td >数据链路层（Data Link）</td> 
     <td rowspan="2">数据链路层</td> 
-    <td >FDDI, Ethernet, Arpanet, PDN, SLIP, PPP</td> 
+    <td >PPP</td> 
     <td>网桥、交换机</td>
   </tr>
   <tr>
     <td >物理层（Physical）</td> 
-    <td >IEEE 802.1A, IEEE 802.2到IEEE 802.11</td> 
+    <td >IEEE、</td> 
     <td></td>
   </tr>
 </table>
