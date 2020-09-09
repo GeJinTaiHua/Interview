@@ -125,6 +125,10 @@
   + SRAM（静态）
     + Cache（高速缓存存储器）
   + DRAM（动态） 
++ 命令
+  + netstat：显示网络相关；
+  + ping：检查网络连接；
+  + MSConfig：Windows配置的应用程序；
 
 #### 简单、复杂指令集
 + CISC（复杂）
