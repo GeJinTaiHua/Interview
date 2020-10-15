@@ -291,7 +291,10 @@
   + TDM：时分多路
   + WDM：波分多路
   + CDMA：码分多址
-    + 3G、TD-CDMA（中国）、WCDMA（欧洲）、CDMA2000（美国
+    + 3G、TD-CDMA（中国）、WCDMA（欧洲）、CDMA2000（美国)
++ 端口
+  + UDP：53，TCP：23
+  + SMTP（简单邮件传送协议）：25，POP3（接受邮件协议）：110
   
 #### OSI七层
 <table>
@@ -304,7 +307,7 @@
   <tr>
     <td>应用层（Application）</td>    
     <td rowspan="3">应用层</td>  
-    <td>HTTP、FTP、SNMP（简单网络管理协议）</td>      
+    <td>HTTP、FTP、SNMP、DNS、SMTP、NFS</td>      
     <td>网关</td>
   </tr>
   <tr>
