@@ -370,7 +370,7 @@
     <td>数据链路层（Data Link）</td> 
     <td rowspan="2">数据链路层</td> 
     <td>PPP</td> 
-    <td>网桥、交换机</td>
+    <td>交换机、网桥（透明网桥、源路）</td>
   </tr>
   <tr>
     <td>物理层（Physical）</td> 
