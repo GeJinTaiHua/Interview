@@ -1,12 +1,12 @@
 ## 📚MyNote
  
 ### 语言
-|&emsp;&emsp;Ⅰ&emsp;&emsp;|  Ⅱ  |  Ⅲ  |  Ⅳ  |  Ⅴ  | 
+|&emsp;&emsp;Ⅰ&emsp;&emsp;|&emsp;&emsp;Ⅱ&emsp;&emsp;|&emsp;&emsp;Ⅲ&emsp;&emsp;|&emsp;&emsp;Ⅳ&emsp;&emsp;|&emsp;&emsp;Ⅴ&emsp;&emsp;| 
 |:----:|:----:|:----:|:----:|:----:|
 |[☕Java️](Interview-Java/Java.md)|[🆚C#](Interview-NET/NET.md)|[🌎HTML](Interview-HTML/HTML.md)|[💾DB](Interview-DB/DB.md)|[🔧命令](Interview-Other/Tool.md) |
 
 ### 知识
-|  Ⅰ  |  Ⅱ  |  Ⅲ  |  Ⅳ  |  Ⅴ  | 
+|&emsp;&emsp;Ⅰ&emsp;&emsp;|&emsp;&emsp;Ⅱ&emsp;&emsp;|&emsp;&emsp;Ⅲ&emsp;&emsp;|&emsp;&emsp;Ⅳ&emsp;&emsp;|&emsp;&emsp;Ⅴ&emsp;&emsp;| 
 |:----:|:----:|:----:|:----:|:----:|
 |[📏数据结构](Interview-DSAndA/DS.md)|[✏️算法](Interview-DSAndA/Algorithm.md)|[🎴编程思想](Interview-ComAndThink/Thinking.md)|[💻计算机基础](Interview-ComAndThink/ComputerBasic.md)| |
 
