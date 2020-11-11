@@ -13,5 +13,5 @@
 
 |  Ⅺ  |  Ⅻ  | XIII |  XIV |  XV  |
 |:----:|:----:|:----:|:----:|:----:| 
-|[🔧工具](Interview-Other/Tool.md)|[:octocat:GitHub](Interview-Other/GitHub.md)| [📃软考](Interview-Other/NCRE.md)| | | 
+|[🔧工具](Interview-Other/Tool.md)|[:octocat:GitHub](Interview-Other/GitHub.md)| [📃软考中级](Interview-Other/NCRE.md)| [📃软考高级](Interview-Other/NCRE2.md)| | 
 
