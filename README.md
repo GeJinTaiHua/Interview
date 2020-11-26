@@ -14,4 +14,3 @@
 |&emsp;&emsp;&ensp;Ⅰ&emsp;&emsp;&ensp;|&emsp;&emsp;&ensp;Ⅱ&emsp;&emsp;&ensp;|&emsp;&emsp;&ensp;Ⅲ&emsp;&emsp;&ensp;|&emsp;&emsp;&ensp;Ⅳ&emsp;&emsp;&ensp;|&emsp;&emsp;&ensp;Ⅴ&emsp;&emsp;&ensp;|
 |:----:|:----:|:----:|:----:|:----:|
 |[📃软考中级](Interview-Other/NCRE.md)|[📃软考高级](Interview-Other/NCRE2.md)| | | [:octocat:GitHub](Interview-Other/GitHub.md)| 
-
