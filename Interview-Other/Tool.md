@@ -121,7 +121,7 @@ kill -9 19979 终止线程号位19979的进程
 + vim
 i：输入模式
 :w（保存） :q（退出） :q!（不保存退出）
-
+![变量](/Interview-Other/Tool_Pic/vim.gif)
  
 #### Shell命令
 + 启动jar包
