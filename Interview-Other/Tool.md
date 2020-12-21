@@ -32,7 +32,7 @@
 
   rpm -qa pcre
   ```
-
+ 
 + 4、安装zlib库
   + http://rpmfind.net/linux/rpm2html/search.php?query=zlib
   ```
