@@ -117,6 +117,11 @@ ps –ef|grep tomcat 查看所有有关tomcat的进程
 ps -ef|grep --color java 高亮要查询的关键字
 kill -9 19979 终止线程号位19979的进程
 ```
+
++ vim
+i：输入模式
+:w（保存） :q（退出） :q!（不保存退出）
+
  
 #### Shell命令
 + 启动jar包
