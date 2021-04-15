@@ -305,45 +305,45 @@
 ### 十一、专业英语
 + a pattern of：模式
 + a set of constraint：一组约束
-+ a standard format for storage：标准存储格式
 + application：应用
-+ architectural style：架构风格
-+ architecture designer：架构设计师
-+ architectural standard：架构标准
 + capacity：容量
 + component：构件
 + combine：关联
-+ constraint：约束
-+ connector type：连接器风格
-+ data loss：数据丢失
-+ data partitioning and replication：数据分区和复制
-+ distributed data：分布式数据库
 + detailed design：详细设计
 + device：设备
 + experienced：经验丰富
 + general design：概要设计
-+ interpretive：解释性
-+ interactive：交互式
-+ iterative：反复迭代
 + information extraction：信息提取
 + mechanism：机制
 + nonfunctional requirements：非功能需求
 + outline：大纲
-+ overall properties：整体特性
 + part：部件
 + perform：执行
-+ performance：性能
 + pattern definition：模式定义
-+ pipe-and-filter architectures：管道-过滤器架构
 + processor：处理器
-+ reliability：可靠性
-+ response time：响应时间
 + reconstruction：重用
 + recognition：识别
 + semantic models：语义模型
 + specification：规范
-+ structured organization：结构化组织
-+ three-tier architecture：三层架构
-+ visualization：可视化
 + vocabulary：词汇表
++ architectural：架构
+  + architectural style：架构风格
+  + architecture designer：架构设计师
+  + architectural standard：架构标准
+  + connector type：连接器风格
+  + pipe-and-filter architectures：管道-过滤器架构
+  + structured organization：结构化组织
+  + three-tier architecture：三层架构
++ distributed data：分布式数据库
+  + a standard format for storage：标准存储格式
+  + data loss：数据丢失
+  + data partitioning and replication：数据分区和复制
++ overall properties：整体特性
+  + interactive：交互式
+  + interpretive：解释性
+  + iterative：反复迭代
+  + visualization：可视化
++ performance：性能
+  + reliability：可靠性
+  + response time：响应时间
 
