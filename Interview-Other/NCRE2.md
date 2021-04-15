@@ -306,13 +306,10 @@
 + a pattern of：模式
 + a set of constraint：一组约束
 + application：应用
-+ capacity：容量
 + component：构件
 + combine：关联
-+ detailed design：详细设计
 + device：设备
 + experienced：经验丰富
-+ general design：概要设计
 + information extraction：信息提取
 + mechanism：机制
 + nonfunctional requirements：非功能需求
@@ -334,8 +331,12 @@
   + pipe-and-filter architectures：管道-过滤器架构
   + structured organization：结构化组织
   + three-tier architecture：三层架构
++ design：设计
+  + detailed design：详细设计
+  + general design：概要设计
 + distributed data：分布式数据库
   + a standard format for storage：标准存储格式
+  + capacity：容量
   + data loss：数据丢失
   + data partitioning and replication：数据分区和复制
 + overall properties：整体特性
