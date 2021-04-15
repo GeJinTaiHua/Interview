@@ -183,7 +183,7 @@
     </tr>
     <tr>
         <td rowspan="2">数据流风格</td>  
-        <td >管道——过滤器</td> 
+        <td >管道-过滤器</td> 
         <td ></td> 
     </tr>
     <tr>
@@ -191,8 +191,8 @@
         <td >经典数据处理、程序开发、Windows下的BAT程序；</td> 
     </tr>    
     <tr>
-        <td rowspan="3">调用——返回风格</td>  
-        <td >主程序——子程序</td> 
+        <td rowspan="3">调用-返回风格</td>  
+        <td >主程序-子程序</td> 
         <td ></td> 
     </tr>
     <tr>
@@ -288,7 +288,7 @@
 + connector type：连接器风格
 + overall properties：整体特性
 + part：部件
-+ pipe-and-filter：管道和过滤器
++ pipe-and-filter architectures：管道-过滤器架构
 + semantic models：语义模型
 + structured organization：结构化组织
 + vocabulary：词汇表
