@@ -279,19 +279,19 @@
   + 模式评价
   + 模式求精
 
-#### 1.8&nbsp;专业英语
-+ architectural style：架构风格
+#### 1.8&nbsp;专业英语 
 + a pattern of：模式
 + a set of constraint：一组约束
-+ structured organization：结构化组织
-+ vocabulary：词汇表
++ architectural style：架构风格
 + component：构件
-+ connector type：连接器风格
 + combine：关联
-+ semantic models：语义模型
++ connector type：连接器风格
 + overall properties：整体特性
 + part：部件
 + pipe-and-filter：管道和过滤器
++ semantic models：语义模型
++ structured organization：结构化组织
++ vocabulary：词汇表
 
 
 ### 2&nbsp;案例分析----------------------------------------------------------------------------------------------------
