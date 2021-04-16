@@ -43,11 +43,15 @@
         <td >OSI七层网络模型</td> 
         <td >TCP/IP四层概念模型</td> 
         <td >主要功能</td> 
+        <td colspan="3">协议</td> 
     </tr>
     <tr>
         <td >应用层（Application）</td>    
         <td rowspan="3">应用层</td>  
         <td >处理网络应用</td>      
+        <td rowspan="3">POP3、FTP、HTTP、Telnet、SMTP</td>     
+        <td rowspan="3"></td>     
+        <td rowspan="3">DHCP、TFTP、snmp、DNS</td>     
     </tr>
     <tr>
         <td >表示层（Presentation）</td>    
@@ -61,16 +65,21 @@
         <td >传输层（Transport）</td> 
         <td >传输层</td> 
         <td >端到端连接</td> 
+        <td >TCP</td>     
+        <td ></td>     
+        <td >UDP</td>      
     </tr>
     <tr>
         <td >网络层（Network）</td> 
         <td >网络层</td> 
         <td >分组传输和路由选择</td> 
+        <td colspan="3">IP、ICMP、IGMP、ARP、RARP</td> 
     </tr>
     <tr>
         <td >数据链路层（Data Link）</td> 
         <td rowspan="2">数据链路层</td> 
         <td >传送以帧为单位的信息</td> 
+        <td rowspan="2" colspan="3">CSMA/CD、TokingRing</td> 
     </tr>
     <tr>
         <td >物理层（Physical）</td> 
