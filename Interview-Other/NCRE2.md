@@ -164,7 +164,7 @@
         <td >管道-过滤器</td> 
         <td ></td> 
     </tr>
-    <tr>
+    <tr> 
         <td >批处理序列</td> 
         <td >经典数据处理、程序开发、Windows下的BAT程序；</td> 
     </tr>    
