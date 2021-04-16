@@ -55,10 +55,8 @@
     ![红黑树](/Interview-DSAndA/DS_Pic/RedBlackTree.png)  
 
 #### B树
-+ B树：一种树状数据结构，能够用来存储排序后的数据。     
-
-+ B-树：  
-![B+树](/Interview-DSAndA/DS_Pic/B-Tree.png)
++ B树：一种树状数据结构，能够用来存储排序后的数据。      
+![B树](/Interview-DSAndA/DS_Pic/B-Tree.png)
 
 + B+树：只有达到叶子结点才命中（B树可以在非叶子结点命中）。   
   + 非叶子节点只存储键值信息；
