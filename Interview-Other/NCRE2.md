@@ -1,7 +1,8 @@
 ## 📃软考高级（系统架构设计师）
 * [一、计算机与网络基础知识](#一计算机与网络基础知识) 
   * [现代信息系统的架构](#现代信息系统的架构) 
-  * [网络存储](#网络存储) 
+  * [网络存储](#网络存储)
+  * [OSI七层和TCP/IP四层](#OSI七层和TCP/IP四层) 
 * [二、信息化基础知识](#二信息化基础知识) 
   * [信息化需求](#信息化需求) 
   * [供应链信息流](#供应链信息流) 
@@ -35,6 +36,47 @@
 + DSA（直接附加存储）：通过电缆直连服务器；
 + NAS（网络附加存储）：通过网络接口与网络直接相连；
 + SAN
+
+#### OSI七层和TCP/IP四层
+<table>
+    <tr>
+        <td >OSI七层网络模型</td> 
+        <td >TCP/IP四层概念模型</td> 
+        <td >主要功能</td> 
+    </tr>
+    <tr>
+        <td >应用层（Application）</td>    
+        <td rowspan="3">应用层</td>  
+        <td ></td>      
+    </tr>
+    <tr>
+        <td >表示层（Presentation）</td>    
+        <td ></td>      
+    </tr>
+    <tr>
+        <td >会话层（Session）</td>    
+        <td ></td>      
+    </tr>
+    <tr>
+        <td >传输层（Transport）</td> 
+        <td >传输层</td> 
+        <td ></td> 
+    </tr>
+    <tr>
+        <td >网络层（Network）</td> 
+        <td >网络层</td> 
+        <td ></td> 
+    </tr>
+    <tr>
+        <td >数据链路层（Data Link）</td> 
+        <td rowspan="2">数据链路层</td> 
+        <td ></td> 
+    </tr>
+    <tr>
+        <td >物理层（Physical）</td> 
+        <td ></td> 
+    </tr>
+</table>
 
 
 ### 二、信息化基础知识
