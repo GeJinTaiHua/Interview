@@ -56,9 +56,9 @@
     <tr>
         <td >表示层（Presentation）</td>    
         <td >数据表示</td>     
-        <td rowspan="2">FTP、HTTP、Telnet、SMTP</td>     
+        <td rowspan="2">FTP、HTTP<br/>Telnet、SMTP</td>     
         <td rowspan="2">NFS</td>     
-        <td rowspan="2">DHCP、TFTP、snmp、DNS</td>    
+        <td rowspan="2">DHCP、TFTP<br/>snmp、DNS</td>    
     </tr>
     <tr>
         <td >会话层（Session）</td>    
