@@ -49,13 +49,16 @@
         <td >应用层（Application）</td>    
         <td rowspan="3">应用层</td>  
         <td >处理网络应用</td>      
-        <td rowspan="3">POP3、FTP、HTTP、Telnet、SMTP</td>     
-        <td rowspan="3"></td>     
-        <td rowspan="3">DHCP、TFTP、snmp、DNS</td>     
+        <td >POP3</td>     
+        <td ></td>     
+        <td ></td>     
     </tr>
     <tr>
         <td >表示层（Presentation）</td>    
-        <td >数据表示</td>      
+        <td >数据表示</td>     
+        <td rowspan="2">FTP、HTTP、Telnet、SMTP</td>     
+        <td rowspan="2">NFS</td>     
+        <td rowspan="2">DHCP、TFTP、snmp、DNS</td>    
     </tr>
     <tr>
         <td >会话层（Session）</td>    
