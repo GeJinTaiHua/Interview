@@ -47,34 +47,34 @@
     <tr>
         <td >应用层（Application）</td>    
         <td rowspan="3">应用层</td>  
-        <td ></td>      
+        <td >处理网络应用</td>      
     </tr>
     <tr>
         <td >表示层（Presentation）</td>    
-        <td ></td>      
+        <td >数据表示</td>      
     </tr>
     <tr>
         <td >会话层（Session）</td>    
-        <td ></td>      
+        <td >互联主机通信</td>      
     </tr>
     <tr>
         <td >传输层（Transport）</td> 
         <td >传输层</td> 
-        <td ></td> 
+        <td >端到端连接</td> 
     </tr>
     <tr>
         <td >网络层（Network）</td> 
         <td >网络层</td> 
-        <td ></td> 
+        <td >分组传输和路由选择</td> 
     </tr>
     <tr>
         <td >数据链路层（Data Link）</td> 
         <td rowspan="2">数据链路层</td> 
-        <td ></td> 
+        <td >传送以帧为单位的信息</td> 
     </tr>
     <tr>
         <td >物理层（Physical）</td> 
-        <td ></td> 
+        <td >二进制位传输</td> 
     </tr>
 </table>
 
