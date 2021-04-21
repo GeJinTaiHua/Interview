@@ -558,4 +558,3 @@
 + performance：性能
   + reliability：可靠性
   + response time：响应时间
-
