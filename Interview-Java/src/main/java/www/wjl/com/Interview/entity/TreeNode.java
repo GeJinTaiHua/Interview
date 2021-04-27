@@ -9,10 +9,9 @@ import lombok.Data;
  */
 @Data
 public class TreeNode<T> {
-    public T value;
+    private T value;
 
-    // 左子树
-    public TreeNode<T> left;
-    // 右子树
-    public TreeNode<T> right;
+    private TreeNode<T> left;
+
+    private TreeNode<T> right;
 }

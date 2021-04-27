@@ -34,10 +34,10 @@
 #### 二叉树  
 ![二叉树](/Interview-DSAndA/DS_Pic/2XTree.png)
 + 遍历
-  + [前序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L17)：ABDECF
-  + [中序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L57)：DBEAFC
-  + [后序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L95)：DEBFCA
-  + [层序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L108)：ABCDEF
+  + [前序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L19)：ABDECF
+  + [中序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L31)：DBEAFC
+  + [后序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L43)：DEBFCA
+  + [层序遍历](/Interview-Java/src/test/java/DataStructure/BinaryTree.java#L142)：ABCDEF
   
 + 完全二叉树
 
