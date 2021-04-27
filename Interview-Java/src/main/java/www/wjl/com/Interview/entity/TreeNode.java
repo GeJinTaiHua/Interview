@@ -1,15 +1,18 @@
 package www.wjl.com.Interview.entity;
 
-/*
- * @desc 二叉树
- * @author wjl
- * @date 2018/8/29 0029
+import lombok.Data;
+
+/**
+ * 二叉树
+ *
+ * @date 2021/4/27 10:55
  */
-public class TreeNode {
-    public String value;
+@Data
+public class TreeNode<T> {
+    public T value;
 
     // 左子树
-    public TreeNode left;
+    public TreeNode<T> left;
     // 右子树
-    public TreeNode right;
+    public TreeNode<T> right;
 }
