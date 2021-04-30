@@ -18,9 +18,9 @@ public class BinaryTree {
      */
     public void PreOrderRecursion(TreeNode treeNode) {
         if (treeNode != null) {
-            System.out.println(treeNode.getValue());
-            PreOrderRecursion(treeNode.getLeft());
-            PreOrderRecursion(treeNode.getRight());
+            System.out.println(treeNode.value);
+            PreOrderRecursion(treeNode.left);
+            PreOrderRecursion(treeNode.right);
         }
     }
 
@@ -30,9 +30,9 @@ public class BinaryTree {
      */
     public void InOrderRecursion(TreeNode treeNode) {
         if (treeNode != null) {
-            InOrderRecursion(treeNode.getLeft());
-            System.out.println(treeNode.getValue());
-            InOrderRecursion(treeNode.getRight());
+            InOrderRecursion(treeNode.left);
+            System.out.println(treeNode.value);
+            InOrderRecursion(treeNode.right);
         }
     }
 
@@ -42,9 +42,9 @@ public class BinaryTree {
      */
     public void PostOrderRecursion(TreeNode treeNode) {
         if (treeNode != null) {
-            PostOrderRecursion(treeNode.getLeft());
-            PostOrderRecursion(treeNode.getRight());
-            System.out.println(treeNode.getValue());
+            PostOrderRecursion(treeNode.left);
+            PostOrderRecursion(treeNode.right);
+            System.out.println(treeNode.value);
         }
     }
 
@@ -63,14 +63,14 @@ public class BinaryTree {
         stack.push(treeNode);
         while (!stack.empty()) {
             TreeNode node = stack.pop();
-            System.out.println(node.getValue());
+            System.out.println(node.value);
 
             // 右结点先入栈，左结点后入栈
-            if (node.getRight() != null) {
-                stack.push(node.getRight());
+            if (node.right != null) {
+                stack.push(node.right);
             }
-            if (node.getLeft() != null) {
-                stack.push(node.getLeft());
+            if (node.left != null) {
+                stack.push(node.left);
             }
         }
     }
@@ -93,15 +93,15 @@ public class BinaryTree {
             // 走完左孩子
             while (treeNode != null) {
                 stack.push(treeNode);
-                treeNode = treeNode.getLeft();
+                treeNode = treeNode.left;
             }
 
             // 没有左孩子，输出
             if (!stack.empty()) {
                 TreeNode node = stack.pop();
-                System.out.print(node.getValue());
+                System.out.print(node.value);
                 // 最后一个节点的右孩子
-                treeNode = node.getRight();
+                treeNode = node.right;
             }
         }
     }
@@ -120,18 +120,18 @@ public class BinaryTree {
             // 走完左孩子
             while (treeNode != null) {
                 stack.push(treeNode);
-                treeNode = treeNode.getLeft();
+                treeNode = treeNode.left;
             }
 
             treeNode = stack.peek();
-            if (treeNode.getRight() == null || treeNode.getRight() == tag) {
+            if (treeNode.right == null || treeNode.right == tag) {
                 // 右子树为空，或者已经遍历过，回到最近顶点
-                System.out.println(treeNode.getValue());
+                System.out.println(treeNode.value);
                 tag = stack.pop();
             } else {
                 // 遍历该节点的右子树
                 tag = treeNode;
-                treeNode = treeNode.getRight();
+                treeNode = treeNode.right;
             }
         }
     }
@@ -147,14 +147,14 @@ public class BinaryTree {
 
         while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
-            System.out.print(node.getValue());
+            System.out.print(node.value);
 
-            if (node.getLeft() != null) {
-                queue.offer(node.getLeft());
+            if (node.left != null) {
+                queue.offer(node.left);
             }
 
-            if (node.getRight() != null) {
-                queue.offer(node.getRight());
+            if (node.right != null) {
+                queue.offer(node.right);
             }
         }
     }

@@ -7,11 +7,10 @@ import lombok.Data;
  *
  * @date 2021/4/27 10:55
  */
-@Data
 public class TreeNode<T> {
-    private T value;
+    public T value;
 
-    private TreeNode<T> left;
+    public TreeNode<T> left;
 
-    private TreeNode<T> right;
+    public TreeNode<T> right;
 }
