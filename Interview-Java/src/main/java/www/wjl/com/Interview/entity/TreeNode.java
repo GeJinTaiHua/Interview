@@ -1,7 +1,5 @@
 package www.wjl.com.Interview.entity;
 
-import lombok.Data;
-
 /**
  * 二叉树
  *
