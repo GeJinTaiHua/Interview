@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.net.URL;
+import java.net.URLConnection;
 
 /**
  * 网络版的自定义加载器
@@ -25,13 +26,13 @@ public class MyNetworkClassLoader extends ClassLoader {
 
     private byte[] loadClassData(String name) {
         String classUrl = url + "/" + name.replace(".", "/") + ".class";
-        byte[] bytes = null;
-
+        byte[] result = null;
         InputStream is = null;
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         try {
             URL url = new URL(classUrl);
-            is = url.openStream();
+            URLConnection openConnection = url.openConnection();
+            is = openConnection.getInputStream();
 
             int len = 0;
             byte[] buffer = new byte[1024];
@@ -39,7 +40,7 @@ public class MyNetworkClassLoader extends ClassLoader {
                 bos.write(buffer, 0, len);
             }
 
-            bytes = bos.toByteArray();
+            result = bos.toByteArray();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -52,7 +53,7 @@ public class MyNetworkClassLoader extends ClassLoader {
             }
         }
 
-        return bytes;
+        return result;
     }
 
     public static void main(String[] args) throws Exception {
