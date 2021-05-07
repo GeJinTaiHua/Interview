@@ -580,7 +580,7 @@ public void countDown() { };
      - 扩展类加载器（Extension ClassLoader）
      - 系统类加载器（Application ClassLoader）
      - 自定义类加载器
-       ![网络版的自定义加载器](/Interview-Java/src/test/java/ClassLoad/MyNetworkClassLoader.java#12)
+       + [网络版的自定义加载器](/Interview-Java/src/test/java/ClassLoad/MyNetworkClassLoader.java#12)
      + 双亲委派机制：类加载器收到类加载请求，自己不加载，向上委托给父类加载，父类加载不了，再自己加载。
      ![类加载器](/Interview-Java/Pic/LJZ.png)
   2) 验证（Verification）：确保Class文件的字节流中包含的信息符合当前虚拟机的要求，并且不会危害虚拟机自身的安全。
