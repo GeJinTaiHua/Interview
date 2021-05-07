@@ -56,6 +56,7 @@ public class MyNetworkClassLoader extends ClassLoader {
     }
 
     public static void main(String[] args) throws Exception {
+        // 删除本地class再调试，否则会调用本地的class
         MyNetworkClassLoader myNetworkClassLoader = new MyNetworkClassLoader("https://github.com/GeJinTaiHua/MyNote/tree/master/Interview-Java/src/main/resources/classlib");
         Class<?> loadClass = myNetworkClassLoader.loadClass("www.wjl.com.Interview.SnowFlake");
         Method method = loadClass.getMethod("main", String[].class);
