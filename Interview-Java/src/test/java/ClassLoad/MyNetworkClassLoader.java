@@ -46,10 +46,9 @@ public class MyNetworkClassLoader extends ClassLoader {
         } finally {
             try {
                 bos.close();
-                assert is != null;
-                is.close();
-            } catch (IOException ie) {
-                ie.printStackTrace();
+                if (is != null) is.close();
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
             }
         }
 
