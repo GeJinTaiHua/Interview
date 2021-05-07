@@ -1,9 +1,9 @@
 package ClassLoad;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Method;
-import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
@@ -27,23 +27,29 @@ public class MyNetworkClassLoader extends ClassLoader {
         String classUrl = url + "/" + name.replace(".", "/") + ".class";
         byte[] bytes = null;
 
+        InputStream is = null;
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
         try {
             URL url = new URL(classUrl);
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setConnectTimeout(60 * 1000);
-            conn.setRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)");
-            InputStream inputStream = conn.getInputStream();
+            is = url.openStream();
 
-            byte[] buffer = new byte[1024];
             int len = 0;
-            ByteArrayOutputStream bos = new ByteArrayOutputStream();
-            while ((len = inputStream.read(buffer)) != -1) {
+            byte[] buffer = new byte[1024];
+            while ((len = is.read(buffer)) != -1) {
                 bos.write(buffer, 0, len);
             }
-            bos.close();
+
             bytes = bos.toByteArray();
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            try {
+                bos.close();
+                assert is != null;
+                is.close();
+            } catch (IOException ie) {
+                ie.printStackTrace();
+            }
         }
 
         return bytes;
