@@ -146,7 +146,7 @@ int randNumber = new Random().Next(MIN, MAX + 1);
 
 #### 雪花算法
 Twitter 的分布式自增ID SnowFlake算法
-+ [SnowFlake](/Interview-Java/src/main/java/www/wjl/com/Interview/SnowFlake.java)
++ [SnowFlake](/Interview-Java/src/main/java/www/wjl/com/Interview/MSnowFlake.java)
   + 组合：1位 + 41位毫秒级时间 + 5位数据中心datacenterId + 5位机器标识workerId + 12位的计数顺序号 = 64位Long型(转换成字符串长度为18)；
   + 算法核心：把时间戳，工作机器id，序列号组合在一起。
   ![](/Interview-DSAndA/A_Pic/Snowflake.png)

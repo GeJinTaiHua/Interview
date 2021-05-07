@@ -5,7 +5,7 @@ package www.wjl.com.Interview;
  *
  * @date 2019/7/18 13:44
  */
-public class SnowFlake {
+public class MSnowFlake {
     /**
      * 起始的时间戳
      */
@@ -40,7 +40,7 @@ public class SnowFlake {
     /**
      * 构造函数
      */
-    public SnowFlake(long datacenterId, long machineId) {
+    public MSnowFlake(long datacenterId, long machineId) {
         if (datacenterId > MAX_DATACENTER_NUM || datacenterId < 0) {
             throw new IllegalArgumentException("datacenterId can't be greater than MAX_DATACENTER_NUM or less than 0");
         }
@@ -96,11 +96,11 @@ public class SnowFlake {
     }
 
     public static void main(String[] args) {
-        SnowFlake snowFlake = new SnowFlake(1, 1);
+        MSnowFlake MSnowFlake = new MSnowFlake(1, 1);
 
         long start = System.currentTimeMillis();
         for (int i = 0; i < 100; i++) {
-            System.out.println(snowFlake.nextId());
+            System.out.println(MSnowFlake.nextId());
         }
 
         System.out.println(System.currentTimeMillis() - start);
