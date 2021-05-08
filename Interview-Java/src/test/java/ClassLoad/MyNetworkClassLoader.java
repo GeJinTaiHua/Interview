@@ -31,8 +31,7 @@ public class MyNetworkClassLoader extends ClassLoader {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         try {
             URL url = new URL(classUrl);
-            URLConnection openConnection = url.openConnection();
-            is = openConnection.getInputStream();
+            is = url.openStream();
 
             int len = 0;
             byte[] buffer = new byte[1024];
