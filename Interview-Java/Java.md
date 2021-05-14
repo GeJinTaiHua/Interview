@@ -744,7 +744,7 @@ public void countDown() { };
        + 可预测的停顿：低停顿的同时实现高吞吐量。
      ![G1](/Interview-Java/Pic/G1.png)
   2) ZGC（The Z Garbage Collector）：JDK 11中推出的一款低延迟垃圾回收器 。
-     + 染色指针（remapped、mark0、mark1、） + 读屏障
+     + 染色指针（remapped、mark0、mark1） + 读屏障
        + 并发标记：初始标记阶段 +并发标记阶段
        + 并发预备重分配
        + 并发重分配
