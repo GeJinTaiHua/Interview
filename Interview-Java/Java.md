@@ -233,9 +233,16 @@ String str ="hello";
   + [示例](/Interview-Java/src/test/java/TryExceptionFinally/tryTest.java)
 
 #### final、finally、finalize
-+ final
++ final（）
   + 类
     + 表明这个类不能被继承。
+```
+// \src\share\vm\classfile\classFileParser.cpp
+// Make sure super class is not final
+if (super_klass->is_final()) {
+THROW_MSG_(vmSymbols::java_lang_VerifyError(), "Cannot inherit from final class", nullHandle);
+}
+```
     + final类中的所有成员方法都会被隐式地指定为final方法。
   + 方法
     + 把方法锁定，以防任何继承类修改它的含义；
