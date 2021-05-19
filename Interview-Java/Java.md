@@ -235,20 +235,64 @@ String str ="hello";
 #### final、finally、finalize
 + final（）
   + 类
-    + 表明这个类不能被继承。
-```
-// \src\share\vm\classfile\classFileParser.cpp
-// Make sure super class is not final
-if (super_klass->is_final()) {
-THROW_MSG_(vmSymbols::java_lang_VerifyError(), "Cannot inherit from final class", nullHandle);
-}
-```
-    + final类中的所有成员方法都会被隐式地指定为final方法。
+    + 表明这个类不能被继承；(\src\share\vm\classfile\classFileParser.cpp)
+    ```
+    // Make sure super class is not final
+    if (super_klass->is_final()) {
+        THROW_MSG_(vmSymbols::java_lang_VerifyError(), "Cannot inherit from final class", nullHandle);
+    }
+    ```
+    + final类中的所有成员方法都会被隐式地指定为final方法；
   + 方法
-    + 把方法锁定，以防任何继承类修改它的含义；
-    + 类的private方法会隐式地被指定为final方法。
+    + 把方法锁定，以防任何继承类修改它的含义；(\src\share\vm\classfile\classFileParser.cpp)
+    ```
+    if (super_m->is_final() &&
+      // matching method in super is final
+      (Reflection::verify_field_access(this_klass(),
+                                       super_m->method_holder(),
+                                       super_m->method_holder(),
+                                       super_m->access_flags(), false))
+    // this class can access super final method and therefore override
+    ) {
+    ResourceMark rm(THREAD);
+    Exceptions::fthrow(
+      THREAD_AND_LOCATION,
+      vmSymbols::java_lang_VerifyError(),
+      "class %s overrides final method %s.%s",
+      this_klass->external_name(),
+      name->as_C_string(),
+      signature->as_C_string()
+    );
+    return;
+    }
+    ```
+    + jdk8：接口方法不允许有final方法；(\src\share\vm\oops\klassVtable.cpp)
+    ```
+    int klassItable::assign_itable_indices_for_interface(Klass* klass) {
+    // an interface does not have an itable, but its methods need to be numbered
+        if (TraceItables) tty->print_cr("%3d: Initializing itable for interface %s", ++initialize_count,
+        klass->name()->as_C_string());
+        Array<Method*>* methods = InstanceKlass::cast(klass)->methods();
+        int nof_methods = methods->length();
+        int ime_num = 0;
+        for (int i = 0; i < nof_methods; i++) {
+            Method* m = methods->at(i);
+            if (interface_method_needs_itable_index(m)) {
+            assert(!m->is_final_method(), "no final interface methods");
+    ```
+    + 类的private方法会隐式地被指定为final方；。
   + 变量
-    + 基本数据类型：数值一旦在初始化之后便不能更改；
+    + 基本数据类型：数值一旦在初始化之后便不能更改；(\src\share\vm\opto\compile.hpp)
+    ```
+    void set_field(ciField* f) {
+        assert(!_field,"");
+        _field = f;
+        if (f->is_final() || f->is_stable()) {
+            // In the case of @Stable, multiple writes are possible but may be assumed to be no-ops.
+            _is_rewritable = false;
+        }
+    }
+    ```
     + 引用类型：在对其初始化之后便不能再让其指向另一个对象。	
 + finally：在异常处理时提供 finally 块来执行任何清除操作。
 + finalize：方法名；finalize() 方法在垃圾收集器将对象从内存中清除出去之前做必要的清理工作。
