@@ -537,6 +537,8 @@
 + a pattern of：模式
 + a set of constraint：一组约束
 + application：应用
++ access control：访问控制
++ functional requirements：功能需求
 + component：构件
 + combine：关联
 + device：设备
@@ -544,6 +546,7 @@
 + information extraction：信息提取
 + mechanism：机制
 + nonfunctional requirements：非功能需求
++ network architecture：网络架构
 + outline：大纲
 + part：部件
 + perform：执行
@@ -552,6 +555,8 @@
 + reconstruction：重用
 + recognition：识别
 + semantic models：语义模型
++ system constraint：系统约束
++ system operational environment：系统操作环境
 + specification：规范
 + vocabulary：词汇表
 + architectural：架构
@@ -559,6 +564,8 @@
   + architecture designer：架构设计师
   + architectural standard：架构标准
   + connector type：连接器风格
+  + client-based architecture：基于客户端的架构
+  + server-based architecture：基于服务器的架构
   + pipe-and-filter architectures：管道-过滤器架构
   + structured organization：结构化组织
   + three-tier architecture：三层架构
@@ -578,3 +585,5 @@
 + performance：性能
   + reliability：可靠性
   + response time：响应时间
+  + maintainability：可维护性
+
