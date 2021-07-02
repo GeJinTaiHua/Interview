@@ -58,7 +58,6 @@
   + [☕️EDAS](https://github.com/GeJinTaiHua/EDAS-learning)
 + [💥Dubbo](https://github.com/GeJinTaiHua/Dubbo-learning)
 + [☀️gRPC](https://github.com/GeJinTaiHua/gRPC-learning)
-+ [📀EDAS](https://github.com/GeJinTaiHua/EDAS-learning)
 
 ### 基础知识
 #### 8大基本类型
